@@ -5924,6 +5924,780 @@ body:has(.tsurusen-pixel-home) {
     transform: none;
   }
 }
+
+/* Event / Access / FAQ / Footer image-match compact pass */
+@media (min-width: 901px) {
+  #event,
+  #access {
+    scroll-margin-top: clamp(18px, 2vw, 40px);
+  }
+
+  .pixel-eaf-panel {
+    padding: clamp(20px, 2.1vw, 36px) clamp(24px, 3vw, 48px) clamp(22px, 2.25vw, 38px);
+    background:
+      radial-gradient(circle at 18% 42%, rgba(216, 177, 90, 0.045), transparent 25%),
+      radial-gradient(circle at 76% 38%, rgba(216, 177, 90, 0.035), transparent 26%),
+      #050505;
+  }
+
+  .pixel-eaf-grid {
+    max-width: 1500px;
+    grid-template-columns: 1.1fr 0.9fr 1fr;
+    gap: clamp(26px, 2.6vw, 48px);
+  }
+
+  .pixel-eaf-faq {
+    grid-column: auto;
+  }
+
+  .pixel-eaf-column {
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: clamp(10px, 0.9vw, 16px);
+  }
+
+  .pixel-eaf-heading {
+    gap: clamp(18px, 1.6vw, 24px);
+  }
+
+  .pixel-eaf-heading-title {
+    font-size: clamp(42px, 2.7vw, 52px);
+    line-height: 1.26;
+  }
+
+  .pixel-eaf-heading-line {
+    width: 120px;
+    max-width: 28%;
+    flex-basis: 72px;
+  }
+
+  .pixel-eaf-card-shell {
+    min-height: 0;
+    height: clamp(348px, 19.8vw, 382px);
+    gap: clamp(12px, 1vw, 18px);
+    border-radius: 18px;
+    padding: clamp(16px, 1.15vw, 22px);
+  }
+
+  .pixel-eaf-event-grid {
+    gap: clamp(12px, 1vw, 20px);
+  }
+
+  .pixel-eaf-event-card {
+    height: clamp(244px, 13.6vw, 262px) !important;
+    grid-template-rows: clamp(104px, 7.2vw, 140px) minmax(0, 1fr);
+    border-radius: 16px;
+  }
+
+  .pixel-eaf-card-media {
+    height: clamp(104px, 7.2vw, 140px) !important;
+  }
+
+  .pixel-eaf-event-copy {
+    gap: clamp(4px, 0.42vw, 8px);
+    padding: clamp(10px, 0.75vw, 16px);
+  }
+
+  .pixel-eaf-event-title {
+    font-size: clamp(15px, 1.05vw, 22px);
+    line-height: 1.2;
+  }
+
+  .pixel-eaf-event-subtitle {
+    font-size: clamp(13px, 0.95vw, 20px);
+    line-height: 1.32;
+  }
+
+  .pixel-eaf-card-rule {
+    width: 76%;
+    margin: 1px 0;
+  }
+
+  .pixel-eaf-event-date {
+    font-size: clamp(14px, 0.98vw, 20px);
+    line-height: 1.24;
+  }
+
+  .pixel-eaf-event-time {
+    font-size: clamp(13px, 0.9vw, 18px);
+    line-height: 1.24;
+  }
+
+  .pixel-eaf-button {
+    width: min(100%, 360px) !important;
+    height: clamp(54px, 3.55vw, 64px) !important;
+    min-height: clamp(54px, 3.55vw, 64px);
+    border-radius: 14px;
+    font-size: clamp(16px, 1.12vw, 22px);
+  }
+
+  .pixel-eaf-button small {
+    font-size: clamp(12px, 0.78vw, 15px);
+  }
+
+  .pixel-eaf-access-card {
+    gap: clamp(14px, 1.15vw, 20px);
+  }
+
+  .pixel-eaf-map-media {
+    height: clamp(142px, 8.7vw, 170px) !important;
+    border-radius: 14px;
+  }
+
+  .pixel-eaf-access-list {
+    gap: clamp(8px, 0.8vw, 14px);
+  }
+
+  .pixel-eaf-access-row {
+    grid-template-columns: clamp(20px, 1.35vw, 28px) minmax(0, 1fr);
+    gap: clamp(10px, 1vw, 16px);
+    font-size: clamp(13px, 0.88vw, 18px);
+    line-height: 1.55;
+  }
+
+  .pixel-eaf-access-row svg {
+    width: clamp(20px, 1.35vw, 28px);
+    height: clamp(20px, 1.35vw, 28px);
+  }
+
+  .pixel-eaf-faq-card {
+    gap: clamp(12px, 0.9vw, 18px);
+  }
+
+  .pixel-eaf-faq-list {
+    gap: clamp(7px, 0.62vw, 10px);
+  }
+
+  .pixel-eaf-faq-row {
+    min-height: clamp(46px, 3vw, 56px) !important;
+    border-radius: 12px;
+  }
+
+  .pixel-eaf-faq-row summary {
+    min-height: clamp(46px, 3vw, 56px);
+    gap: clamp(10px, 0.9vw, 18px);
+    padding: 0 clamp(18px, 1.45vw, 28px);
+    font-size: clamp(14px, 0.95vw, 18px);
+    line-height: 1.25;
+  }
+
+  .pixel-eaf-faq-row svg {
+    width: clamp(20px, 1.35vw, 26px);
+    height: clamp(20px, 1.35vw, 26px);
+  }
+
+  .pixel-eaf-faq-row p {
+    padding: 0 clamp(18px, 1.45vw, 28px) 14px;
+    font-size: clamp(12px, 0.8vw, 15px);
+    line-height: 1.6;
+  }
+
+  .pixel-cf-panel {
+    position: relative !important;
+    z-index: 17;
+    width: 100% !important;
+    margin: 0 !important;
+    border: 0;
+    background: #050505;
+  }
+
+  .pixel-cf-inner {
+    max-width: 1500px;
+    grid-template-columns: 1.35fr 0.82fr 0.72fr 0.92fr 1.3fr 1.32fr;
+    gap: clamp(24px, 2.7vw, 48px);
+    padding: clamp(22px, 2.4vw, 42px) clamp(24px, 3vw, 48px) clamp(26px, 2.45vw, 44px);
+    border-top: 1px solid rgba(216, 177, 90, 0.78);
+  }
+
+  .pixel-cf-brand {
+    grid-template-columns: clamp(58px, 4.2vw, 78px) minmax(0, 1fr);
+    column-gap: clamp(14px, 1.2vw, 18px);
+  }
+
+  .pixel-cf-logo-mark {
+    width: clamp(58px, 4.2vw, 78px);
+    height: clamp(58px, 4.2vw, 78px);
+  }
+
+  .pixel-cf-logo-mark svg {
+    width: clamp(38px, 2.8vw, 52px);
+    height: clamp(38px, 2.8vw, 52px);
+  }
+
+  .pixel-cf-brand-kicker {
+    font-size: clamp(15px, 1vw, 22px);
+    letter-spacing: 0.13em;
+    line-height: 1.25;
+  }
+
+  .pixel-cf-brand-name {
+    margin-top: clamp(8px, 0.65vw, 11px);
+    font-size: clamp(28px, 2vw, 44px);
+    letter-spacing: 0.1em;
+    line-height: 1.25;
+  }
+
+  .pixel-cf-column-title {
+    font-size: clamp(18px, 1.25vw, 26px);
+    line-height: 1.25;
+  }
+
+  .pixel-cf-column-rule {
+    width: clamp(70px, 5.2vw, 96px);
+    margin: clamp(10px, 0.75vw, 14px) 0 clamp(9px, 0.9vw, 16px);
+  }
+
+  .pixel-cf-column-items {
+    gap: clamp(6px, 0.55vw, 11px);
+  }
+
+  .pixel-cf-column-item {
+    align-items: flex-start;
+    gap: 10px;
+    font-size: clamp(13px, 0.9vw, 18px);
+    line-height: 1.45;
+    overflow: visible;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .pixel-cf-column-item svg {
+    width: clamp(25px, 1.7vw, 32px);
+    height: clamp(25px, 1.7vw, 32px);
+  }
+
+  .pixel-cf-column[data-kind="address"] .pixel-cf-column-item,
+  .pixel-cf-column[data-kind="hours"] .pixel-cf-column-item {
+    font-size: clamp(14px, 0.98vw, 20px);
+    line-height: 1.5;
+  }
+
+  .pixel-cf-copyright {
+    margin-top: clamp(12px, 1.2vw, 20px);
+    font-size: clamp(13px, 0.9vw, 18px);
+  }
+}
+
+@media (max-height: 760px) and (min-width: 901px) {
+  .pixel-eaf-panel {
+    padding-top: 18px;
+    padding-bottom: 22px;
+  }
+
+  .pixel-eaf-column {
+    gap: 10px;
+  }
+
+  .pixel-eaf-heading-title {
+    font-size: 46px;
+    line-height: 1.27;
+  }
+
+  .pixel-eaf-card-shell {
+    height: 390px;
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .pixel-eaf-event-grid {
+    gap: 12px;
+  }
+
+  .pixel-eaf-event-card {
+    height: 286px !important;
+    grid-template-rows: 118px minmax(0, 1fr);
+  }
+
+  .pixel-eaf-card-media {
+    height: 118px !important;
+  }
+
+  .pixel-eaf-event-copy {
+    gap: 4px;
+    padding: 10px;
+  }
+
+  .pixel-eaf-event-title {
+    font-size: 18px;
+    line-height: 1.14;
+  }
+
+  .pixel-eaf-event-subtitle {
+    font-size: 15px;
+    line-height: 1.24;
+  }
+
+  .pixel-eaf-event-date {
+    font-size: 16px;
+    line-height: 1.18;
+  }
+
+  .pixel-eaf-event-time {
+    font-size: 15px;
+    line-height: 1.18;
+  }
+
+  .pixel-eaf-card-rule {
+    margin: 0;
+  }
+
+  .pixel-eaf-button {
+    height: 54px !important;
+    min-height: 54px;
+    font-size: 17px;
+  }
+
+  .pixel-eaf-button small {
+    font-size: 12px;
+  }
+
+  .pixel-eaf-access-card {
+    gap: 12px;
+  }
+
+  .pixel-eaf-map-media {
+    height: 150px !important;
+  }
+
+  .pixel-eaf-access-list {
+    gap: 8px;
+  }
+
+  .pixel-eaf-access-row {
+    grid-template-columns: 22px minmax(0, 1fr);
+    gap: 10px;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .pixel-eaf-access-row svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .pixel-eaf-faq-card {
+    gap: 12px;
+  }
+
+  .pixel-eaf-faq-list {
+    gap: 7px;
+  }
+
+  .pixel-eaf-faq-row,
+  .pixel-eaf-faq-row summary {
+    min-height: 46px !important;
+  }
+
+  .pixel-eaf-faq-row summary {
+    padding: 0 18px;
+    font-size: 14px;
+  }
+
+  .pixel-eaf-faq-row svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .pixel-cf-inner {
+    gap: clamp(20px, 2.4vw, 38px);
+    padding-top: 22px;
+    padding-bottom: 24px;
+  }
+
+  .pixel-cf-brand {
+    grid-template-columns: 60px minmax(0, 1fr);
+    column-gap: 14px;
+  }
+
+  .pixel-cf-logo-mark {
+    width: 60px;
+    height: 60px;
+  }
+
+  .pixel-cf-logo-mark svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .pixel-cf-brand-kicker {
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  .pixel-cf-brand-name {
+    margin-top: 7px;
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  .pixel-cf-column-title {
+    font-size: 18px;
+    line-height: 1.18;
+  }
+
+  .pixel-cf-column-rule {
+    width: 72px;
+    margin: 8px 0;
+  }
+
+  .pixel-cf-column-items {
+    gap: 5px;
+  }
+
+  .pixel-cf-column-item,
+  .pixel-cf-column[data-kind="address"] .pixel-cf-column-item,
+  .pixel-cf-column[data-kind="hours"] .pixel-cf-column-item {
+    font-size: 13px;
+    line-height: 1.36;
+  }
+
+  .pixel-cf-column-item svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .pixel-cf-copyright {
+    margin-top: 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-height: 680px) and (min-width: 901px) {
+  .pixel-eaf-panel {
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+
+  .pixel-eaf-column {
+    gap: 6px;
+  }
+
+  .pixel-eaf-heading-title {
+    font-size: 32px;
+    line-height: 1.22;
+  }
+
+  .pixel-eaf-card-shell {
+    height: 260px;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .pixel-eaf-event-grid {
+    gap: 8px;
+  }
+
+  .pixel-eaf-event-card {
+    height: 184px !important;
+    grid-template-rows: 70px minmax(0, 1fr);
+  }
+
+  .pixel-eaf-card-media {
+    height: 70px !important;
+  }
+
+  .pixel-eaf-event-copy {
+    gap: 2px;
+    padding: 6px;
+  }
+
+  .pixel-eaf-event-title,
+  .pixel-eaf-event-subtitle,
+  .pixel-eaf-event-date,
+  .pixel-eaf-event-time {
+    line-height: 1.16;
+  }
+
+  .pixel-eaf-event-title {
+    font-size: 12px;
+  }
+
+  .pixel-eaf-event-subtitle,
+  .pixel-eaf-event-date,
+  .pixel-eaf-event-time {
+    font-size: 10px;
+  }
+
+  .pixel-eaf-card-rule {
+    margin: 0;
+  }
+
+  .pixel-eaf-button {
+    height: 38px !important;
+    min-height: 38px;
+    font-size: 12px;
+  }
+
+  .pixel-eaf-button small {
+    font-size: 9px;
+  }
+
+  .pixel-eaf-access-card {
+    gap: 6px;
+  }
+
+  .pixel-eaf-map-media {
+    height: 88px !important;
+  }
+
+  .pixel-eaf-access-list {
+    gap: 4px;
+  }
+
+  .pixel-eaf-access-row {
+    grid-template-columns: 16px minmax(0, 1fr);
+    gap: 7px;
+    font-size: 10px;
+    line-height: 1.28;
+  }
+
+  .pixel-eaf-access-row svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .pixel-eaf-faq-card {
+    gap: 6px;
+  }
+
+  .pixel-eaf-faq-list {
+    gap: 4px;
+  }
+
+  .pixel-eaf-faq-row,
+  .pixel-eaf-faq-row summary {
+    min-height: 32px !important;
+  }
+
+  .pixel-eaf-faq-row summary {
+    padding: 0 12px;
+    font-size: 10px;
+  }
+
+  .pixel-eaf-faq-row svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .pixel-cf-inner {
+    gap: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .pixel-cf-brand {
+    grid-template-columns: 42px minmax(0, 1fr);
+    column-gap: 10px;
+  }
+
+  .pixel-cf-logo-mark {
+    width: 42px;
+    height: 42px;
+  }
+
+  .pixel-cf-logo-mark svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .pixel-cf-brand-kicker {
+    font-size: 10px;
+  }
+
+  .pixel-cf-brand-name {
+    margin-top: 4px;
+    font-size: 20px;
+  }
+
+  .pixel-cf-column-title {
+    font-size: 12px;
+  }
+
+  .pixel-cf-column-rule {
+    width: 48px;
+    margin: 4px 0;
+  }
+
+  .pixel-cf-column-items {
+    gap: 2px;
+  }
+
+  .pixel-cf-column-item,
+  .pixel-cf-column[data-kind="address"] .pixel-cf-column-item,
+  .pixel-cf-column[data-kind="hours"] .pixel-cf-column-item {
+    font-size: 9px;
+    line-height: 1.25;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .pixel-cf-column-item svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .pixel-cf-copyright {
+    margin-top: 4px;
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  .pixel-eaf-grid {
+    gap: clamp(16px, 2vw, 28px);
+  }
+
+  .pixel-eaf-event-grid {
+    gap: 8px;
+  }
+
+  .pixel-eaf-event-copy {
+    gap: 2px;
+    padding: 6px;
+  }
+
+  .pixel-eaf-event-title {
+    font-size: clamp(11px, 1.25vw, 14px);
+    line-height: 1.2;
+  }
+
+  .pixel-eaf-event-subtitle,
+  .pixel-eaf-event-date,
+  .pixel-eaf-event-time {
+    font-size: clamp(10px, 1.1vw, 12px);
+    line-height: 1.2;
+  }
+
+  .pixel-cf-inner {
+    grid-template-columns: 1.14fr 0.7fr 0.62fr 0.82fr 1.04fr 1.04fr;
+    gap: clamp(12px, 1.8vw, 22px);
+  }
+
+  .pixel-cf-brand {
+    grid-template-columns: 44px minmax(0, 1fr);
+    column-gap: 10px;
+  }
+
+  .pixel-cf-logo-mark {
+    width: 44px;
+    height: 44px;
+  }
+
+  .pixel-cf-logo-mark svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .pixel-cf-brand-kicker {
+    font-size: 10px;
+    line-height: 1.25;
+  }
+
+  .pixel-cf-brand-name {
+    margin-top: 4px;
+    font-size: 21px;
+    line-height: 1.25;
+  }
+
+  .pixel-cf-column-title {
+    font-size: 13px;
+    line-height: 1.24;
+  }
+
+  .pixel-cf-column-rule {
+    width: 50px;
+    margin: 5px 0;
+  }
+
+  .pixel-cf-column-items {
+    gap: 3px;
+  }
+
+  .pixel-cf-column-item,
+  .pixel-cf-column[data-kind="address"] .pixel-cf-column-item,
+  .pixel-cf-column[data-kind="hours"] .pixel-cf-column-item {
+    font-size: 10px;
+    line-height: 1.3;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .pixel-cf-column-item svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .pixel-eaf-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pixel-eaf-faq {
+    grid-column: 1 / -1;
+  }
+
+  .pixel-eaf-card-shell {
+    height: auto;
+    min-height: 0;
+  }
+
+  .pixel-eaf-heading-title,
+  .pixel-eaf-event-title,
+  .pixel-eaf-event-subtitle,
+  .pixel-eaf-event-date,
+  .pixel-eaf-event-time,
+  .pixel-cf-brand-kicker,
+  .pixel-cf-brand-name,
+  .pixel-cf-column-title {
+    line-height: 1.32;
+  }
+
+  .pixel-eaf-event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pixel-eaf-event-card {
+    height: auto !important;
+    min-height: 300px;
+    grid-template-rows: 150px auto;
+  }
+
+  .pixel-eaf-event-copy {
+    gap: 8px;
+    padding: 14px;
+  }
+
+  .pixel-cf-column-item {
+    overflow: visible;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+
+  .pixel-cf-column[data-kind="hours"] .pixel-cf-column-item {
+    font-size: clamp(14px, 2vw, 16px);
+    line-height: 1.5;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 760px) {
+  .pixel-eaf-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pixel-eaf-card-shell {
+    height: auto;
+  }
+
+  .pixel-eaf-heading-title {
+    line-height: 1.36;
+  }
+
+  .pixel-cf-inner {
+    grid-template-columns: 1fr;
+  }
+}
 `;
 
 const xPct = (value: number) => `${(value / designWidth) * 100}%`;
@@ -6588,23 +7362,8 @@ function CtaFooterSection() {
   });
 
   return (
-    <footer id="reserve" className="pixel-cf-panel" aria-label="Footer">
-      <section className="pixel-cf-cta" aria-labelledby="pixel-cf-cta-title">
-        <div className="pixel-cf-cta-inner">
-          <h2 id="pixel-cf-cta-title" className="pixel-cf-cta-title">
-            LET&apos;S PLAY TONIGHT.
-          </h2>
-          <p className="pixel-cf-cta-subtitle">今夜はTSURUSENで最高の時間を。</p>
-          <div className="pixel-cf-cta-actions" aria-label="Reservation actions">
-            {ctaHeroButtons.map((button) => (
-              <button key={button.label} type="button" className="pixel-cf-cta-button" data-tone={button.tone} onClick={() => navigateTo(button.href)}>
-                <span>{button.label}</span>
-                <small>{button.sub}</small>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
+    <>
+    <footer className="pixel-cf-panel" aria-label="Footer">
       <div className="pixel-cf-inner">
         <div className="pixel-cf-brand">
           <span className="pixel-cf-logo-mark" aria-hidden="true">
@@ -6646,6 +7405,23 @@ function CtaFooterSection() {
         {ctaFooterButtons.length}
       </span>
     </footer>
+    <section id="reserve" className="pixel-cf-cta" aria-labelledby="pixel-cf-cta-title">
+      <div className="pixel-cf-cta-inner">
+        <h2 id="pixel-cf-cta-title" className="pixel-cf-cta-title">
+          LET&apos;S PLAY TONIGHT.
+        </h2>
+        <p className="pixel-cf-cta-subtitle">今夜はTSURUSENで最高の時間を。</p>
+        <div className="pixel-cf-cta-actions" aria-label="Reservation actions">
+          {ctaHeroButtons.map((button) => (
+            <button key={button.label} type="button" className="pixel-cf-cta-button" data-tone={button.tone} onClick={() => navigateTo(button.href)}>
+              <span>{button.label}</span>
+              <small>{button.sub}</small>
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
+    </>
   );
 }
 
