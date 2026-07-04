@@ -3256,33 +3256,6 @@ body:has(.tsurusen-pixel-home) {
   filter: drop-shadow(0 0 calc(3 * 0.1157407407vw) rgba(239, 200, 116, 0.28));
 }
 
-.pixel-cf-panel {
-  position: absolute;
-  z-index: 7;
-  overflow: hidden;
-  border: max(1px, calc(0.9 * 0.1157407407vw)) solid rgba(171, 126, 52, 0.88);
-  border-radius: calc(6 * 0.1157407407vw);
-  background:
-    radial-gradient(circle at 49% 34%, rgba(168, 72, 235, 0.1), transparent 24%),
-    radial-gradient(circle at 18% 30%, rgba(216, 180, 106, 0.07), transparent 20%),
-    radial-gradient(circle at 83% 26%, rgba(216, 180, 106, 0.06), transparent 22%);
-  box-shadow:
-    inset 0 0 calc(18 * 0.1157407407vw) rgba(0, 0, 0, 0.58),
-    0 0 calc(12 * 0.1157407407vw) rgba(216, 180, 106, 0.08);
-  pointer-events: none;
-}
-
-.pixel-cf-panel::before {
-  position: absolute;
-  inset: 0 0 auto;
-  z-index: 7;
-  height: 58%;
-  background:
-    radial-gradient(ellipse at 50% 35%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.38) 48%, rgba(0, 0, 0, 0.62) 100%),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.4) 28%, rgba(0, 0, 0, 0.34) 72%, rgba(0, 0, 0, 0.02));
-  content: "";
-}
-
 .pixel-cf-footer-shade {
   position: absolute;
   left: 0;
@@ -4347,8 +4320,7 @@ body:has(.tsurusen-pixel-home) {
   }
 
   .pixel-about-panel,
-  .pixel-eaf-panel,
-  .pixel-cf-panel {
+  .pixel-eaf-panel {
     position: relative !important;
     left: auto !important;
     top: auto !important;
@@ -4505,28 +4477,6 @@ body:has(.tsurusen-pixel-home) {
     height: 20px;
   }
 
-  .pixel-cf-panel {
-    display: flex;
-    height: auto !important;
-    min-height: 0;
-    flex-direction: column;
-    gap: 18px;
-    margin-top: 32px;
-    margin-bottom: 32px;
-    overflow: hidden;
-    border-radius: 18px;
-    padding: 32px 24px;
-    pointer-events: auto;
-  }
-
-  .pixel-cf-panel > *:not(.pixel-cf-footer-shade) {
-    position: relative !important;
-    left: auto !important;
-    top: auto !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
   .pixel-cf-footer-shade {
     top: 48% !important;
     height: 52% !important;
@@ -4613,8 +4563,7 @@ body:has(.tsurusen-pixel-home) {
 }
 
 /* Event / Access / FAQ / Footer finish pass */
-.pixel-eaf-panel,
-.pixel-cf-panel {
+.pixel-eaf-panel {
   position: relative !important;
   left: auto !important;
   top: auto !important;
@@ -5026,19 +4975,6 @@ body:has(.tsurusen-pixel-home) {
   line-height: 1.7;
 }
 
-.pixel-cf-panel {
-  z-index: 17;
-  margin-top: 0;
-  border: 0;
-  border-top: 1px solid rgba(210, 170, 80, 0.72);
-  border-radius: 0;
-  background:
-    radial-gradient(circle at 12% 6%, rgba(216, 176, 83, 0.05), transparent 24%),
-    #050505;
-  box-shadow: none;
-  padding: clamp(48px, 4.2vw, 72px) clamp(24px, 3vw, 48px) clamp(160px, 8vw, 220px);
-}
-
 .pixel-cf-inner {
   display: grid;
   max-width: 1500px;
@@ -5237,13 +5173,6 @@ body:has(.tsurusen-pixel-home) {
     width: 100% !important;
     margin-top: 56px;
     padding: 72px 24px 64px;
-  }
-
-  .pixel-cf-panel {
-    width: 100% !important;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 52px 24px 36px;
   }
 
   .pixel-eaf-card-shell {
@@ -5556,18 +5485,6 @@ body:has(.tsurusen-pixel-home) {
 }
 
 /* CTA / footer hero finish pass */
-.pixel-cf-panel {
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: visible;
-  border: 0;
-  border-radius: 0;
-  background: #050505;
-  box-shadow: none;
-}
-
-.pixel-cf-panel::before,
 .pixel-cf-footer-shade {
   display: none !important;
 }
@@ -6003,15 +5920,6 @@ body:has(.tsurusen-pixel-home) {
     padding: 0 clamp(18px, 1.45vw, 28px) 14px;
     font-size: clamp(12px, 0.8vw, 15px);
     line-height: 1.6;
-  }
-
-  .pixel-cf-panel {
-    position: relative !important;
-    z-index: 17;
-    width: 100% !important;
-    margin: 0 !important;
-    border: 0;
-    background: #050505;
   }
 
   .pixel-cf-inner {
