@@ -85,6 +85,14 @@ type HeaderNavItem = {
   active?: boolean;
   group?: "menu";
 };
+type HeroAction = {
+  label: string;
+  sub: string;
+  href: string;
+  tone: "gold" | "blue" | "green" | "dark";
+  icon?: typeof Camera;
+  secondaryIcon?: typeof Camera;
+};
 
 const headerNavItems: HeaderNavItem[] = [
   { label: "HOME", href: "/", icon: Home, active: true },
@@ -97,6 +105,13 @@ const headerNavItems: HeaderNavItem[] = [
   { label: "ENTERTAINMENT", href: "/play", icon: Mic2 },
   { label: "EVENTS", href: "/events", icon: CalendarDays },
   { label: "FAQ", href: "/#faq", icon: CircleHelp },
+];
+
+const heroActions: HeroAction[] = [
+  { label: "WEB予約", sub: "RESERVE", href: "/reservation", tone: "gold" },
+  { label: "電話予約", sub: "CALL", href: "tel:03-XXXX-XXXX", tone: "blue" },
+  { label: "LINE予約", sub: "LINE", href: "https://line.me/R/ti/p/@tsurusen", tone: "green" },
+  { label: "Instagram", sub: "FOLLOW", href: "https://www.instagram.com/", tone: "dark", icon: Camera },
 ];
 
 const anchorTargets = [
@@ -430,16 +445,25 @@ const ctaFooterColumns: CtaFooterColumn[] = [
 const runtimeCss = `
 body:has(.tsurusen-pixel-home) {
   min-width: 0 !important;
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .tsurusen-pixel-home {
   position: relative;
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
+  overflow-x: clip;
+  contain: paint;
   background: #090807;
   color: #f6f0e6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  font-feature-settings: "kern";
 }
 
 .tsurusen-pixel-home *,
@@ -453,10 +477,12 @@ body:has(.tsurusen-pixel-home) {
   left: 0;
   top: 0;
   width: 100%;
-  max-width: 100vw;
+  max-width: 100%;
   aspect-ratio: 864 / 1821;
   min-height: 1px;
   overflow: hidden;
+  overflow: clip;
+  contain: paint;
   background: #090807;
   isolation: isolate;
 }
@@ -1050,6 +1076,490 @@ body:has(.tsurusen-pixel-home) {
   }
 }
 
+.pixel-lux-hero {
+  position: relative;
+  z-index: 12;
+  display: grid;
+  width: 100%;
+  height: 19.8243%;
+  min-height: clamp(430px, 41.8vw, 820px);
+  grid-template-rows: auto minmax(0, 1fr);
+  overflow: visible;
+  color: #fff8ea;
+  pointer-events: none;
+}
+
+.pixel-lux-hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.88) 100%),
+    radial-gradient(circle at 50% 51%, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.7) 58%, rgba(0, 0, 0, 0.95) 100%);
+  content: "";
+  pointer-events: none;
+}
+
+.pixel-lux-hero .pixel-main-header {
+  --header-label-scale: 0.74;
+  --header-nav-scale: 0.88;
+  position: relative;
+  left: auto;
+  top: auto;
+  z-index: 4;
+  width: 100%;
+  min-height: clamp(110px, 8.7vw, 178px);
+  overflow: visible;
+  background:
+    radial-gradient(circle at 28% 0%, rgba(239, 200, 116, 0.15), transparent 18%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.98), rgba(0, 0, 0, 0.9) 68%, rgba(0, 0, 0, 0.18));
+  box-shadow: none;
+  pointer-events: auto;
+}
+
+.pixel-lux-hero .pixel-header-shell {
+  width: 100%;
+  max-width: 1500px;
+  height: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  gap: clamp(10px, 1.05vw, 20px);
+  padding: clamp(14px, 1.35vw, 26px) clamp(24px, 2.35vw, 48px) clamp(10px, 0.9vw, 18px);
+}
+
+.pixel-lux-hero .pixel-header-brand {
+  flex: 0 0 clamp(380px, 24vw, 450px);
+  min-height: clamp(74px, 6.4vw, 120px);
+  grid-template-columns: clamp(58px, 5.3vw, 96px) minmax(0, 1fr);
+  column-gap: clamp(16px, 1.4vw, 28px);
+}
+
+.pixel-lux-hero .pixel-header-logo-mark {
+  width: clamp(54px, 4.6vw, 86px);
+  height: clamp(54px, 4.6vw, 86px);
+  border-width: 2px;
+  box-shadow:
+    0 0 clamp(16px, 1.5vw, 28px) rgba(239, 200, 116, 0.42),
+    inset 0 0 clamp(9px, 0.8vw, 16px) rgba(239, 200, 116, 0.14);
+}
+
+.pixel-lux-hero .pixel-header-brand-kicker {
+  color: #efc874;
+  font-family: var(--font-oswald), var(--font-bebas), "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: clamp(13px, 1.1vw, 21px);
+  letter-spacing: 0.18em;
+  line-height: 1.35;
+}
+
+.pixel-lux-hero .pixel-header-brand-name {
+  margin-top: clamp(8px, 0.65vw, 13px);
+  color: #efc874;
+  font-family: var(--font-oswald), var(--font-bebas), "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: clamp(34px, 2.7vw, 54px);
+  letter-spacing: 0.06em;
+  line-height: 1.18;
+}
+
+.pixel-lux-hero .pixel-header-desktop-nav {
+  gap: clamp(5px, 0.65vw, 14px);
+}
+
+.pixel-lux-hero .pixel-header-menu-group {
+  flex: 0 0 clamp(260px, 24vw, 390px);
+  height: clamp(76px, 7.1vw, 130px);
+  grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1.15fr) 1px minmax(0, 1.1fr);
+  border: 1px solid rgba(216, 180, 106, 0.5);
+  border-radius: clamp(14px, 1.4vw, 26px);
+  box-shadow:
+    inset 0 0 clamp(12px, 1vw, 20px) rgba(239, 200, 116, 0.035),
+    0 0 clamp(14px, 1.15vw, 24px) rgba(216, 180, 106, 0.09);
+}
+
+.pixel-lux-hero .pixel-header-nav-item {
+  flex: 0 0 calc(var(--nav-basis, 50) * var(--header-nav-scale) * 1px);
+  width: calc(var(--nav-basis, 50) * var(--header-nav-scale) * 1px);
+  min-width: clamp(48px, 4vw, 72px);
+  height: clamp(76px, 7.1vw, 130px);
+  padding: clamp(10px, 0.75vw, 14px) clamp(3px, 0.5vw, 9px);
+  transition:
+    color 250ms var(--ease-signature),
+    filter 250ms var(--ease-signature),
+    transform 250ms var(--ease-signature),
+    background 250ms var(--ease-signature),
+    box-shadow 250ms var(--ease-signature);
+}
+
+.pixel-lux-hero .pixel-header-nav-item svg {
+  width: clamp(28px, 2.3vw, 44px);
+  height: clamp(28px, 2.3vw, 44px);
+}
+
+.pixel-lux-hero .pixel-header-nav-label {
+  margin-top: clamp(10px, 0.85vw, 16px);
+  font-family: var(--font-oswald), var(--font-bebas), "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: calc(var(--header-font-size, 16) * var(--header-label-scale) * 1px);
+  letter-spacing: 0.06em;
+  line-height: 1.34;
+}
+
+.pixel-lux-hero .pixel-header-nav-sub {
+  margin-top: clamp(4px, 0.4vw, 8px);
+  font-size: calc(12 * var(--header-label-scale) * 1px);
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+}
+
+.pixel-lux-hero .pixel-header-nav-item[data-active="true"] {
+  background:
+    radial-gradient(circle at 50% 24%, rgba(239, 200, 116, 0.28), transparent 46%),
+    linear-gradient(180deg, rgba(239, 200, 116, 0.16), rgba(239, 200, 116, 0.055));
+  box-shadow:
+    inset 0 0 clamp(24px, 2.2vw, 42px) rgba(239, 200, 116, 0.12),
+    0 0 clamp(16px, 1.5vw, 30px) rgba(239, 200, 116, 0.2);
+}
+
+.pixel-lux-hero .pixel-header-nav-item[data-active="true"]::after {
+  bottom: 0;
+  width: 100%;
+  height: max(3px, 0.22vw);
+}
+
+.pixel-lux-hero .pixel-header-nav-item:hover {
+  transform: translateY(-1px);
+  filter: drop-shadow(0 0 clamp(8px, 0.8vw, 16px) rgba(239, 200, 116, 0.34));
+}
+
+.pixel-lux-content {
+  display: grid;
+  width: min(100% - 128px, 1500px);
+  min-width: 0;
+  align-content: center;
+  justify-items: center;
+  gap: clamp(24px, 2.15vw, 42px);
+  margin: 0 auto;
+  padding: clamp(14px, 1.4vw, 26px) 0 clamp(38px, 3.2vw, 64px);
+  text-align: center;
+  pointer-events: auto;
+}
+
+.pixel-lux-title {
+  margin: 0;
+  max-width: 100%;
+  color: #efc874;
+  font-family: var(--font-bebas), var(--font-oswald), "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: clamp(54px, 6.7vw, 132px);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.08;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow:
+    0 0 clamp(10px, 1vw, 20px) rgba(239, 200, 116, 0.28),
+    0 clamp(4px, 0.4vw, 8px) clamp(16px, 1.4vw, 28px) rgba(0, 0, 0, 0.95);
+}
+
+.pixel-lux-subtitle {
+  margin: calc(-8px + 0.3vw) 0 0;
+  color: #fff8ea;
+  font-family: var(--font-noto-sans-jp), var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: clamp(18px, 1.85vw, 34px);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.8;
+  text-shadow:
+    0 0 clamp(7px, 0.7vw, 14px) rgba(255, 255, 255, 0.16),
+    0 clamp(3px, 0.28vw, 6px) clamp(10px, 0.9vw, 18px) rgba(0, 0, 0, 0.96);
+}
+
+.pixel-lux-actions {
+  display: grid;
+  width: min(100%, 1400px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 1.7vw, 34px);
+  margin-top: clamp(3px, 0.5vw, 10px);
+}
+
+.pixel-lux-action {
+  --lux-border: rgba(216, 180, 106, 0.94);
+  --lux-fill: rgba(216, 180, 106, 0.14);
+  --lux-glow: rgba(216, 180, 106, 0.45);
+  display: flex;
+  min-width: 0;
+  min-height: 80px;
+  height: clamp(80px, 7.2vw, 142px);
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 1.1vw, 20px);
+  overflow: hidden;
+  border: 2px solid var(--lux-border);
+  border-radius: 16px;
+  padding: 16px clamp(18px, 1.6vw, 32px);
+  background:
+    linear-gradient(180deg, rgba(255, 247, 234, 0.08), rgba(255, 247, 234, 0.01) 45%, rgba(0, 0, 0, 0.2)),
+    rgba(5, 5, 4, 0.74),
+    var(--lux-fill);
+  box-shadow:
+    0 0 clamp(12px, 1.4vw, 28px) var(--lux-glow),
+    inset 0 0 clamp(14px, 1.5vw, 30px) rgba(255, 247, 234, 0.045);
+  color: #fff8ea;
+  cursor: pointer;
+  font: inherit;
+  text-align: center;
+  transition:
+    transform 250ms var(--ease-signature),
+    box-shadow 250ms var(--ease-signature),
+    filter 250ms var(--ease-signature);
+}
+
+.pixel-lux-action:hover {
+  transform: scale(1.03);
+  box-shadow:
+    0 0 clamp(20px, 2vw, 40px) var(--lux-glow),
+    inset 0 0 clamp(14px, 1.5vw, 30px) rgba(255, 247, 234, 0.06);
+}
+
+.pixel-lux-action[data-tone="blue"] {
+  --lux-border: rgba(31, 154, 255, 0.96);
+  --lux-fill: rgba(31, 154, 255, 0.1);
+  --lux-glow: rgba(31, 154, 255, 0.36);
+}
+
+.pixel-lux-action[data-tone="green"] {
+  --lux-border: rgba(20, 226, 70, 0.96);
+  --lux-fill: rgba(20, 226, 70, 0.1);
+  --lux-glow: rgba(20, 226, 70, 0.36);
+}
+
+.pixel-lux-action[data-tone="dark"] {
+  --lux-border: rgba(255, 247, 234, 0.72);
+  --lux-fill: rgba(255, 247, 234, 0.03);
+  --lux-glow: rgba(255, 247, 234, 0.22);
+}
+
+.pixel-lux-action-icons {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  color: #fff8ea;
+}
+
+.pixel-lux-action-icons svg {
+  width: clamp(34px, 3.8vw, 70px);
+  height: clamp(34px, 3.8vw, 70px);
+  filter: drop-shadow(0 0 clamp(8px, 0.8vw, 16px) rgba(255, 247, 234, 0.24));
+}
+
+.pixel-lux-action-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff8ea;
+  font-family: var(--font-noto-sans-jp), var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: clamp(21px, 1.85vw, 38px);
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  line-height: 1.32;
+  text-shadow: 0 clamp(2px, 0.22vw, 4px) clamp(8px, 0.75vw, 15px) rgba(0, 0, 0, 0.94);
+  white-space: nowrap;
+}
+
+.pixel-lux-action-copy small {
+  margin-top: clamp(6px, 0.65vw, 12px);
+  color: var(--lux-border);
+  font-family: var(--font-oswald), var(--font-bebas), "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: clamp(14px, 1.22vw, 25px);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.25;
+}
+
+@media (max-width: 1400px) {
+  .pixel-lux-hero .pixel-main-header {
+    --header-label-scale: 0.55;
+    --header-nav-scale: 0.64;
+  }
+
+  .pixel-lux-hero .pixel-header-shell {
+    gap: clamp(4px, 0.45vw, 8px);
+    padding-inline: clamp(16px, 1.7vw, 26px);
+  }
+
+  .pixel-lux-hero .pixel-header-brand {
+    flex-basis: clamp(210px, 19vw, 250px);
+  }
+
+  .pixel-lux-hero .pixel-header-brand-kicker {
+    letter-spacing: 0.14em;
+  }
+
+  .pixel-lux-hero .pixel-header-brand-name {
+    font-size: clamp(27px, 2.5vw, 38px);
+    letter-spacing: 0.08em;
+  }
+
+  .pixel-lux-hero .pixel-header-menu-group {
+    flex-basis: clamp(220px, 22vw, 290px);
+  }
+}
+
+@media (max-width: 1180px) {
+  .pixel-lux-hero .pixel-main-header {
+    --header-label-scale: 0.5;
+    --header-nav-scale: 0.46;
+  }
+
+  .pixel-lux-hero .pixel-header-shell {
+    gap: 3px;
+    padding-inline: clamp(14px, 1.8vw, 22px);
+  }
+
+  .pixel-lux-hero .pixel-header-brand {
+    flex-basis: clamp(172px, 18vw, 205px);
+    grid-template-columns: clamp(42px, 4vw, 54px) minmax(0, 1fr);
+    column-gap: clamp(8px, 0.9vw, 12px);
+  }
+
+  .pixel-lux-hero .pixel-header-logo-mark {
+    width: clamp(40px, 4vw, 54px);
+    height: clamp(40px, 4vw, 54px);
+  }
+
+  .pixel-lux-hero .pixel-header-brand-kicker {
+    font-size: clamp(9px, 0.9vw, 12px);
+  }
+
+  .pixel-lux-hero .pixel-header-brand-name {
+    font-size: clamp(24px, 2.55vw, 31px);
+    letter-spacing: 0.06em;
+  }
+
+  .pixel-lux-hero .pixel-header-menu-group {
+    flex-basis: clamp(172px, 21vw, 220px);
+  }
+
+  .pixel-lux-hero .pixel-header-nav-item {
+    min-width: 34px;
+    height: clamp(58px, 6.2vw, 72px);
+    padding-inline: 1px;
+  }
+
+  .pixel-lux-hero .pixel-header-nav-item svg {
+    width: clamp(17px, 2vw, 24px);
+    height: clamp(17px, 2vw, 24px);
+  }
+
+  .pixel-lux-hero .pixel-header-nav-label {
+    margin-top: clamp(5px, 0.6vw, 8px);
+  }
+
+  .pixel-lux-content {
+    width: min(100% - 56px, 1500px);
+  }
+
+  .pixel-lux-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 960px) {
+  .pixel-lux-hero {
+    min-height: 520px;
+  }
+
+  .pixel-lux-content {
+    width: min(100% - 56px, 1500px);
+    gap: 20px;
+  }
+
+  .pixel-lux-title {
+    font-size: clamp(42px, 7.2vw, 70px);
+    white-space: normal;
+  }
+
+  .pixel-lux-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .pixel-lux-hero {
+    min-height: 620px;
+  }
+
+  .pixel-lux-hero .pixel-main-header {
+    min-height: 82px;
+  }
+
+  .pixel-lux-hero .pixel-header-shell {
+    padding: 12px 14px;
+  }
+
+  .pixel-lux-hero .pixel-header-brand {
+    flex-basis: min(72vw, 230px);
+    min-height: 50px;
+    grid-template-columns: 44px minmax(0, 1fr);
+    column-gap: 12px;
+  }
+
+  .pixel-lux-hero .pixel-header-logo-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .pixel-lux-hero .pixel-header-brand-kicker {
+    font-size: 9px;
+    letter-spacing: 2.2px;
+  }
+
+  .pixel-lux-hero .pixel-header-brand-name {
+    margin-top: 6px;
+    font-size: 24px;
+    letter-spacing: 5px;
+  }
+
+  .pixel-lux-content {
+    width: min(100% - 32px, 1500px);
+    align-content: start;
+    gap: 18px;
+    padding-top: 58px;
+    padding-bottom: 30px;
+  }
+
+  .pixel-lux-title {
+    font-size: clamp(36px, 11vw, 48px);
+    line-height: 1.02;
+  }
+
+  .pixel-lux-subtitle {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .pixel-lux-actions {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .pixel-lux-action {
+    min-height: 76px;
+    height: 76px;
+    border-radius: 14px;
+    padding: 12px 16px;
+  }
+
+  .pixel-lux-action-copy {
+    font-size: 20px;
+  }
+
+  .pixel-lux-action-copy small {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+}
+
 .pixel-hero-cta-band {
   position: absolute;
   left: 0;
@@ -1113,7 +1623,9 @@ body:has(.tsurusen-pixel-home) {
 }
 
 .pixel-dom-text[data-region="header"],
+.pixel-dom-text[data-region="hero"],
 .pixel-dom-text[data-region="about"],
+.pixel-dom-button[data-region="hero"],
 .pixel-dom-button[data-region="about"],
 .pixel-dom-text[data-region="price-entertainment"],
 .pixel-dom-button[data-region="price-entertainment"] {
@@ -1371,6 +1883,8 @@ body:has(.tsurusen-pixel-home) {
   position: absolute;
   z-index: 8;
   overflow: hidden;
+  overflow: clip;
+  contain: paint;
   background: #050504;
 }
 
@@ -2744,6 +3258,8 @@ function TextBlock({ as, text, left, top, width, height, size, lineHeight = 1, t
   const region =
     top < 50
       ? "header"
+      : top < 361
+        ? "hero"
       : top >= 361 && top < 592
         ? "about"
         : top >= 775 && top < 1031
@@ -2770,7 +3286,7 @@ function TextBlock({ as, text, left, top, width, height, size, lineHeight = 1, t
 }
 
 function ActionButton({ href, label, sub, left, top, width, height, tone, icon: Icon, secondaryIcon: SecondaryIcon, row, framed, compact, cleanFill }: PixelButton) {
-  const region = top >= 361 && top < 592 ? "about" : top >= 775 && top < 1031 ? "price-entertainment" : top >= 1418 && top < 1621 ? "event-access-faq" : top >= 1621 ? "cta-footer" : undefined;
+  const region = top < 361 ? "hero" : top >= 361 && top < 592 ? "about" : top >= 775 && top < 1031 ? "price-entertainment" : top >= 1418 && top < 1621 ? "event-access-faq" : top >= 1621 ? "cta-footer" : undefined;
   const style: PixelStyle = {
     ...boxStyle({ left, top, width, height }),
     ...buttonTone(tone),
@@ -2814,28 +3330,26 @@ function CardLink({ href, label, left, top, width, height }: PixelLink) {
 
 function PixelHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const panelWidth = 864;
-  const panelHeight = 92;
   const groupedItems = headerNavItems.filter((item) => item.group === "menu");
   const standaloneItems = headerNavItems.filter((item) => item.group !== "menu");
 
   const itemMetrics = (label: string) => {
     const basisByLabel: Record<string, number> = {
-      HOME: 50,
-      ACCESS: 55,
-      BLOG: 48,
-      CAMPAIGN: 64,
-      ENTERTAINMENT: 82,
-      EVENTS: 50,
-      FAQ: 34,
-      PRICE: 62,
-      "DRINK MENU": 78,
-      "FOOD MENU": 78,
+      HOME: 80,
+      ACCESS: 90,
+      BLOG: 70,
+      CAMPAIGN: 120,
+      ENTERTAINMENT: 150,
+      EVENTS: 86,
+      FAQ: 60,
+      PRICE: 92,
+      "DRINK MENU": 132,
+      "FOOD MENU": 126,
     };
 
     return {
-      basis: basisByLabel[label] ?? 54,
-      labelSize: label.length > 12 ? 6.45 : label.length > 8 ? 7.25 : 8.4,
+      basis: basisByLabel[label] ?? 76,
+      labelSize: label.length > 12 ? 18 : label.length > 8 ? 19.5 : 21,
       tracking: label.length > 12 ? 0.16 : label.length > 8 ? 0.34 : 0.78,
     };
   };
@@ -2873,7 +3387,7 @@ function PixelHeader() {
   };
 
   return (
-    <header className="pixel-main-header" aria-label="Site header" style={boxStyle({ left: 0, top: 0, width: panelWidth, height: panelHeight })}>
+    <header className="pixel-main-header" aria-label="Site header">
       <div className="pixel-header-shell">
         <button type="button" className="pixel-header-brand" aria-label="TSURUSEN home" onClick={() => navigateTo("/")}>
           <span className="pixel-header-logo-mark" aria-hidden="true">
@@ -2909,6 +3423,41 @@ function PixelHeader() {
         </nav>
       </div>
     </header>
+  );
+}
+
+function PixelHero() {
+  return (
+    <section className="pixel-lux-hero" aria-labelledby="pixel-lux-title">
+      <PixelHeader />
+      <div className="pixel-lux-content">
+        <h1 id="pixel-lux-title" className="pixel-lux-title">
+          LET&apos;S PLAY TONIGHT.
+        </h1>
+        <p className="pixel-lux-subtitle">今夜はTSURUSENで最高の時間を。</p>
+        <div className="pixel-lux-actions" aria-label="Reserve actions">
+          {heroActions.map((action) => {
+            const Icon = action.icon;
+            const SecondaryIcon = action.secondaryIcon;
+
+            return (
+              <button key={action.label} type="button" className="pixel-lux-action" data-tone={action.tone} onClick={() => navigateTo(action.href)} aria-label={action.label}>
+                {Icon || SecondaryIcon ? (
+                  <span className="pixel-lux-action-icons" aria-hidden="true">
+                    {Icon ? <Icon strokeWidth={2} /> : null}
+                    {SecondaryIcon ? <SecondaryIcon strokeWidth={2} /> : null}
+                  </span>
+                ) : null}
+                <span className="pixel-lux-action-copy">
+                  {action.label}
+                  <small>{action.sub}</small>
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -3189,7 +3738,7 @@ export function TsurusenPixelHome() {
           <span key={anchor.id} id={anchor.id} className="pixel-anchor" style={{ top: yPct(anchor.top) }} />
         ))}
 
-        <PixelHeader />
+        <PixelHero />
 
         {textBlocks.map((block) => (
           <TextBlock key={`${block.text}-${block.left}-${block.top}`} {...block} />
