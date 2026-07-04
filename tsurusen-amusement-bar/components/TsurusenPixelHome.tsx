@@ -1,7 +1,7 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
-import { useState, type CSSProperties } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import {
   Aperture,
   CalendarDays,
@@ -248,20 +248,6 @@ const socialReviews: SocialReviewItem[] = [
     avatarSrc: "/assets/tsurusen-entertainment/png/perfect-gokon.png",
     avatarPosition: "48% 17%",
   },
-];
-
-const anchorTargets = [
-  { id: "about", top: 361 },
-  { id: "feature", top: 592 },
-  { id: "price", top: 775 },
-  { id: "play", top: 775 },
-  { id: "scene", top: 1031 },
-  { id: "gallery", top: 1181 },
-  { id: "reviews", top: 1181 },
-  { id: "event", top: 1418 },
-  { id: "access", top: 1418 },
-  { id: "faq", top: 1418 },
-  { id: "reserve", top: 1621 },
 ];
 
 const actionButtons: PixelButton[] = [
@@ -535,7 +521,8 @@ body:has(.tsurusen-pixel-home) {
   max-width: 100%;
   overflow-x: hidden;
   overflow-x: clip;
-  contain: paint;
+  overflow-y: visible;
+  contain: layout style;
   background: #090807;
   color: #f6f0e6;
   -webkit-font-smoothing: antialiased;
@@ -558,9 +545,8 @@ body:has(.tsurusen-pixel-home) {
   max-width: 100%;
   aspect-ratio: 864 / 1821;
   min-height: 1px;
-  overflow: hidden;
-  overflow: clip;
-  contain: paint;
+  overflow: visible;
+  contain: layout style;
   background: #090807;
   isolation: isolate;
 }
@@ -3573,7 +3559,7 @@ body:has(.tsurusen-pixel-home) {
   min-width: 0;
   max-width: 100%;
   flex-direction: column;
-  gap: calc(5.1 * 0.1157407407vw);
+  gap: calc(4.2 * 0.1157407407vw);
   overflow: hidden;
 }
 
@@ -3591,10 +3577,10 @@ body:has(.tsurusen-pixel-home) {
   overflow: hidden;
   color: #fff8ea;
   font-family: var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
-  font-size: calc(7.3 * 0.1157407407vw);
+  font-size: calc(6.8 * 0.1157407407vw);
   font-weight: 900;
   letter-spacing: calc(0.45 * 0.1157407407vw);
-  line-height: 1.15;
+  line-height: 1.1;
   white-space: nowrap;
 }
 
@@ -3608,7 +3594,7 @@ body:has(.tsurusen-pixel-home) {
 
 .pixel-cf-column[data-kind="address"] .pixel-cf-column-item,
 .pixel-cf-column[data-kind="hours"] .pixel-cf-column-item {
-  font-size: calc(6.7 * 0.1157407407vw);
+  font-size: calc(6.3 * 0.1157407407vw);
   letter-spacing: calc(0.15 * 0.1157407407vw);
 }
 
@@ -4382,6 +4368,311 @@ body:has(.tsurusen-pixel-home) {
   border: max(1px, calc(1.7 * 0.1157407407vw)) solid currentColor;
   border-radius: calc(6 * 0.1157407407vw);
 }
+
+@media (max-width: 900px) {
+  body:has(.tsurusen-pixel-home) {
+    overflow-y: auto;
+  }
+
+  .tsurusen-pixel-home {
+    overflow-y: visible;
+    contain: none;
+  }
+
+  .tsurusen-pixel-stage {
+    display: flex;
+    height: auto;
+    min-height: 100dvh;
+    flex-direction: column;
+    aspect-ratio: auto;
+    overflow: visible;
+    contain: none;
+  }
+
+  .pixel-slice-image {
+    display: none;
+  }
+
+  .pixel-slice-image:first-child {
+    display: block;
+    top: 0 !important;
+    height: 620px !important;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .pixel-feature-section-bg,
+  .pixel-hero-cta-band,
+  .pixel-icon-layer,
+  .pixel-card-link {
+    display: none;
+  }
+
+  .pixel-about-panel,
+  .pixel-eaf-panel,
+  .pixel-cf-panel {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: min(calc(100% - 32px), 900px) !important;
+    margin-right: auto;
+    margin-left: auto;
+    flex: 0 0 auto;
+  }
+
+  .pixel-about-panel {
+    height: clamp(320px, 74vw, 520px) !important;
+    margin-top: 28px;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+
+  .pixel-eaf-panel {
+    display: flex;
+    height: auto !important;
+    min-height: 0;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 56px;
+    overflow: visible;
+    border-radius: 18px;
+    padding: 24px;
+    pointer-events: auto;
+  }
+
+  .pixel-eaf-panel > * {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+  }
+
+  .pixel-eaf-heading {
+    height: auto !important;
+    justify-content: center;
+    gap: 14px;
+    order: 1;
+  }
+
+  .pixel-eaf-heading:nth-child(2) {
+    order: 4;
+    margin-top: 18px;
+  }
+
+  .pixel-eaf-heading:nth-child(3) {
+    order: 7;
+    margin-top: 18px;
+  }
+
+  .pixel-eaf-heading-title {
+    font-size: clamp(30px, 8vw, 46px);
+    letter-spacing: 0.08em;
+  }
+
+  .pixel-eaf-heading-line {
+    height: 1px;
+  }
+
+  .pixel-eaf-event-card {
+    height: clamp(280px, 72vw, 360px) !important;
+    order: 2;
+    border-radius: 14px;
+    pointer-events: auto;
+  }
+
+  .pixel-eaf-event-copy {
+    justify-content: center;
+    padding: 12px;
+  }
+
+  .pixel-eaf-event-title {
+    font-size: clamp(22px, 6vw, 30px);
+    letter-spacing: 0.04em;
+  }
+
+  .pixel-eaf-event-subtitle,
+  .pixel-eaf-event-date,
+  .pixel-eaf-event-time {
+    font-size: clamp(15px, 4.2vw, 20px);
+    letter-spacing: 0.04em;
+  }
+
+  .pixel-eaf-button {
+    height: 72px !important;
+    min-height: 72px;
+    border-radius: 14px;
+    font-size: clamp(18px, 4.8vw, 24px);
+    letter-spacing: 0.08em;
+  }
+
+  .pixel-eaf-button:first-of-type {
+    order: 3;
+  }
+
+  .pixel-eaf-button:last-of-type {
+    order: 9;
+  }
+
+  .pixel-eaf-button small {
+    font-size: 13px;
+  }
+
+  .pixel-eaf-map-media {
+    height: clamp(220px, 58vw, 320px) !important;
+    order: 5;
+    border-radius: 14px;
+  }
+
+  .pixel-eaf-access-list {
+    height: auto !important;
+    order: 6;
+    gap: 0;
+  }
+
+  .pixel-eaf-access-row {
+    min-height: 54px;
+    grid-template-columns: 28px minmax(0, 1fr);
+    column-gap: 12px;
+    padding: 10px 0;
+  }
+
+  .pixel-eaf-access-row svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .pixel-eaf-access-row span {
+    font-size: clamp(14px, 3.7vw, 18px);
+    line-height: 1.55;
+  }
+
+  .pixel-eaf-faq-list {
+    height: auto !important;
+    order: 8;
+    gap: 10px;
+  }
+
+  .pixel-eaf-faq-row {
+    min-height: 56px;
+    grid-template-columns: minmax(0, 1fr) 24px;
+    border-radius: 12px;
+    padding: 0 16px;
+    font-size: clamp(15px, 4vw, 19px);
+    letter-spacing: 0.04em;
+    white-space: normal;
+  }
+
+  .pixel-eaf-faq-row svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .pixel-cf-panel {
+    display: flex;
+    height: auto !important;
+    min-height: 0;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    padding: 32px 24px;
+    pointer-events: auto;
+  }
+
+  .pixel-cf-panel > *:not(.pixel-cf-footer-shade) {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .pixel-cf-footer-shade {
+    top: 48% !important;
+    height: 52% !important;
+  }
+
+  .pixel-cf-title {
+    font-size: clamp(42px, 11vw, 74px);
+    line-height: 1.05;
+    white-space: normal;
+  }
+
+  .pixel-cf-subtitle {
+    font-size: clamp(16px, 4.2vw, 22px);
+    line-height: 1.55;
+    white-space: normal;
+  }
+
+  .pixel-cf-button {
+    height: 72px !important;
+    min-height: 72px;
+    border-radius: 14px;
+    font-size: clamp(18px, 4.8vw, 24px);
+  }
+
+  .pixel-cf-button small {
+    font-size: 13px;
+  }
+
+  .pixel-cf-brand {
+    margin-top: 10px;
+  }
+
+  .pixel-cf-logo-mark {
+    width: 64px;
+    height: 64px;
+  }
+
+  .pixel-cf-brand-kicker {
+    font-size: 13px;
+    letter-spacing: 0.12em;
+  }
+
+  .pixel-cf-brand-name {
+    font-size: 32px;
+    letter-spacing: 0.12em;
+  }
+
+  .pixel-cf-column {
+    align-items: center;
+    text-align: center;
+  }
+
+  .pixel-cf-column-title {
+    font-size: 20px;
+    letter-spacing: 0.12em;
+  }
+
+  .pixel-cf-column-rule {
+    width: 96px;
+    height: 1px;
+    margin: 10px auto 8px;
+  }
+
+  .pixel-cf-column-items {
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pixel-cf-column-item,
+  .pixel-cf-column[data-kind="address"] .pixel-cf-column-item,
+  .pixel-cf-column[data-kind="hours"] .pixel-cf-column-item {
+    justify-content: center;
+    font-size: 15px;
+    line-height: 1.5;
+    white-space: normal;
+  }
+
+  .pixel-cf-copyright {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: normal;
+  }
+}
 `;
 
 const xPct = (value: number) => `${(value / designWidth) * 100}%`;
@@ -4677,7 +4968,7 @@ function AboutSection() {
   const panelHeight = 214;
 
   return (
-    <section className="pixel-about-panel" aria-labelledby="about-heading" style={boxStyle({ left: 30, top: 374, width: 804, height: 214 })}>
+    <section id="about" className="pixel-about-panel" aria-labelledby="about-heading" style={boxStyle({ left: 30, top: 374, width: 804, height: 214 })}>
       <div className="pixel-about-copy" style={innerBoxStyle({ left: 100, top: 38, width: 300, height: 132 }, panelWidth, panelHeight)}>
         <p className="pixel-about-kicker">ABOUT</p>
         <h2 id="about-heading" className="pixel-about-title">
@@ -4709,7 +5000,7 @@ function CoreSections() {
   return (
     <section className="pixel-core-sections" aria-label="Feature Price Entertainment Scene">
       <div className="pixel-core-inner">
-        <section className="pixel-core-section" aria-label="FEATURE">
+        <section id="feature" className="pixel-core-section" aria-label="FEATURE">
           <CoreSectionTitle>FEATURE</CoreSectionTitle>
           <div className="pixel-core-feature-grid">
             {coreFeatureItems.map((item) => {
@@ -4727,7 +5018,7 @@ function CoreSections() {
         </section>
 
         <div className="pixel-core-duo-grid">
-          <section className="pixel-core-price-panel" aria-label="PRICE SYSTEM">
+          <section id="price" className="pixel-core-price-panel" aria-label="PRICE SYSTEM">
             <CoreSectionTitle>PRICE SYSTEM</CoreSectionTitle>
             <div className="pixel-core-price-cards">
               {corePriceCards.map((card) => (
@@ -4758,7 +5049,7 @@ function CoreSections() {
             </button>
           </section>
 
-          <section className="pixel-core-ent-panel" aria-label="ENTERTAINMENT">
+          <section id="play" className="pixel-core-ent-panel" aria-label="ENTERTAINMENT">
             <CoreSectionTitle>ENTERTAINMENT</CoreSectionTitle>
             <div className="pixel-core-ent-rows">
               {coreEntertainmentItems.map((item) => {
@@ -4782,7 +5073,7 @@ function CoreSections() {
           </section>
         </div>
 
-        <section className="pixel-core-section" aria-label="SCENE">
+        <section id="scene" className="pixel-core-section" aria-label="SCENE">
           <CoreSectionTitle>SCENE</CoreSectionTitle>
           <div className="pixel-core-scene-grid">
             {coreSceneItems.map((item) => (
@@ -4814,9 +5105,9 @@ function SocialProofSections() {
   const socialSlice = `${assetBase}/section-06-instagram-reviews-textless-ai.webp`;
 
   return (
-    <section className="pixel-social-sections" aria-label="Instagram and Google Reviews">
+    <section id="reviews" className="pixel-social-sections" aria-label="Instagram and Google Reviews">
       <div className="pixel-social-inner">
-        <section className="pixel-social-column" aria-labelledby="pixel-social-instagram-title">
+        <section id="gallery" className="pixel-social-column" aria-labelledby="pixel-social-instagram-title">
           <h2 id="pixel-social-instagram-title" className="pixel-social-title">
             INSTAGRAM
           </h2>
@@ -4893,7 +5184,7 @@ function EventAccessFaqSection() {
   );
 
   return (
-    <section className="pixel-eaf-panel" aria-label="Event Access FAQ" style={boxStyle({ left: 2, top: 1418, width: 860, height: 203 })}>
+    <section id="event" className="pixel-eaf-panel" aria-label="Event Access FAQ" style={boxStyle({ left: 2, top: 1418, width: 860, height: 203 })}>
       {heading("EVENT", 16, 318)}
       {heading("ACCESS", 348, 224)}
       {heading("FAQ", 590, 250)}
@@ -4918,7 +5209,7 @@ function EventAccessFaqSection() {
         <small>VIEW MORE</small>
       </button>
 
-      <div className="pixel-eaf-map-media" aria-hidden="true" style={innerBoxStyle({ left: 360, top: 53, width: 210, height: 74 }, panelWidth, panelHeight)}>
+      <div id="access" className="pixel-eaf-map-media" aria-hidden="true" style={innerBoxStyle({ left: 360, top: 53, width: 210, height: 74 }, panelWidth, panelHeight)}>
         <img src={sliceSrc} alt="" draggable={false} width={designWidth} height={203} loading="lazy" decoding="async" style={sliceCropStyle({ x: 352, y: 5, width: 104, height: 72 })} />
       </div>
 
@@ -4934,7 +5225,7 @@ function EventAccessFaqSection() {
         })}
       </div>
 
-      <div className="pixel-eaf-faq-list" style={innerBoxStyle({ left: 594, top: 52, width: 246, height: 125 }, panelWidth, panelHeight)}>
+      <div id="faq" className="pixel-eaf-faq-list" style={innerBoxStyle({ left: 594, top: 52, width: 246, height: 125 }, panelWidth, panelHeight)}>
         {faqItems.map((item) => (
           <div key={item} className="pixel-eaf-faq-row">
             <span>{item}</span>
@@ -4956,7 +5247,7 @@ function CtaFooterSection() {
   const panelHeight = 189;
 
   return (
-    <section className="pixel-cf-panel" aria-label="Reserve and footer" style={boxStyle({ left: 5, top: 1626, width: panelWidth, height: panelHeight })}>
+    <section id="reserve" className="pixel-cf-panel" aria-label="Reserve and footer" style={boxStyle({ left: 5, top: 1626, width: panelWidth, height: panelHeight })}>
       <div className="pixel-cf-footer-shade" aria-hidden="true" />
 
       <h2 className="pixel-cf-title" style={innerBoxStyle({ left: 202, top: 27, width: 450, height: 43 }, panelWidth, panelHeight)}>
@@ -5022,6 +5313,26 @@ function CtaFooterSection() {
 }
 
 export function TsurusenPixelHome() {
+  useEffect(() => {
+    const scrollToHashTarget = () => {
+      const id = decodeURIComponent(window.location.hash.replace(/^#/, ""));
+      if (!id) return;
+
+      const target = document.getElementById(id);
+      if (!target) return;
+
+      target.scrollIntoView({ block: "start", inline: "nearest" });
+    };
+
+    const timers = [0, 240, 900].map((delay) => window.setTimeout(scrollToHashTarget, delay));
+    window.addEventListener("hashchange", scrollToHashTarget);
+
+    return () => {
+      timers.forEach((timer) => window.clearTimeout(timer));
+      window.removeEventListener("hashchange", scrollToHashTarget);
+    };
+  }, []);
+
   return (
     <div className="tsurusen-pixel-home" id="top">
       <style>{runtimeCss}</style>
@@ -5045,10 +5356,6 @@ export function TsurusenPixelHome() {
 
         <div className="pixel-hero-cta-band" aria-hidden="true" />
         <div className="pixel-feature-section-bg" aria-hidden="true" style={boxStyle({ left: 0, top: 592, width: 864, height: 183 })} />
-
-        {anchorTargets.map((anchor) => (
-          <span key={anchor.id} id={anchor.id} className="pixel-anchor" style={{ top: yPct(anchor.top) }} />
-        ))}
 
         <PixelHero />
 
