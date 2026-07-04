@@ -20,7 +20,6 @@ import {
   Mic2,
   MoonStar,
   Phone,
-  Plus,
   Star,
   Tag,
   Target,
@@ -4673,6 +4672,748 @@ body:has(.tsurusen-pixel-home) {
     white-space: normal;
   }
 }
+
+/* Event / Access / FAQ / Footer finish pass */
+.pixel-eaf-panel,
+.pixel-cf-panel {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0;
+  overflow: visible;
+  contain: none;
+  pointer-events: auto;
+  color: #fff8ea;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  font-feature-settings: "kern";
+}
+
+.pixel-eaf-panel {
+  z-index: 17;
+  margin-top: clamp(1160px, 122vw, 2500px);
+  border: 0;
+  border-radius: 0;
+  background:
+    radial-gradient(circle at 20% 35%, rgba(216, 176, 83, 0.04), transparent 28%),
+    radial-gradient(circle at 72% 42%, rgba(216, 176, 83, 0.035), transparent 24%),
+    #050505;
+  box-shadow: none;
+  padding: clamp(72px, 5.2vw, 96px) clamp(24px, 3vw, 48px) clamp(56px, 4vw, 78px);
+}
+
+.pixel-eaf-grid {
+  display: grid;
+  max-width: 1500px;
+  margin: 0 auto;
+  grid-template-columns: 1.1fr 0.9fr 1fr;
+  align-items: stretch;
+  gap: clamp(28px, 3vw, 48px);
+}
+
+.pixel-eaf-column {
+  display: grid;
+  min-width: 0;
+  grid-template-rows: auto 1fr;
+  gap: 18px;
+}
+
+.pixel-eaf-heading {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  z-index: 1;
+  display: flex;
+  width: 100% !important;
+  height: auto !important;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  pointer-events: none;
+}
+
+.pixel-eaf-heading-title {
+  margin: 0;
+  flex: 0 0 auto;
+  color: #d8b15a;
+  font-family: "Bebas Neue", "Oswald", "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: clamp(42px, 3vw, 52px);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(216, 177, 90, 0.25);
+  white-space: nowrap;
+}
+
+.pixel-eaf-heading-line {
+  display: block;
+  width: min(120px, 28%);
+  height: 2px;
+  flex: 1 1 64px;
+  background: linear-gradient(90deg, transparent, rgba(216, 177, 90, 0.9), transparent);
+}
+
+.pixel-eaf-card-shell {
+  display: flex;
+  min-width: 0;
+  min-height: 600px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  border: 1px solid rgba(210, 170, 80, 0.55);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 52% 0%, rgba(216, 176, 83, 0.05), transparent 42%),
+    linear-gradient(180deg, rgba(15, 15, 14, 0.98), rgba(5, 5, 5, 0.98));
+  box-shadow:
+    inset 0 0 26px rgba(216, 176, 83, 0.035),
+    0 0 22px rgba(216, 176, 83, 0.08);
+  padding: 24px;
+}
+
+.pixel-eaf-event-grid {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.pixel-eaf-event-card {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  display: grid;
+  width: 100% !important;
+  height: 360px !important;
+  min-width: 0;
+  grid-template-rows: 150px minmax(0, 1fr);
+  border: 1px solid rgba(210, 170, 80, 0.46);
+  border-radius: 18px;
+  background: #0b0b0b;
+  box-shadow: 0 0 20px rgba(216, 176, 83, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pixel-eaf-event-card:hover {
+  border-color: rgba(216, 177, 90, 0.86);
+  box-shadow: 0 0 30px rgba(212, 176, 83, 0.28);
+  transform: translateY(-6px);
+}
+
+.pixel-eaf-card-media,
+.pixel-eaf-map-media {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  overflow: hidden;
+  overflow: clip;
+  contain: paint;
+  background: #050504;
+}
+
+.pixel-eaf-card-media {
+  display: block;
+  height: 150px !important;
+  border-bottom: 1px solid rgba(210, 170, 80, 0.28);
+}
+
+.pixel-eaf-card-media::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 44%, rgba(5, 5, 5, 0.78));
+  content: "";
+}
+
+.pixel-eaf-card-media img,
+.pixel-eaf-map-media img {
+  position: absolute;
+  display: block;
+  height: auto;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+.pixel-eaf-event-copy {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  display: flex;
+  width: 100% !important;
+  min-width: 0;
+  height: 100% !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px 14px 20px;
+  color: #fff8ea;
+  text-align: center;
+}
+
+.pixel-eaf-event-title,
+.pixel-eaf-event-subtitle,
+.pixel-eaf-event-date,
+.pixel-eaf-event-time {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-wrap: balance;
+}
+
+.pixel-eaf-event-title {
+  color: #fff8ea;
+  font-family: "Bebas Neue", "Oswald", "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: clamp(20px, 1.35vw, 24px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+}
+
+.pixel-eaf-event-subtitle {
+  font-size: clamp(17px, 1.2vw, 21px);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.pixel-eaf-card-rule {
+  display: block;
+  width: 78%;
+  height: 1px;
+  margin: 2px 0;
+  background: linear-gradient(90deg, transparent, rgba(216, 177, 90, 0.75), transparent);
+}
+
+.pixel-eaf-event-date {
+  color: #efc874;
+  font-family: "Bebas Neue", "Oswald", "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: clamp(18px, 1.25vw, 21px);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+}
+
+.pixel-eaf-event-time {
+  font-size: clamp(17px, 1.15vw, 20px);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+}
+
+.pixel-eaf-button {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  display: flex;
+  width: min(100%, 360px) !important;
+  height: 72px !important;
+  min-height: 72px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  gap: 4px;
+  border: 1px solid rgba(216, 177, 90, 0.82);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 50% 100%, rgba(216, 177, 90, 0.13), transparent 64%),
+    rgba(5, 5, 5, 0.72);
+  box-shadow:
+    inset 0 0 18px rgba(216, 177, 90, 0.045),
+    0 0 18px rgba(216, 177, 90, 0.08);
+  color: #fff8ea;
+  cursor: pointer;
+  font-family: "Noto Sans JP", var(--font-manrope), sans-serif;
+  font-size: clamp(19px, 1.5vw, 24px);
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.pixel-eaf-button small {
+  color: #efc874;
+  font-family: "Bebas Neue", "Oswald", "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1;
+}
+
+.pixel-eaf-button:hover {
+  border-color: rgba(245, 205, 112, 0.98);
+  box-shadow: 0 0 24px rgba(212, 176, 83, 0.35);
+  transform: scale(1.03);
+}
+
+.pixel-eaf-access-card {
+  gap: 28px;
+}
+
+.pixel-eaf-map-media {
+  height: 260px !important;
+  border: 1px solid rgba(210, 170, 80, 0.55);
+  border-radius: 16px;
+  box-shadow: inset 0 0 22px rgba(0, 0, 0, 0.5);
+}
+
+.pixel-eaf-access-list {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  display: flex;
+  width: 100% !important;
+  height: auto !important;
+  min-width: 0;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.pixel-eaf-access-row {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 28px minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+  color: #fff8ea;
+  font-family: "Noto Sans JP", var(--font-manrope), sans-serif;
+  font-size: clamp(20px, 1.5vw, 26px);
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.pixel-eaf-access-row svg {
+  width: 28px;
+  height: 28px;
+  margin-top: 0.24em;
+  color: #d8b15a;
+  filter: drop-shadow(0 0 8px rgba(216, 177, 90, 0.22));
+}
+
+.pixel-eaf-faq-card {
+  gap: 24px;
+}
+
+.pixel-eaf-faq-list {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  display: flex;
+  width: 100% !important;
+  height: auto !important;
+  min-width: 0;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pixel-eaf-faq-row {
+  display: block;
+  min-height: 72px !important;
+  flex: 0 0 auto !important;
+  min-width: 0;
+  padding: 0 !important;
+  border: 1px solid rgba(210, 170, 80, 0.6);
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(18, 18, 17, 0.96), rgba(8, 8, 7, 0.96));
+  color: #fff8ea;
+  overflow: hidden;
+  white-space: normal !important;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.pixel-eaf-faq-row:hover,
+.pixel-eaf-faq-row[open] {
+  border-color: rgba(245, 205, 112, 0.92);
+  box-shadow: 0 0 18px rgba(212, 176, 83, 0.22);
+}
+
+.pixel-eaf-faq-row summary {
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 0 28px;
+  cursor: pointer;
+  font-family: "Noto Sans JP", var(--font-manrope), sans-serif;
+  font-size: clamp(18px, 1.35vw, 24px);
+  font-weight: 800;
+  line-height: 1.35;
+  list-style: none;
+  text-wrap: balance;
+}
+
+.pixel-eaf-faq-row summary::-webkit-details-marker {
+  display: none;
+}
+
+.pixel-eaf-faq-row summary span {
+  display: block !important;
+  height: auto !important;
+  min-width: 0;
+  overflow: visible !important;
+  color: #fff8ea;
+  line-height: 1.35;
+}
+
+.pixel-eaf-faq-row svg {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 auto;
+  color: #d8b15a;
+  transform: rotate(90deg);
+  transition: transform 0.25s ease;
+}
+
+.pixel-eaf-faq-row[open] svg {
+  transform: rotate(-90deg);
+}
+
+.pixel-eaf-faq-row p {
+  margin: 0;
+  padding: 0 28px 22px;
+  color: rgba(255, 248, 234, 0.84);
+  font-size: clamp(15px, 1.1vw, 18px);
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.pixel-cf-panel {
+  z-index: 17;
+  margin-top: 0;
+  border: 0;
+  border-top: 1px solid rgba(210, 170, 80, 0.72);
+  border-radius: 0;
+  background:
+    radial-gradient(circle at 12% 6%, rgba(216, 176, 83, 0.05), transparent 24%),
+    #050505;
+  box-shadow: none;
+  padding: clamp(48px, 4.2vw, 72px) clamp(24px, 3vw, 48px) clamp(160px, 8vw, 220px);
+}
+
+.pixel-cf-inner {
+  display: grid;
+  max-width: 1500px;
+  margin: 0 auto;
+  grid-template-columns: 1.35fr 0.82fr 0.72fr 0.92fr 1.3fr 1.32fr;
+  gap: clamp(24px, 2.4vw, 44px);
+  align-items: start;
+}
+
+.pixel-cf-footer-shade,
+.pixel-cf-title,
+.pixel-cf-subtitle,
+.pixel-cf-button {
+  display: none !important;
+}
+
+.pixel-cf-brand,
+.pixel-cf-column,
+.pixel-cf-copyright {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.pixel-cf-brand {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 74px minmax(0, 1fr);
+  grid-template-areas:
+    "logo kicker"
+    "logo name";
+  column-gap: 16px;
+  align-items: center;
+  justify-content: start;
+  color: #d8b15a;
+  text-align: left;
+}
+
+.pixel-cf-logo-mark {
+  display: grid;
+  width: 74px;
+  height: 74px;
+  grid-area: logo;
+  place-items: center;
+  border: 2px solid rgba(216, 177, 90, 0.9);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(216, 177, 90, 0.16), transparent 60%);
+  box-shadow: 0 0 22px rgba(216, 177, 90, 0.18);
+}
+
+.pixel-cf-logo-mark::before,
+.pixel-cf-logo-mark::after {
+  display: none !important;
+}
+
+.pixel-cf-logo-mark svg {
+  width: 48px;
+  height: 48px;
+}
+
+.pixel-cf-brand-kicker,
+.pixel-cf-brand-name {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  font-family: "Bebas Neue", "Oswald", "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pixel-cf-brand-kicker {
+  grid-area: kicker;
+  align-self: end;
+  font-size: clamp(18px, 1.25vw, 24px);
+  letter-spacing: 0.14em;
+}
+
+.pixel-cf-brand-name {
+  grid-area: name;
+  align-self: start;
+  margin-top: 10px;
+  overflow: visible;
+  font-size: clamp(34px, 2.2vw, 46px);
+  letter-spacing: 0.1em;
+}
+
+.pixel-cf-column {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff8ea;
+  font-family: "Noto Sans JP", var(--font-manrope), sans-serif;
+}
+
+.pixel-cf-column-title {
+  display: block;
+  color: #d8b15a;
+  font-family: "Bebas Neue", "Oswald", "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: clamp(22px, 1.55vw, 28px);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pixel-cf-column-rule {
+  display: block;
+  width: 96px;
+  height: 1px;
+  margin: 14px 0 18px;
+  background: linear-gradient(90deg, rgba(216, 177, 90, 0.88), transparent);
+}
+
+.pixel-cf-column-items {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pixel-cf-column-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pixel-cf-column-link:hover {
+  color: #efc874;
+}
+
+.pixel-cf-column-item {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+  color: #fff8ea;
+  font-size: clamp(16px, 1.05vw, 20px);
+  font-weight: 700;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.pixel-cf-column-item svg {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+}
+
+.pixel-cf-column[data-kind="address"] .pixel-cf-column-item,
+.pixel-cf-column[data-kind="hours"] .pixel-cf-column-item {
+  color: #efc874;
+  font-size: clamp(17px, 1.1vw, 21px);
+  line-height: 1.65;
+}
+
+.pixel-cf-copyright {
+  grid-column: 1 / -1;
+  margin: 20px 0 0;
+  color: rgba(255, 248, 234, 0.72);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  white-space: normal;
+}
+
+@media (max-width: 1180px) {
+  .pixel-eaf-panel {
+    margin-top: clamp(980px, 128vw, 1520px);
+  }
+
+  .pixel-eaf-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pixel-eaf-faq {
+    grid-column: 1 / -1;
+  }
+
+  .pixel-cf-inner {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pixel-cf-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 900px) {
+  .pixel-eaf-panel {
+    width: 100% !important;
+    margin-top: 56px;
+    padding: 72px 24px 64px;
+  }
+
+  .pixel-cf-panel {
+    width: 100% !important;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 52px 24px 36px;
+  }
+
+  .pixel-eaf-card-shell {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .pixel-eaf-panel {
+    padding: 56px 16px 52px;
+  }
+
+  .pixel-eaf-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .pixel-eaf-faq {
+    grid-column: auto;
+  }
+
+  .pixel-eaf-heading {
+    gap: 16px;
+  }
+
+  .pixel-eaf-heading-title {
+    font-size: clamp(36px, 12vw, 46px);
+  }
+
+  .pixel-eaf-heading-line {
+    width: min(72px, 22%);
+    flex-basis: 48px;
+  }
+
+  .pixel-eaf-card-shell {
+    padding: 18px;
+  }
+
+  .pixel-eaf-event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pixel-eaf-event-card {
+    height: auto !important;
+    min-height: 360px;
+  }
+
+  .pixel-eaf-map-media {
+    height: 220px !important;
+  }
+
+  .pixel-eaf-access-row {
+    font-size: clamp(17px, 4.3vw, 20px);
+    line-height: 1.65;
+  }
+
+  .pixel-eaf-faq-row summary {
+    min-height: 68px;
+    padding: 0 18px;
+    font-size: clamp(16px, 4.2vw, 19px);
+  }
+
+  .pixel-eaf-button {
+    width: 100% !important;
+  }
+
+  .pixel-cf-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .pixel-cf-brand {
+    grid-template-columns: 66px minmax(0, 1fr);
+    column-gap: 16px;
+  }
+
+  .pixel-cf-logo-mark {
+    width: 66px;
+    height: 66px;
+  }
+
+  .pixel-cf-logo-mark svg {
+    width: 44px;
+    height: 44px;
+  }
+
+  .pixel-cf-column-rule {
+    width: 120px;
+  }
+
+  .pixel-cf-copyright {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 901px) {
+  .tsurusen-pixel-home::after {
+    display: block;
+    height: clamp(220px, 12vw, 320px);
+    content: "";
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  .tsurusen-pixel-home::after {
+    height: 760px;
+  }
+}
 `;
 
 const xPct = (value: number) => `${(value / designWidth) * 100}%`;
@@ -5172,143 +5913,216 @@ function SocialProofSections() {
 }
 
 function EventAccessFaqSection() {
-  const panelWidth = 860;
-  const panelHeight = 203;
   const sliceSrc = `${assetBase}/section-07-event-access-faq-textless-ai.webp`;
-  const heading = (label: string, left: number, width: number) => (
-    <div className="pixel-eaf-heading" aria-hidden="true" style={innerBoxStyle({ left, top: 11, width, height: 30 }, panelWidth, panelHeight)}>
-      <span className="pixel-eaf-heading-line" />
-      <span className="pixel-eaf-heading-title">{label}</span>
-      <span className="pixel-eaf-heading-line" />
+  const eventDetails = eventCards.map((card, index) => {
+    const copy = [
+      { title: "DARTS TOURNAMENT", subtitle: "ダーツ大会", date: "2024.06.15 SAT", time: "20:00 START" },
+      { title: "DJ NIGHT", subtitle: "DJ NIGHT", date: "2024.06.22 SAT", time: "22:00 START" },
+      { title: "BIRTHDAY 特典", subtitle: "誕生日の方は特典あり！", date: "詳しくはスタッフまで", time: "" },
+    ][index];
+
+    return { ...card, ...copy };
+  });
+  const accessDetails = accessRows.slice(0, 3).map((row, index) => ({
+    ...row,
+    text: [
+      "〒180-0021 東京都武蔵野区緑町1-XX-XX 緑町ビル6F",
+      "03-XXXX-XXXX",
+      "18:00 - 05:00（L.O. 04:30）",
+    ][index],
+  }));
+  const faqDetails = faqItems.map((_, index) => [
+    "予約は必要ですか？",
+    "貸切は何名から可能ですか？",
+    "飲み放題の内容を教えてください",
+    "支払い方法は？",
+    "持ち込みはできますか？",
+  ][index]);
+
+  const sectionHeading = (id: string, label: string) => (
+    <div className="pixel-eaf-heading">
+      <span className="pixel-eaf-heading-line" aria-hidden="true" />
+      <h2 className="pixel-eaf-heading-title" id={id}>
+        {label}
+      </h2>
+      <span className="pixel-eaf-heading-line" aria-hidden="true" />
     </div>
   );
 
   return (
-    <section id="event" className="pixel-eaf-panel" aria-label="Event Access FAQ" style={boxStyle({ left: 2, top: 1418, width: 860, height: 203 })}>
-      {heading("EVENT", 16, 318)}
-      {heading("ACCESS", 348, 224)}
-      {heading("FAQ", 590, 250)}
-
-      {eventCards.map((card, index) => (
-        <article key={card.title} className="pixel-eaf-event-card" style={innerBoxStyle({ left: 18 + index * 108, top: 53, width: 100, height: 119 }, panelWidth, panelHeight)}>
-          <span className="pixel-eaf-card-media" aria-hidden="true">
-            <img src={sliceSrc} alt="" draggable={false} width={designWidth} height={203} loading="lazy" decoding="async" style={sliceCropStyle(card.crop)} />
-          </span>
-          <span className="pixel-eaf-event-copy">
-            <span className="pixel-eaf-event-title">{card.title}</span>
-            {card.subtitle ? <span className="pixel-eaf-event-subtitle">{card.subtitle}</span> : null}
-            <span className="pixel-eaf-card-rule" aria-hidden="true" />
-            <span className="pixel-eaf-event-date">{card.date}</span>
-            <span className="pixel-eaf-event-time">{card.time}</span>
-          </span>
-        </article>
-      ))}
-
-      <button type="button" className="pixel-eaf-button" onClick={() => navigateTo("/#event")} style={innerBoxStyle({ left: 51, top: 177, width: 278, height: 22 }, panelWidth, panelHeight)}>
-        イベント一覧を見る
-        <small>VIEW MORE</small>
-      </button>
-
-      <div id="access" className="pixel-eaf-map-media" aria-hidden="true" style={innerBoxStyle({ left: 360, top: 53, width: 210, height: 74 }, panelWidth, panelHeight)}>
-        <img src={sliceSrc} alt="" draggable={false} width={designWidth} height={203} loading="lazy" decoding="async" style={sliceCropStyle({ x: 352, y: 5, width: 104, height: 72 })} />
-      </div>
-
-      <div className="pixel-eaf-access-list" style={innerBoxStyle({ left: 365, top: 129, width: 205, height: 68 }, panelWidth, panelHeight)}>
-        {accessRows.map((row) => {
-          const Icon = row.icon;
-          return (
-            <div key={row.text} className="pixel-eaf-access-row">
-              <Icon strokeWidth={1.7} aria-hidden="true" />
-              <span>{row.text}</span>
+    <section id="event" className="pixel-eaf-panel" aria-label="Event Access FAQ">
+      <div className="pixel-eaf-grid">
+        <section className="pixel-eaf-column pixel-eaf-events" aria-labelledby="pixel-eaf-event-title">
+          {sectionHeading("pixel-eaf-event-title", "EVENT")}
+          <div className="pixel-eaf-card-shell pixel-eaf-event-shell">
+            <div className="pixel-eaf-event-grid">
+              {eventDetails.map((card) => (
+                <article key={card.title} className="pixel-eaf-event-card">
+                  <span className="pixel-eaf-card-media" aria-hidden="true">
+                    <img
+                      src={sliceSrc}
+                      alt=""
+                      draggable={false}
+                      width={designWidth}
+                      height={203}
+                      loading="lazy"
+                      decoding="async"
+                      style={sliceCropStyle(card.crop)}
+                    />
+                  </span>
+                  <span className="pixel-eaf-event-copy">
+                    <span className="pixel-eaf-event-title">{card.title}</span>
+                    <span className="pixel-eaf-event-subtitle">{card.subtitle}</span>
+                    <span className="pixel-eaf-card-rule" aria-hidden="true" />
+                    <span className="pixel-eaf-event-date">{card.date}</span>
+                    {card.time ? <span className="pixel-eaf-event-time">{card.time}</span> : null}
+                  </span>
+                </article>
+              ))}
             </div>
-          );
-        })}
-      </div>
-
-      <div id="faq" className="pixel-eaf-faq-list" style={innerBoxStyle({ left: 594, top: 52, width: 246, height: 125 }, panelWidth, panelHeight)}>
-        {faqItems.map((item) => (
-          <div key={item} className="pixel-eaf-faq-row">
-            <span>{item}</span>
-            <Plus strokeWidth={2.2} aria-hidden="true" />
+            <button type="button" className="pixel-eaf-button" onClick={() => navigateTo("/#event")}>
+              <span>イベント一覧を見る</span>
+              <small>VIEW MORE</small>
+            </button>
           </div>
-        ))}
-      </div>
+        </section>
 
-      <button type="button" className="pixel-eaf-button" onClick={() => navigateTo("/#faq")} style={innerBoxStyle({ left: 600, top: 183, width: 234, height: 18 }, panelWidth, panelHeight)}>
-        すべてのFAQを見る
-        <small>VIEW MORE</small>
-      </button>
+        <section id="access" className="pixel-eaf-column pixel-eaf-access" aria-labelledby="pixel-eaf-access-title">
+          {sectionHeading("pixel-eaf-access-title", "ACCESS")}
+          <div className="pixel-eaf-card-shell pixel-eaf-access-card">
+            <div className="pixel-eaf-map-media" aria-hidden="true">
+              <img
+                src={sliceSrc}
+                alt=""
+                draggable={false}
+                width={designWidth}
+                height={203}
+                loading="lazy"
+                decoding="async"
+                style={sliceCropStyle({ x: 352, y: 5, width: 104, height: 72 })}
+              />
+            </div>
+            <div className="pixel-eaf-access-list">
+              {accessDetails.map((row) => {
+                const Icon = row.icon;
+                return (
+                  <div key={row.text} className="pixel-eaf-access-row">
+                    <Icon strokeWidth={1.7} aria-hidden="true" />
+                    <span>{row.text}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" className="pixel-eaf-column pixel-eaf-faq" aria-labelledby="pixel-eaf-faq-title">
+          {sectionHeading("pixel-eaf-faq-title", "FAQ")}
+          <div className="pixel-eaf-card-shell pixel-eaf-faq-card">
+            <div className="pixel-eaf-faq-list">
+              {faqDetails.map((item) => (
+                <details key={item} className="pixel-eaf-faq-row">
+                  <summary>
+                    <span>{item}</span>
+                    <ChevronRight strokeWidth={2.2} aria-hidden="true" />
+                  </summary>
+                  <p>詳細はスタッフまでお気軽にお問い合わせください。</p>
+                </details>
+              ))}
+            </div>
+            <button type="button" className="pixel-eaf-button pixel-eaf-button-faq" onClick={() => navigateTo("/#faq")}>
+              <span>すべてのFAQを見る</span>
+              <small>VIEW MORE</small>
+            </button>
+          </div>
+        </section>
+      </div>
     </section>
   );
 }
 
 function CtaFooterSection() {
-  const panelWidth = 854;
-  const panelHeight = 189;
+  type FooterColumn = (typeof ctaFooterColumns)[number];
+  type FooterItem = { text: string; href?: string; icon?: typeof Camera };
+  const footerColumns: Array<Omit<FooterColumn, "items"> & { items: FooterItem[] }> = ctaFooterColumns.map((column) => {
+    if (column.kind === "information") {
+      return { ...column, items: [{ text: "ABOUT" }, { text: "FEATURE" }, { text: "PRICE" }] };
+    }
+
+    if (column.kind === "scene") {
+      return { ...column, items: [{ text: "GALLERY" }, { text: "EVENT" }] };
+    }
+
+    if (column.kind === "follow") {
+      return {
+        ...column,
+        items: [
+          { text: "INSTAGRAM", icon: Camera, href: "#instagram" },
+          { text: "LINE", href: "#reserve" },
+        ],
+      };
+    }
+
+    if (column.kind === "address") {
+      return {
+        ...column,
+        items: [
+          { text: "東京都武蔵野区緑町1-XX-XX" },
+          { text: "緑町ビル6F" },
+          { text: "03-XXXX-XXXX" },
+        ],
+      };
+    }
+
+    return {
+      ...column,
+      items: [{ text: "18:00 - 05:00（L.O. 04:30）" }, { text: "年中無休" }],
+    };
+  });
 
   return (
-    <section id="reserve" className="pixel-cf-panel" aria-label="Reserve and footer" style={boxStyle({ left: 5, top: 1626, width: panelWidth, height: panelHeight })}>
-      <div className="pixel-cf-footer-shade" aria-hidden="true" />
-
-      <h2 className="pixel-cf-title" style={innerBoxStyle({ left: 202, top: 27, width: 450, height: 43 }, panelWidth, panelHeight)}>
-        LET&apos;S PLAY TONIGHT.
-      </h2>
-      <p className="pixel-cf-subtitle" style={innerBoxStyle({ left: 286, top: 64, width: 282, height: 16 }, panelWidth, panelHeight)}>
-        今夜はTSURUSENで最高の時間を。
-      </p>
-
-      {ctaFooterButtons.map((button) => (
-        <button
-          key={button.label}
-          type="button"
-          className="pixel-cf-button"
-          data-tone={button.tone}
-          onClick={() => navigateTo(button.href)}
-          style={{ ...innerBoxStyle(button, panelWidth, panelHeight), ...buttonTone(button.tone) }}
-        >
-          {button.label}
-          <small>{button.sub}</small>
-        </button>
-      ))}
-
-      <div className="pixel-cf-brand" style={innerBoxStyle({ left: 55, top: 122, width: 128, height: 61 }, panelWidth, panelHeight)}>
-        <span className="pixel-cf-logo-mark" aria-hidden="true">
-          <span className="pixel-cf-logo-stem" />
-        </span>
-        <span className="pixel-cf-brand-kicker">AMUSEMENT BAR</span>
-        <span className="pixel-cf-brand-name">TSURUSEN</span>
-      </div>
-
-      {ctaFooterColumns.map((column) => (
-        <div key={column.title} className="pixel-cf-column" data-kind={column.kind} style={innerBoxStyle(column, panelWidth, panelHeight)}>
-          <span className="pixel-cf-column-title">{column.title}</span>
-          <span className="pixel-cf-column-rule" aria-hidden="true" />
-          <span className="pixel-cf-column-items">
-            {column.items.map((item) => {
-              const Icon = item.icon;
-              const content = (
-                <span className="pixel-cf-column-item">
-                  {Icon ? <Icon strokeWidth={2} aria-hidden="true" /> : null}
-                  <span>{item.text}</span>
-                </span>
-              );
-
-              return item.href ? (
-                <a key={item.text} className="pixel-cf-column-link" href={item.href}>
-                  {content}
-                </a>
-              ) : (
-                <span key={item.text}>{content}</span>
-              );
-            })}
+    <footer id="reserve" className="pixel-cf-panel" aria-label="Footer">
+      <div className="pixel-cf-inner">
+        <div className="pixel-cf-brand">
+          <span className="pixel-cf-logo-mark" aria-hidden="true">
+            <Aperture strokeWidth={1.7} />
           </span>
+          <span className="pixel-cf-brand-kicker">AMUSEMENT BAR</span>
+          <span className="pixel-cf-brand-name">TSURUSEN</span>
         </div>
-      ))}
 
-      <p className="pixel-cf-copyright" style={innerBoxStyle({ left: 354, top: 176, width: 146, height: 9 }, panelWidth, panelHeight)}>
-        © 2024 TSURUSEN. All Rights Reserved.
-      </p>
-    </section>
+        {footerColumns.map((column) => (
+          <div key={column.title} className="pixel-cf-column" data-kind={column.kind}>
+            <span className="pixel-cf-column-title">{column.title}</span>
+            <span className="pixel-cf-column-rule" aria-hidden="true" />
+            <span className="pixel-cf-column-items">
+              {column.items.map((item) => {
+                const Icon = item.icon;
+                const content = (
+                  <span className="pixel-cf-column-item">
+                    {Icon ? <Icon strokeWidth={2} aria-hidden="true" /> : null}
+                    <span>{item.text}</span>
+                  </span>
+                );
+
+                return item.href ? (
+                  <a key={item.text} className="pixel-cf-column-link" href={item.href}>
+                    {content}
+                  </a>
+                ) : (
+                  <span key={item.text}>{content}</span>
+                );
+              })}
+            </span>
+          </div>
+        ))}
+
+        <p className="pixel-cf-copyright">© 2024 TSURUSEN. All Rights Reserved.</p>
+      </div>
+      <span className="pixel-cf-reserve-count" hidden>
+        {ctaFooterButtons.length}
+      </span>
+    </footer>
   );
 }
 
@@ -5321,7 +6135,8 @@ export function TsurusenPixelHome() {
       const target = document.getElementById(id);
       if (!target) return;
 
-      target.scrollIntoView({ block: "start", inline: "nearest" });
+      const top = target.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: Math.max(0, top), left: 0, behavior: "auto" });
     };
 
     const timers = [0, 240, 900, 1800, 3200].map((delay) => window.setTimeout(scrollToHashTarget, delay));
