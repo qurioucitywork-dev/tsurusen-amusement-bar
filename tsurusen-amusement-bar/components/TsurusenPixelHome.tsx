@@ -31,17 +31,17 @@ import {
 
 const designWidth = 864;
 const designHeight = 1821;
-const assetBase = "/assets/tsurusen-home/png";
+const assetBase = "/assets/tsurusen-home/webp";
 
 const textlessSlices = [
-  { src: `${assetBase}/section-01-hero-textless-ai.png`, top: 0, height: 361 },
-  { src: `${assetBase}/section-02-about-textless-ai.png`, top: 361, height: 231 },
-  { src: `${assetBase}/section-03-feature-textless-ai.png`, top: 592, height: 183 },
-  { src: `${assetBase}/section-04-price-entertainment-textless-ai.png`, top: 775, height: 256 },
-  { src: `${assetBase}/section-05-scene-textless-ai.png`, top: 1031, height: 150 },
-  { src: `${assetBase}/section-06-instagram-reviews-textless-ai.png`, top: 1181, height: 237 },
-  { src: `${assetBase}/section-07-event-access-faq-textless-ai.png`, top: 1418, height: 203 },
-  { src: `${assetBase}/section-08-cta-footer-textless-ai.png`, top: 1621, height: 200 },
+  { src: `${assetBase}/section-01-hero-textless-ai.webp`, top: 0, height: 361 },
+  { src: `${assetBase}/section-02-about-textless-ai.webp`, top: 361, height: 231 },
+  { src: `${assetBase}/section-03-feature-textless-ai.webp`, top: 592, height: 183 },
+  { src: `${assetBase}/section-04-price-entertainment-textless-ai.webp`, top: 775, height: 256 },
+  { src: `${assetBase}/section-05-scene-textless-ai.webp`, top: 1031, height: 150 },
+  { src: `${assetBase}/section-06-instagram-reviews-textless-ai.webp`, top: 1181, height: 237 },
+  { src: `${assetBase}/section-07-event-access-faq-textless-ai.webp`, top: 1418, height: 203 },
+  { src: `${assetBase}/section-08-cta-footer-textless-ai.webp`, top: 1621, height: 200 },
 ];
 
 type PixelStyle = CSSProperties & Record<`--${string}`, string | number>;
@@ -751,7 +751,7 @@ body:has(.tsurusen-pixel-home) {
   background:
     linear-gradient(90deg, rgba(0, 0, 0, 0.94), rgba(6, 5, 4, 0.78) 30%, rgba(3, 3, 3, 0.86) 72%, rgba(0, 0, 0, 0.96)),
     linear-gradient(180deg, rgba(255, 245, 213, 0.05), rgba(255, 245, 213, 0) 32%, rgba(0, 0, 0, 0.5)),
-    url("/assets/tsurusen-home/png/section-01-hero-textless-ai.png") center 10% / cover no-repeat,
+    url("/assets/tsurusen-home/webp/section-01-hero-textless-ai.webp") center 10% / cover no-repeat,
     #050504;
 }
 
@@ -1798,7 +1798,7 @@ body:has(.tsurusen-pixel-home) {
   border: max(1px, calc(1.05 * 0.1157407407vw)) solid rgba(171, 126, 52, 0.86);
   border-radius: calc(4 * 0.1157407407vw);
   background-color: #050504;
-  background-image: url("/assets/tsurusen-home/png/section-02-about-textless-ai.png");
+  background-image: url("/assets/tsurusen-home/webp/section-02-about-textless-ai.webp");
   background-position: 75.5% 13.4%;
   background-repeat: no-repeat;
   background-size: 274.4% auto;
@@ -3576,7 +3576,7 @@ function PriceEntertainmentSection() {
 function EventAccessFaqSection() {
   const panelWidth = 860;
   const panelHeight = 203;
-  const sliceSrc = `${assetBase}/section-07-event-access-faq-textless-ai.png`;
+  const sliceSrc = `${assetBase}/section-07-event-access-faq-textless-ai.webp`;
   const heading = (label: string, left: number, width: number) => (
     <div className="pixel-eaf-heading" aria-hidden="true" style={innerBoxStyle({ left, top: 11, width, height: 30 }, panelWidth, panelHeight)}>
       <span className="pixel-eaf-heading-line" />
@@ -3594,7 +3594,7 @@ function EventAccessFaqSection() {
       {eventCards.map((card, index) => (
         <article key={card.title} className="pixel-eaf-event-card" style={innerBoxStyle({ left: 18 + index * 108, top: 53, width: 100, height: 119 }, panelWidth, panelHeight)}>
           <span className="pixel-eaf-card-media" aria-hidden="true">
-            <img src={sliceSrc} alt="" draggable={false} style={sliceCropStyle(card.crop)} />
+            <img src={sliceSrc} alt="" draggable={false} width={designWidth} height={203} loading="lazy" decoding="async" style={sliceCropStyle(card.crop)} />
           </span>
           <span className="pixel-eaf-event-copy">
             <span className="pixel-eaf-event-title">{card.title}</span>
@@ -3612,7 +3612,7 @@ function EventAccessFaqSection() {
       </button>
 
       <div className="pixel-eaf-map-media" aria-hidden="true" style={innerBoxStyle({ left: 360, top: 53, width: 210, height: 74 }, panelWidth, panelHeight)}>
-        <img src={sliceSrc} alt="" draggable={false} style={sliceCropStyle({ x: 352, y: 5, width: 104, height: 72 })} />
+        <img src={sliceSrc} alt="" draggable={false} width={designWidth} height={203} loading="lazy" decoding="async" style={sliceCropStyle({ x: 352, y: 5, width: 104, height: 72 })} />
       </div>
 
       <div className="pixel-eaf-access-list" style={innerBoxStyle({ left: 365, top: 129, width: 205, height: 68 }, panelWidth, panelHeight)}>
@@ -3727,6 +3727,11 @@ export function TsurusenPixelHome() {
             aria-hidden="true"
             className="pixel-slice-image"
             draggable={false}
+            width={designWidth}
+            height={slice.height}
+            loading={slice.top === 0 ? "eager" : "lazy"}
+            fetchPriority={slice.top === 0 ? "high" : "auto"}
+            decoding="async"
             style={{ top: yPct(slice.top), height: yPct(slice.height) }}
           />
         ))}
