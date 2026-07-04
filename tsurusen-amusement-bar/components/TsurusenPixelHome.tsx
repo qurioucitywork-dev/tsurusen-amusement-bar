@@ -6,6 +6,8 @@ import {
   Aperture,
   CalendarDays,
   Camera,
+  ChevronLeft,
+  ChevronRight,
   CircleHelp,
   Clock,
   Dices,
@@ -93,6 +95,45 @@ type HeroAction = {
   icon?: typeof Camera;
   secondaryIcon?: typeof Camera;
 };
+type CoreFeatureItem = {
+  icon: typeof Camera;
+  title: string;
+  description: string;
+};
+type CorePriceCard = {
+  title: string;
+  price: string;
+  extension: string;
+  tone: "men" | "women";
+  perks: Array<{ icon: typeof Camera; label: string }>;
+};
+type CoreEntertainmentItem = {
+  icon: typeof Camera;
+  title: string;
+  body: string;
+  imagePosition: string;
+};
+type CoreSceneItem = {
+  title: string;
+  imagePosition: string;
+};
+type SliceCrop = {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+};
+type SocialInstagramTile = {
+  label: string;
+  crop: SliceCrop;
+};
+type SocialReviewItem = {
+  name: string;
+  date: string;
+  body: string;
+  avatarSrc: string;
+  avatarPosition: string;
+};
 
 const headerNavItems: HeaderNavItem[] = [
   { label: "HOME", href: "/", icon: Home, active: true },
@@ -112,6 +153,101 @@ const heroActions: HeroAction[] = [
   { label: "電話予約", sub: "CALL", href: "tel:03-XXXX-XXXX", tone: "blue" },
   { label: "LINE予約", sub: "LINE", href: "https://line.me/R/ti/p/@tsurusen", tone: "green" },
   { label: "Instagram", sub: "FOLLOW", href: "https://www.instagram.com/", tone: "dark", icon: Camera },
+];
+
+const coreFeatureItems: CoreFeatureItem[] = [
+  { icon: GlassWater, title: "飲み放題", description: "月曜日〜日曜日まで\n好きなだけ飲み放題" },
+  { icon: Target, title: "ダーツ", description: "最新ダーツ機種完備\nダーツ無料で遊び放題" },
+  { icon: Mic2, title: "カラオケ", description: "最新カラオケ完備\n歌い放題" },
+  { icon: UsersRound, title: "貸切100名", description: "最大100名様までOK\n貸切パーティーに最適" },
+  { icon: MoonStar, title: "朝まで営業", description: "朝5時まで営業\n終電を逃しても安心" },
+  { icon: Wine, title: "女子会歓迎", description: "女子会プランあり\n女性に嬉しい特典多数" },
+];
+
+const corePriceCards: CorePriceCard[] = [
+  {
+    title: "MEN",
+    price: "¥3,000",
+    extension: "延長　¥2,000 / 30min",
+    tone: "men",
+    perks: [
+      { icon: GlassWater, label: "飲み放題" },
+      { icon: Target, label: "ダーツ無料" },
+    ],
+  },
+  {
+    title: "WOMEN",
+    price: "¥1,500",
+    extension: "延長　¥1,000 / 30min",
+    tone: "women",
+    perks: [
+      { icon: GlassWater, label: "飲み放題" },
+      { icon: Mic2, label: "カラオケ無料" },
+    ],
+  },
+];
+
+const coreEntertainmentItems: CoreEntertainmentItem[] = [
+  {
+    icon: Target,
+    title: "ダーツ",
+    body: "最新機種を完備。初心者から上級者まで\nみんなで盛り上がれる人気コンテンツ。",
+    imagePosition: "58% 22%",
+  },
+  {
+    icon: Mic2,
+    title: "カラオケ",
+    body: "最新カラオケ機種を導入。\n大迫力の音響で熱唱しよう。",
+    imagePosition: "58% 48%",
+  },
+  {
+    icon: Dices,
+    title: "ボードゲーム",
+    body: "定番から話題のゲームまで多数取り揃え。\n飲みながらワイワイ楽しめる。",
+    imagePosition: "58% 73%",
+  },
+];
+
+const coreSceneItems: CoreSceneItem[] = [
+  { title: "女子会", imagePosition: "10% 54%" },
+  { title: "誕生日", imagePosition: "26% 54%" },
+  { title: "貸切パーティー", imagePosition: "42% 54%" },
+  { title: "二次会", imagePosition: "57% 54%" },
+  { title: "合コン", imagePosition: "73% 54%" },
+  { title: "デート", imagePosition: "89% 54%" },
+];
+
+const socialInstagramTiles: SocialInstagramTile[] = [
+  { label: "Lounge neon interior", crop: { x: 26, y: 14, width: 102, height: 79 } },
+  { label: "Signature drinks", crop: { x: 132, y: 14, width: 102, height: 79 } },
+  { label: "Dart board", crop: { x: 238, y: 14, width: 102, height: 79 } },
+  { label: "Karaoke scene", crop: { x: 26, y: 97, width: 102, height: 79 } },
+  { label: "Private room", crop: { x: 132, y: 97, width: 102, height: 79 } },
+  { label: "Group party", crop: { x: 238, y: 97, width: 102, height: 79 } },
+];
+
+const socialReviews: SocialReviewItem[] = [
+  {
+    name: "けんたろう",
+    date: "2週間前",
+    body: "店内の雰囲気が最高！\nスタッフも親切で\nまた来ます！",
+    avatarSrc: "/assets/tsurusen-entertainment/png/perfect-visitor.png",
+    avatarPosition: "50% 18%",
+  },
+  {
+    name: "Mika",
+    date: "1ヶ月前",
+    body: "女子会で利用しました！\n飲み放題でコスパ最高です♪",
+    avatarSrc: "/assets/tsurusen-entertainment/png/perfect-girls.png",
+    avatarPosition: "48% 18%",
+  },
+  {
+    name: "James",
+    date: "1ヶ月前",
+    body: "Great place! Good drinks,\ngood music, good people!",
+    avatarSrc: "/assets/tsurusen-entertainment/png/perfect-gokon.png",
+    avatarPosition: "48% 17%",
+  },
 ];
 
 const anchorTargets = [
@@ -252,64 +388,6 @@ const textBlocks: PixelTextBlock[] = [
   { as: "p", text: "ADDRESS\n東京都新宿区歌舞伎町1-XX-XX\n鶴千ビル5F\n03-XXXX-XXXX", left: 562, top: 1772, width: 112, height: 42, size: 5.2, lineHeight: 1.55, tracking: 0.2, variant: "small", tone: "muted" },
   { as: "p", text: "OPENING HOURS\n18:00 - 05:00（L.O. 04:30）\n年中無休", left: 711, top: 1772, width: 104, height: 36, size: 5.2, lineHeight: 1.65, tracking: 0.2, variant: "small", tone: "muted" },
   { as: "span", text: "© 2024 TSURUSEN. All Rights Reserved.", left: 402, top: 1810, width: 118, height: 9, size: 4.5, tracking: 0.1, variant: "body", tone: "muted", align: "center" },
-];
-
-const featureItems = [
-  { icon: GlassWater, label: "飲み放題", sub: "月曜日〜日曜日まで\n好きなだけ飲み放題", left: 107, top: 704 },
-  { icon: Target, label: "ダーツ", sub: "最新ダーツ機種完備\nダーツ無料で遊び放題", left: 236, top: 704 },
-  { icon: Mic2, label: "カラオケ", sub: "最新カラオケ完備\n歌い放題", left: 365, top: 704 },
-  { icon: UsersRound, label: "貸切100名", sub: "最大100名様までOK\n貸切パーティーに最適", left: 494, top: 704 },
-  { icon: MoonStar, label: "朝まで営業", sub: "朝5時まで営業\n終電を逃しても安心", left: 623, top: 704 },
-  { icon: Wine, label: "女子会歓迎", sub: "女子会プランあり\n女性に嬉しい特典多数", left: 752, top: 704 },
-];
-
-const featureCardInner = {
-  top: 632,
-  width: 122,
-  height: 126,
-};
-
-const priceCards = [
-  {
-    title: "MEN",
-    price: "¥3,000 / 1hour",
-    extension: "延長　¥2,000 / 30min",
-    tone: "blue",
-    left: 68,
-    perks: [
-      { icon: GlassWater, label: "飲み放題" },
-      { icon: Target, label: "ダーツ無料" },
-    ],
-  },
-  {
-    title: "WOMEN",
-    price: "¥1,500 / 1hour",
-    extension: "延長　¥1,000 / 30min",
-    tone: "pink",
-    left: 234,
-    perks: [{ icon: Mic2, label: "カラオケ無料" }],
-  },
-];
-
-const entertainmentItems = [
-  {
-    icon: Target,
-    title: "ダーツ",
-    body: "最新機種を完備。初心者から上級者まで\nみんなで盛り上がれる人気コンテンツ。",
-    top: 823,
-  },
-  {
-    icon: Mic2,
-    title: "カラオケ",
-    body: "最新カラオケ機種を導入。\n大迫力の音響で熱唱しよう。",
-    top: 883,
-  },
-  {
-    icon: Dices,
-    title: "ボードゲーム",
-    body: "定番から話題のゲームまで多数取り揃え。\n飲みながらワイワイ楽しめる。",
-    top: 943,
-  },
 ];
 
 const eventCards = [
@@ -1554,9 +1632,1134 @@ body:has(.tsurusen-pixel-home) {
     font-size: 20px;
   }
 
-  .pixel-lux-action-copy small {
-    font-size: 13px;
-    margin-top: 5px;
+.pixel-lux-action-copy small {
+  font-size: 13px;
+  margin-top: 5px;
+  }
+}
+
+.pixel-core-sections {
+  position: absolute;
+  left: 0;
+  top: 32.51%;
+  z-index: 15;
+  width: 100%;
+  min-height: 32.35%;
+  overflow: visible;
+  padding: clamp(28px, 3vw, 48px) clamp(20px, 3vw, 48px) clamp(56px, 5vw, 96px);
+  background:
+    radial-gradient(circle at 50% 24%, rgba(216, 177, 90, 0.055), transparent 32%),
+    linear-gradient(180deg, rgba(5, 5, 5, 0.98), #050505 8%, #050505 100%);
+  color: #fff8ea;
+  pointer-events: auto;
+  background-color: #050505;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  font-feature-settings: "kern";
+}
+
+.pixel-core-inner {
+  display: grid;
+  width: min(100%, 1500px);
+  margin: 0 auto;
+  gap: clamp(30px, 2.7vw, 48px);
+}
+
+.pixel-core-section,
+.pixel-core-panel {
+  min-width: 0;
+}
+
+.pixel-core-title {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 0 0 clamp(22px, 2vw, 32px);
+  color: #d8b15a;
+  font-family: var(--font-oswald), var(--font-bebas), "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: clamp(34px, 3.45vw, 56px);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-align: center;
+  text-shadow:
+    0 0 20px rgba(216, 177, 90, 0.18),
+    0 4px 14px rgba(0, 0, 0, 0.92);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pixel-core-title::before,
+.pixel-core-title::after {
+  display: block;
+  width: clamp(64px, 8vw, 120px);
+  height: 2px;
+  flex: 0 1 clamp(64px, 8vw, 120px);
+  background: linear-gradient(90deg, transparent, rgba(216, 177, 90, 0.88), transparent);
+  box-shadow: 0 0 14px rgba(216, 177, 90, 0.22);
+  content: "";
+}
+
+.pixel-core-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 32px);
+}
+
+.pixel-core-feature-card,
+.pixel-core-price-card,
+.pixel-core-ent-panel,
+.pixel-core-scene-card,
+.pixel-core-price-panel {
+  border: 1px solid rgba(210, 170, 80, 0.55);
+  background:
+    linear-gradient(180deg, rgba(255, 247, 230, 0.045), rgba(255, 247, 230, 0.006) 42%, rgba(0, 0, 0, 0.12)),
+    #0b0b0b;
+  box-shadow:
+    inset 0 0 28px rgba(216, 177, 90, 0.035),
+    0 0 22px rgba(216, 177, 90, 0.08);
+  transition:
+    transform 250ms var(--ease-signature),
+    border-color 250ms var(--ease-signature),
+    box-shadow 250ms var(--ease-signature),
+    filter 250ms var(--ease-signature);
+}
+
+.pixel-core-feature-card:hover,
+.pixel-core-price-card:hover,
+.pixel-core-ent-panel:hover,
+.pixel-core-scene-card:hover {
+  border-color: rgba(216, 177, 90, 0.95);
+  box-shadow:
+    0 0 30px rgba(212, 176, 83, 0.35),
+    inset 0 0 28px rgba(216, 177, 90, 0.05);
+  transform: translateY(-6px);
+}
+
+.pixel-core-feature-card {
+  display: grid;
+  height: clamp(220px, 15vw, 260px);
+  align-content: center;
+  grid-template-rows: auto auto 1px auto;
+  row-gap: clamp(11px, 1vw, 18px);
+  justify-items: center;
+  overflow: hidden;
+  border-radius: 18px;
+  padding: clamp(18px, 1.55vw, 28px);
+  text-align: center;
+}
+
+.pixel-core-feature-card svg {
+  width: clamp(46px, 4.25vw, 72px);
+  height: clamp(46px, 4.25vw, 72px);
+  color: #f0c96f;
+  filter:
+    drop-shadow(0 0 7px rgba(240, 201, 111, 0.72))
+    drop-shadow(0 0 18px rgba(240, 201, 111, 0.22));
+}
+
+.pixel-core-feature-title {
+  display: flex;
+  min-width: 0;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #fff8ea;
+  font-family: var(--font-noto-sans-jp), var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: clamp(18px, 1.48vw, 30px);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.96);
+  white-space: nowrap;
+}
+
+.pixel-core-feature-rule {
+  width: min(100%, 128px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(216, 177, 90, 0.82), transparent);
+}
+
+.pixel-core-feature-description {
+  min-width: 0;
+  max-width: 100%;
+  color: rgba(255, 248, 234, 0.94);
+  font-family: var(--font-noto-sans-jp), var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: clamp(11px, 0.95vw, 18px);
+  font-weight: 700;
+  line-height: 1.58;
+  text-align: center;
+  white-space: pre-line;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+.pixel-core-duo-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(28px, 3.2vw, 48px);
+  align-items: stretch;
+}
+
+.pixel-core-price-panel,
+.pixel-core-ent-panel {
+  position: relative;
+  display: grid;
+  min-height: clamp(455px, 36vw, 620px);
+  overflow: hidden;
+  border-radius: 18px;
+  padding: clamp(22px, 2.2vw, 40px);
+}
+
+.pixel-core-price-panel {
+  align-content: start;
+  gap: clamp(22px, 2.1vw, 32px);
+}
+
+.pixel-core-price-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 2vw, 32px);
+}
+
+.pixel-core-price-card {
+  --price-accent: #68a9ff;
+  --price-glow: rgba(104, 169, 255, 0.34);
+  display: grid;
+  height: clamp(360px, 29vw, 520px);
+  align-content: center;
+  grid-template-rows: auto auto 1px auto minmax(84px, 1fr);
+  row-gap: clamp(14px, 1.55vw, 28px);
+  overflow: hidden;
+  border-color: color-mix(in srgb, var(--price-accent) 72%, transparent);
+  border-radius: 24px;
+  padding: clamp(18px, 1.85vw, 36px);
+  background:
+    radial-gradient(circle at 50% 86%, var(--price-glow), transparent 44%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(0, 0, 0, 0.12)),
+    #06080b;
+  box-shadow:
+    0 0 28px color-mix(in srgb, var(--price-accent) 30%, transparent),
+    inset 0 0 28px rgba(255, 247, 234, 0.035);
+}
+
+.pixel-core-price-card[data-tone="women"] {
+  --price-accent: #ff6fb3;
+  --price-glow: rgba(255, 111, 179, 0.28);
+}
+
+.pixel-core-price-title {
+  color: var(--price-accent);
+  font-family: var(--font-oswald), var(--font-bebas), "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: clamp(26px, 2.45vw, 46px);
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.pixel-core-price-value {
+  margin-top: clamp(16px, 1.65vw, 36px);
+  color: #fff8ea;
+  font-family: var(--font-oswald), var(--font-noto-sans-jp), var(--font-manrope), sans-serif;
+  font-size: clamp(26px, 2.42vw, 58px);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 5px 18px rgba(0, 0, 0, 0.96);
+  white-space: nowrap;
+}
+
+.pixel-core-price-value small {
+  font-size: clamp(15px, 1.32vw, 32px);
+  font-weight: 800;
+}
+
+.pixel-core-price-rule {
+  width: 100%;
+  height: 1px;
+  margin: 0;
+  background: linear-gradient(90deg, transparent, rgba(216, 177, 90, 0.85), transparent);
+}
+
+.pixel-core-price-extension {
+  color: rgba(255, 239, 209, 0.95);
+  font-family: var(--font-noto-sans-jp), var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: clamp(14px, 1.18vw, 22px);
+  font-weight: 800;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.pixel-core-price-perks {
+  display: grid;
+  min-height: clamp(84px, 7vw, 118px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-self: end;
+  border-top: 1px dashed rgba(255, 248, 234, 0.22);
+  padding-top: clamp(12px, 1.2vw, 24px);
+}
+
+.pixel-core-price-perk {
+  display: grid;
+  min-width: 0;
+  place-items: center;
+  gap: clamp(7px, 0.8vw, 14px);
+  color: #f0c96f;
+}
+
+.pixel-core-price-perk + .pixel-core-price-perk {
+  border-left: 1px dashed rgba(216, 177, 90, 0.45);
+}
+
+.pixel-core-price-perk svg {
+  width: clamp(30px, 2.55vw, 50px);
+  height: clamp(30px, 2.55vw, 50px);
+  filter: drop-shadow(0 0 10px rgba(240, 201, 111, 0.34));
+}
+
+.pixel-core-price-perk span {
+  color: #fff8ea;
+  font-family: var(--font-noto-sans-jp), var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: clamp(13px, 1.1vw, 20px);
+  font-weight: 800;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.pixel-core-price-more {
+  display: flex;
+  width: min(100%, 360px);
+  height: 72px;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  flex-direction: column;
+  gap: 7px;
+  overflow: hidden;
+  border: 1px solid rgba(210, 170, 80, 0.78);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 247, 234, 0.055), rgba(255, 247, 234, 0)),
+    rgba(5, 5, 5, 0.78);
+  box-shadow: 0 0 22px rgba(216, 177, 90, 0.16);
+  color: #fff8ea;
+  cursor: pointer;
+  font-family: var(--font-noto-sans-jp), var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  transition:
+    transform 250ms var(--ease-signature),
+    border-color 250ms var(--ease-signature),
+    box-shadow 250ms var(--ease-signature);
+}
+
+.pixel-core-price-more small {
+  color: #d8b15a;
+  font-family: var(--font-oswald), var(--font-bebas), "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.pixel-core-price-more:hover {
+  border-color: rgba(216, 177, 90, 0.96);
+  box-shadow: 0 0 30px rgba(212, 176, 83, 0.35);
+  transform: translateY(-4px);
+}
+
+.pixel-core-ent-panel {
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.pixel-core-ent-rows {
+  display: grid;
+  min-height: 0;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid rgba(210, 170, 80, 0.62);
+  border-radius: 12px;
+}
+
+.pixel-core-ent-row {
+  display: grid;
+  min-height: 0;
+  grid-template-columns: 35% 65%;
+  border-top: 1px solid rgba(210, 170, 80, 0.62);
+}
+
+.pixel-core-ent-row:first-child {
+  border-top: 0;
+}
+
+.pixel-core-ent-media {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border-right: 1px solid rgba(210, 170, 80, 0.62);
+  background: #050505;
+}
+
+.pixel-core-ent-media img,
+.pixel-core-scene-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.08) contrast(1.05);
+}
+
+.pixel-core-ent-copy {
+  display: grid;
+  min-width: 0;
+  align-content: center;
+  grid-template-columns: clamp(36px, 3.2vw, 62px) minmax(0, 1fr);
+  column-gap: clamp(14px, 1.55vw, 28px);
+  padding: clamp(16px, 1.9vw, 34px);
+}
+
+.pixel-core-ent-copy svg {
+  width: clamp(34px, 3vw, 58px);
+  height: clamp(34px, 3vw, 58px);
+  color: #d8b15a;
+  filter: drop-shadow(0 0 12px rgba(216, 177, 90, 0.3));
+}
+
+.pixel-core-ent-title {
+  display: block;
+  color: #d8b15a;
+  font-family: var(--font-noto-sans-jp), var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: clamp(22px, 2vw, 38px);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+}
+
+.pixel-core-ent-body {
+  display: block;
+  margin-top: clamp(10px, 0.9vw, 16px);
+  color: rgba(255, 248, 234, 0.94);
+  font-family: var(--font-noto-sans-jp), var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: clamp(13px, 1.08vw, 21px);
+  font-weight: 600;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+.pixel-core-scene-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 32px);
+}
+
+.pixel-core-scene-card {
+  display: grid;
+  height: clamp(166px, 12.5vw, 220px);
+  min-width: 0;
+  grid-template-rows: minmax(0, 1fr) clamp(44px, 3.35vw, 50px);
+  overflow: hidden;
+  border-radius: 16px;
+  color: #fff8ea;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-decoration: none;
+}
+
+.pixel-core-scene-card:hover {
+  transform: scale(1.03);
+}
+
+.pixel-core-scene-media {
+  min-height: 0;
+  overflow: hidden;
+  background: #050505;
+}
+
+.pixel-core-scene-title {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  color: #fff8ea;
+  font-family: var(--font-noto-sans-jp), var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: clamp(15px, 1.3vw, 24px);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-align: center;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.96);
+  white-space: nowrap;
+}
+
+@media (max-width: 1180px) {
+  .pixel-core-sections {
+    padding-inline: 32px;
+  }
+
+  .pixel-core-feature-grid,
+  .pixel-core-scene-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pixel-core-duo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .pixel-core-sections {
+    position: relative;
+    top: auto;
+    z-index: 15;
+    padding: 72px 24px 80px;
+  }
+
+  .pixel-core-inner {
+    gap: 56px;
+  }
+
+  .pixel-core-feature-grid,
+  .pixel-core-price-cards,
+  .pixel-core-scene-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .pixel-core-sections {
+    padding: 56px 16px 72px;
+  }
+
+  .pixel-core-title {
+    gap: 14px;
+    font-size: 34px;
+  }
+
+  .pixel-core-title::before,
+  .pixel-core-title::after {
+    width: 42px;
+    flex-basis: 42px;
+  }
+
+  .pixel-core-feature-grid,
+  .pixel-core-price-cards,
+  .pixel-core-scene-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pixel-core-feature-card {
+    height: auto;
+    min-height: 240px;
+  }
+
+  .pixel-core-price-panel,
+  .pixel-core-ent-panel {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .pixel-core-price-card {
+    height: auto;
+    min-height: 430px;
+  }
+
+  .pixel-core-ent-row {
+    grid-template-columns: 1fr;
+    grid-template-rows: 160px auto;
+  }
+
+  .pixel-core-ent-media {
+    border-right: 0;
+    border-bottom: 1px solid rgba(210, 170, 80, 0.62);
+  }
+
+  .pixel-core-ent-copy {
+    grid-template-columns: 42px minmax(0, 1fr);
+    padding: 22px;
+  }
+}
+
+.pixel-social-sections {
+  position: absolute;
+  left: 0;
+  top: 64.85%;
+  z-index: 16;
+  width: 100%;
+  height: clamp(360px, 34.42vw, 705px);
+  overflow: hidden;
+  padding: clamp(28px, 2.34vw, 48px) clamp(24px, 2.34vw, 48px);
+  background:
+    radial-gradient(circle at 25% 32%, rgba(216, 177, 90, 0.06), transparent 25%),
+    radial-gradient(circle at 73% 42%, rgba(216, 177, 90, 0.055), transparent 28%),
+    linear-gradient(180deg, rgba(5, 5, 5, 0.98), #050505 16%, #050505 100%);
+  background-color: #050505;
+  color: #fff8ea;
+  pointer-events: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  font-feature-settings: "kern";
+}
+
+.pixel-social-inner {
+  display: grid;
+  width: min(100%, 1500px);
+  height: 100%;
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: clamp(28px, 3.13vw, 64px);
+  align-items: stretch;
+  margin: 0 auto;
+}
+
+.pixel-social-column {
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: calc(9 * 0.1157407407vw);
+}
+
+.pixel-social-title,
+.pixel-social-review-title {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 1.17vw, 24px);
+  margin: 0;
+  color: #d8b15a;
+  font-family: var(--font-oswald), var(--font-bebas), "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: clamp(30px, 2.54vw, 52px);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-align: center;
+  text-shadow:
+    0 0 calc(12 * 0.1157407407vw) rgba(216, 177, 90, 0.26),
+    0 calc(3 * 0.1157407407vw) calc(9 * 0.1157407407vw) rgba(0, 0, 0, 0.92);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pixel-social-title::before,
+.pixel-social-title::after,
+.pixel-social-review-title::before,
+.pixel-social-review-title::after {
+  display: block;
+  height: max(1px, calc(1 * 0.1157407407vw));
+  flex: 1 1 auto;
+  min-width: clamp(46px, 6.84vw, 140px);
+  background: linear-gradient(90deg, transparent, rgba(216, 177, 90, 0.92), transparent);
+  box-shadow: 0 0 calc(8 * 0.1157407407vw) rgba(216, 177, 90, 0.2);
+  content: "";
+}
+
+.pixel-social-instagram-card,
+.pixel-social-review-card,
+.pixel-social-more {
+  border: max(1px, calc(1 * 0.1157407407vw)) solid rgba(210, 170, 80, 0.58);
+  background:
+    linear-gradient(180deg, rgba(255, 247, 230, 0.035), rgba(255, 247, 230, 0.006) 42%, rgba(0, 0, 0, 0.12)),
+    rgba(11, 11, 11, 0.96);
+  box-shadow:
+    inset 0 0 calc(18 * 0.1157407407vw) rgba(216, 177, 90, 0.035),
+    0 0 calc(18 * 0.1157407407vw) rgba(216, 177, 90, 0.1);
+}
+
+.pixel-social-instagram-card {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: calc(9 * 0.1157407407vw);
+  padding: calc(8 * 0.1157407407vw);
+}
+
+.pixel-social-instagram-grid {
+  display: grid;
+  min-height: 0;
+  flex: 1 1 auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: calc(5 * 0.1157407407vw);
+}
+
+.pixel-social-insta-tile {
+  position: relative;
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border: max(1px, calc(0.75 * 0.1157407407vw)) solid rgba(210, 170, 80, 0.52);
+  border-radius: calc(5 * 0.1157407407vw);
+  background: #050505;
+  transition:
+    transform 250ms var(--ease-signature),
+    border-color 250ms var(--ease-signature),
+    box-shadow 250ms var(--ease-signature);
+}
+
+.pixel-social-insta-tile:hover {
+  z-index: 2;
+  border-color: rgba(216, 177, 90, 0.92);
+  box-shadow: 0 0 calc(18 * 0.1157407407vw) rgba(212, 176, 83, 0.35);
+  transform: scale(1.03);
+}
+
+.pixel-social-crop-image {
+  position: absolute;
+  display: block;
+  height: auto;
+  max-width: none;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+}
+
+.pixel-social-account {
+  display: flex;
+  min-height: calc(24 * 0.1157407407vw);
+  align-items: center;
+  justify-content: center;
+  margin-top: calc(7 * 0.1157407407vw);
+  border: 0;
+  background: transparent;
+  color: #fff8ea;
+  cursor: pointer;
+  font-family: var(--font-oswald), var(--font-bebas), "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: calc(13 * 0.1157407407vw);
+  font-weight: 800;
+  letter-spacing: calc(0.9 * 0.1157407407vw);
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 calc(2 * 0.1157407407vw) calc(8 * 0.1157407407vw) rgba(0, 0, 0, 0.92);
+  white-space: nowrap;
+}
+
+.pixel-social-reviews {
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+.pixel-social-review-heading {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: clamp(12px, 0.88vw, 18px);
+}
+
+.pixel-social-review-title {
+  flex: 0 0 auto;
+  justify-content: start;
+  font-size: clamp(26px, 2.2vw, 52px);
+}
+
+.pixel-social-review-title::after {
+  display: none;
+}
+
+.pixel-social-review-heading::after {
+  display: block;
+  height: 2px;
+  flex: 1 1 auto;
+  min-width: 0;
+  background: linear-gradient(90deg, rgba(216, 177, 90, 0.86), transparent);
+  box-shadow: 0 0 12px rgba(216, 177, 90, 0.22);
+  content: "";
+}
+
+.pixel-social-rating-summary {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: flex-start;
+  gap: clamp(6px, 0.7vw, 14px);
+  flex: 0 0 auto;
+  color: #fff8ea;
+  font-family: var(--font-noto-sans-jp), var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: clamp(12px, 0.95vw, 22px);
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: 0 calc(2 * 0.1157407407vw) calc(7 * 0.1157407407vw) rgba(0, 0, 0, 0.92);
+  white-space: nowrap;
+}
+
+.pixel-social-stars {
+  display: inline-flex;
+  align-items: center;
+  color: #d8b15a;
+  gap: clamp(2px, 0.2vw, 4px);
+  filter: drop-shadow(0 0 calc(6 * 0.1157407407vw) rgba(216, 177, 90, 0.25));
+}
+
+.pixel-social-stars svg {
+  width: clamp(15px, 1.1vw, 26px);
+  height: clamp(15px, 1.1vw, 26px);
+  fill: currentColor;
+}
+
+.pixel-social-score {
+  font-size: clamp(16px, 1.25vw, 30px);
+  font-weight: 900;
+}
+
+.pixel-social-review-body {
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: calc(12 * 0.1157407407vw);
+  align-items: center;
+}
+
+.pixel-social-nav {
+  display: grid;
+  width: calc(28 * 0.1157407407vw);
+  height: calc(54 * 0.1157407407vw);
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: #d8b15a;
+  cursor: pointer;
+  padding: 0;
+  transition:
+    filter 250ms var(--ease-signature),
+    transform 250ms var(--ease-signature);
+}
+
+.pixel-social-nav svg {
+  width: calc(28 * 0.1157407407vw);
+  height: calc(28 * 0.1157407407vw);
+}
+
+.pixel-social-nav:hover {
+  filter: drop-shadow(0 0 calc(12 * 0.1157407407vw) rgba(212, 176, 83, 0.48));
+  transform: translateY(calc(-2 * 0.1157407407vw));
+}
+
+.pixel-social-review-grid {
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: calc(16 * 0.1157407407vw);
+  align-self: stretch;
+}
+
+.pixel-social-review-card {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: calc(9 * 0.1157407407vw);
+  padding: calc(11 * 0.1157407407vw) calc(10 * 0.1157407407vw);
+  text-align: center;
+  transition:
+    transform 250ms var(--ease-signature),
+    border-color 250ms var(--ease-signature),
+    box-shadow 250ms var(--ease-signature);
+}
+
+.pixel-social-review-card:hover {
+  border-color: rgba(216, 177, 90, 0.92);
+  box-shadow: 0 0 calc(24 * 0.1157407407vw) rgba(212, 176, 83, 0.32);
+  transform: translateY(calc(-5 * 0.1157407407vw));
+}
+
+.pixel-social-avatar {
+  display: block;
+  width: calc(24 * 0.1157407407vw);
+  height: calc(24 * 0.1157407407vw);
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: 999px;
+  box-shadow:
+    0 0 0 max(1px, calc(0.85 * 0.1157407407vw)) rgba(216, 177, 90, 0.28),
+    0 0 calc(10 * 0.1157407407vw) rgba(216, 177, 90, 0.12);
+}
+
+.pixel-social-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pixel-social-review-name {
+  margin: calc(6 * 0.1157407407vw) 0 0;
+  color: #fff8ea;
+  font-family: var(--font-noto-sans-jp), var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: calc(9.6 * 0.1157407407vw);
+  font-weight: 900;
+  letter-spacing: calc(0.25 * 0.1157407407vw);
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.pixel-social-review-date {
+  margin: calc(3 * 0.1157407407vw) 0 0;
+  color: rgba(255, 248, 234, 0.78);
+  font-family: var(--font-noto-sans-jp), var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: calc(6.6 * 0.1157407407vw);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.pixel-social-review-text {
+  margin: calc(8 * 0.1157407407vw) 0;
+  color: rgba(255, 248, 234, 0.94);
+  font-family: var(--font-noto-sans-jp), var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: calc(6.6 * 0.1157407407vw);
+  font-weight: 700;
+  letter-spacing: calc(0.08 * 0.1157407407vw);
+  line-height: 1.62;
+  text-wrap: balance;
+  white-space: pre-line;
+}
+
+.pixel-social-card-stars svg {
+  width: calc(8 * 0.1157407407vw);
+  height: calc(8 * 0.1157407407vw);
+}
+
+.pixel-social-more {
+  display: flex;
+  width: min(100%, calc(210 * 0.1157407407vw));
+  height: calc(28 * 0.1157407407vw);
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  flex-direction: column;
+  gap: calc(2 * 0.1157407407vw);
+  overflow: hidden;
+  border-radius: calc(8 * 0.1157407407vw);
+  color: #fff8ea;
+  cursor: pointer;
+  font-family: var(--font-noto-sans-jp), var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: calc(10 * 0.1157407407vw);
+  font-weight: 900;
+  letter-spacing: calc(1 * 0.1157407407vw);
+  line-height: 1;
+  transition:
+    transform 250ms var(--ease-signature),
+    border-color 250ms var(--ease-signature),
+    box-shadow 250ms var(--ease-signature);
+}
+
+.pixel-social-more small {
+  color: #d8b15a;
+  font-family: var(--font-oswald), var(--font-bebas), "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: calc(6 * 0.1157407407vw);
+  font-weight: 900;
+  letter-spacing: calc(1.1 * 0.1157407407vw);
+}
+
+.pixel-social-more:hover {
+  border-color: rgba(216, 177, 90, 0.92);
+  box-shadow: 0 0 calc(24 * 0.1157407407vw) rgba(212, 176, 83, 0.35);
+  transform: translateY(calc(-3 * 0.1157407407vw));
+}
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .pixel-social-review-heading {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .pixel-social-review-heading::after {
+    display: none;
+  }
+
+  .pixel-social-review-title {
+    justify-content: center;
+  }
+
+  .pixel-social-review-title::after {
+    display: block;
+  }
+
+  .pixel-social-rating-summary {
+    justify-content: center;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .pixel-social-sections {
+    position: relative;
+    top: auto;
+    height: auto;
+    min-height: 0;
+    padding: 72px 24px 80px;
+  }
+
+  .pixel-social-inner {
+    height: auto;
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .pixel-social-column {
+    gap: 20px;
+  }
+
+  .pixel-social-title,
+  .pixel-social-review-title {
+    gap: 16px;
+    font-size: 38px;
+    letter-spacing: 0.08em;
+  }
+
+  .pixel-social-instagram-card {
+    min-height: 420px;
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .pixel-social-instagram-grid {
+    gap: 12px;
+  }
+
+  .pixel-social-insta-tile {
+    border-radius: 12px;
+  }
+
+  .pixel-social-account {
+    min-height: 48px;
+    margin-top: 18px;
+    font-size: 24px;
+  }
+
+  .pixel-social-review-heading {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .pixel-social-review-heading::after {
+    display: none;
+  }
+
+  .pixel-social-review-title {
+    justify-content: center;
+  }
+
+  .pixel-social-review-title::after {
+    display: block;
+  }
+
+  .pixel-social-rating-summary {
+    justify-content: center;
+    font-size: 15px;
+  }
+
+  .pixel-social-stars svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .pixel-social-score {
+    font-size: 22px;
+  }
+
+  .pixel-social-review-body {
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    gap: 14px;
+  }
+
+  .pixel-social-review-grid {
+    gap: 16px;
+  }
+
+  .pixel-social-review-card {
+    min-height: 320px;
+    padding: 24px 16px;
+    border-radius: 20px;
+  }
+
+  .pixel-social-avatar {
+    width: 56px;
+    height: 56px;
+  }
+
+  .pixel-social-review-name {
+    font-size: 22px;
+  }
+
+  .pixel-social-review-date {
+    font-size: 15px;
+  }
+
+  .pixel-social-review-text {
+    font-size: 16px;
+  }
+
+  .pixel-social-card-stars svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .pixel-social-more {
+    width: min(100%, 420px);
+    height: 72px;
+    border-radius: 18px;
+    font-size: 22px;
+  }
+
+  .pixel-social-more small {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .pixel-social-sections {
+    padding: 56px 16px 72px;
+  }
+
+  .pixel-social-title,
+  .pixel-social-review-title {
+    gap: 12px;
+    font-size: 34px;
+  }
+
+  .pixel-social-instagram-grid,
+  .pixel-social-review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pixel-social-instagram-grid {
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+  }
+
+  .pixel-social-instagram-card {
+    min-height: 780px;
+  }
+
+  .pixel-social-review-body {
+    grid-template-columns: 1fr;
+  }
+
+  .pixel-social-rating-summary {
+    flex-wrap: wrap;
+    row-gap: 6px;
+    white-space: normal;
+  }
+
+  .pixel-social-nav {
+    display: none;
   }
 }
 
@@ -1625,8 +2828,12 @@ body:has(.tsurusen-pixel-home) {
 .pixel-dom-text[data-region="header"],
 .pixel-dom-text[data-region="hero"],
 .pixel-dom-text[data-region="about"],
+.pixel-dom-text[data-region="core"],
+.pixel-dom-text[data-region="social"],
 .pixel-dom-button[data-region="hero"],
 .pixel-dom-button[data-region="about"],
+.pixel-dom-button[data-region="core"],
+.pixel-dom-button[data-region="social"],
 .pixel-dom-text[data-region="price-entertainment"],
 .pixel-dom-button[data-region="price-entertainment"] {
   display: none;
@@ -3262,6 +4469,10 @@ function TextBlock({ as, text, left, top, width, height, size, lineHeight = 1, t
         ? "hero"
       : top >= 361 && top < 592
         ? "about"
+        : top >= 592 && top < 1181
+          ? "core"
+          : top >= 1181 && top < 1418
+            ? "social"
         : top >= 775 && top < 1031
           ? "price-entertainment"
           : top >= 1418 && top < 1621
@@ -3286,7 +4497,7 @@ function TextBlock({ as, text, left, top, width, height, size, lineHeight = 1, t
 }
 
 function ActionButton({ href, label, sub, left, top, width, height, tone, icon: Icon, secondaryIcon: SecondaryIcon, row, framed, compact, cleanFill }: PixelButton) {
-  const region = top < 361 ? "hero" : top >= 361 && top < 592 ? "about" : top >= 775 && top < 1031 ? "price-entertainment" : top >= 1418 && top < 1621 ? "event-access-faq" : top >= 1621 ? "cta-footer" : undefined;
+  const region = top < 361 ? "hero" : top >= 361 && top < 592 ? "about" : top >= 592 && top < 1181 ? "core" : top >= 1181 && top < 1418 ? "social" : top >= 775 && top < 1031 ? "price-entertainment" : top >= 1418 && top < 1621 ? "event-access-faq" : top >= 1621 ? "cta-footer" : undefined;
   const style: PixelStyle = {
     ...boxStyle({ left, top, width, height }),
     ...buttonTone(tone),
@@ -3487,89 +4698,185 @@ function AboutSection() {
   );
 }
 
-function priceCardTone(tone: string): PixelStyle {
-  if (tone === "pink") {
-    return {
-      "--price-card-border": "rgba(255, 111, 174, 0.96)",
-      "--price-card-glow": "rgba(255, 111, 174, 0.16)",
-      "--price-card-shadow": "rgba(255, 111, 174, 0.34)",
-      "--price-title-color": "#ff9bc8",
-    };
-  }
-
-  return {
-    "--price-card-border": "rgba(105, 168, 255, 0.96)",
-    "--price-card-glow": "rgba(105, 168, 255, 0.14)",
-    "--price-card-shadow": "rgba(105, 168, 255, 0.34)",
-    "--price-title-color": "#6aa8ff",
-  };
+function CoreSectionTitle({ children }: { children: string }) {
+  return <h2 className="pixel-core-title">{children}</h2>;
 }
 
-function PriceEntertainmentSection() {
+function CoreSections() {
+  const entertainmentImage = `${assetBase}/section-04-price-entertainment-textless-ai.webp`;
+  const sceneImage = `${assetBase}/section-05-scene-textless-ai.webp`;
+
   return (
-    <>
-      <div className="pixel-pe-heading" aria-hidden="true" style={boxStyle({ left: 34, top: 786, width: 350, height: 36 })}>
-        <span className="pixel-pe-heading-line" />
-        <span className="pixel-pe-heading-title">PRICE SYSTEM</span>
-        <span className="pixel-pe-heading-line" />
-      </div>
+    <section className="pixel-core-sections" aria-label="Feature Price Entertainment Scene">
+      <div className="pixel-core-inner">
+        <section className="pixel-core-section" aria-label="FEATURE">
+          <CoreSectionTitle>FEATURE</CoreSectionTitle>
+          <div className="pixel-core-feature-grid">
+            {coreFeatureItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <article key={item.title} className="pixel-core-feature-card">
+                  <Icon strokeWidth={1.65} aria-hidden="true" />
+                  <h3 className="pixel-core-feature-title">{item.title}</h3>
+                  <span className="pixel-core-feature-rule" aria-hidden="true" />
+                  <p className="pixel-core-feature-description">{item.description}</p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
 
-      <div className="pixel-pe-heading" aria-hidden="true" style={boxStyle({ left: 432, top: 786, width: 390, height: 36 })}>
-        <span className="pixel-pe-heading-line" />
-        <span className="pixel-pe-heading-title">ENTERTAINMENT</span>
-        <span className="pixel-pe-heading-line" />
-      </div>
+        <div className="pixel-core-duo-grid">
+          <section className="pixel-core-price-panel" aria-label="PRICE SYSTEM">
+            <CoreSectionTitle>PRICE SYSTEM</CoreSectionTitle>
+            <div className="pixel-core-price-cards">
+              {corePriceCards.map((card) => (
+                <article key={card.title} className="pixel-core-price-card" data-tone={card.tone}>
+                  <h3 className="pixel-core-price-title">{card.title}</h3>
+                  <p className="pixel-core-price-value">
+                    {card.price} <small>/ 1hour</small>
+                  </p>
+                  <span className="pixel-core-price-rule" aria-hidden="true" />
+                  <p className="pixel-core-price-extension">{card.extension}</p>
+                  <div className="pixel-core-price-perks">
+                    {card.perks.map((perk) => {
+                      const Icon = perk.icon;
+                      return (
+                        <span key={perk.label} className="pixel-core-price-perk">
+                          <Icon strokeWidth={1.6} aria-hidden="true" />
+                          <span>{perk.label}</span>
+                        </span>
+                      );
+                    })}
+                  </div>
+                </article>
+              ))}
+            </div>
+            <button type="button" className="pixel-core-price-more" onClick={() => navigateTo("/pricing")}>
+              詳しく見る
+              <small>VIEW MORE</small>
+            </button>
+          </section>
 
-      {priceCards.map((card) => {
-        const style: PixelStyle = {
-          ...boxStyle({ left: card.left, top: 803, width: 157, height: 185 }),
-          ...priceCardTone(card.tone),
-        };
-
-        return (
-          <div key={card.title} className="pixel-price-card" style={style}>
-            <span className="pixel-price-title">{card.title}</span>
-            <span className="pixel-price-value">{card.price}</span>
-            <span className="pixel-price-solid-rule" aria-hidden="true" />
-            <span className="pixel-price-extension">{card.extension}</span>
-            <span className="pixel-price-dotted-rule" aria-hidden="true" />
-            <span className="pixel-price-perks" style={{ "--perk-count": card.perks.length } as PixelStyle}>
-              {card.perks.map((perk) => {
-                const Icon = perk.icon;
+          <section className="pixel-core-ent-panel" aria-label="ENTERTAINMENT">
+            <CoreSectionTitle>ENTERTAINMENT</CoreSectionTitle>
+            <div className="pixel-core-ent-rows">
+              {coreEntertainmentItems.map((item) => {
+                const Icon = item.icon;
                 return (
-                  <span key={perk.label} className="pixel-price-perk">
-                    <Icon strokeWidth={1.4} aria-hidden="true" />
-                    <span className="pixel-price-perk-label">{perk.label}</span>
-                  </span>
+                  <article key={item.title} className="pixel-core-ent-row">
+                    <span className="pixel-core-ent-media" aria-hidden="true">
+                      <img src={entertainmentImage} alt="" width={864} height={256} loading="lazy" decoding="async" style={{ objectPosition: item.imagePosition }} />
+                    </span>
+                    <span className="pixel-core-ent-copy">
+                      <Icon strokeWidth={1.6} aria-hidden="true" />
+                      <span>
+                        <h3 className="pixel-core-ent-title">{item.title}</h3>
+                        <p className="pixel-core-ent-body">{item.body}</p>
+                      </span>
+                    </span>
+                  </article>
                 );
               })}
-            </span>
-          </div>
-        );
-      })}
-
-      <button type="button" className="pixel-price-more" onClick={() => navigateTo("/pricing")} style={boxStyle({ left: 124, top: 984, width: 216, height: 33 })}>
-        詳しく見る
-        <small>VIEW MORE</small>
-      </button>
-
-      <div className="pixel-entertainment-panel" aria-label="ENTERTAINMENT" style={boxStyle({ left: 427, top: 803, width: 352, height: 186 })}>
-        {entertainmentItems.map((item, index) => {
-          const Icon = item.icon;
-          return (
-            <div key={item.title} className="pixel-ent-row" style={{ top: `${index * 33.3333}%`, height: "33.3334%" }}>
-              <span className="pixel-ent-copy">
-                <Icon strokeWidth={1.45} aria-hidden="true" />
-                <span>
-                  <span className="pixel-ent-title">{item.title}</span>
-                  <span className="pixel-ent-body">{item.body}</span>
-                </span>
-              </span>
             </div>
-          );
-        })}
+          </section>
+        </div>
+
+        <section className="pixel-core-section" aria-label="SCENE">
+          <CoreSectionTitle>SCENE</CoreSectionTitle>
+          <div className="pixel-core-scene-grid">
+            {coreSceneItems.map((item) => (
+              <button key={item.title} type="button" className="pixel-core-scene-card" onClick={() => navigateTo("/#scene")} aria-label={item.title}>
+                <span className="pixel-core-scene-media" aria-hidden="true">
+                  <img src={sceneImage} alt="" width={864} height={150} loading="lazy" decoding="async" style={{ objectPosition: item.imagePosition }} />
+                </span>
+                <span className="pixel-core-scene-title">{item.title}</span>
+              </button>
+            ))}
+          </div>
+        </section>
       </div>
-    </>
+    </section>
+  );
+}
+
+function SocialRatingStars({ className }: { className?: string }) {
+  return (
+    <span className={`pixel-social-stars${className ? ` ${className}` : ""}`} aria-label="5 stars">
+      {Array.from({ length: 5 }).map((_, index) => (
+        <Star key={index} strokeWidth={1.4} aria-hidden="true" />
+      ))}
+    </span>
+  );
+}
+
+function SocialProofSections() {
+  const socialSlice = `${assetBase}/section-06-instagram-reviews-textless-ai.webp`;
+
+  return (
+    <section className="pixel-social-sections" aria-label="Instagram and Google Reviews">
+      <div className="pixel-social-inner">
+        <section className="pixel-social-column" aria-labelledby="pixel-social-instagram-title">
+          <h2 id="pixel-social-instagram-title" className="pixel-social-title">
+            INSTAGRAM
+          </h2>
+          <div className="pixel-social-instagram-card">
+            <div className="pixel-social-instagram-grid">
+              {socialInstagramTiles.map((tile) => (
+                <span key={tile.label} className="pixel-social-insta-tile">
+                  <img src={socialSlice} alt={tile.label} width={designWidth} height={237} loading="lazy" decoding="async" className="pixel-social-crop-image" style={sliceCropStyle(tile.crop)} />
+                </span>
+              ))}
+            </div>
+            <button type="button" className="pixel-social-account" onClick={() => navigateTo("https://www.instagram.com/")} aria-label="Instagram @TSURUSEN_OFFICIAL">
+              @TSURUSEN_OFFICIAL
+            </button>
+          </div>
+        </section>
+
+        <section className="pixel-social-column pixel-social-reviews" aria-labelledby="pixel-social-google-title">
+          <div className="pixel-social-review-heading">
+            <h2 id="pixel-social-google-title" className="pixel-social-review-title">
+              GOOGLE REVIEWS
+            </h2>
+            <div className="pixel-social-rating-summary" aria-label="Google rating 4.8 based on 312 reviews">
+              <SocialRatingStars />
+              <span className="pixel-social-score">4.8</span>
+              <span>（312件のレビュー）</span>
+            </div>
+          </div>
+
+          <div className="pixel-social-review-body">
+            <button type="button" className="pixel-social-nav" aria-label="Previous reviews">
+              <ChevronLeft strokeWidth={1.8} />
+            </button>
+            <div className="pixel-social-review-grid">
+              {socialReviews.map((review) => (
+                <article key={review.name} className="pixel-social-review-card">
+                  <span>
+                    <span className="pixel-social-avatar">
+                      <img src={review.avatarSrc} alt="" width={96} height={96} loading="lazy" decoding="async" style={{ objectPosition: review.avatarPosition }} />
+                    </span>
+                    <h3 className="pixel-social-review-name">{review.name}</h3>
+                    <p className="pixel-social-review-date">{review.date}</p>
+                  </span>
+                  <p className="pixel-social-review-text">{review.body}</p>
+                  <SocialRatingStars className="pixel-social-card-stars" />
+                </article>
+              ))}
+            </div>
+            <button type="button" className="pixel-social-nav" aria-label="Next reviews">
+              <ChevronRight strokeWidth={1.8} />
+            </button>
+          </div>
+
+          <button type="button" className="pixel-social-more" onClick={() => navigateTo("/#reviews")}>
+            もっと見る
+            <small>VIEW MORE</small>
+          </button>
+        </section>
+      </div>
+    </section>
   );
 }
 
@@ -3751,40 +5058,8 @@ export function TsurusenPixelHome() {
 
         <AboutSection />
 
-        <div className="pixel-feature-heading" aria-hidden="true" style={boxStyle({ left: 38, top: 609, width: 788, height: 30 })}>
-          <span className="pixel-feature-heading-line" />
-          <span className="pixel-feature-heading-title">FEATURE</span>
-          <span className="pixel-feature-heading-line" />
-        </div>
-
-        {featureItems.map((item) => {
-          const Icon = item.icon;
-          return (
-            <div
-              key={item.label}
-              className="pixel-feature-card"
-              style={boxStyle({
-                left: item.left - featureCardInner.width / 2,
-                top: featureCardInner.top,
-                width: featureCardInner.width,
-                height: featureCardInner.height,
-              })}
-            >
-              <span className="pixel-feature-icon" data-contained="true">
-                <Icon size={28} strokeWidth={1.4} aria-hidden="true" />
-              </span>
-              <span className="pixel-feature-label" data-contained="true">
-                {item.label}
-              </span>
-              <span className="pixel-feature-divider" aria-hidden="true" />
-              <span className="pixel-feature-sub" data-contained="true">
-                {item.sub}
-              </span>
-            </div>
-          );
-        })}
-
-        <PriceEntertainmentSection />
+        <CoreSections />
+        <SocialProofSections />
         <EventAccessFaqSection />
         <CtaFooterSection />
 
