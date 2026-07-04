@@ -32,6 +32,23 @@ const navLinks = [
   { label: "RESERVE", href: "/reservation", left: 794, top: 10, width: 54, height: 31 },
 ];
 
+const anchorTargets = [
+  { id: "concept", top: 303 },
+  { id: "all-you-can-drink", top: 482 },
+  { id: "beer", top: 650 },
+  { id: "highball", top: 650 },
+  { id: "cocktail", top: 650 },
+  { id: "sour", top: 650 },
+  { id: "wine", top: 650 },
+  { id: "shochu", top: 650 },
+  { id: "whisky", top: 650 },
+  { id: "soft-drink", top: 650 },
+  { id: "champagne", top: 1102 },
+  { id: "pairing", top: 1358 },
+  { id: "favorites", top: 1515 },
+  { id: "reserve", top: 1705 },
+];
+
 const categoryButtons = [
   { label: "BEER", href: "/drink-menu#beer", left: 49, top: 665, width: 93, height: 26 },
   { label: "HIGHBALL", href: "/drink-menu#highball", left: 146, top: 665, width: 92, height: 26 },
@@ -153,6 +170,9 @@ export function TsurusenDrinkPixelPage() {
         ))}
         {textBlocks.map((block) => (
           <PixelText key={`${block.text}-${block.top}`} {...block} />
+        ))}
+        {anchorTargets.map((anchor) => (
+          <span key={anchor.id} id={anchor.id} className="pixel-anchor" style={{ top: yPct(anchor.top) }} />
         ))}
         {navLinks.map((link) => (
           <HitLink key={link.label} {...link} />

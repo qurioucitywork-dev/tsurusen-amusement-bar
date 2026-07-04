@@ -47,6 +47,26 @@ const navLinks = [
   { label: "RESERVE", href: "/reservation", left: 783, top: 10, width: 55, height: 32 },
 ];
 
+const anchorTargets = [
+  { id: "experience", top: 258 },
+  { id: "menu", top: 454 },
+  { id: "darts", top: 618 },
+  { id: "karaoke", top: 769 },
+  { id: "board-game", top: 927 },
+  { id: "gallery", top: 1106 },
+  { id: "floor-guide", top: 1106 },
+  { id: "capacity", top: 1264 },
+  { id: "group-date", top: 1264 },
+  { id: "girls-party", top: 1264 },
+  { id: "birthday", top: 1264 },
+  { id: "private", top: 1264 },
+  { id: "after-party", top: 1264 },
+  { id: "visitor", top: 1264 },
+  { id: "timeline", top: 1410 },
+  { id: "moments", top: 1530 },
+  { id: "reserve", top: 1686 },
+];
+
 const hitLinks = [
   { label: "ダーツ", href: "/play#darts", left: 44, top: 489, width: 187, height: 109 },
   { label: "カラオケ", href: "/play#karaoke", left: 240, top: 489, width: 187, height: 109 },
@@ -224,6 +244,10 @@ export function TsurusenEntertainmentPixelPage() {
 
         {textBlocks.map((block) => (
           <PixelText key={`${block.text}-${block.top}`} {...block} />
+        ))}
+
+        {anchorTargets.map((anchor) => (
+          <span key={anchor.id} id={anchor.id} className="pixel-anchor" style={{ top: yPct(anchor.top) }} />
         ))}
 
         {navLinks.map((link) => (

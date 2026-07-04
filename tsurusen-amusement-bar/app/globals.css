@@ -35,8 +35,14 @@
   --ease-signature: var(--ease-signature);
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
 }
 
 html {
@@ -141,6 +147,16 @@ a {
   box-shadow: 0 20px 70px rgba(0, 0, 0, 0.28);
 }
 
+.dokomi-card,
+.gold-card,
+.grove-panel,
+.glass-panel,
+.photo-card,
+.experience-card {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .grove-frame {
   border: 2px solid rgba(255, 247, 234, 0.86);
   background: #171717;
@@ -153,6 +169,8 @@ a {
 .button-ghost {
   min-height: 48px;
   display: inline-flex;
+  min-width: 0;
+  max-width: 100%;
   align-items: center;
   justify-content: center;
   gap: 10px;
@@ -163,7 +181,11 @@ a {
   font-size: 12px;
   font-weight: 900;
   letter-spacing: 0.04em;
+  line-height: 1.15;
+  text-align: center;
   text-transform: uppercase;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .button-primary {
@@ -378,6 +400,9 @@ button:focus-visible {
   position: absolute;
   left: 10px;
   bottom: 10px;
+  max-width: calc(100% - 20px);
+  min-width: 0;
+  overflow: hidden;
   border: 1px solid rgba(255, 247, 234, 0.7);
   border-radius: 999px;
   background: rgba(8, 8, 7, 0.76);
@@ -386,6 +411,9 @@ button:focus-visible {
   font-family: var(--font-manrope), sans-serif;
   font-size: 11px;
   font-weight: 900;
+  line-height: 1.15;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .home-sticker-main {
@@ -900,6 +928,10 @@ body:has(.tsurusen-entertainment-pixel-page) main {
   padding-bottom: 0;
 }
 
+body:has(.tsurusen-pixel-home) {
+  min-width: 0;
+}
+
 .tsurusen-pixel-home,
 .tsurusen-system-pixel-page,
 .tsurusen-entertainment-pixel-page {
@@ -946,10 +978,14 @@ body:has(.tsurusen-entertainment-pixel-page) main {
   position: absolute;
   z-index: 3;
   display: inline-flex;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
   align-items: center;
   justify-content: center;
   border: 0;
   border-radius: 4px;
+  overflow: hidden;
   background: rgba(9, 8, 7, 0);
   color: transparent;
   font-family: var(--font-manrope), var(--font-zen), sans-serif;
@@ -962,7 +998,16 @@ body:has(.tsurusen-entertainment-pixel-page) main {
 }
 
 .pixel-hit span {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 0;
+  overflow: hidden;
   color: transparent;
+  line-height: 1;
+  pointer-events: none;
+  text-overflow: clip;
+  white-space: nowrap;
 }
 
 .pixel-hit:focus-visible {
@@ -970,13 +1015,27 @@ body:has(.tsurusen-entertainment-pixel-page) main {
   outline-offset: 2px;
 }
 
+.pixel-anchor {
+  position: absolute;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  scroll-margin-top: 0;
+}
+
 .pixel-button {
+  min-width: 0;
+  overflow: hidden;
   padding: 0;
 }
 
 .pixel-text {
   position: absolute;
   z-index: 2;
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
   margin: 0;
   overflow: hidden;
   color: transparent;
@@ -984,8 +1043,17 @@ body:has(.tsurusen-entertainment-pixel-page) main {
   font-weight: 900;
   letter-spacing: 0;
   line-height: 1;
+  overflow-wrap: anywhere;
   pointer-events: none;
   white-space: pre-line;
+  word-break: keep-all;
+}
+
+.pixel-input {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .pixel-icon-layer {

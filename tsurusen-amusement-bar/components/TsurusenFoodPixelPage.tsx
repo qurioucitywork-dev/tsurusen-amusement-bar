@@ -31,6 +31,24 @@ const navLinks = [
   { label: "RESERVE", href: "/reservation", left: 785, top: 10, width: 63, height: 31 },
 ];
 
+const anchorTargets = [
+  { id: "concept", top: 300 },
+  { id: "popular", top: 488 },
+  { id: "recommend", top: 716 },
+  { id: "snack", top: 716 },
+  { id: "fried", top: 716 },
+  { id: "meat", top: 716 },
+  { id: "rice", top: 716 },
+  { id: "dessert", top: 716 },
+  { id: "list", top: 716 },
+  { id: "chef", top: 1050 },
+  { id: "pairing", top: 1050 },
+  { id: "gallery", top: 1282 },
+  { id: "favorites", top: 1397 },
+  { id: "late-night", top: 1537 },
+  { id: "reserve", top: 1665 },
+];
+
 const categoryButtons = [
   { label: "おすすめ", href: "/food-menu#recommend", left: 47, top: 723, width: 137, height: 25 },
   { label: "おつまみ", href: "/food-menu#snack", left: 187, top: 723, width: 137, height: 25 },
@@ -155,6 +173,9 @@ export function TsurusenFoodPixelPage() {
         ))}
         {textBlocks.map((block) => (
           <PixelText key={`${block.text}-${block.top}`} {...block} />
+        ))}
+        {anchorTargets.map((anchor) => (
+          <span key={anchor.id} id={anchor.id} className="pixel-anchor" style={{ top: yPct(anchor.top) }} />
         ))}
         {navLinks.map((link) => (
           <HitLink key={link.label} {...link} />

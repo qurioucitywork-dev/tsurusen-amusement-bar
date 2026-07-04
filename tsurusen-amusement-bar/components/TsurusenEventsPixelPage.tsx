@@ -34,10 +34,41 @@ const navLinks = [
   { label: "DRINK MENU", href: "/drink-menu", left: 391, top: 14, width: 69, height: 25 },
   { label: "ENTERTAINMENT", href: "/play", left: 465, top: 14, width: 86, height: 25 },
   { label: "SCENES", href: "/#scene", left: 555, top: 14, width: 43, height: 25 },
-  { label: "PRIVATE PARTY", href: "/private-party", left: 604, top: 14, width: 84, height: 25 },
+  { label: "PRIVATE PARTY", href: "/private-party", left: 604, top: 14, width: 39, height: 25 },
   { label: "EVENTS", href: "/events", left: 644, top: 14, width: 48, height: 25 },
   { label: "ACCESS", href: "/access", left: 694, top: 14, width: 45, height: 25 },
   { label: "RESERVE", href: "/reservation", left: 787, top: 10, width: 56, height: 31 },
+];
+
+const anchorTargets = [
+  { id: "featured", top: 300 },
+  { id: "upcoming", top: 560 },
+  { id: "calendar", top: 797 },
+  { id: "categories", top: 797 },
+  { id: "dj-night", top: 797 },
+  { id: "darts", top: 797 },
+  { id: "karaoke", top: 797 },
+  { id: "birthday", top: 797 },
+  { id: "season", top: 797 },
+  { id: "private", top: 797 },
+  { id: "gallery", top: 977 },
+  { id: "gallery-party", top: 977 },
+  { id: "gallery-darts", top: 977 },
+  { id: "gallery-karaoke", top: 977 },
+  { id: "gallery-dj", top: 977 },
+  { id: "moments", top: 977 },
+  { id: "video-dj-night", top: 977 },
+  { id: "video-darts", top: 977 },
+  { id: "video-karaoke", top: 977 },
+  { id: "video-birthday", top: 977 },
+  { id: "video-crowd", top: 977 },
+  { id: "past", top: 1212 },
+  { id: "community", top: 1379 },
+  { id: "reviews", top: 1379 },
+  { id: "host", top: 1549 },
+  { id: "sns", top: 1549 },
+  { id: "faq", top: 1549 },
+  { id: "reserve", top: 1720 },
 ];
 
 const hitLinks = [
@@ -205,6 +236,9 @@ export function TsurusenEventsPixelPage() {
         ))}
         {textBlocks.map((block) => (
           <PixelText key={`${block.text}-${block.top}`} {...block} />
+        ))}
+        {anchorTargets.map((anchor) => (
+          <span key={anchor.id} id={anchor.id} className="pixel-anchor" style={{ top: yPct(anchor.top) }} />
         ))}
         {navLinks.map((link) => (
           <HitLink key={link.label} {...link} />

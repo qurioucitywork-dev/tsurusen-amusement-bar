@@ -44,6 +44,28 @@ const navLinks = [
   { label: "RESERVE", href: "/reservation", left: 806, top: 10, width: 43, height: 31 },
 ];
 
+const anchorTargets = [
+  { id: "featured", top: 300 },
+  { id: "latest", top: 663 },
+  { id: "events", top: 663 },
+  { id: "campaign", top: 663 },
+  { id: "store", top: 663 },
+  { id: "media", top: 663 },
+  { id: "press", top: 663 },
+  { id: "update", top: 663 },
+  { id: "breaking", top: 952 },
+  { id: "videos", top: 1277 },
+  { id: "video-dj-night", top: 1277 },
+  { id: "video-darts", top: 1277 },
+  { id: "video-birthday", top: 1277 },
+  { id: "video-karaoke", top: 1277 },
+  { id: "video-cocktails", top: 1277 },
+  { id: "editor", top: 1455 },
+  { id: "archive", top: 1455 },
+  { id: "newsletter", top: 1455 },
+  { id: "reserve", top: 1634 },
+];
+
 const categoryButtons = [
   { label: "ALL", href: "/news#latest", left: 126, top: 622, width: 66, height: 29 },
   { label: "EVENT", href: "/news#events", left: 202, top: 622, width: 67, height: 29 },
@@ -208,6 +230,9 @@ export function TsurusenNewsPixelPage() {
         ))}
         {textBlocks.map((block) => (
           <PixelText key={`${block.text}-${block.top}`} {...block} />
+        ))}
+        {anchorTargets.map((anchor) => (
+          <span key={anchor.id} id={anchor.id} className="pixel-anchor" style={{ top: yPct(anchor.top) }} />
         ))}
         {navLinks.map((link) => (
           <HitLink key={link.label} {...link} />

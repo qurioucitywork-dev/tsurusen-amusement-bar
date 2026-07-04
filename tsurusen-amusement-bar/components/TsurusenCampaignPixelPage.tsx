@@ -41,6 +41,40 @@ const navLinks = [
   { label: "RESERVE", href: "/reservation", left: 806, top: 10, width: 43, height: 31 },
 ];
 
+const anchorTargets = [
+  { id: "golden-night", top: 352 },
+  { id: "coupon-get", top: 352 },
+  { id: "coupons", top: 613 },
+  { id: "coupon-01", top: 613 },
+  { id: "coupon-02", top: 613 },
+  { id: "coupon-03", top: 613 },
+  { id: "coupon-04", top: 613 },
+  { id: "coupon-05", top: 613 },
+  { id: "coupon-06", top: 613 },
+  { id: "season", top: 834 },
+  { id: "spring-party", top: 834 },
+  { id: "golden-week", top: 834 },
+  { id: "summer-festival", top: 834 },
+  { id: "halloween-night", top: 834 },
+  { id: "christmas-party", top: 834 },
+  { id: "new-year-party", top: 834 },
+  { id: "member-benefits", top: 994 },
+  { id: "how-to-use", top: 994 },
+  { id: "first-visit", top: 1195 },
+  { id: "girls-party", top: 1195 },
+  { id: "birthday", top: 1195 },
+  { id: "after-party", top: 1195 },
+  { id: "party", top: 1195 },
+  { id: "today-only", top: 1195 },
+  { id: "this-week", top: 1195 },
+  { id: "this-month", top: 1195 },
+  { id: "limited-quantity", top: 1195 },
+  { id: "sns", top: 1360 },
+  { id: "reviews", top: 1360 },
+  { id: "faq", top: 1559 },
+  { id: "reserve", top: 1704 },
+];
+
 const hitLinks = [
   { label: "Logo", href: "/", left: 18, top: 14, width: 105, height: 23 },
   { label: "Use coupon", href: "/campaigns#coupons", left: 55, top: 294, width: 145, height: 43 },
@@ -187,6 +221,9 @@ export function TsurusenCampaignPixelPage() {
         ))}
         {textBlocks.map((block) => (
           <PixelText key={`${block.text}-${block.top}`} {...block} />
+        ))}
+        {anchorTargets.map((anchor) => (
+          <span key={anchor.id} id={anchor.id} className="pixel-anchor" style={{ top: yPct(anchor.top) }} />
         ))}
         {navLinks.map((link) => (
           <HitLink key={link.label} {...link} />

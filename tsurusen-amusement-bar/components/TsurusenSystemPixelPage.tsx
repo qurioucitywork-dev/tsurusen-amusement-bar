@@ -31,6 +31,16 @@ const navLinks = [
   { label: "RESERVE", href: "/reservation", left: 22, top: 367, width: 80, height: 35 },
 ];
 
+const anchorTargets = [
+  { id: "price", top: 356 },
+  { id: "included", top: 784 },
+  { id: "flow", top: 963 },
+  { id: "payment", top: 1136 },
+  { id: "plans", top: 1330 },
+  { id: "faq", top: 1538 },
+  { id: "reserve", top: 1669 },
+];
+
 const hitLinks = [
   { label: "MEN予約", href: "/reservation", left: 149, top: 698, width: 245, height: 39 },
   { label: "WOMEN予約", href: "/reservation", left: 495, top: 698, width: 244, height: 39 },
@@ -118,6 +128,9 @@ export function TsurusenSystemPixelPage() {
         ))}
         {textBlocks.map((block) => (
           <PixelText key={`${block.text}-${block.top}`} {...block} />
+        ))}
+        {anchorTargets.map((anchor) => (
+          <span key={anchor.id} id={anchor.id} className="pixel-anchor" style={{ top: yPct(anchor.top) }} />
         ))}
         {navLinks.map((link) => (
           <HitLink key={link.label} {...link} />
