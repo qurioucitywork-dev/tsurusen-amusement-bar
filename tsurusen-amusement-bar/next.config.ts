@@ -3,13 +3,24 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = path.dirname(fileURLToPath(import.meta.url));
+const isStaticExport = process.env.STATIC_EXPORT === "1" || process.env.CF_PAGES === "1" || process.env.CLOUDFLARE_PAGES === "1";
 
 const nextConfig: NextConfig = {
   devIndicators: false,
+  ...(isStaticExport
+    ? {
+        output: "export" as const,
+        trailingSlash: true,
+      }
+    : {}),
   turbopack: {
     root: projectRoot,
   },
   async redirects() {
+    if (isStaticExport) {
+      return [];
+    }
+
     return [
       { source: "/about", destination: "/#about", permanent: false },
       { source: "/party", destination: "/#scene", permanent: false },
@@ -34,6 +45,7 @@ const nextConfig: NextConfig = {
     ];
   },
   images: {
+    unoptimized: isStaticExport,
     formats: ["image/avif", "image/webp"],
     deviceSizes: [390, 430, 768, 834, 1024, 1280, 1440, 1920],
     imageSizes: [96, 160, 240, 320, 480, 640],
