@@ -1,0 +1,793 @@
+{
+  "source": "C:\\Users\\Lenovo\\Desktop\\鶴千\\ACCESS.png",
+  "size": [
+    864,
+    1821
+  ],
+  "sections": [
+    {
+      "name": "section-01-hero.png",
+      "box": [
+        0,
+        0,
+        864,
+        282
+      ],
+      "width": 864,
+      "height": 282,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-02-location-map.png",
+      "box": [
+        0,
+        282,
+        864,
+        589
+      ],
+      "width": 864,
+      "height": 307,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-03-quick-info.png",
+      "box": [
+        0,
+        589,
+        864,
+        682
+      ],
+      "width": 864,
+      "height": 93,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-04-route-guide.png",
+      "box": [
+        0,
+        682,
+        864,
+        898
+      ],
+      "width": 864,
+      "height": 216,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-05-photo-navigation.png",
+      "box": [
+        0,
+        898,
+        864,
+        1047
+      ],
+      "width": 864,
+      "height": 149,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-06-map-transport.png",
+      "box": [
+        0,
+        1047,
+        864,
+        1263
+      ],
+      "width": 864,
+      "height": 216,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-07-nearby-spots.png",
+      "box": [
+        0,
+        1263,
+        864,
+        1418
+      ],
+      "width": 864,
+      "height": 155,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-08-guest-parking-faq.png",
+      "box": [
+        0,
+        1418,
+        864,
+        1627
+      ],
+      "width": 864,
+      "height": 209,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-09-street-cta.png",
+      "box": [
+        0,
+        1627,
+        864,
+        1821
+      ],
+      "width": 864,
+      "height": 194,
+      "mode": "RGBA",
+      "kind": "section"
+    }
+  ],
+  "materials": [
+    {
+      "name": "logo.png",
+      "box": [
+        18,
+        14,
+        121,
+        35
+      ],
+      "width": 103,
+      "height": 21,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "reserve-header.png",
+      "box": [
+        807,
+        10,
+        849,
+        39
+      ],
+      "width": 42,
+      "height": 29,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-title.png",
+      "box": [
+        92,
+        56,
+        411,
+        151
+      ],
+      "width": 319,
+      "height": 95,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-subtitle.png",
+      "box": [
+        94,
+        165,
+        262,
+        214
+      ],
+      "width": 168,
+      "height": 49,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-building-sign.png",
+      "box": [
+        532,
+        52,
+        728,
+        219
+      ],
+      "width": 196,
+      "height": 167,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "location-overview-panel.png",
+      "box": [
+        68,
+        282,
+        287,
+        573
+      ],
+      "width": 219,
+      "height": 291,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "main-map.png",
+      "box": [
+        286,
+        282,
+        797,
+        573
+      ],
+      "width": 511,
+      "height": 291,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "google-maps-button.png",
+      "box": [
+        80,
+        535,
+        254,
+        563
+      ],
+      "width": 174,
+      "height": 28,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "quick-info-panel.png",
+      "box": [
+        68,
+        590,
+        796,
+        681
+      ],
+      "width": 728,
+      "height": 91,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "quick-card-01.png",
+      "box": [
+        78,
+        608,
+        249,
+        671
+      ],
+      "width": 171,
+      "height": 63,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "quick-card-02.png",
+      "box": [
+        257,
+        608,
+        428,
+        671
+      ],
+      "width": 171,
+      "height": 63,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "quick-card-03.png",
+      "box": [
+        437,
+        608,
+        608,
+        671
+      ],
+      "width": 171,
+      "height": 63,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "quick-card-04.png",
+      "box": [
+        616,
+        608,
+        787,
+        671
+      ],
+      "width": 171,
+      "height": 63,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "route-panel.png",
+      "box": [
+        68,
+        695,
+        796,
+        893
+      ],
+      "width": 728,
+      "height": 198,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "route-card-01.png",
+      "box": [
+        83,
+        763,
+        202,
+        865
+      ],
+      "width": 119,
+      "height": 102,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "route-card-02.png",
+      "box": [
+        271,
+        763,
+        390,
+        865
+      ],
+      "width": 119,
+      "height": 102,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "route-card-03.png",
+      "box": [
+        458,
+        763,
+        592,
+        865
+      ],
+      "width": 134,
+      "height": 102,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "route-card-04.png",
+      "box": [
+        627,
+        763,
+        777,
+        865
+      ],
+      "width": 150,
+      "height": 102,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "photo-navigation-panel.png",
+      "box": [
+        68,
+        907,
+        796,
+        1045
+      ],
+      "width": 728,
+      "height": 138,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "photo-card-01.png",
+      "box": [
+        78,
+        932,
+        157,
+        980
+      ],
+      "width": 79,
+      "height": 48,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "photo-card-02.png",
+      "box": [
+        164,
+        932,
+        244,
+        980
+      ],
+      "width": 80,
+      "height": 48,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "photo-card-03.png",
+      "box": [
+        250,
+        932,
+        330,
+        980
+      ],
+      "width": 80,
+      "height": 48,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "photo-card-04.png",
+      "box": [
+        336,
+        932,
+        416,
+        980
+      ],
+      "width": 80,
+      "height": 48,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "photo-card-05.png",
+      "box": [
+        423,
+        932,
+        514,
+        980
+      ],
+      "width": 91,
+      "height": 48,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "photo-card-06.png",
+      "box": [
+        522,
+        932,
+        604,
+        980
+      ],
+      "width": 82,
+      "height": 48,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "photo-card-07.png",
+      "box": [
+        611,
+        932,
+        693,
+        980
+      ],
+      "width": 82,
+      "height": 48,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "photo-card-08.png",
+      "box": [
+        704,
+        932,
+        787,
+        980
+      ],
+      "width": 83,
+      "height": 48,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "illustrated-map-panel.png",
+      "box": [
+        68,
+        1059,
+        427,
+        1260
+      ],
+      "width": 359,
+      "height": 201,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "transportation-panel.png",
+      "box": [
+        438,
+        1059,
+        796,
+        1260
+      ],
+      "width": 358,
+      "height": 201,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "nearby-spots-panel.png",
+      "box": [
+        68,
+        1274,
+        796,
+        1418
+      ],
+      "width": 728,
+      "height": 144,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "nearby-card-01.png",
+      "box": [
+        80,
+        1304,
+        189,
+        1382
+      ],
+      "width": 109,
+      "height": 78,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "nearby-card-02.png",
+      "box": [
+        197,
+        1304,
+        306,
+        1382
+      ],
+      "width": 109,
+      "height": 78,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "nearby-card-03.png",
+      "box": [
+        315,
+        1304,
+        424,
+        1382
+      ],
+      "width": 109,
+      "height": 78,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "nearby-card-04.png",
+      "box": [
+        434,
+        1304,
+        544,
+        1382
+      ],
+      "width": 110,
+      "height": 78,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "nearby-card-05.png",
+      "box": [
+        556,
+        1304,
+        666,
+        1382
+      ],
+      "width": 110,
+      "height": 78,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "nearby-card-06.png",
+      "box": [
+        676,
+        1304,
+        786,
+        1382
+      ],
+      "width": 110,
+      "height": 78,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "international-panel.png",
+      "box": [
+        68,
+        1432,
+        316,
+        1615
+      ],
+      "width": 248,
+      "height": 183,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "parking-panel.png",
+      "box": [
+        328,
+        1432,
+        544,
+        1615
+      ],
+      "width": 216,
+      "height": 183,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "faq-panel.png",
+      "box": [
+        555,
+        1432,
+        796,
+        1615
+      ],
+      "width": 241,
+      "height": 183,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "street-view-panel.png",
+      "box": [
+        68,
+        1640,
+        397,
+        1812
+      ],
+      "width": 329,
+      "height": 172,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "cta-background.png",
+      "box": [
+        397,
+        1627,
+        796,
+        1821
+      ],
+      "width": 399,
+      "height": 194,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "cta-title.png",
+      "box": [
+        426,
+        1657,
+        586,
+        1749
+      ],
+      "width": 160,
+      "height": 92,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "cta-buttons.png",
+      "box": [
+        425,
+        1782,
+        747,
+        1816
+      ],
+      "width": 322,
+      "height": 34,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "floating-map.png",
+      "box": [
+        795,
+        1510,
+        857,
+        1582
+      ],
+      "width": 62,
+      "height": 72,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "floating-web.png",
+      "box": [
+        795,
+        1584,
+        857,
+        1656
+      ],
+      "width": 62,
+      "height": 72,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "floating-line.png",
+      "box": [
+        795,
+        1660,
+        857,
+        1730
+      ],
+      "width": 62,
+      "height": 70,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "floating-phone.png",
+      "box": [
+        795,
+        1733,
+        857,
+        1805
+      ],
+      "width": 62,
+      "height": 72,
+      "mode": "RGBA",
+      "kind": "material"
+    }
+  ],
+  "recomposition": {
+    "diff_bbox": null
+  },
+  "palette_note": "RGBA PNG crops; section slices recompose to the source image without visible offset.",
+  "palette": [
+    {
+      "hex": "#1d0c16",
+      "count": 1
+    },
+    {
+      "hex": "#260310",
+      "count": 1
+    },
+    {
+      "hex": "#030100",
+      "count": 15
+    },
+    {
+      "hex": "#170210",
+      "count": 1
+    },
+    {
+      "hex": "#0b0200",
+      "count": 1
+    },
+    {
+      "hex": "#070200",
+      "count": 3
+    },
+    {
+      "hex": "#0a0200",
+      "count": 1
+    },
+    {
+      "hex": "#130310",
+      "count": 1
+    },
+    {
+      "hex": "#0b0300",
+      "count": 1
+    },
+    {
+      "hex": "#070300",
+      "count": 1
+    },
+    {
+      "hex": "#080300",
+      "count": 2
+    },
+    {
+      "hex": "#120410",
+      "count": 2
+    }
+  ]
+}

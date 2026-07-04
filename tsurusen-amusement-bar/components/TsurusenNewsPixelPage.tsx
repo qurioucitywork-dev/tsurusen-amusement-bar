@@ -40,7 +40,7 @@ const navLinks = [
   { label: "REVIEWS", href: "/reviews", left: 608, top: 36, width: 54, height: 1 },
   { label: "SOCIAL HUB", href: "/social", left: 670, top: 36, width: 66, height: 1 },
   { label: "NEWS", href: "/news", left: 737, top: 36, width: 39, height: 1 },
-  { label: "ACCESS", href: "/#access", left: 777, top: 14, width: 42, height: 25 },
+  { label: "ACCESS", href: "/access", left: 777, top: 14, width: 42, height: 25 },
   { label: "RESERVE", href: "/reservation", left: 806, top: 10, width: 43, height: 31 },
 ];
 

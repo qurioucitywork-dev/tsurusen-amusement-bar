@@ -27,7 +27,7 @@ const navLinks = [
   { label: "ENTERTAINMENT", href: "/play", left: 569, top: 15, width: 88, height: 25 },
   { label: "SCENE", href: "/#scene", left: 660, top: 15, width: 44, height: 25 },
   { label: "GALLERY", href: "/#gallery", left: 710, top: 15, width: 53, height: 25 },
-  { label: "ACCESS", href: "/#access", left: 770, top: 15, width: 53, height: 25 },
+  { label: "ACCESS", href: "/access", left: 770, top: 15, width: 53, height: 25 },
   { label: "RESERVE", href: "/reservation", left: 785, top: 10, width: 63, height: 31 },
 ];
 
