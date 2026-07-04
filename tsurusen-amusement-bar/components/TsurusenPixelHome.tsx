@@ -465,6 +465,12 @@ const ctaFooterButtons = [
   { label: "電話予約", sub: "CALL", href: "tel:03-XXXX-XXXX", left: 516, top: 74, width: 150, height: 40, tone: "blue" as const },
 ];
 
+const ctaHeroButtons = [
+  { label: "WEB予約", sub: "RESERVE", href: "/reservation", tone: "gold" as const },
+  { label: "LINE予約", sub: "LINE", href: "https://line.me/R/ti/p/@tsurusen", tone: "green" as const },
+  { label: "電話予約", sub: "CALL", href: "tel:03-XXXX-XXXX", tone: "blue" as const },
+];
+
 const ctaFooterColumns: CtaFooterColumn[] = [
   {
     kind: "information",
@@ -5634,6 +5640,290 @@ body:has(.tsurusen-pixel-home) {
     min-height: 420px;
   }
 }
+
+/* CTA / footer hero finish pass */
+.pixel-cf-panel {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: #050505;
+  box-shadow: none;
+}
+
+.pixel-cf-panel::before,
+.pixel-cf-footer-shade {
+  display: none !important;
+}
+
+@media (min-width: 761px) {
+  .tsurusen-pixel-home::after {
+    display: block;
+    height: clamp(760px, 82svh, 980px);
+    content: "";
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  .tsurusen-pixel-home::after {
+    height: clamp(1760px, 220svh, 2100px);
+  }
+}
+
+.pixel-cf-cta {
+  display: flex;
+  min-height: clamp(520px, 72svh, 760px);
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  padding: clamp(64px, 8vh, 120px) clamp(16px, 4vw, 48px);
+  background-color: #050505;
+  background-image:
+    radial-gradient(ellipse at 50% 48%, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.26) 42%, rgba(0, 0, 0, 0.66) 78%),
+    linear-gradient(180deg, #050505 0%, rgba(5, 5, 5, 0.1) 18%, rgba(5, 5, 5, 0.04) 52%, rgba(5, 5, 5, 0.82) 92%, #050505 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.24) 31%, rgba(0, 0, 0, 0.2) 69%, rgba(0, 0, 0, 0.01)),
+    url("/assets/tsurusen-home/webp/cta-party-textless.webp");
+  background-position:
+    center center,
+    center center,
+    center center,
+    center center;
+  background-repeat: no-repeat;
+  background-size:
+    cover,
+    cover,
+    cover,
+    cover;
+  color: #fff8ea;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  font-feature-settings: "kern";
+}
+
+.pixel-cf-cta-inner {
+  display: grid;
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+  place-items: center;
+  text-align: center;
+}
+
+.pixel-cf-cta-title {
+  margin: 0;
+  overflow: visible;
+  background: none;
+  color: #f4cf7a;
+  font-family: "Bebas Neue", "Oswald", "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: clamp(52px, 7vw, 128px);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-shadow:
+    0 0 18px rgba(244, 207, 122, 0.34),
+    0 5px 22px rgba(0, 0, 0, 0.86);
+  text-transform: uppercase;
+  white-space: nowrap;
+  -webkit-text-fill-color: #f4cf7a;
+}
+
+@supports (-webkit-background-clip: text) {
+  .pixel-cf-cta-title {
+    -webkit-text-fill-color: #f4cf7a;
+  }
+}
+
+.pixel-cf-cta-subtitle {
+  margin: 16px 0 0;
+  color: #fffaf1;
+  font-family: "Noto Sans JP", var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: clamp(18px, 2vw, 30px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.88);
+  text-wrap: balance;
+}
+
+.pixel-cf-cta-actions {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(18px, 2vw, 32px);
+  margin-top: clamp(28px, 4vh, 48px);
+}
+
+.pixel-cf-cta-button {
+  --cta-border: rgba(216, 180, 106, 0.94);
+  --cta-fill: rgba(216, 180, 106, 0.12);
+  --cta-glow: rgba(216, 180, 106, 0.42);
+  display: flex;
+  width: clamp(240px, 22vw, 360px);
+  height: clamp(72px, 8vh, 96px);
+  min-height: 72px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px solid var(--cta-border);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 247, 234, 0.08), rgba(255, 247, 234, 0.01)),
+    var(--cta-fill),
+    rgba(4, 4, 4, 0.76);
+  box-shadow:
+    0 0 28px var(--cta-glow),
+    inset 0 0 26px rgba(255, 247, 234, 0.04);
+  color: #fffaf1;
+  cursor: pointer;
+  font-family: "Noto Sans JP", var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: clamp(24px, 1.8vw, 34px);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.88);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.pixel-cf-cta-button[data-tone="green"] {
+  --cta-border: rgba(48, 214, 94, 0.92);
+  --cta-fill: rgba(25, 167, 72, 0.16);
+  --cta-glow: rgba(48, 214, 94, 0.44);
+}
+
+.pixel-cf-cta-button[data-tone="blue"] {
+  --cta-border: rgba(69, 170, 255, 0.92);
+  --cta-fill: rgba(34, 91, 176, 0.16);
+  --cta-glow: rgba(80, 145, 255, 0.45);
+}
+
+.pixel-cf-cta-button small {
+  color: var(--cta-border);
+  font-family: "Bebas Neue", "Oswald", "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: clamp(15px, 1vw, 20px);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1;
+}
+
+.pixel-cf-cta-button:hover,
+.pixel-cf-cta-button:focus-visible {
+  border-color: color-mix(in srgb, var(--cta-border) 88%, #fffaf1);
+  box-shadow:
+    0 0 34px var(--cta-glow),
+    inset 0 0 30px rgba(255, 247, 234, 0.06);
+  transform: translateY(-3px) scale(1.03);
+}
+
+.pixel-cf-cta-button:focus-visible {
+  outline: 2px solid rgba(255, 248, 234, 0.88);
+  outline-offset: 4px;
+}
+
+.pixel-cf-inner {
+  width: min(1500px, 100%);
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: clamp(48px, 4.2vw, 72px) clamp(24px, 3vw, 48px) clamp(52px, 4vw, 72px);
+  border-top: 1px solid rgba(210, 170, 80, 0.72);
+}
+
+@media (max-width: 1180px) {
+  .pixel-cf-cta {
+    min-height: clamp(520px, 68svh, 700px);
+    background-position:
+      center center,
+      center center,
+      center center,
+      center center;
+  }
+
+  .pixel-cf-inner {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .pixel-cf-cta {
+    min-height: clamp(520px, 72svh, 660px);
+    padding: clamp(64px, 8vh, 86px) 16px;
+    background-position:
+      center center,
+      center center,
+      center center,
+      center top;
+  }
+
+  .pixel-cf-cta-title {
+    font-size: clamp(32px, 8.6vw, 42px);
+    letter-spacing: 0.035em;
+  }
+
+  .pixel-cf-cta-subtitle {
+    max-width: 94%;
+    margin-top: 14px;
+    font-size: clamp(16px, 4.3vw, 19px);
+    line-height: 1.55;
+  }
+
+  .pixel-cf-cta-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: clamp(24px, 4vh, 34px);
+  }
+
+  .pixel-cf-cta-button {
+    width: min(100%, 340px);
+    height: clamp(64px, 8vh, 74px);
+    min-height: 64px;
+    border-radius: 16px;
+    font-size: clamp(20px, 5.6vw, 24px);
+  }
+
+  .pixel-cf-cta-button small {
+    font-size: 13px;
+  }
+
+  .pixel-cf-inner {
+    grid-template-columns: 1fr;
+    padding: 42px 24px 44px;
+  }
+}
+
+@media (max-height: 600px) and (min-width: 761px) {
+  .pixel-cf-cta {
+    min-height: 520px;
+    padding-block: 64px;
+  }
+
+  .pixel-cf-cta-title {
+    font-size: clamp(50px, 6.2vw, 92px);
+  }
+
+  .pixel-cf-cta-button {
+    height: 72px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pixel-cf-cta-button {
+    transition: none;
+  }
+
+  .pixel-cf-cta-button:hover,
+  .pixel-cf-cta-button:focus-visible {
+    transform: none;
+  }
+}
 `;
 
 const xPct = (value: number) => `${(value / designWidth) * 100}%`;
@@ -6299,6 +6589,22 @@ function CtaFooterSection() {
 
   return (
     <footer id="reserve" className="pixel-cf-panel" aria-label="Footer">
+      <section className="pixel-cf-cta" aria-labelledby="pixel-cf-cta-title">
+        <div className="pixel-cf-cta-inner">
+          <h2 id="pixel-cf-cta-title" className="pixel-cf-cta-title">
+            LET&apos;S PLAY TONIGHT.
+          </h2>
+          <p className="pixel-cf-cta-subtitle">今夜はTSURUSENで最高の時間を。</p>
+          <div className="pixel-cf-cta-actions" aria-label="Reservation actions">
+            {ctaHeroButtons.map((button) => (
+              <button key={button.label} type="button" className="pixel-cf-cta-button" data-tone={button.tone} onClick={() => navigateTo(button.href)}>
+                <span>{button.label}</span>
+                <small>{button.sub}</small>
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
       <div className="pixel-cf-inner">
         <div className="pixel-cf-brand">
           <span className="pixel-cf-logo-mark" aria-hidden="true">
