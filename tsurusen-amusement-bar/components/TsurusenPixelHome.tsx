@@ -6,12 +6,10 @@ import {
   Aperture,
   CalendarDays,
   Camera,
-  ChevronUp,
   Clock,
   Dices,
   GlassWater,
   MapPin,
-  MessageCircle,
   Mic2,
   MoonStar,
   Phone,
@@ -329,20 +327,100 @@ const accessRows = [
 const faqItems = ["予約は必要ですか？", "貸切は何名から可能ですか？", "飲み放題の内容を教えてください", "支払い方法は？", "持ち込みはできますか？"];
 
 const footerIcons = [
-  { icon: CalendarDays, left: 799, top: 1803, size: 14 },
-  { icon: MessageCircle, left: 823, top: 1803, size: 14 },
-  { icon: Phone, left: 844, top: 1803, size: 14 },
   { icon: Trophy, left: 412, top: 1240, size: 13 },
+];
+
+type CtaFooterItem = {
+  text: string;
+  href?: string;
+  icon?: typeof Aperture;
+};
+
+type CtaFooterColumn = {
+  kind: "information" | "scene" | "follow" | "address" | "hours";
+  title: string;
+  left: number;
+  top: number;
+  width: number;
+  height: number;
+  items: CtaFooterItem[];
+};
+
+const ctaFooterButtons = [
+  { label: "WEB予約", sub: "RESERVE", href: "/reservation", left: 188, top: 74, width: 150, height: 40, tone: "gold" as const },
+  { label: "LINE予約", sub: "LINE", href: "https://line.me/R/ti/p/@tsurusen", left: 352, top: 74, width: 150, height: 40, tone: "green" as const },
+  { label: "電話予約", sub: "CALL", href: "tel:03-XXXX-XXXX", left: 516, top: 74, width: 150, height: 40, tone: "blue" as const },
+];
+
+const ctaFooterColumns: CtaFooterColumn[] = [
+  {
+    kind: "information",
+    title: "INFORMATION",
+    left: 205,
+    top: 119,
+    width: 84,
+    height: 56,
+    items: [
+      { text: "ABOUT", href: "/#about" },
+      { text: "FEATURE", href: "/#feature" },
+      { text: "PRICE", href: "/pricing" },
+    ],
+  },
+  {
+    kind: "scene",
+    title: "SCENE",
+    left: 330,
+    top: 119,
+    width: 78,
+    height: 56,
+    items: [
+      { text: "GALLERY", href: "/#gallery" },
+      { text: "EVENT", href: "/#event" },
+      { text: "ACCESS", href: "/#access" },
+    ],
+  },
+  {
+    kind: "follow",
+    title: "FOLLOW US",
+    left: 446,
+    top: 119,
+    width: 102,
+    height: 56,
+    items: [
+      { text: "INSTAGRAM", href: "https://www.instagram.com/", icon: Aperture },
+      { text: "LINE", href: "https://line.me/R/ti/p/@tsurusen" },
+    ],
+  },
+  {
+    kind: "address",
+    title: "ADDRESS",
+    left: 560,
+    top: 119,
+    width: 135,
+    height: 56,
+    items: [{ text: "東京都新宿区歌舞伎町1-XX-XX" }, { text: "鶴千ビル5F" }, { text: "03-XXXX-XXXX" }],
+  },
+  {
+    kind: "hours",
+    title: "OPENING HOURS",
+    left: 710,
+    top: 119,
+    width: 128,
+    height: 56,
+    items: [{ text: "18:00 - 05:00（L.O. 04:30）" }, { text: "年中無休" }],
+  },
 ];
 
 const runtimeCss = `
 body:has(.tsurusen-pixel-home) {
   min-width: 0 !important;
+  overflow-x: hidden;
 }
 
 .tsurusen-pixel-home {
   position: relative;
-  width: 100vw;
+  width: 100%;
+  max-width: 100vw;
   overflow-x: hidden;
   background: #090807;
   color: #f6f0e6;
@@ -358,7 +436,8 @@ body:has(.tsurusen-pixel-home) {
   position: relative;
   left: 0;
   top: 0;
-  width: 100vw;
+  width: 100%;
+  max-width: 100vw;
   aspect-ratio: 864 / 1821;
   min-height: 1px;
   overflow: hidden;
@@ -639,7 +718,9 @@ body:has(.tsurusen-pixel-home) {
 }
 
 .pixel-dom-text[data-region="event-access-faq"],
-.pixel-dom-button[data-region="event-access-faq"] {
+.pixel-dom-button[data-region="event-access-faq"],
+.pixel-dom-text[data-region="cta-footer"],
+.pixel-dom-button[data-region="cta-footer"] {
   display: none;
 }
 
@@ -949,6 +1030,300 @@ body:has(.tsurusen-pixel-home) {
   height: calc(11 * 0.1157407407vw);
   color: #efc874;
   filter: drop-shadow(0 0 calc(3 * 0.1157407407vw) rgba(239, 200, 116, 0.28));
+}
+
+.pixel-cf-panel {
+  position: absolute;
+  z-index: 7;
+  overflow: hidden;
+  border: max(1px, calc(0.9 * 0.1157407407vw)) solid rgba(171, 126, 52, 0.88);
+  border-radius: calc(6 * 0.1157407407vw);
+  background:
+    radial-gradient(circle at 49% 34%, rgba(168, 72, 235, 0.1), transparent 24%),
+    radial-gradient(circle at 18% 30%, rgba(216, 180, 106, 0.07), transparent 20%),
+    radial-gradient(circle at 83% 26%, rgba(216, 180, 106, 0.06), transparent 22%);
+  box-shadow:
+    inset 0 0 calc(18 * 0.1157407407vw) rgba(0, 0, 0, 0.58),
+    0 0 calc(12 * 0.1157407407vw) rgba(216, 180, 106, 0.08);
+  pointer-events: none;
+}
+
+.pixel-cf-panel::before {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 7;
+  height: 58%;
+  background:
+    radial-gradient(ellipse at 50% 35%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.38) 48%, rgba(0, 0, 0, 0.62) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.4) 28%, rgba(0, 0, 0, 0.34) 72%, rgba(0, 0, 0, 0.02));
+  content: "";
+}
+
+.pixel-cf-footer-shade {
+  position: absolute;
+  left: 0;
+  top: 57.5%;
+  z-index: 7;
+  width: 100%;
+  height: 42.5%;
+  border-top: max(1px, calc(0.65 * 0.1157407407vw)) solid rgba(171, 126, 52, 0.72);
+  background-color: #060605;
+  background:
+    radial-gradient(circle at 13% 45%, rgba(216, 180, 106, 0.06), transparent 19%),
+    radial-gradient(circle at 54% 20%, rgba(255, 247, 234, 0.035), transparent 24%),
+    linear-gradient(180deg, #10100f, #060605 62%, #050504);
+}
+
+.pixel-cf-title,
+.pixel-cf-subtitle,
+.pixel-cf-brand,
+.pixel-cf-column,
+.pixel-cf-copyright {
+  position: absolute;
+  z-index: 9;
+  margin: 0;
+  overflow: hidden;
+  pointer-events: none;
+  text-shadow: 0 calc(2 * 0.1157407407vw) calc(7 * 0.1157407407vw) rgba(0, 0, 0, 0.94);
+}
+
+.pixel-cf-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #efc874;
+  font-family: "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: calc(40 * 0.1157407407vw);
+  font-weight: 900;
+  letter-spacing: calc(1.6 * 0.1157407407vw);
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow:
+    0 calc(2 * 0.1157407407vw) calc(8 * 0.1157407407vw) rgba(0, 0, 0, 0.96),
+    0 0 calc(11 * 0.1157407407vw) rgba(239, 200, 116, 0.2);
+}
+
+.pixel-cf-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff8ea;
+  font-family: var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: calc(11 * 0.1157407407vw);
+  font-weight: 900;
+  letter-spacing: calc(0.7 * 0.1157407407vw);
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.pixel-cf-button {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: max(1px, calc(1.2 * 0.1157407407vw)) solid var(--button-border);
+  border-radius: calc(6 * 0.1157407407vw);
+  background:
+    linear-gradient(180deg, rgba(255, 247, 234, 0.09), rgba(255, 247, 234, 0.01) 45%, rgba(0, 0, 0, 0.2)),
+    rgba(6, 6, 5, 0.78),
+    var(--button-fill);
+  box-shadow:
+    0 0 calc(13 * 0.1157407407vw) var(--button-glow),
+    inset 0 0 calc(14 * 0.1157407407vw) rgba(255, 247, 234, 0.04);
+  color: #fff8ea;
+  cursor: pointer;
+  font-family: var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: calc(12.4 * 0.1157407407vw);
+  font-weight: 900;
+  letter-spacing: calc(0.3 * 0.1157407407vw);
+  line-height: 1;
+  pointer-events: auto;
+  text-align: center;
+  text-shadow: 0 calc(2 * 0.1157407407vw) calc(6 * 0.1157407407vw) rgba(0, 0, 0, 0.96);
+  white-space: nowrap;
+}
+
+.pixel-cf-button small {
+  display: block;
+  max-width: 100%;
+  margin-top: calc(4 * 0.1157407407vw);
+  overflow: hidden;
+  color: var(--button-border);
+  font-family: "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-size: calc(7.6 * 0.1157407407vw);
+  font-weight: 900;
+  letter-spacing: calc(1.35 * 0.1157407407vw);
+  line-height: 1;
+}
+
+.pixel-cf-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #efc874;
+  text-align: center;
+}
+
+.pixel-cf-logo-mark {
+  position: relative;
+  display: block;
+  width: calc(28 * 0.1157407407vw);
+  height: calc(28 * 0.1157407407vw);
+  border: max(1px, calc(1.2 * 0.1157407407vw)) solid rgba(239, 200, 116, 0.9);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(239, 200, 116, 0.18), transparent 56%),
+    rgba(8, 8, 7, 0.34);
+  box-shadow: 0 0 calc(9 * 0.1157407407vw) rgba(239, 200, 116, 0.22);
+}
+
+.pixel-cf-logo-mark::before,
+.pixel-cf-logo-mark::after {
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  width: 47%;
+  height: 24%;
+  border-top: max(1px, calc(1.2 * 0.1157407407vw)) solid rgba(239, 200, 116, 0.9);
+  border-radius: 50% 50% 0 0;
+  content: "";
+}
+
+.pixel-cf-logo-mark::before {
+  transform: translate(-88%, -50%) rotate(25deg);
+}
+
+.pixel-cf-logo-mark::after {
+  transform: translate(-12%, -50%) rotate(-25deg);
+}
+
+.pixel-cf-logo-stem {
+  position: absolute;
+  left: 50%;
+  top: 36%;
+  width: max(1px, calc(1 * 0.1157407407vw));
+  height: 44%;
+  background: rgba(239, 200, 116, 0.92);
+  transform: translateX(-50%);
+}
+
+.pixel-cf-brand-kicker,
+.pixel-cf-brand-name {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  font-family: "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pixel-cf-brand-kicker {
+  margin-top: calc(5 * 0.1157407407vw);
+  font-size: calc(7.2 * 0.1157407407vw);
+  letter-spacing: calc(1.35 * 0.1157407407vw);
+}
+
+.pixel-cf-brand-name {
+  margin-top: calc(5 * 0.1157407407vw);
+  font-size: calc(16.8 * 0.1157407407vw);
+  letter-spacing: calc(3.7 * 0.1157407407vw);
+}
+
+.pixel-cf-column {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff8ea;
+  font-family: "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+}
+
+.pixel-cf-column-title {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  color: #efc874;
+  font-size: calc(9.4 * 0.1157407407vw);
+  font-weight: 900;
+  letter-spacing: calc(1.25 * 0.1157407407vw);
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.pixel-cf-column-rule {
+  display: block;
+  width: calc(55 * 0.1157407407vw);
+  height: max(1px, calc(0.65 * 0.1157407407vw));
+  margin: calc(7 * 0.1157407407vw) 0 calc(6 * 0.1157407407vw);
+  background: linear-gradient(90deg, rgba(239, 200, 116, 0.82), rgba(239, 200, 116, 0.1));
+}
+
+.pixel-cf-column-items {
+  display: flex;
+  min-width: 0;
+  max-width: 100%;
+  flex-direction: column;
+  gap: calc(5.1 * 0.1157407407vw);
+  overflow: hidden;
+}
+
+.pixel-cf-column-link {
+  color: inherit;
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+.pixel-cf-column-item {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: calc(5.5 * 0.1157407407vw);
+  overflow: hidden;
+  color: #fff8ea;
+  font-family: var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: calc(7.3 * 0.1157407407vw);
+  font-weight: 900;
+  letter-spacing: calc(0.45 * 0.1157407407vw);
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.pixel-cf-column-item svg {
+  width: calc(14 * 0.1157407407vw);
+  height: calc(14 * 0.1157407407vw);
+  flex: 0 0 auto;
+  color: #fff8ea;
+  filter: drop-shadow(0 0 calc(3 * 0.1157407407vw) rgba(255, 247, 234, 0.36));
+}
+
+.pixel-cf-column[data-kind="address"] .pixel-cf-column-item,
+.pixel-cf-column[data-kind="hours"] .pixel-cf-column-item {
+  font-size: calc(6.7 * 0.1157407407vw);
+  letter-spacing: calc(0.15 * 0.1157407407vw);
+}
+
+.pixel-cf-copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 248, 234, 0.9);
+  font-family: var(--font-manrope), var(--font-zen), sans-serif;
+  font-size: calc(5.6 * 0.1157407407vw);
+  font-weight: 500;
+  letter-spacing: calc(0.15 * 0.1157407407vw);
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .pixel-pe-heading {
@@ -1784,7 +2159,7 @@ function sliceCropStyle(crop: { x: number; y: number; width: number; height: num
 
 function TextBlock({ as, text, left, top, width, height, size, lineHeight = 1, tracking = 0, tone, variant = "body", align = "left" }: PixelTextBlock) {
   const Tag = as;
-  const region = top >= 361 && top < 592 ? "about" : top >= 775 && top < 1031 ? "price-entertainment" : top >= 1418 && top < 1621 ? "event-access-faq" : undefined;
+  const region = top >= 361 && top < 592 ? "about" : top >= 775 && top < 1031 ? "price-entertainment" : top >= 1418 && top < 1621 ? "event-access-faq" : top >= 1621 ? "cta-footer" : undefined;
   const style: PixelStyle = {
     ...boxStyle({ left, top, width, height }),
     "--font-size": size,
@@ -1810,7 +2185,7 @@ function NavLink({ href, label, left, top, width, height }: PixelLink) {
 }
 
 function ActionButton({ href, label, sub, left, top, width, height, tone, icon: Icon, secondaryIcon: SecondaryIcon, row, framed, compact, cleanFill }: PixelButton) {
-  const region = top >= 361 && top < 592 ? "about" : top >= 775 && top < 1031 ? "price-entertainment" : top >= 1418 && top < 1621 ? "event-access-faq" : undefined;
+  const region = top >= 361 && top < 592 ? "about" : top >= 775 && top < 1031 ? "price-entertainment" : top >= 1418 && top < 1621 ? "event-access-faq" : top >= 1621 ? "cta-footer" : undefined;
   const style: PixelStyle = {
     ...boxStyle({ left, top, width, height }),
     ...buttonTone(tone),
@@ -2039,6 +2414,76 @@ function EventAccessFaqSection() {
   );
 }
 
+function CtaFooterSection() {
+  const panelWidth = 854;
+  const panelHeight = 189;
+
+  return (
+    <section className="pixel-cf-panel" aria-label="Reserve and footer" style={boxStyle({ left: 5, top: 1626, width: panelWidth, height: panelHeight })}>
+      <div className="pixel-cf-footer-shade" aria-hidden="true" />
+
+      <h2 className="pixel-cf-title" style={innerBoxStyle({ left: 202, top: 27, width: 450, height: 43 }, panelWidth, panelHeight)}>
+        LET&apos;S PLAY TONIGHT.
+      </h2>
+      <p className="pixel-cf-subtitle" style={innerBoxStyle({ left: 286, top: 64, width: 282, height: 16 }, panelWidth, panelHeight)}>
+        今夜はTSURUSENで最高の時間を。
+      </p>
+
+      {ctaFooterButtons.map((button) => (
+        <button
+          key={button.label}
+          type="button"
+          className="pixel-cf-button"
+          data-tone={button.tone}
+          onClick={() => navigateTo(button.href)}
+          style={{ ...innerBoxStyle(button, panelWidth, panelHeight), ...buttonTone(button.tone) }}
+        >
+          {button.label}
+          <small>{button.sub}</small>
+        </button>
+      ))}
+
+      <div className="pixel-cf-brand" style={innerBoxStyle({ left: 55, top: 122, width: 128, height: 61 }, panelWidth, panelHeight)}>
+        <span className="pixel-cf-logo-mark" aria-hidden="true">
+          <span className="pixel-cf-logo-stem" />
+        </span>
+        <span className="pixel-cf-brand-kicker">AMUSEMENT BAR</span>
+        <span className="pixel-cf-brand-name">TSURUSEN</span>
+      </div>
+
+      {ctaFooterColumns.map((column) => (
+        <div key={column.title} className="pixel-cf-column" data-kind={column.kind} style={innerBoxStyle(column, panelWidth, panelHeight)}>
+          <span className="pixel-cf-column-title">{column.title}</span>
+          <span className="pixel-cf-column-rule" aria-hidden="true" />
+          <span className="pixel-cf-column-items">
+            {column.items.map((item) => {
+              const Icon = item.icon;
+              const content = (
+                <span className="pixel-cf-column-item">
+                  {Icon ? <Icon strokeWidth={2} aria-hidden="true" /> : null}
+                  <span>{item.text}</span>
+                </span>
+              );
+
+              return item.href ? (
+                <a key={item.text} className="pixel-cf-column-link" href={item.href}>
+                  {content}
+                </a>
+              ) : (
+                <span key={item.text}>{content}</span>
+              );
+            })}
+          </span>
+        </div>
+      ))}
+
+      <p className="pixel-cf-copyright" style={innerBoxStyle({ left: 354, top: 176, width: 146, height: 9 }, panelWidth, panelHeight)}>
+        © 2024 TSURUSEN. All Rights Reserved.
+      </p>
+    </section>
+  );
+}
+
 export function TsurusenPixelHome() {
   return (
     <div className="tsurusen-pixel-home" id="top">
@@ -2110,6 +2555,7 @@ export function TsurusenPixelHome() {
 
         <PriceEntertainmentSection />
         <EventAccessFaqSection />
+        <CtaFooterSection />
 
         {actionButtons.map((button) => (
           <ActionButton key={`${button.label}-${button.left}-${button.top}`} {...button} />
@@ -2129,7 +2575,6 @@ export function TsurusenPixelHome() {
           <Star size={14} fill="currentColor" strokeWidth={1.2} style={{ left: xPct(595), top: yPct(1204) }} />
           <Star size={14} fill="currentColor" strokeWidth={1.2} style={{ left: xPct(620), top: yPct(1204) }} />
           <Star size={14} fill="currentColor" strokeWidth={1.2} style={{ left: xPct(645), top: yPct(1204) }} />
-          <ChevronUp size={13} strokeWidth={1.8} style={{ left: xPct(837), top: yPct(1790) }} />
         </div>
       </div>
     </div>
