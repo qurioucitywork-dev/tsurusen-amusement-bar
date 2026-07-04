@@ -23,7 +23,6 @@ import {
   Star,
   Tag,
   Target,
-  Trophy,
   Utensils,
   UsersRound,
   Wine,
@@ -141,7 +140,7 @@ const headerNavItems: HeaderNavItem[] = [
   { label: "DRINK MENU", href: "/drink-menu", icon: Wine, group: "menu" },
   { label: "FOOD MENU", href: "/food-menu", icon: Utensils, group: "menu" },
   { label: "ACCESS", href: "/access", icon: MapPin },
-  { label: "BLOG", href: "/news", icon: FileText, sub: "記事" },
+  { label: "BLOG", href: "/news", icon: FileText },
   { label: "CAMPAIGN", href: "/campaigns", icon: Gift },
   { label: "ENTERTAINMENT", href: "/play", icon: Mic2 },
   { label: "EVENTS", href: "/events", icon: CalendarDays },
@@ -439,95 +438,10 @@ const accessRows = [
 
 const faqItems = ["予約は必要ですか？", "貸切は何名から可能ですか？", "飲み放題の内容を教えてください", "支払い方法は？", "持ち込みはできますか？"];
 
-const footerIcons = [
-  { icon: Trophy, left: 412, top: 1240, size: 13 },
-];
-
-type CtaFooterItem = {
-  text: string;
-  href?: string;
-  icon?: typeof Aperture;
-};
-
-type CtaFooterColumn = {
-  kind: "information" | "scene" | "follow" | "address" | "hours";
-  title: string;
-  left: number;
-  top: number;
-  width: number;
-  height: number;
-  items: CtaFooterItem[];
-};
-
-const ctaFooterButtons = [
-  { label: "WEB予約", sub: "RESERVE", href: "/reservation", left: 188, top: 74, width: 150, height: 40, tone: "gold" as const },
-  { label: "LINE予約", sub: "LINE", href: "https://line.me/R/ti/p/@tsurusen", left: 352, top: 74, width: 150, height: 40, tone: "green" as const },
-  { label: "電話予約", sub: "CALL", href: "tel:03-XXXX-XXXX", left: 516, top: 74, width: 150, height: 40, tone: "blue" as const },
-];
-
 const ctaHeroButtons = [
   { label: "WEB予約", sub: "RESERVE", href: "/reservation", tone: "gold" as const },
   { label: "LINE予約", sub: "LINE", href: "https://line.me/R/ti/p/@tsurusen", tone: "green" as const },
   { label: "電話予約", sub: "CALL", href: "tel:03-XXXX-XXXX", tone: "blue" as const },
-];
-
-const ctaFooterColumns: CtaFooterColumn[] = [
-  {
-    kind: "information",
-    title: "INFORMATION",
-    left: 205,
-    top: 119,
-    width: 84,
-    height: 56,
-    items: [
-      { text: "ABOUT", href: "/#about" },
-      { text: "FEATURE", href: "/#feature" },
-      { text: "PRICE", href: "/pricing" },
-    ],
-  },
-  {
-    kind: "scene",
-    title: "SCENE",
-    left: 330,
-    top: 119,
-    width: 78,
-    height: 56,
-    items: [
-      { text: "GALLERY", href: "/#gallery" },
-      { text: "EVENT", href: "/#event" },
-      { text: "ACCESS", href: "/#access" },
-    ],
-  },
-  {
-    kind: "follow",
-    title: "FOLLOW US",
-    left: 446,
-    top: 119,
-    width: 102,
-    height: 56,
-    items: [
-      { text: "INSTAGRAM", href: "https://www.instagram.com/", icon: Aperture },
-      { text: "LINE", href: "https://line.me/R/ti/p/@tsurusen" },
-    ],
-  },
-  {
-    kind: "address",
-    title: "ADDRESS",
-    left: 560,
-    top: 119,
-    width: 135,
-    height: 56,
-    items: [{ text: "東京都新宿区歌舞伎町1-XX-XX" }, { text: "鶴千ビル5F" }, { text: "03-XXXX-XXXX" }],
-  },
-  {
-    kind: "hours",
-    title: "OPENING HOURS",
-    left: 710,
-    top: 119,
-    width: 128,
-    height: 56,
-    items: [{ text: "18:00 - 05:00（L.O. 04:30）" }, { text: "年中無休" }],
-  },
 ];
 
 const runtimeCss = `
@@ -6698,6 +6612,12 @@ body:has(.tsurusen-pixel-home) {
     grid-template-columns: 1fr;
   }
 }
+
+.tsurusen-pixel-home::after {
+  display: none !important;
+  height: 0 !important;
+  content: none !important;
+}
 `;
 
 const xPct = (value: number) => `${(value / designWidth) * 100}%`;
@@ -7323,88 +7243,7 @@ function EventAccessFaqSection() {
 }
 
 function CtaFooterSection() {
-  type FooterColumn = (typeof ctaFooterColumns)[number];
-  type FooterItem = { text: string; href?: string; icon?: typeof Camera };
-  const footerColumns: Array<Omit<FooterColumn, "items"> & { items: FooterItem[] }> = ctaFooterColumns.map((column) => {
-    if (column.kind === "information") {
-      return { ...column, items: [{ text: "ABOUT" }, { text: "FEATURE" }, { text: "PRICE" }] };
-    }
-
-    if (column.kind === "scene") {
-      return { ...column, items: [{ text: "GALLERY" }, { text: "EVENT" }] };
-    }
-
-    if (column.kind === "follow") {
-      return {
-        ...column,
-        items: [
-          { text: "INSTAGRAM", icon: Camera, href: "#instagram" },
-          { text: "LINE", href: "#reserve" },
-        ],
-      };
-    }
-
-    if (column.kind === "address") {
-      return {
-        ...column,
-        items: [
-          { text: "東京都武蔵野区緑町1-XX-XX" },
-          { text: "緑町ビル6F" },
-          { text: "03-XXXX-XXXX" },
-        ],
-      };
-    }
-
-    return {
-      ...column,
-      items: [{ text: "18:00 - 05:00（L.O. 04:30）" }, { text: "年中無休" }],
-    };
-  });
-
   return (
-    <>
-    <footer className="pixel-cf-panel" aria-label="Footer">
-      <div className="pixel-cf-inner">
-        <div className="pixel-cf-brand">
-          <span className="pixel-cf-logo-mark" aria-hidden="true">
-            <Aperture strokeWidth={1.7} />
-          </span>
-          <span className="pixel-cf-brand-kicker">AMUSEMENT BAR</span>
-          <span className="pixel-cf-brand-name">TSURUSEN</span>
-        </div>
-
-        {footerColumns.map((column) => (
-          <div key={column.title} className="pixel-cf-column" data-kind={column.kind}>
-            <span className="pixel-cf-column-title">{column.title}</span>
-            <span className="pixel-cf-column-rule" aria-hidden="true" />
-            <span className="pixel-cf-column-items">
-              {column.items.map((item) => {
-                const Icon = item.icon;
-                const content = (
-                  <span className="pixel-cf-column-item">
-                    {Icon ? <Icon strokeWidth={2} aria-hidden="true" /> : null}
-                    <span>{item.text}</span>
-                  </span>
-                );
-
-                return item.href ? (
-                  <a key={item.text} className="pixel-cf-column-link" href={item.href}>
-                    {content}
-                  </a>
-                ) : (
-                  <span key={item.text}>{content}</span>
-                );
-              })}
-            </span>
-          </div>
-        ))}
-
-        <p className="pixel-cf-copyright">© 2024 TSURUSEN. All Rights Reserved.</p>
-      </div>
-      <span className="pixel-cf-reserve-count" hidden>
-        {ctaFooterButtons.length}
-      </span>
-    </footer>
     <section id="reserve" className="pixel-cf-cta" aria-labelledby="pixel-cf-cta-title">
       <div className="pixel-cf-cta-inner">
         <h2 id="pixel-cf-cta-title" className="pixel-cf-cta-title">
@@ -7421,7 +7260,6 @@ function CtaFooterSection() {
         </div>
       </div>
     </section>
-    </>
   );
 }
 
@@ -7495,10 +7333,6 @@ export function TsurusenPixelHome() {
         ))}
 
         <div className="pixel-icon-layer" aria-hidden="true">
-          {footerIcons.map((item) => {
-            const Icon = item.icon;
-            return <Icon key={`${item.left}-${item.top}`} size={item.size} strokeWidth={1.6} style={{ left: xPct(item.left), top: yPct(item.top) }} />;
-          })}
           <Star size={14} fill="currentColor" strokeWidth={1.2} style={{ left: xPct(545), top: yPct(1204) }} />
           <Star size={14} fill="currentColor" strokeWidth={1.2} style={{ left: xPct(570), top: yPct(1204) }} />
           <Star size={14} fill="currentColor" strokeWidth={1.2} style={{ left: xPct(595), top: yPct(1204) }} />
