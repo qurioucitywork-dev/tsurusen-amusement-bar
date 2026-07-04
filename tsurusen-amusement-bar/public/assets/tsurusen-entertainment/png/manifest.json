@@ -1,0 +1,479 @@
+{
+  "source": "public/assets/tsurusen-entertainment/reference-entertainment.png",
+  "sourceSize": {
+    "width": 863,
+    "height": 1822
+  },
+  "assets": [
+    {
+      "name": "section-01-hero.png",
+      "box": [
+        0,
+        0,
+        863,
+        258
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-02-experience.png",
+      "box": [
+        0,
+        258,
+        863,
+        454
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-03-entertainment-menu.png",
+      "box": [
+        0,
+        454,
+        863,
+        618
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-04-darts-experience.png",
+      "box": [
+        0,
+        618,
+        863,
+        769
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-05-karaoke-experience.png",
+      "box": [
+        0,
+        769,
+        863,
+        927
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-06-board-game-lounge.png",
+      "box": [
+        0,
+        927,
+        863,
+        1106
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-07-space-gallery-floor-guide.png",
+      "box": [
+        0,
+        1106,
+        863,
+        1264
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-08-capacity-perfect-for.png",
+      "box": [
+        0,
+        1264,
+        863,
+        1410
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-09-timeline.png",
+      "box": [
+        0,
+        1410,
+        863,
+        1530
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-10-night-moments.png",
+      "box": [
+        0,
+        1530,
+        863,
+        1686
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-11-cta.png",
+      "box": [
+        0,
+        1686,
+        863,
+        1822
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "logo-header-transparent.png",
+      "box": [
+        22,
+        15,
+        126,
+        43
+      ],
+      "type": "transparent-keyed"
+    },
+    {
+      "name": "intro-lounge.png",
+      "box": [
+        28,
+        258,
+        432,
+        454
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "menu-darts.png",
+      "box": [
+        44,
+        489,
+        231,
+        598
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "menu-karaoke.png",
+      "box": [
+        240,
+        489,
+        427,
+        598
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "menu-board-game.png",
+      "box": [
+        436,
+        489,
+        623,
+        598
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "menu-lounge.png",
+      "box": [
+        631,
+        489,
+        819,
+        598
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "darts-left.png",
+      "box": [
+        28,
+        618,
+        310,
+        769
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "darts-right.png",
+      "box": [
+        495,
+        618,
+        836,
+        769
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "karaoke-main.png",
+      "box": [
+        324,
+        769,
+        836,
+        927
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "board-classic.png",
+      "box": [
+        51,
+        988,
+        296,
+        1091
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "board-party.png",
+      "box": [
+        314,
+        960,
+        553,
+        1091
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "board-strategy.png",
+      "box": [
+        562,
+        960,
+        816,
+        1091
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "space-gallery-large.png",
+      "box": [
+        48,
+        1144,
+        218,
+        1248
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "space-gallery-collage.png",
+      "box": [
+        222,
+        1136,
+        415,
+        1249
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "floor-guide-map.png",
+      "box": [
+        443,
+        1134,
+        712,
+        1248
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "floor-guide-legend.png",
+      "box": [
+        728,
+        1128,
+        826,
+        1232
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "perfect-gokon.png",
+      "box": [
+        300,
+        1298,
+        388,
+        1398
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "perfect-girls.png",
+      "box": [
+        393,
+        1298,
+        480,
+        1398
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "perfect-birthday.png",
+      "box": [
+        486,
+        1298,
+        573,
+        1398
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "perfect-private.png",
+      "box": [
+        579,
+        1298,
+        666,
+        1398
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "perfect-afterparty.png",
+      "box": [
+        672,
+        1298,
+        759,
+        1398
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "perfect-visitor.png",
+      "box": [
+        765,
+        1298,
+        819,
+        1398
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "timeline-drink.png",
+      "box": [
+        69,
+        1444,
+        130,
+        1511
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "timeline-darts.png",
+      "box": [
+        194,
+        1444,
+        255,
+        1511
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "timeline-karaoke.png",
+      "box": [
+        319,
+        1444,
+        380,
+        1511
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "timeline-game.png",
+      "box": [
+        472,
+        1444,
+        533,
+        1511
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "timeline-drink2.png",
+      "box": [
+        625,
+        1444,
+        686,
+        1511
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "timeline-photo.png",
+      "box": [
+        751,
+        1444,
+        812,
+        1511
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "night-moment-01.png",
+      "box": [
+        28,
+        1530,
+        211,
+        1686
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "night-moment-02.png",
+      "box": [
+        211,
+        1530,
+        393,
+        1686
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "night-moment-03.png",
+      "box": [
+        393,
+        1530,
+        586,
+        1686
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "night-moment-04.png",
+      "box": [
+        586,
+        1530,
+        799,
+        1686
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "cta-background.png",
+      "box": [
+        0,
+        1686,
+        863,
+        1822
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "floating-web.png",
+      "box": [
+        794,
+        1549,
+        857,
+        1613
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "floating-line.png",
+      "box": [
+        794,
+        1620,
+        857,
+        1684
+      ],
+      "type": "rounded-alpha"
+    },
+    {
+      "name": "floating-phone.png",
+      "box": [
+        794,
+        1691,
+        857,
+        1755
+      ],
+      "type": "rounded-alpha"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "source": "artifacts\\recomposed-system-from-slices.png",
+  "sourceSize": {
+    "width": 864,
+    "height": 1821
+  },
+  "assets": [
+    {
+      "name": "section-01-hero.png",
+      "box": [
+        0,
+        0,
+        864,
+        356
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-02-price-cards.png",
+      "box": [
+        0,
+        356,
+        864,
+        784
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-03-included.png",
+      "box": [
+        0,
+        784,
+        864,
+        963
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-04-flow.png",
+      "box": [
+        0,
+        963,
+        864,
+        1136
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-05-payment-comparison.png",
+      "box": [
+        0,
+        1136,
+        864,
+        1330
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-06-recommended-plans.png",
+      "box": [
+        0,
+        1330,
+        864,
+        1538
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-07-faq.png",
+      "box": [
+        0,
+        1538,
+        864,
+        1669
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-08-cta.png",
+      "box": [
+        0,
+        1669,
+        864,
+        1821
+      ],
+      "type": "rgba"
+    }
+  ]
+}

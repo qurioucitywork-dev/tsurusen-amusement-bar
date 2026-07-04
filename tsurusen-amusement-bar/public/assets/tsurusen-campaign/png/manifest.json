@@ -1,0 +1,885 @@
+{
+  "source": "C:\\Users\\Lenovo\\Desktop\\鶴千\\CAMPAIGN.png",
+  "size": [
+    864,
+    1821
+  ],
+  "sections": [
+    {
+      "name": "section-01-hero.png",
+      "box": [
+        0,
+        0,
+        864,
+        352
+      ],
+      "width": 864,
+      "height": 352,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-02-golden-night.png",
+      "box": [
+        0,
+        352,
+        864,
+        613
+      ],
+      "width": 864,
+      "height": 261,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-03-coupons.png",
+      "box": [
+        0,
+        613,
+        864,
+        834
+      ],
+      "width": 864,
+      "height": 221,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-04-season-campaign.png",
+      "box": [
+        0,
+        834,
+        864,
+        994
+      ],
+      "width": 864,
+      "height": 160,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-05-member-howto.png",
+      "box": [
+        0,
+        994,
+        864,
+        1195
+      ],
+      "width": 864,
+      "height": 201,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-06-recommended-limited.png",
+      "box": [
+        0,
+        1195,
+        864,
+        1360
+      ],
+      "width": 864,
+      "height": 165,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-07-sns-reviews.png",
+      "box": [
+        0,
+        1360,
+        864,
+        1559
+      ],
+      "width": 864,
+      "height": 199,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-08-faq.png",
+      "box": [
+        0,
+        1559,
+        864,
+        1704
+      ],
+      "width": 864,
+      "height": 145,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-09-cta.png",
+      "box": [
+        0,
+        1704,
+        864,
+        1821
+      ],
+      "width": 864,
+      "height": 117,
+      "mode": "RGBA",
+      "kind": "section"
+    }
+  ],
+  "materials": [
+    {
+      "name": "logo.png",
+      "box": [
+        18,
+        14,
+        122,
+        35
+      ],
+      "width": 104,
+      "height": 21,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "reserve-header.png",
+      "box": [
+        807,
+        10,
+        849,
+        40
+      ],
+      "width": 42,
+      "height": 30,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-title.png",
+      "box": [
+        119,
+        67,
+        360,
+        213
+      ],
+      "width": 241,
+      "height": 146,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-script.png",
+      "box": [
+        153,
+        229,
+        362,
+        277
+      ],
+      "width": 209,
+      "height": 48,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-buttons.png",
+      "box": [
+        55,
+        294,
+        454,
+        337
+      ],
+      "width": 399,
+      "height": 43,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-coupon-button.png",
+      "box": [
+        55,
+        294,
+        200,
+        337
+      ],
+      "width": 145,
+      "height": 43,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-web-button.png",
+      "box": [
+        210,
+        294,
+        326,
+        337
+      ],
+      "width": 116,
+      "height": 43,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-line-button.png",
+      "box": [
+        337,
+        294,
+        454,
+        337
+      ],
+      "width": 117,
+      "height": 43,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "golden-night-panel.png",
+      "box": [
+        45,
+        358,
+        820,
+        606
+      ],
+      "width": 775,
+      "height": 248,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "golden-night-title.png",
+      "box": [
+        75,
+        386,
+        384,
+        488
+      ],
+      "width": 309,
+      "height": 102,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "countdown-panel.png",
+      "box": [
+        500,
+        377,
+        734,
+        592
+      ],
+      "width": 234,
+      "height": 215,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "coupons-panel.png",
+      "box": [
+        45,
+        623,
+        820,
+        823
+      ],
+      "width": 775,
+      "height": 200,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "coupon-01.png",
+      "box": [
+        58,
+        645,
+        166,
+        817
+      ],
+      "width": 108,
+      "height": 172,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "coupon-02.png",
+      "box": [
+        184,
+        645,
+        291,
+        817
+      ],
+      "width": 107,
+      "height": 172,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "coupon-03.png",
+      "box": [
+        309,
+        645,
+        416,
+        817
+      ],
+      "width": 107,
+      "height": 172,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "coupon-04.png",
+      "box": [
+        435,
+        645,
+        542,
+        817
+      ],
+      "width": 107,
+      "height": 172,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "coupon-05.png",
+      "box": [
+        560,
+        645,
+        667,
+        817
+      ],
+      "width": 107,
+      "height": 172,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "coupon-06.png",
+      "box": [
+        686,
+        645,
+        793,
+        817
+      ],
+      "width": 107,
+      "height": 172,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "season-panel.png",
+      "box": [
+        45,
+        841,
+        820,
+        986
+      ],
+      "width": 775,
+      "height": 145,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "season-card-01.png",
+      "box": [
+        64,
+        858,
+        179,
+        971
+      ],
+      "width": 115,
+      "height": 113,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "season-card-02.png",
+      "box": [
+        187,
+        858,
+        302,
+        971
+      ],
+      "width": 115,
+      "height": 113,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "season-card-03.png",
+      "box": [
+        310,
+        858,
+        425,
+        971
+      ],
+      "width": 115,
+      "height": 113,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "season-card-04.png",
+      "box": [
+        433,
+        858,
+        548,
+        971
+      ],
+      "width": 115,
+      "height": 113,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "season-card-05.png",
+      "box": [
+        557,
+        858,
+        672,
+        971
+      ],
+      "width": 115,
+      "height": 113,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "season-card-06.png",
+      "box": [
+        680,
+        858,
+        795,
+        971
+      ],
+      "width": 115,
+      "height": 113,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "member-benefits-panel.png",
+      "box": [
+        45,
+        996,
+        383,
+        1188
+      ],
+      "width": 338,
+      "height": 192,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "how-to-use-panel.png",
+      "box": [
+        390,
+        996,
+        820,
+        1188
+      ],
+      "width": 430,
+      "height": 192,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "recommended-panel.png",
+      "box": [
+        45,
+        1202,
+        493,
+        1354
+      ],
+      "width": 448,
+      "height": 152,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "recommended-card-01.png",
+      "box": [
+        64,
+        1241,
+        133,
+        1335
+      ],
+      "width": 69,
+      "height": 94,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "recommended-card-02.png",
+      "box": [
+        140,
+        1241,
+        209,
+        1335
+      ],
+      "width": 69,
+      "height": 94,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "recommended-card-03.png",
+      "box": [
+        216,
+        1241,
+        285,
+        1335
+      ],
+      "width": 69,
+      "height": 94,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "recommended-card-04.png",
+      "box": [
+        292,
+        1241,
+        361,
+        1335
+      ],
+      "width": 69,
+      "height": 94,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "recommended-card-05.png",
+      "box": [
+        368,
+        1241,
+        437,
+        1335
+      ],
+      "width": 69,
+      "height": 94,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "limited-offers-panel.png",
+      "box": [
+        502,
+        1202,
+        820,
+        1354
+      ],
+      "width": 318,
+      "height": 152,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "limited-card-01.png",
+      "box": [
+        527,
+        1242,
+        592,
+        1337
+      ],
+      "width": 65,
+      "height": 95,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "limited-card-02.png",
+      "box": [
+        608,
+        1242,
+        673,
+        1337
+      ],
+      "width": 65,
+      "height": 95,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "limited-card-03.png",
+      "box": [
+        690,
+        1242,
+        755,
+        1337
+      ],
+      "width": 65,
+      "height": 95,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "limited-card-04.png",
+      "box": [
+        772,
+        1242,
+        810,
+        1337
+      ],
+      "width": 38,
+      "height": 95,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "sns-panel.png",
+      "box": [
+        45,
+        1362,
+        373,
+        1547
+      ],
+      "width": 328,
+      "height": 185,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "sns-card-instagram.png",
+      "box": [
+        62,
+        1412,
+        150,
+        1537
+      ],
+      "width": 88,
+      "height": 125,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "sns-card-tiktok.png",
+      "box": [
+        159,
+        1412,
+        247,
+        1537
+      ],
+      "width": 88,
+      "height": 125,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "sns-card-review.png",
+      "box": [
+        256,
+        1412,
+        357,
+        1537
+      ],
+      "width": 101,
+      "height": 125,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "reviews-panel.png",
+      "box": [
+        384,
+        1362,
+        820,
+        1547
+      ],
+      "width": 436,
+      "height": 185,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "review-card-01.png",
+      "box": [
+        407,
+        1407,
+        494,
+        1537
+      ],
+      "width": 87,
+      "height": 130,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "review-card-02.png",
+      "box": [
+        511,
+        1407,
+        598,
+        1537
+      ],
+      "width": 87,
+      "height": 130,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "review-card-03.png",
+      "box": [
+        614,
+        1407,
+        701,
+        1537
+      ],
+      "width": 87,
+      "height": 130,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "review-card-04.png",
+      "box": [
+        718,
+        1407,
+        805,
+        1537
+      ],
+      "width": 87,
+      "height": 130,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "faq-panel.png",
+      "box": [
+        45,
+        1564,
+        820,
+        1697
+      ],
+      "width": 775,
+      "height": 133,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "floating-coupon.png",
+      "box": [
+        794,
+        1547,
+        857,
+        1615
+      ],
+      "width": 63,
+      "height": 68,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "floating-line.png",
+      "box": [
+        794,
+        1620,
+        857,
+        1687
+      ],
+      "width": 63,
+      "height": 67,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "floating-phone.png",
+      "box": [
+        794,
+        1692,
+        857,
+        1760
+      ],
+      "width": 63,
+      "height": 68,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "cta-background.png",
+      "box": [
+        0,
+        1704,
+        864,
+        1821
+      ],
+      "width": 864,
+      "height": 117,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "cta-title.png",
+      "box": [
+        218,
+        1724,
+        648,
+        1777
+      ],
+      "width": 430,
+      "height": 53,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "cta-buttons.png",
+      "box": [
+        184,
+        1782,
+        688,
+        1819
+      ],
+      "width": 504,
+      "height": 37,
+      "mode": "RGBA",
+      "kind": "material"
+    }
+  ],
+  "recomposition": {
+    "path": "C:\\Users\\Lenovo\\Documents\\HPテンプレート作成システム\\tsurusen-amusement-bar\\artifacts\\recomposed-campaign-from-slices.png",
+    "diff_bbox": null,
+    "diff_sum": 0
+  },
+  "palette": [
+    {
+      "count": 4615,
+      "hex": "#090808"
+    },
+    {
+      "count": 3617,
+      "hex": "#080708"
+    },
+    {
+      "count": 2852,
+      "hex": "#0f0d0c"
+    },
+    {
+      "count": 2829,
+      "hex": "#0a0b0b"
+    },
+    {
+      "count": 2768,
+      "hex": "#2a1f1c"
+    },
+    {
+      "count": 2739,
+      "hex": "#010100"
+    },
+    {
+      "count": 2550,
+      "hex": "#030303"
+    },
+    {
+      "count": 2463,
+      "hex": "#1e1012"
+    },
+    {
+      "count": 2441,
+      "hex": "#4a3a34"
+    },
+    {
+      "count": 1567,
+      "hex": "#857363"
+    },
+    {
+      "count": 1000,
+      "hex": "#040409"
+    },
+    {
+      "count": 919,
+      "hex": "#11060e"
+    }
+  ]
+}

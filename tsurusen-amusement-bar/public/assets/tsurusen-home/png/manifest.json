@@ -1,0 +1,89 @@
+{
+  "source": "artifacts\\recomposed-home-from-slices.png",
+  "sourceSize": {
+    "width": 864,
+    "height": 1821
+  },
+  "assets": [
+    {
+      "name": "section-01-hero.png",
+      "box": [
+        0,
+        0,
+        864,
+        361
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-02-about.png",
+      "box": [
+        0,
+        361,
+        864,
+        592
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-03-feature.png",
+      "box": [
+        0,
+        592,
+        864,
+        775
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-04-price-entertainment.png",
+      "box": [
+        0,
+        775,
+        864,
+        1031
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-05-scene.png",
+      "box": [
+        0,
+        1031,
+        864,
+        1181
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-06-instagram-reviews.png",
+      "box": [
+        0,
+        1181,
+        864,
+        1418
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-07-event-access-faq.png",
+      "box": [
+        0,
+        1418,
+        864,
+        1621
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-08-cta-footer.png",
+      "box": [
+        0,
+        1621,
+        864,
+        1821
+      ],
+      "type": "rgba"
+    }
+  ]
+}

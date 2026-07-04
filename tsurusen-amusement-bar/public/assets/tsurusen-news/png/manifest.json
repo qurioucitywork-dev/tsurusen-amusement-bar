@@ -1,0 +1,690 @@
+{
+  "source": "C:\\Users\\Lenovo\\Desktop\\鶴千\\NEWS.png",
+  "size": [
+    864,
+    1821
+  ],
+  "sections": [
+    {
+      "name": "section-01-hero.png",
+      "box": [
+        0,
+        0,
+        864,
+        300
+      ],
+      "width": 864,
+      "height": 300,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-02-featured-story.png",
+      "box": [
+        0,
+        300,
+        864,
+        620
+      ],
+      "width": 864,
+      "height": 320,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-03-category-tabs.png",
+      "box": [
+        0,
+        620,
+        864,
+        663
+      ],
+      "width": 864,
+      "height": 43,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-04-latest-news.png",
+      "box": [
+        0,
+        663,
+        864,
+        952
+      ],
+      "width": 864,
+      "height": 289,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-05-breaking-news.png",
+      "box": [
+        0,
+        952,
+        864,
+        1016
+      ],
+      "width": 864,
+      "height": 64,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-06-update-campaign-instagram.png",
+      "box": [
+        0,
+        1016,
+        864,
+        1277
+      ],
+      "width": 864,
+      "height": 261,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-07-video-news.png",
+      "box": [
+        0,
+        1277,
+        864,
+        1455
+      ],
+      "width": 864,
+      "height": 178,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-08-editor-archive-newsletter.png",
+      "box": [
+        0,
+        1455,
+        864,
+        1634
+      ],
+      "width": 864,
+      "height": 179,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-09-cta.png",
+      "box": [
+        0,
+        1634,
+        864,
+        1821
+      ],
+      "width": 864,
+      "height": 187,
+      "mode": "RGBA",
+      "kind": "section"
+    }
+  ],
+  "materials": [
+    {
+      "name": "logo.png",
+      "box": [
+        18,
+        14,
+        123,
+        34
+      ],
+      "width": 105,
+      "height": 20,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "reserve-header.png",
+      "box": [
+        806,
+        10,
+        849,
+        40
+      ],
+      "width": 43,
+      "height": 30,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-news-room.png",
+      "box": [
+        106,
+        70,
+        338,
+        202
+      ],
+      "width": 232,
+      "height": 132,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-tagline.png",
+      "box": [
+        108,
+        221,
+        235,
+        286
+      ],
+      "width": 127,
+      "height": 65,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "featured-card.png",
+      "box": [
+        50,
+        313,
+        814,
+        597
+      ],
+      "width": 764,
+      "height": 284,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "featured-main-image.png",
+      "box": [
+        52,
+        314,
+        503,
+        596
+      ],
+      "width": 451,
+      "height": 282,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "featured-copy.png",
+      "box": [
+        519,
+        341,
+        684,
+        581
+      ],
+      "width": 165,
+      "height": 240,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "category-strip.png",
+      "box": [
+        50,
+        622,
+        752,
+        650
+      ],
+      "width": 702,
+      "height": 28,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "category-grid-button.png",
+      "box": [
+        786,
+        622,
+        812,
+        650
+      ],
+      "width": 26,
+      "height": 28,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "latest-news-panel.png",
+      "box": [
+        51,
+        664,
+        814,
+        945
+      ],
+      "width": 763,
+      "height": 281,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "latest-card-01.png",
+      "box": [
+        64,
+        706,
+        300,
+        924
+      ],
+      "width": 236,
+      "height": 218,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "latest-card-02.png",
+      "box": [
+        315,
+        706,
+        550,
+        924
+      ],
+      "width": 235,
+      "height": 218,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "latest-card-03.png",
+      "box": [
+        565,
+        706,
+        801,
+        924
+      ],
+      "width": 236,
+      "height": 218,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "breaking-news-bar.png",
+      "box": [
+        51,
+        961,
+        814,
+        1005
+      ],
+      "width": 763,
+      "height": 44,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "event-updates-panel.png",
+      "box": [
+        51,
+        1018,
+        288,
+        1268
+      ],
+      "width": 237,
+      "height": 250,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "campaign-news-panel.png",
+      "box": [
+        302,
+        1018,
+        538,
+        1268
+      ],
+      "width": 236,
+      "height": 250,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "instagram-picks-panel.png",
+      "box": [
+        552,
+        1018,
+        814,
+        1268
+      ],
+      "width": 262,
+      "height": 250,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "event-item-01.png",
+      "box": [
+        64,
+        1063,
+        277,
+        1117
+      ],
+      "width": 213,
+      "height": 54,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "event-item-02.png",
+      "box": [
+        64,
+        1124,
+        277,
+        1178
+      ],
+      "width": 213,
+      "height": 54,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "event-item-03.png",
+      "box": [
+        64,
+        1185,
+        277,
+        1239
+      ],
+      "width": 213,
+      "height": 54,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "campaign-item-01.png",
+      "box": [
+        315,
+        1063,
+        527,
+        1117
+      ],
+      "width": 212,
+      "height": 54,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "campaign-item-02.png",
+      "box": [
+        315,
+        1124,
+        527,
+        1178
+      ],
+      "width": 212,
+      "height": 54,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "campaign-item-03.png",
+      "box": [
+        315,
+        1185,
+        527,
+        1239
+      ],
+      "width": 212,
+      "height": 54,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "instagram-grid.png",
+      "box": [
+        565,
+        1067,
+        802,
+        1247
+      ],
+      "width": 237,
+      "height": 180,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "video-news-panel.png",
+      "box": [
+        51,
+        1278,
+        814,
+        1445
+      ],
+      "width": 763,
+      "height": 167,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "video-card-01.png",
+      "box": [
+        63,
+        1324,
+        199,
+        1401
+      ],
+      "width": 136,
+      "height": 77,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "video-card-02.png",
+      "box": [
+        212,
+        1324,
+        348,
+        1401
+      ],
+      "width": 136,
+      "height": 77,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "video-card-03.png",
+      "box": [
+        361,
+        1324,
+        497,
+        1401
+      ],
+      "width": 136,
+      "height": 77,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "video-card-04.png",
+      "box": [
+        510,
+        1324,
+        646,
+        1401
+      ],
+      "width": 136,
+      "height": 77,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "video-card-05.png",
+      "box": [
+        659,
+        1324,
+        795,
+        1401
+      ],
+      "width": 136,
+      "height": 77,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "editors-choice-panel.png",
+      "box": [
+        51,
+        1463,
+        357,
+        1617
+      ],
+      "width": 306,
+      "height": 154,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "archive-panel.png",
+      "box": [
+        365,
+        1463,
+        574,
+        1617
+      ],
+      "width": 209,
+      "height": 154,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "newsletter-panel.png",
+      "box": [
+        582,
+        1463,
+        814,
+        1617
+      ],
+      "width": 232,
+      "height": 154,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "floating-web.png",
+      "box": [
+        794,
+        1547,
+        857,
+        1614
+      ],
+      "width": 63,
+      "height": 67,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "floating-line.png",
+      "box": [
+        794,
+        1620,
+        857,
+        1686
+      ],
+      "width": 63,
+      "height": 66,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "floating-instagram.png",
+      "box": [
+        794,
+        1693,
+        857,
+        1760
+      ],
+      "width": 63,
+      "height": 67,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "cta-background.png",
+      "box": [
+        0,
+        1634,
+        864,
+        1821
+      ],
+      "width": 864,
+      "height": 187,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "cta-title.png",
+      "box": [
+        287,
+        1663,
+        587,
+        1740
+      ],
+      "width": 300,
+      "height": 77,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "cta-buttons.png",
+      "box": [
+        190,
+        1774,
+        669,
+        1812
+      ],
+      "width": 479,
+      "height": 38,
+      "mode": "RGBA",
+      "kind": "material"
+    }
+  ],
+  "recomposition": {
+    "path": "C:\\Users\\Lenovo\\Documents\\HPテンプレート作成システム\\tsurusen-amusement-bar\\artifacts\\recomposed-news-from-slices.png",
+    "diff_bbox": null,
+    "diff_sum": 0
+  },
+  "palette": [
+    {
+      "count": 4057,
+      "hex": "#010000"
+    },
+    {
+      "count": 4000,
+      "hex": "#090908"
+    },
+    {
+      "count": 3536,
+      "hex": "#060606"
+    },
+    {
+      "count": 3501,
+      "hex": "#080808"
+    },
+    {
+      "count": 2616,
+      "hex": "#2f2220"
+    },
+    {
+      "count": 2302,
+      "hex": "#070607"
+    },
+    {
+      "count": 2088,
+      "hex": "#251416"
+    },
+    {
+      "count": 1935,
+      "hex": "#120a0d"
+    },
+    {
+      "count": 1785,
+      "hex": "#030306"
+    },
+    {
+      "count": 1744,
+      "hex": "#111111"
+    },
+    {
+      "count": 1740,
+      "hex": "#574942"
+    },
+    {
+      "count": 1056,
+      "hex": "#10040f"
+    }
+  ]
+}

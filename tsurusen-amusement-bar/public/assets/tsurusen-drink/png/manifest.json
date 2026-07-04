@@ -1,0 +1,409 @@
+{
+  "source": "public\\assets\\tsurusen-drink\\reference-drink.png",
+  "sourceSize": {
+    "width": 864,
+    "height": 1821
+  },
+  "assets": [
+    {
+      "name": "section-01-hero.png",
+      "box": [
+        0,
+        0,
+        864,
+        303
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-02-concept.png",
+      "box": [
+        0,
+        303,
+        864,
+        482
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-03-all-you-can-drink.png",
+      "box": [
+        0,
+        482,
+        864,
+        650
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-04-beer-menu.png",
+      "box": [
+        0,
+        650,
+        864,
+        910
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-05-signature-cocktail.png",
+      "box": [
+        0,
+        910,
+        864,
+        1102
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-06-champagne-whisky.png",
+      "box": [
+        0,
+        1102,
+        864,
+        1225
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-07-whisky-carousel.png",
+      "box": [
+        0,
+        1225,
+        864,
+        1358
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-08-pairing.png",
+      "box": [
+        0,
+        1358,
+        864,
+        1515
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-09-social-favorites-night.png",
+      "box": [
+        0,
+        1515,
+        864,
+        1705
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-10-cta.png",
+      "box": [
+        0,
+        1705,
+        864,
+        1821
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "logo-header.png",
+      "box": [
+        20,
+        15,
+        119,
+        40
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "hero-drinks-left.png",
+      "box": [
+        80,
+        92,
+        327,
+        253
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "hero-drinks-right.png",
+      "box": [
+        530,
+        52,
+        838,
+        244
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "concept-cocktail.png",
+      "box": [
+        358,
+        303,
+        807,
+        482
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "all-you-can-drink-panel.png",
+      "box": [
+        49,
+        483,
+        817,
+        647
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "beer-tabs.png",
+      "box": [
+        49,
+        665,
+        819,
+        691
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "beer-card-01.png",
+      "box": [
+        49,
+        703,
+        300,
+        791
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "beer-card-02.png",
+      "box": [
+        306,
+        703,
+        559,
+        791
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "beer-card-03.png",
+      "box": [
+        565,
+        703,
+        818,
+        791
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "beer-card-04.png",
+      "box": [
+        49,
+        795,
+        300,
+        883
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "beer-card-05.png",
+      "box": [
+        306,
+        795,
+        559,
+        883
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "beer-card-06.png",
+      "box": [
+        565,
+        795,
+        818,
+        883
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "signature-cocktail.png",
+      "box": [
+        49,
+        914,
+        817,
+        1087
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "champagne-area.png",
+      "box": [
+        49,
+        1101,
+        614,
+        1220
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "whisky-collection.png",
+      "box": [
+        616,
+        1101,
+        817,
+        1220
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "whisky-card-01.png",
+      "box": [
+        49,
+        1231,
+        236,
+        1326
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "whisky-card-02.png",
+      "box": [
+        241,
+        1231,
+        430,
+        1326
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "whisky-card-03.png",
+      "box": [
+        435,
+        1231,
+        624,
+        1326
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "whisky-card-04.png",
+      "box": [
+        629,
+        1231,
+        817,
+        1326
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "pairing-roast-beef.png",
+      "box": [
+        49,
+        1391,
+        270,
+        1472
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "pairing-shrimp.png",
+      "box": [
+        292,
+        1391,
+        532,
+        1472
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "pairing-cheese.png",
+      "box": [
+        558,
+        1391,
+        794,
+        1472
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "instagram-drinks.png",
+      "box": [
+        49,
+        1517,
+        264,
+        1698
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "customer-favorites.png",
+      "box": [
+        274,
+        1517,
+        592,
+        1698
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "night-experience.png",
+      "box": [
+        601,
+        1517,
+        817,
+        1698
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "floating-web.png",
+      "box": [
+        794,
+        1553,
+        858,
+        1618
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "floating-line.png",
+      "box": [
+        794,
+        1623,
+        858,
+        1689
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "floating-phone.png",
+      "box": [
+        794,
+        1694,
+        858,
+        1760
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "cta-background.png",
+      "box": [
+        0,
+        1705,
+        864,
+        1821
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "page.png",
+      "box": [
+        0,
+        0,
+        864,
+        1821
+      ],
+      "type": "rgba"
+    }
+  ]
+}

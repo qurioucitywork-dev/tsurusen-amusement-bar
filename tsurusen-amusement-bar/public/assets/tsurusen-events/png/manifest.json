@@ -1,0 +1,1002 @@
+{
+  "source": "C:\\Users\\Lenovo\\Desktop\\鶴千\\EVENTS.png",
+  "size": [
+    864,
+    1821
+  ],
+  "sections": [
+    {
+      "name": "section-01-hero.png",
+      "box": [
+        0,
+        0,
+        864,
+        300
+      ],
+      "width": 864,
+      "height": 300,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-02-featured-event.png",
+      "box": [
+        0,
+        300,
+        864,
+        560
+      ],
+      "width": 864,
+      "height": 260,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-03-upcoming-events.png",
+      "box": [
+        0,
+        560,
+        864,
+        797
+      ],
+      "width": 864,
+      "height": 237,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-04-calendar-categories.png",
+      "box": [
+        0,
+        797,
+        864,
+        977
+      ],
+      "width": 864,
+      "height": 180,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-05-gallery-moments.png",
+      "box": [
+        0,
+        977,
+        864,
+        1212
+      ],
+      "width": 864,
+      "height": 235,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-06-past-events.png",
+      "box": [
+        0,
+        1212,
+        864,
+        1379
+      ],
+      "width": 864,
+      "height": 167,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-07-community-reviews.png",
+      "box": [
+        0,
+        1379,
+        864,
+        1549
+      ],
+      "width": 864,
+      "height": 170,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-08-host-sns-faq.png",
+      "box": [
+        0,
+        1549,
+        864,
+        1720
+      ],
+      "width": 864,
+      "height": 171,
+      "mode": "RGBA",
+      "kind": "section"
+    },
+    {
+      "name": "section-09-cta.png",
+      "box": [
+        0,
+        1720,
+        864,
+        1821
+      ],
+      "width": 864,
+      "height": 101,
+      "mode": "RGBA",
+      "kind": "section"
+    }
+  ],
+  "materials": [
+    {
+      "name": "logo.png",
+      "box": [
+        18,
+        14,
+        122,
+        35
+      ],
+      "width": 104,
+      "height": 21,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "reserve-header.png",
+      "box": [
+        787,
+        10,
+        842,
+        39
+      ],
+      "width": 55,
+      "height": 29,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-title.png",
+      "box": [
+        303,
+        68,
+        558,
+        141
+      ],
+      "width": 255,
+      "height": 73,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-script.png",
+      "box": [
+        318,
+        146,
+        542,
+        206
+      ],
+      "width": 224,
+      "height": 60,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-buttons.png",
+      "box": [
+        234,
+        222,
+        617,
+        262
+      ],
+      "width": 383,
+      "height": 40,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-event-list-button.png",
+      "box": [
+        234,
+        222,
+        355,
+        262
+      ],
+      "width": 121,
+      "height": 40,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-join-button.png",
+      "box": [
+        363,
+        222,
+        484,
+        262
+      ],
+      "width": 121,
+      "height": 40,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "hero-calendar-button.png",
+      "box": [
+        493,
+        222,
+        617,
+        262
+      ],
+      "width": 124,
+      "height": 40,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "featured-panel.png",
+      "box": [
+        45,
+        300,
+        800,
+        550
+      ],
+      "width": 755,
+      "height": 250,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "featured-left-info.png",
+      "box": [
+        62,
+        334,
+        180,
+        541
+      ],
+      "width": 118,
+      "height": 207,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "featured-dj-night.png",
+      "box": [
+        210,
+        312,
+        800,
+        548
+      ],
+      "width": 590,
+      "height": 236,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "featured-title.png",
+      "box": [
+        223,
+        335,
+        458,
+        452
+      ],
+      "width": 235,
+      "height": 117,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "upcoming-panel.png",
+      "box": [
+        45,
+        568,
+        820,
+        789
+      ],
+      "width": 775,
+      "height": 221,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "upcoming-card-01.png",
+      "box": [
+        51,
+        597,
+        164,
+        785
+      ],
+      "width": 113,
+      "height": 188,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "upcoming-card-02.png",
+      "box": [
+        174,
+        597,
+        289,
+        785
+      ],
+      "width": 115,
+      "height": 188,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "upcoming-card-03.png",
+      "box": [
+        298,
+        597,
+        413,
+        785
+      ],
+      "width": 115,
+      "height": 188,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "upcoming-card-04.png",
+      "box": [
+        421,
+        597,
+        536,
+        785
+      ],
+      "width": 115,
+      "height": 188,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "upcoming-card-05.png",
+      "box": [
+        545,
+        597,
+        660,
+        785
+      ],
+      "width": 115,
+      "height": 188,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "upcoming-card-06.png",
+      "box": [
+        668,
+        597,
+        783,
+        785
+      ],
+      "width": 115,
+      "height": 188,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "calendar-panel.png",
+      "box": [
+        29,
+        797,
+        253,
+        971
+      ],
+      "width": 224,
+      "height": 174,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "categories-panel.png",
+      "box": [
+        268,
+        797,
+        837,
+        971
+      ],
+      "width": 569,
+      "height": 174,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "category-card-01.png",
+      "box": [
+        283,
+        828,
+        370,
+        956
+      ],
+      "width": 87,
+      "height": 128,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "category-card-02.png",
+      "box": [
+        378,
+        828,
+        465,
+        956
+      ],
+      "width": 87,
+      "height": 128,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "category-card-03.png",
+      "box": [
+        473,
+        828,
+        560,
+        956
+      ],
+      "width": 87,
+      "height": 128,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "category-card-04.png",
+      "box": [
+        568,
+        828,
+        655,
+        956
+      ],
+      "width": 87,
+      "height": 128,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "category-card-05.png",
+      "box": [
+        663,
+        828,
+        750,
+        956
+      ],
+      "width": 87,
+      "height": 128,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "category-card-06.png",
+      "box": [
+        758,
+        828,
+        822,
+        956
+      ],
+      "width": 64,
+      "height": 128,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "gallery-panel.png",
+      "box": [
+        29,
+        979,
+        385,
+        1206
+      ],
+      "width": 356,
+      "height": 227,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "moments-panel.png",
+      "box": [
+        402,
+        979,
+        837,
+        1206
+      ],
+      "width": 435,
+      "height": 227,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "moments-card-01.png",
+      "box": [
+        414,
+        1015,
+        491,
+        1184
+      ],
+      "width": 77,
+      "height": 169,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "moments-card-02.png",
+      "box": [
+        501,
+        1015,
+        578,
+        1184
+      ],
+      "width": 77,
+      "height": 169,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "moments-card-03.png",
+      "box": [
+        588,
+        1015,
+        665,
+        1184
+      ],
+      "width": 77,
+      "height": 169,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "moments-card-04.png",
+      "box": [
+        675,
+        1015,
+        752,
+        1184
+      ],
+      "width": 77,
+      "height": 169,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "moments-card-05.png",
+      "box": [
+        762,
+        1015,
+        824,
+        1184
+      ],
+      "width": 62,
+      "height": 169,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "past-events-panel.png",
+      "box": [
+        29,
+        1212,
+        837,
+        1374
+      ],
+      "width": 808,
+      "height": 162,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "past-card-01.png",
+      "box": [
+        64,
+        1240,
+        176,
+        1349
+      ],
+      "width": 112,
+      "height": 109,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "past-card-02.png",
+      "box": [
+        188,
+        1240,
+        300,
+        1349
+      ],
+      "width": 112,
+      "height": 109,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "past-card-03.png",
+      "box": [
+        312,
+        1240,
+        424,
+        1349
+      ],
+      "width": 112,
+      "height": 109,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "past-card-04.png",
+      "box": [
+        437,
+        1240,
+        548,
+        1349
+      ],
+      "width": 111,
+      "height": 109,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "past-card-05.png",
+      "box": [
+        560,
+        1240,
+        672,
+        1349
+      ],
+      "width": 112,
+      "height": 109,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "past-card-06.png",
+      "box": [
+        684,
+        1240,
+        796,
+        1349
+      ],
+      "width": 112,
+      "height": 109,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "community-panel.png",
+      "box": [
+        29,
+        1383,
+        339,
+        1544
+      ],
+      "width": 310,
+      "height": 161,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "guest-voices-panel.png",
+      "box": [
+        356,
+        1383,
+        837,
+        1544
+      ],
+      "width": 481,
+      "height": 161,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "voice-card-01.png",
+      "box": [
+        382,
+        1412,
+        458,
+        1529
+      ],
+      "width": 76,
+      "height": 117,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "voice-card-02.png",
+      "box": [
+        477,
+        1412,
+        553,
+        1529
+      ],
+      "width": 76,
+      "height": 117,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "voice-card-03.png",
+      "box": [
+        572,
+        1412,
+        648,
+        1529
+      ],
+      "width": 76,
+      "height": 117,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "voice-card-04.png",
+      "box": [
+        691,
+        1412,
+        771,
+        1529
+      ],
+      "width": 80,
+      "height": 117,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "host-team-panel.png",
+      "box": [
+        29,
+        1553,
+        326,
+        1715
+      ],
+      "width": 297,
+      "height": 162,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "host-card-01.png",
+      "box": [
+        48,
+        1591,
+        111,
+        1702
+      ],
+      "width": 63,
+      "height": 111,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "host-card-02.png",
+      "box": [
+        120,
+        1591,
+        183,
+        1702
+      ],
+      "width": 63,
+      "height": 111,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "host-card-03.png",
+      "box": [
+        191,
+        1591,
+        254,
+        1702
+      ],
+      "width": 63,
+      "height": 111,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "host-card-04.png",
+      "box": [
+        263,
+        1591,
+        317,
+        1702
+      ],
+      "width": 54,
+      "height": 111,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "sns-panel.png",
+      "box": [
+        340,
+        1553,
+        565,
+        1715
+      ],
+      "width": 225,
+      "height": 162,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "sns-card-01.png",
+      "box": [
+        358,
+        1593,
+        421,
+        1702
+      ],
+      "width": 63,
+      "height": 109,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "sns-card-02.png",
+      "box": [
+        431,
+        1593,
+        494,
+        1702
+      ],
+      "width": 63,
+      "height": 109,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "sns-card-03.png",
+      "box": [
+        504,
+        1593,
+        557,
+        1702
+      ],
+      "width": 53,
+      "height": 109,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "faq-panel.png",
+      "box": [
+        579,
+        1553,
+        837,
+        1715
+      ],
+      "width": 258,
+      "height": 162,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "floating-event.png",
+      "box": [
+        788,
+        1433,
+        858,
+        1505
+      ],
+      "width": 70,
+      "height": 72,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "floating-line.png",
+      "box": [
+        788,
+        1508,
+        858,
+        1580
+      ],
+      "width": 70,
+      "height": 72,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "floating-phone.png",
+      "box": [
+        788,
+        1584,
+        858,
+        1657
+      ],
+      "width": 70,
+      "height": 73,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "cta-background.png",
+      "box": [
+        0,
+        1720,
+        864,
+        1821
+      ],
+      "width": 864,
+      "height": 101,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "cta-title.png",
+      "box": [
+        252,
+        1736,
+        652,
+        1788
+      ],
+      "width": 400,
+      "height": 52,
+      "mode": "RGBA",
+      "kind": "material"
+    },
+    {
+      "name": "cta-buttons.png",
+      "box": [
+        197,
+        1783,
+        687,
+        1819
+      ],
+      "width": 490,
+      "height": 36,
+      "mode": "RGBA",
+      "kind": "material"
+    }
+  ],
+  "recomposition": {
+    "path": "C:\\Users\\Lenovo\\Documents\\HPテンプレート作成システム\\tsurusen-amusement-bar\\artifacts\\recomposed-events-from-slices.png",
+    "diff_bbox": null,
+    "diff_sum": 0
+  },
+  "palette": [
+    {
+      "count": 6987,
+      "hex": "#080708"
+    },
+    {
+      "count": 4400,
+      "hex": "#0c0b0a"
+    },
+    {
+      "count": 4010,
+      "hex": "#010101"
+    },
+    {
+      "count": 2219,
+      "hex": "#18171d"
+    },
+    {
+      "count": 2078,
+      "hex": "#402c3b"
+    },
+    {
+      "count": 1881,
+      "hex": "#695966"
+    },
+    {
+      "count": 1754,
+      "hex": "#1e0c1f"
+    },
+    {
+      "count": 1733,
+      "hex": "#0c0511"
+    },
+    {
+      "count": 1536,
+      "hex": "#280436"
+    },
+    {
+      "count": 1387,
+      "hex": "#090a0b"
+    },
+    {
+      "count": 1277,
+      "hex": "#3c1a37"
+    },
+    {
+      "count": 1098,
+      "hex": "#04040a"
+    }
+  ]
+}

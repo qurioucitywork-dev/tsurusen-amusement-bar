@@ -1,0 +1,16 @@
+.next
+node_modules
+out
+dist
+.env
+.env.local
+*.log
+*.tsbuildinfo
+*.db
+*.db-journal
+.jobs
+.jobs/
+.previews
+.previews/
+hpgen-worker/.jobs/
+hpgen-worker/.previews/

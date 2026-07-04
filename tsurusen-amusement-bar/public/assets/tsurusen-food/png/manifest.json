@@ -1,0 +1,469 @@
+{
+  "source": "public\\assets\\tsurusen-food\\reference-food.png",
+  "sourceSize": {
+    "width": 864,
+    "height": 1821
+  },
+  "assets": [
+    {
+      "name": "section-01-hero.png",
+      "box": [
+        0,
+        0,
+        864,
+        300
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-02-concept.png",
+      "box": [
+        0,
+        300,
+        864,
+        488
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-03-popular-menu.png",
+      "box": [
+        0,
+        488,
+        864,
+        716
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-04-food-list.png",
+      "box": [
+        0,
+        716,
+        864,
+        1050
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-05-chef-pairing.png",
+      "box": [
+        0,
+        1050,
+        864,
+        1282
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-06-gallery.png",
+      "box": [
+        0,
+        1282,
+        864,
+        1397
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-07-customer-favorites.png",
+      "box": [
+        0,
+        1397,
+        864,
+        1537
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-08-late-night-food.png",
+      "box": [
+        0,
+        1537,
+        864,
+        1665
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "section-09-cta.png",
+      "box": [
+        0,
+        1665,
+        864,
+        1821
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "logo-header.png",
+      "box": [
+        20,
+        15,
+        119,
+        40
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "hero-food-left.png",
+      "box": [
+        0,
+        0,
+        355,
+        300
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "hero-food-right.png",
+      "box": [
+        470,
+        0,
+        864,
+        260
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "concept-chef.png",
+      "box": [
+        372,
+        303,
+        737,
+        482
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "popular-card-01-roast-beef.png",
+      "box": [
+        45,
+        532,
+        166,
+        698
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "popular-card-02-cheese-fondue.png",
+      "box": [
+        176,
+        532,
+        296,
+        698
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "popular-card-03-karaage.png",
+      "box": [
+        306,
+        532,
+        427,
+        698
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "popular-card-04-garlic-shrimp.png",
+      "box": [
+        437,
+        532,
+        557,
+        698
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "popular-card-05-ham.png",
+      "box": [
+        568,
+        532,
+        688,
+        698
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "popular-card-06-pizza.png",
+      "box": [
+        698,
+        532,
+        818,
+        698
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "category-tabs.png",
+      "box": [
+        47,
+        723,
+        820,
+        748
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "food-card-01-salmon-tartare.png",
+      "box": [
+        44,
+        765,
+        298,
+        853
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "food-card-02-grilled-egg.png",
+      "box": [
+        304,
+        765,
+        558,
+        853
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "food-card-03-fried-potato.png",
+      "box": [
+        564,
+        765,
+        820,
+        853
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "food-card-04-yangnyeom.png",
+      "box": [
+        44,
+        859,
+        298,
+        948
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "food-card-05-harami-steak.png",
+      "box": [
+        304,
+        859,
+        558,
+        948
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "food-card-06-cheese-curry.png",
+      "box": [
+        564,
+        859,
+        820,
+        948
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "food-card-07-caesar-salad.png",
+      "box": [
+        44,
+        954,
+        298,
+        1043
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "food-card-08-chicken-nanban.png",
+      "box": [
+        304,
+        954,
+        558,
+        1043
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "food-card-09-garlic-rice.png",
+      "box": [
+        564,
+        954,
+        820,
+        1043
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "chef-recommendation.png",
+      "box": [
+        21,
+        1051,
+        412,
+        1276
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "pairing-panel.png",
+      "box": [
+        432,
+        1051,
+        844,
+        1276
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "gallery-strip.png",
+      "box": [
+        42,
+        1310,
+        822,
+        1384
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "favorite-card-01.png",
+      "box": [
+        42,
+        1426,
+        191,
+        1525
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "favorite-card-02.png",
+      "box": [
+        199,
+        1426,
+        348,
+        1525
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "favorite-card-03.png",
+      "box": [
+        356,
+        1426,
+        505,
+        1525
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "favorite-card-04.png",
+      "box": [
+        513,
+        1426,
+        662,
+        1525
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "favorite-card-05.png",
+      "box": [
+        670,
+        1426,
+        819,
+        1525
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "late-food-card-01.png",
+      "box": [
+        53,
+        1570,
+        238,
+        1658
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "late-food-card-02.png",
+      "box": [
+        243,
+        1570,
+        429,
+        1658
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "late-food-card-03.png",
+      "box": [
+        434,
+        1570,
+        620,
+        1658
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "late-food-card-04.png",
+      "box": [
+        625,
+        1570,
+        811,
+        1658
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "floating-web.png",
+      "box": [
+        794,
+        1580,
+        858,
+        1645
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "floating-line.png",
+      "box": [
+        794,
+        1650,
+        858,
+        1716
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "floating-phone.png",
+      "box": [
+        794,
+        1722,
+        858,
+        1787
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "cta-background.png",
+      "box": [
+        0,
+        1665,
+        864,
+        1821
+      ],
+      "type": "rgba"
+    },
+    {
+      "name": "page.png",
+      "box": [
+        0,
+        0,
+        864,
+        1821
+      ],
+      "type": "rgba"
+    }
+  ]
+}
