@@ -2539,10 +2539,6 @@ function AboutSection() {
         </p>
       </div>
 
-      <button type="button" className="pixel-about-more" onClick={() => navigateTo("/#about")} style={innerBoxStyle({ left: 100, top: 176, width: 134, height: 34 }, panelWidth, panelHeight)}>
-        VIEW MORE
-      </button>
-
       <div className="pixel-about-photo-frame" aria-hidden="true" style={innerBoxStyle({ left: 386, top: 32, width: 414, height: 170 }, panelWidth, panelHeight)} />
     </section>
   );
