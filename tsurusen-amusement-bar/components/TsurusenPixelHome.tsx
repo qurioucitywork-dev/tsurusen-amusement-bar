@@ -6,17 +6,23 @@ import {
   Aperture,
   CalendarDays,
   Camera,
+  CircleHelp,
   Clock,
   Dices,
+  FileText,
   GlassWater,
+  Gift,
+  Home,
   MapPin,
   Mic2,
   MoonStar,
   Phone,
   Plus,
   Star,
+  Tag,
   Target,
   Trophy,
+  Utensils,
   UsersRound,
   Wine,
 } from "lucide-react";
@@ -69,18 +75,27 @@ type PixelButton = PixelLink & {
   compact?: boolean;
   cleanFill?: boolean;
 };
+type HeaderNavItem = {
+  label: string;
+  href: string;
+  left: number;
+  width: number;
+  icon: typeof Camera;
+  sub?: string;
+  active?: boolean;
+};
 
-const navLinks: PixelLink[] = [
-  { label: "ABOUT", href: "/#about", left: 398, top: 15, width: 35, height: 25 },
-  { label: "FEATURE", href: "/#feature", left: 438, top: 15, width: 45, height: 25 },
-  { label: "PRICE", href: "/pricing", left: 486, top: 15, width: 34, height: 25 },
-  { label: "ENTERTAINMENT", href: "/play", left: 519, top: 15, width: 85, height: 25 },
-  { label: "SCENE", href: "/#scene", left: 590, top: 15, width: 43, height: 25 },
-  { label: "GALLERY", href: "/#gallery", left: 628, top: 15, width: 51, height: 25 },
-  { label: "EVENT", href: "/#event", left: 681, top: 15, width: 43, height: 25 },
-  { label: "ACCESS", href: "/#access", left: 718, top: 15, width: 48, height: 25 },
-  { label: "FAQ", href: "/#faq", left: 764, top: 15, width: 22, height: 25 },
-  { label: "RESERVE", href: "/reservation", left: 788, top: 9, width: 60, height: 31 },
+const headerNavItems: HeaderNavItem[] = [
+  { label: "HOME", href: "/", left: 229, width: 50, icon: Home, active: true },
+  { label: "PRICE", href: "/pricing", left: 307, width: 54, icon: Tag },
+  { label: "DRINK MENU", href: "/drink-menu", left: 375, width: 86, icon: Wine },
+  { label: "FOOD MENU", href: "/food-menu", left: 463, width: 89, icon: Utensils },
+  { label: "ACCESS", href: "/access", left: 527, width: 61, icon: MapPin },
+  { label: "BLOG", href: "/news", left: 592, width: 53, icon: FileText, sub: "記事" },
+  { label: "CAMPAIGN", href: "/campaigns", left: 645, width: 76, icon: Gift },
+  { label: "ENTERTAINMENT", href: "/play", left: 717, width: 89, icon: Mic2 },
+  { label: "EVENTS", href: "/events", left: 797, width: 53, icon: CalendarDays },
+  { label: "FAQ", href: "/#faq", left: 838, width: 25, icon: CircleHelp },
 ];
 
 const anchorTargets = [
@@ -472,6 +487,236 @@ body:has(.tsurusen-pixel-home) {
   user-select: none;
 }
 
+.pixel-main-header {
+  position: absolute;
+  z-index: 18;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 46% 55%, rgba(239, 200, 116, 0.11), transparent 19%),
+    radial-gradient(circle at 32% 18%, rgba(42, 134, 255, 0.08), transparent 20%),
+    linear-gradient(90deg, rgba(3, 3, 3, 0.98), rgba(9, 8, 6, 0.86) 32%, rgba(4, 4, 4, 0.94) 72%, rgba(3, 3, 3, 0.98));
+  box-shadow:
+    inset 0 calc(10 * 0.1157407407vw) calc(18 * 0.1157407407vw) rgba(0, 0, 0, 0.72),
+    inset 0 calc(-10 * 0.1157407407vw) calc(16 * 0.1157407407vw) rgba(0, 0, 0, 0.72),
+    0 calc(2 * 0.1157407407vw) 0 rgba(239, 200, 116, 0.38),
+    0 calc(5 * 0.1157407407vw) calc(12 * 0.1157407407vw) rgba(0, 0, 0, 0.76);
+  pointer-events: none;
+}
+
+.pixel-main-header::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.36), transparent 18%, rgba(0, 0, 0, 0.2) 63%, rgba(0, 0, 0, 0.42)),
+    linear-gradient(180deg, rgba(255, 247, 234, 0.04), rgba(255, 247, 234, 0) 24%, rgba(0, 0, 0, 0.16));
+  content: "";
+}
+
+.pixel-main-header::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: max(1px, calc(1 * 0.1157407407vw));
+  background: linear-gradient(90deg, transparent, rgba(239, 200, 116, 0.76) 22%, rgba(239, 200, 116, 0.44) 58%, transparent);
+  box-shadow: 0 calc(2 * 0.1157407407vw) calc(8 * 0.1157407407vw) rgba(239, 200, 116, 0.24);
+  content: "";
+}
+
+.pixel-header-brand,
+.pixel-header-nav-item,
+.pixel-header-nav-cluster {
+  position: absolute;
+  z-index: 2;
+}
+
+.pixel-header-brand {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: calc(44 * 0.1157407407vw) minmax(0, 1fr);
+  column-gap: calc(13 * 0.1157407407vw);
+  align-items: center;
+  border: 0;
+  background: transparent;
+  color: #efc874;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+.pixel-header-logo-mark {
+  position: relative;
+  display: block;
+  width: calc(36 * 0.1157407407vw);
+  height: calc(36 * 0.1157407407vw);
+  justify-self: center;
+  border: max(1px, calc(1.4 * 0.1157407407vw)) solid rgba(255, 239, 189, 0.88);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(239, 200, 116, 0.18), transparent 58%),
+    rgba(8, 8, 7, 0.2);
+  box-shadow:
+    0 0 calc(10 * 0.1157407407vw) rgba(239, 200, 116, 0.42),
+    inset 0 0 calc(7 * 0.1157407407vw) rgba(239, 200, 116, 0.14);
+}
+
+.pixel-header-logo-mark::before,
+.pixel-header-logo-mark::after {
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  width: 46%;
+  height: 24%;
+  border-top: max(1px, calc(1.25 * 0.1157407407vw)) solid rgba(255, 239, 189, 0.9);
+  border-radius: 50% 50% 0 0;
+  content: "";
+}
+
+.pixel-header-logo-mark::before {
+  transform: translate(-88%, -50%) rotate(24deg);
+}
+
+.pixel-header-logo-mark::after {
+  transform: translate(-12%, -50%) rotate(-24deg);
+}
+
+.pixel-header-logo-stem {
+  position: absolute;
+  left: 50%;
+  top: 36%;
+  width: max(1px, calc(1.1 * 0.1157407407vw));
+  height: 45%;
+  background: rgba(255, 239, 189, 0.92);
+  transform: translateX(-50%);
+}
+
+.pixel-header-brand-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pixel-header-brand-kicker,
+.pixel-header-brand-name {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  font-family: "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow:
+    0 0 calc(7 * 0.1157407407vw) rgba(239, 200, 116, 0.32),
+    0 calc(2 * 0.1157407407vw) calc(6 * 0.1157407407vw) rgba(0, 0, 0, 0.94);
+}
+
+.pixel-header-brand-kicker {
+  font-size: calc(8 * 0.1157407407vw);
+  letter-spacing: calc(2.2 * 0.1157407407vw);
+}
+
+.pixel-header-brand-name {
+  margin-top: calc(7 * 0.1157407407vw);
+  font-size: calc(21 * 0.1157407407vw);
+  letter-spacing: calc(5.1 * 0.1157407407vw);
+}
+
+.pixel-header-nav-cluster {
+  border: max(1px, calc(1 * 0.1157407407vw)) solid rgba(171, 126, 52, 0.76);
+  border-radius: calc(12 * 0.1157407407vw);
+  background: rgba(7, 6, 5, 0.2);
+  box-shadow:
+    inset 0 0 calc(12 * 0.1157407407vw) rgba(239, 200, 116, 0.04),
+    0 0 calc(12 * 0.1157407407vw) rgba(216, 180, 106, 0.1);
+  pointer-events: none;
+}
+
+.pixel-header-nav-item {
+  display: flex;
+  min-width: 0;
+  height: calc(66 * 0.1157407407vw);
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  color: #fff8ea;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pixel-header-nav-item svg {
+  display: block;
+  width: calc(19 * 0.1157407407vw);
+  height: calc(19 * 0.1157407407vw);
+  margin-top: calc(10 * 0.1157407407vw);
+  color: #efc874;
+  filter:
+    drop-shadow(0 0 calc(5 * 0.1157407407vw) rgba(239, 200, 116, 0.5))
+    drop-shadow(0 calc(2 * 0.1157407407vw) calc(4 * 0.1157407407vw) rgba(0, 0, 0, 0.8));
+}
+
+.pixel-header-nav-item[data-active="true"] svg,
+.pixel-header-nav-item[data-active="true"] .pixel-header-nav-label {
+  color: #efc874;
+}
+
+.pixel-header-nav-label,
+.pixel-header-nav-sub {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  font-family: "Bahnschrift Condensed", "Arial Narrow", var(--font-manrope), sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-shadow:
+    0 0 calc(5 * 0.1157407407vw) rgba(255, 247, 234, 0.18),
+    0 calc(2 * 0.1157407407vw) calc(5 * 0.1157407407vw) rgba(0, 0, 0, 0.96);
+}
+
+.pixel-header-nav-label {
+  margin-top: calc(11 * 0.1157407407vw);
+  font-size: calc(var(--header-font-size, 9.5) * 0.1157407407vw);
+  letter-spacing: calc(var(--header-tracking, 0.9) * 0.1157407407vw);
+}
+
+.pixel-header-nav-sub {
+  margin-top: calc(6 * 0.1157407407vw);
+  color: rgba(255, 248, 234, 0.82);
+  font-family: var(--font-zen), "Yu Gothic", "Meiryo", sans-serif;
+  font-size: calc(6 * 0.1157407407vw);
+  letter-spacing: calc(0.35 * 0.1157407407vw);
+  line-height: 1.25;
+}
+
+.pixel-header-nav-item[data-active="true"]::after {
+  position: absolute;
+  left: 50%;
+  bottom: calc(3 * 0.1157407407vw);
+  width: calc(46 * 0.1157407407vw);
+  height: max(2px, calc(1.8 * 0.1157407407vw));
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, #efc874 14%, #fff0ae 50%, #efc874 86%, transparent);
+  box-shadow: 0 0 calc(7 * 0.1157407407vw) rgba(239, 200, 116, 0.5);
+  content: "";
+  transform: translateX(-50%);
+}
+
 .pixel-hero-cta-band {
   position: absolute;
   left: 0;
@@ -534,6 +779,7 @@ body:has(.tsurusen-pixel-home) {
     0 0 calc(10 * 0.1157407407vw) rgba(239, 200, 116, 0.22);
 }
 
+.pixel-dom-text[data-region="header"],
 .pixel-dom-text[data-region="about"],
 .pixel-dom-button[data-region="about"],
 .pixel-dom-text[data-region="price-entertainment"],
@@ -2159,7 +2405,18 @@ function sliceCropStyle(crop: { x: number; y: number; width: number; height: num
 
 function TextBlock({ as, text, left, top, width, height, size, lineHeight = 1, tracking = 0, tone, variant = "body", align = "left" }: PixelTextBlock) {
   const Tag = as;
-  const region = top >= 361 && top < 592 ? "about" : top >= 775 && top < 1031 ? "price-entertainment" : top >= 1418 && top < 1621 ? "event-access-faq" : top >= 1621 ? "cta-footer" : undefined;
+  const region =
+    top < 50
+      ? "header"
+      : top >= 361 && top < 592
+        ? "about"
+        : top >= 775 && top < 1031
+          ? "price-entertainment"
+          : top >= 1418 && top < 1621
+            ? "event-access-faq"
+            : top >= 1621
+              ? "cta-footer"
+              : undefined;
   const style: PixelStyle = {
     ...boxStyle({ left, top, width, height }),
     "--font-size": size,
@@ -2173,14 +2430,6 @@ function TextBlock({ as, text, left, top, width, height, size, lineHeight = 1, t
     <Tag className="pixel-dom-text" data-region={region} data-variant={variant} style={style}>
       {text}
     </Tag>
-  );
-}
-
-function NavLink({ href, label, left, top, width, height }: PixelLink) {
-  return (
-    <a className="pixel-nav-link" data-reserve={label === "RESERVE" ? "true" : undefined} href={href} style={boxStyle({ left, top, width, height })}>
-      {label}
-    </a>
   );
 }
 
@@ -2224,6 +2473,48 @@ function CardLink({ href, label, left, top, width, height }: PixelLink) {
     <a className="pixel-card-link" href={href} aria-label={label} style={boxStyle({ left, top, width, height })}>
       <span>{label}</span>
     </a>
+  );
+}
+
+function PixelHeader() {
+  const panelWidth = 864;
+  const panelHeight = 92;
+
+  return (
+    <header className="pixel-main-header" aria-label="Site header" style={boxStyle({ left: 0, top: 0, width: panelWidth, height: panelHeight })}>
+      <button type="button" className="pixel-header-brand" aria-label="TSURUSEN home" onClick={() => navigateTo("/")} style={innerBoxStyle({ left: 27, top: 25, width: 192, height: 44 }, panelWidth, panelHeight)}>
+        <span className="pixel-header-logo-mark" aria-hidden="true">
+          <span className="pixel-header-logo-stem" />
+        </span>
+        <span className="pixel-header-brand-copy">
+          <span className="pixel-header-brand-kicker">AMUSEMENT BAR</span>
+          <span className="pixel-header-brand-name">TSURUSEN</span>
+        </span>
+      </button>
+
+      <span className="pixel-header-nav-cluster" aria-hidden="true" style={innerBoxStyle({ left: 287, top: 16, width: 220, height: 61 }, panelWidth, panelHeight)} />
+
+      <nav aria-label="Header menu">
+        {headerNavItems.map((item) => {
+          const Icon = item.icon;
+          const labelSize = item.label.length > 11 ? 7.7 : item.label.length > 8 ? 8.2 : 9.5;
+          const tracking = item.label.length > 11 ? 0.25 : item.label.length > 8 ? 0.45 : 0.9;
+          const style: PixelStyle = {
+            ...innerBoxStyle({ left: item.left, top: 12, width: item.width, height: item.sub ? 76 : 68 }, panelWidth, panelHeight),
+            "--header-font-size": labelSize,
+            "--header-tracking": tracking,
+          };
+
+          return (
+            <button key={item.label} type="button" className="pixel-header-nav-item" data-active={item.active ? "true" : undefined} onClick={() => navigateTo(item.href)} style={style} aria-label={item.label}>
+              <Icon strokeWidth={1.55} aria-hidden="true" />
+              <span className="pixel-header-nav-label">{item.label}</span>
+              {item.sub ? <span className="pixel-header-nav-sub">{item.sub}</span> : null}
+            </button>
+          );
+        })}
+      </nav>
+    </header>
   );
 }
 
@@ -2508,11 +2799,7 @@ export function TsurusenPixelHome() {
           <span key={anchor.id} id={anchor.id} className="pixel-anchor" style={{ top: yPct(anchor.top) }} />
         ))}
 
-        <nav aria-label="Top menu">
-          {navLinks.map((link) => (
-            <NavLink key={link.label} {...link} />
-          ))}
-        </nav>
+        <PixelHeader />
 
         {textBlocks.map((block) => (
           <TextBlock key={`${block.text}-${block.left}-${block.top}`} {...block} />
