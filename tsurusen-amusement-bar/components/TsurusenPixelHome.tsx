@@ -5324,11 +5324,13 @@ export function TsurusenPixelHome() {
       target.scrollIntoView({ block: "start", inline: "nearest" });
     };
 
-    const timers = [0, 240, 900].map((delay) => window.setTimeout(scrollToHashTarget, delay));
+    const timers = [0, 240, 900, 1800, 3200].map((delay) => window.setTimeout(scrollToHashTarget, delay));
+    window.addEventListener("load", scrollToHashTarget);
     window.addEventListener("hashchange", scrollToHashTarget);
 
     return () => {
       timers.forEach((timer) => window.clearTimeout(timer));
+      window.removeEventListener("load", scrollToHashTarget);
       window.removeEventListener("hashchange", scrollToHashTarget);
     };
   }, []);
