@@ -111,6 +111,7 @@ type CoreEntertainmentItem = {
   title: string;
   body: string;
   imagePosition: string;
+  crop: SliceCrop;
 };
 type CoreSceneItem = {
   title: string;
@@ -192,18 +193,21 @@ const coreEntertainmentItems: CoreEntertainmentItem[] = [
     title: "ダーツ",
     body: "最新機種を完備。初心者から上級者まで\nみんなで盛り上がれる人気コンテンツ。",
     imagePosition: "58% 22%",
+    crop: { x: 424, y: 27, width: 140, height: 61 },
   },
   {
     icon: Mic2,
     title: "カラオケ",
     body: "最新カラオケ機種を導入。\n大迫力の音響で熱唱しよう。",
     imagePosition: "58% 48%",
+    crop: { x: 424, y: 88, width: 140, height: 61 },
   },
   {
     icon: Dices,
     title: "ボードゲーム",
     body: "定番から話題のゲームまで多数取り揃え。\n飲みながらワイワイ楽しめる。",
     imagePosition: "58% 73%",
+    crop: { x: 424, y: 149, width: 140, height: 62 },
   },
 ];
 
@@ -214,6 +218,21 @@ const coreSceneItems: CoreSceneItem[] = [
   { title: "二次会", imagePosition: "57% 54%" },
   { title: "合コン", imagePosition: "73% 54%" },
   { title: "デート", imagePosition: "89% 54%" },
+];
+
+const coreEntertainmentCropImages = [
+  `${assetBase}/core-ent-darts.webp`,
+  `${assetBase}/core-ent-karaoke.webp`,
+  `${assetBase}/core-ent-boardgame.webp`,
+];
+
+const coreSceneCropImages = [
+  `${assetBase}/core-scene-girls.webp`,
+  `${assetBase}/core-scene-birthday.webp`,
+  `${assetBase}/core-scene-private-party.webp`,
+  `${assetBase}/core-scene-after-party.webp`,
+  `${assetBase}/core-scene-mixer.webp`,
+  `${assetBase}/core-scene-date.webp`,
 ];
 
 const socialInstagramTiles: SocialInstagramTile[] = [
@@ -5414,6 +5433,207 @@ body:has(.tsurusen-pixel-home) {
     height: 760px;
   }
 }
+
+/* Feature / Price / Entertainment / Scene finish pass */
+@media (min-width: 901px) {
+  .pixel-core-sections {
+    min-height: 0;
+    padding: clamp(8px, 0.75vw, 16px) clamp(24px, 3vw, 48px) clamp(24px, 2.3vw, 44px);
+  }
+
+  #feature,
+  #price,
+  #play,
+  #scene {
+    scroll-margin-top: clamp(22px, 1.8vw, 34px);
+  }
+
+  .pixel-core-inner {
+    gap: clamp(16px, 1.35vw, 24px);
+  }
+
+  .pixel-core-section:first-child {
+    padding-top: clamp(8px, 0.7vw, 12px);
+  }
+
+  .pixel-core-title {
+    gap: 24px;
+    margin: 0 0 clamp(10px, 0.85vw, 14px);
+    font-size: clamp(38px, 2.8vw, 52px);
+    line-height: 0.95;
+  }
+
+  .pixel-core-title::before,
+  .pixel-core-title::after {
+    width: 120px;
+    flex-basis: 120px;
+  }
+
+  .pixel-core-feature-grid,
+  .pixel-core-scene-grid {
+    gap: clamp(18px, 1.8vw, 28px);
+  }
+
+  .pixel-core-feature-card {
+    height: clamp(194px, 11.35vw, 222px);
+    grid-template-rows: clamp(58px, 4.1vw, 74px) auto 1px auto;
+    align-content: center;
+    row-gap: clamp(9px, 0.72vw, 14px);
+    padding: clamp(17px, 1.35vw, 24px);
+  }
+
+  .pixel-core-feature-card svg {
+    width: clamp(54px, 3.65vw, 68px);
+    height: clamp(54px, 3.65vw, 68px);
+  }
+
+  .pixel-core-feature-title {
+    font-size: clamp(21px, 1.42vw, 28px);
+    line-height: 1.18;
+  }
+
+  .pixel-core-feature-description {
+    font-size: clamp(12px, 0.82vw, 15px);
+    line-height: 1.52;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .pixel-core-duo-grid {
+    gap: clamp(28px, 2.8vw, 48px);
+    align-items: stretch;
+  }
+
+  .pixel-core-price-panel,
+  .pixel-core-ent-panel {
+    height: clamp(428px, 22.55vw, 456px);
+    min-height: 0;
+    border-radius: 18px;
+    padding: clamp(12px, 1.08vw, 19px) clamp(20px, 1.85vw, 30px) clamp(18px, 1.65vw, 28px);
+  }
+
+  .pixel-core-price-panel,
+  .pixel-core-ent-panel {
+    gap: clamp(12px, 1vw, 18px);
+  }
+
+  .pixel-core-price-panel .pixel-core-title,
+  .pixel-core-ent-panel .pixel-core-title {
+    margin-bottom: 0;
+  }
+
+  .pixel-core-price-cards {
+    gap: clamp(20px, 1.8vw, 30px);
+  }
+
+  .pixel-core-price-card {
+    height: clamp(250px, 13.9vw, 280px);
+    grid-template-rows: auto auto 1px auto minmax(60px, 1fr);
+    row-gap: clamp(8px, 0.7vw, 13px);
+    padding: clamp(16px, 1.25vw, 24px);
+  }
+
+  .pixel-core-price-title {
+    font-size: clamp(27px, 1.82vw, 36px);
+  }
+
+  .pixel-core-price-value {
+    margin-top: clamp(4px, 0.45vw, 9px);
+    font-size: clamp(30px, 2.35vw, 46px);
+  }
+
+  .pixel-core-price-value small {
+    font-size: clamp(17px, 1.05vw, 22px);
+  }
+
+  .pixel-core-price-extension {
+    font-size: clamp(14px, 0.92vw, 18px);
+  }
+
+  .pixel-core-price-perks {
+    min-height: clamp(58px, 4.05vw, 78px);
+    padding-top: clamp(8px, 0.7vw, 13px);
+  }
+
+  .pixel-core-price-perk svg {
+    width: clamp(26px, 1.8vw, 36px);
+    height: clamp(26px, 1.8vw, 36px);
+  }
+
+  .pixel-core-price-perk span {
+    font-size: clamp(12px, 0.88vw, 17px);
+  }
+
+  .pixel-core-price-more {
+    width: min(100%, 360px);
+    height: 56px;
+    min-height: 56px;
+    align-self: end;
+    font-size: clamp(18px, 1.2vw, 22px);
+  }
+
+  .pixel-core-ent-rows {
+    height: clamp(316px, 16.4vw, 332px);
+    min-height: 0;
+    border-radius: 12px;
+  }
+
+  .pixel-core-ent-media img,
+  .pixel-core-scene-media img {
+    object-position: center;
+  }
+
+  .pixel-core-ent-copy {
+    grid-template-columns: clamp(34px, 2.25vw, 44px) minmax(0, 1fr);
+    column-gap: clamp(12px, 1vw, 18px);
+    padding: clamp(10px, 0.92vw, 18px);
+  }
+
+  .pixel-core-ent-copy svg {
+    width: clamp(30px, 2.05vw, 40px);
+    height: clamp(30px, 2.05vw, 40px);
+  }
+
+  .pixel-core-ent-title {
+    font-size: clamp(21px, 1.42vw, 28px);
+    line-height: 1.1;
+  }
+
+  .pixel-core-ent-body {
+    margin-top: clamp(6px, 0.55vw, 10px);
+    font-size: clamp(11px, 0.73vw, 14px);
+    line-height: 1.42;
+  }
+
+  .pixel-core-scene-card {
+    height: clamp(148px, 8.7vw, 176px);
+    grid-template-rows: minmax(0, 1fr) clamp(38px, 2.45vw, 46px);
+  }
+
+  .pixel-core-scene-title {
+    font-size: clamp(15px, 1.05vw, 21px);
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1180px) {
+  .pixel-core-sections {
+    padding-top: 44px;
+  }
+
+  .pixel-core-price-panel,
+  .pixel-core-ent-panel {
+    min-height: 0;
+  }
+
+  .pixel-core-price-card {
+    height: auto;
+    min-height: 340px;
+  }
+
+  .pixel-core-ent-rows {
+    min-height: 420px;
+  }
+}
 `;
 
 const xPct = (value: number) => `${(value / designWidth) * 100}%`;
@@ -5735,9 +5955,6 @@ function CoreSectionTitle({ children }: { children: string }) {
 }
 
 function CoreSections() {
-  const entertainmentImage = `${assetBase}/section-04-price-entertainment-textless-ai.webp`;
-  const sceneImage = `${assetBase}/section-05-scene-textless-ai.webp`;
-
   return (
     <section className="pixel-core-sections" aria-label="Feature Price Entertainment Scene">
       <div className="pixel-core-inner">
@@ -5793,12 +6010,12 @@ function CoreSections() {
           <section id="play" className="pixel-core-ent-panel" aria-label="ENTERTAINMENT">
             <CoreSectionTitle>ENTERTAINMENT</CoreSectionTitle>
             <div className="pixel-core-ent-rows">
-              {coreEntertainmentItems.map((item) => {
+              {coreEntertainmentItems.map((item, index) => {
                 const Icon = item.icon;
                 return (
                   <article key={item.title} className="pixel-core-ent-row">
                     <span className="pixel-core-ent-media" aria-hidden="true">
-                      <img src={entertainmentImage} alt="" width={864} height={256} loading="lazy" decoding="async" style={{ objectPosition: item.imagePosition }} />
+                      <img src={coreEntertainmentCropImages[index]} alt="" width={140} height={61} loading="lazy" decoding="async" />
                     </span>
                     <span className="pixel-core-ent-copy">
                       <Icon strokeWidth={1.6} aria-hidden="true" />
@@ -5817,10 +6034,10 @@ function CoreSections() {
         <section id="scene" className="pixel-core-section" aria-label="SCENE">
           <CoreSectionTitle>SCENE</CoreSectionTitle>
           <div className="pixel-core-scene-grid">
-            {coreSceneItems.map((item) => (
+            {coreSceneItems.map((item, index) => (
               <button key={item.title} type="button" className="pixel-core-scene-card" onClick={() => navigateTo("/#scene")} aria-label={item.title}>
                 <span className="pixel-core-scene-media" aria-hidden="true">
-                  <img src={sceneImage} alt="" width={864} height={150} loading="lazy" decoding="async" style={{ objectPosition: item.imagePosition }} />
+                  <img src={coreSceneCropImages[index]} alt="" width={144} height={150} loading="lazy" decoding="async" />
                 </span>
                 <span className="pixel-core-scene-title">{item.title}</span>
               </button>
