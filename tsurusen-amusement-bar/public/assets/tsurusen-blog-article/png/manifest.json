@@ -1,0 +1,417 @@
+{
+  "source": "public/assets/tsurusen-blog-article/source/blog-article-reference-source.png",
+  "sourceSize": {
+    "width": 1024,
+    "height": 1536
+  },
+  "assets": [
+    {
+      "name": "page.png",
+      "box": [
+        0,
+        0,
+        1024,
+        1536
+      ],
+      "width": 1024,
+      "height": 1536,
+      "alpha": true
+    },
+    {
+      "name": "section-01-hero.png",
+      "box": [
+        0,
+        0,
+        1024,
+        319
+      ],
+      "width": 1024,
+      "height": 319,
+      "alpha": true
+    },
+    {
+      "name": "section-02-meta-intro.png",
+      "box": [
+        0,
+        319,
+        1024,
+        581
+      ],
+      "width": 1024,
+      "height": 262,
+      "alpha": true
+    },
+    {
+      "name": "section-03-content-cards.png",
+      "box": [
+        0,
+        581,
+        1024,
+        936
+      ],
+      "width": 1024,
+      "height": 355,
+      "alpha": true
+    },
+    {
+      "name": "section-04-points-share.png",
+      "box": [
+        0,
+        936,
+        1024,
+        1268
+      ],
+      "width": 1024,
+      "height": 332,
+      "alpha": true
+    },
+    {
+      "name": "section-05-related-sidebar.png",
+      "box": [
+        0,
+        1268,
+        1024,
+        1536
+      ],
+      "width": 1024,
+      "height": 268,
+      "alpha": true
+    },
+    {
+      "name": "logo-header.png",
+      "box": [
+        14,
+        8,
+        143,
+        42
+      ],
+      "width": 129,
+      "height": 34,
+      "alpha": true
+    },
+    {
+      "name": "reserve-header.png",
+      "box": [
+        954,
+        8,
+        1016,
+        43
+      ],
+      "width": 62,
+      "height": 35,
+      "alpha": true
+    },
+    {
+      "name": "hero-darts-left.png",
+      "box": [
+        0,
+        68,
+        152,
+        222
+      ],
+      "width": 152,
+      "height": 154,
+      "alpha": true
+    },
+    {
+      "name": "hero-title.png",
+      "box": [
+        152,
+        110,
+        493,
+        211
+      ],
+      "width": 341,
+      "height": 101,
+      "alpha": true
+    },
+    {
+      "name": "hero-party-right.png",
+      "box": [
+        492,
+        55,
+        1024,
+        319
+      ],
+      "width": 532,
+      "height": 264,
+      "alpha": true
+    },
+    {
+      "name": "breadcrumb.png",
+      "box": [
+        52,
+        336,
+        486,
+        352
+      ],
+      "width": 434,
+      "height": 16,
+      "alpha": true
+    },
+    {
+      "name": "meta-bar.png",
+      "box": [
+        52,
+        362,
+        741,
+        412
+      ],
+      "width": 689,
+      "height": 50,
+      "alpha": true
+    },
+    {
+      "name": "toc-panel.png",
+      "box": [
+        756,
+        333,
+        976,
+        482
+      ],
+      "width": 220,
+      "height": 149,
+      "alpha": true
+    },
+    {
+      "name": "article-image-main.png",
+      "box": [
+        483,
+        433,
+        734,
+        650
+      ],
+      "width": 251,
+      "height": 217,
+      "alpha": true
+    },
+    {
+      "name": "quote-panel.png",
+      "box": [
+        52,
+        568,
+        445,
+        651
+      ],
+      "width": 393,
+      "height": 83,
+      "alpha": true
+    },
+    {
+      "name": "card-darts.png",
+      "box": [
+        52,
+        756,
+        263,
+        925
+      ],
+      "width": 211,
+      "height": 169,
+      "alpha": true
+    },
+    {
+      "name": "card-karaoke.png",
+      "box": [
+        286,
+        756,
+        486,
+        925
+      ],
+      "width": 200,
+      "height": 169,
+      "alpha": true
+    },
+    {
+      "name": "card-cocktails.png",
+      "box": [
+        501,
+        756,
+        721,
+        925
+      ],
+      "width": 220,
+      "height": 169,
+      "alpha": true
+    },
+    {
+      "name": "main-bar-photo.png",
+      "box": [
+        52,
+        938,
+        489,
+        1083
+      ],
+      "width": 437,
+      "height": 145,
+      "alpha": true
+    },
+    {
+      "name": "enjoy-reasons.png",
+      "box": [
+        504,
+        947,
+        716,
+        1077
+      ],
+      "width": 212,
+      "height": 130,
+      "alpha": true
+    },
+    {
+      "name": "point-panel.png",
+      "box": [
+        52,
+        1100,
+        721,
+        1180
+      ],
+      "width": 669,
+      "height": 80,
+      "alpha": true
+    },
+    {
+      "name": "share-panel.png",
+      "box": [
+        52,
+        1215,
+        708,
+        1261
+      ],
+      "width": 656,
+      "height": 46,
+      "alpha": true
+    },
+    {
+      "name": "related-info-panel.png",
+      "box": [
+        756,
+        494,
+        976,
+        785
+      ],
+      "width": 220,
+      "height": 291,
+      "alpha": true
+    },
+    {
+      "name": "reserve-card.png",
+      "box": [
+        756,
+        796,
+        976,
+        919
+      ],
+      "width": 220,
+      "height": 123,
+      "alpha": true
+    },
+    {
+      "name": "popular-panel.png",
+      "box": [
+        756,
+        930,
+        976,
+        1168
+      ],
+      "width": 220,
+      "height": 238,
+      "alpha": true
+    },
+    {
+      "name": "author-panel.png",
+      "box": [
+        756,
+        1181,
+        976,
+        1308
+      ],
+      "width": 220,
+      "height": 127,
+      "alpha": true
+    },
+    {
+      "name": "newsletter-panel.png",
+      "box": [
+        756,
+        1319,
+        976,
+        1493
+      ],
+      "width": 220,
+      "height": 174,
+      "alpha": true
+    },
+    {
+      "name": "related-articles-panel.png",
+      "box": [
+        52,
+        1287,
+        721,
+        1423
+      ],
+      "width": 669,
+      "height": 136,
+      "alpha": true
+    },
+    {
+      "name": "related-card-01.png",
+      "box": [
+        52,
+        1304,
+        211,
+        1411
+      ],
+      "width": 159,
+      "height": 107,
+      "alpha": true
+    },
+    {
+      "name": "related-card-02.png",
+      "box": [
+        221,
+        1304,
+        380,
+        1411
+      ],
+      "width": 159,
+      "height": 107,
+      "alpha": true
+    },
+    {
+      "name": "related-card-03.png",
+      "box": [
+        390,
+        1304,
+        549,
+        1411
+      ],
+      "width": 159,
+      "height": 107,
+      "alpha": true
+    },
+    {
+      "name": "related-card-04.png",
+      "box": [
+        559,
+        1304,
+        721,
+        1411
+      ],
+      "width": 162,
+      "height": 107,
+      "alpha": true
+    },
+    {
+      "name": "more-button.png",
+      "box": [
+        294,
+        1476,
+        512,
+        1535
+      ],
+      "width": 218,
+      "height": 59,
+      "alpha": true
+    }
+  ]
+}

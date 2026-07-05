@@ -1,0 +1,741 @@
+{
+  "source": "public/assets/tsurusen-blog/source/blog-reference-source.png",
+  "sourceSize": {
+    "width": 881,
+    "height": 1786
+  },
+  "assets": [
+    {
+      "name": "page.png",
+      "box": [
+        0,
+        0,
+        881,
+        1786
+      ],
+      "width": 881,
+      "height": 1786,
+      "alpha": true
+    },
+    {
+      "name": "section-01-hero.png",
+      "box": [
+        0,
+        0,
+        881,
+        272
+      ],
+      "width": 881,
+      "height": 272,
+      "alpha": true
+    },
+    {
+      "name": "section-02-editor-pick.png",
+      "box": [
+        0,
+        272,
+        881,
+        488
+      ],
+      "width": 881,
+      "height": 216,
+      "alpha": true
+    },
+    {
+      "name": "section-03-category-tabs.png",
+      "box": [
+        0,
+        488,
+        881,
+        528
+      ],
+      "width": 881,
+      "height": 40,
+      "alpha": true
+    },
+    {
+      "name": "section-04-featured-trending.png",
+      "box": [
+        0,
+        528,
+        881,
+        816
+      ],
+      "width": 881,
+      "height": 288,
+      "alpha": true
+    },
+    {
+      "name": "section-05-latest-articles.png",
+      "box": [
+        0,
+        816,
+        881,
+        1010
+      ],
+      "width": 881,
+      "height": 194,
+      "alpha": true
+    },
+    {
+      "name": "section-06-search-topics.png",
+      "box": [
+        0,
+        1010,
+        881,
+        1156
+      ],
+      "width": 881,
+      "height": 146,
+      "alpha": true
+    },
+    {
+      "name": "section-07-series-instagram.png",
+      "box": [
+        0,
+        1156,
+        881,
+        1296
+      ],
+      "width": 881,
+      "height": 140,
+      "alpha": true
+    },
+    {
+      "name": "section-08-video-lisa.png",
+      "box": [
+        0,
+        1296,
+        881,
+        1436
+      ],
+      "width": 881,
+      "height": 140,
+      "alpha": true
+    },
+    {
+      "name": "section-09-customer-reviews.png",
+      "box": [
+        0,
+        1436,
+        881,
+        1548
+      ],
+      "width": 881,
+      "height": 112,
+      "alpha": true
+    },
+    {
+      "name": "section-10-newsletter-author.png",
+      "box": [
+        0,
+        1548,
+        881,
+        1664
+      ],
+      "width": 881,
+      "height": 116,
+      "alpha": true
+    },
+    {
+      "name": "section-11-cta.png",
+      "box": [
+        0,
+        1664,
+        881,
+        1786
+      ],
+      "width": 881,
+      "height": 122,
+      "alpha": true
+    },
+    {
+      "name": "logo-header.png",
+      "box": [
+        15,
+        8,
+        125,
+        38
+      ],
+      "width": 110,
+      "height": 30,
+      "alpha": true
+    },
+    {
+      "name": "reserve-header.png",
+      "box": [
+        812,
+        8,
+        873,
+        43
+      ],
+      "width": 61,
+      "height": 35,
+      "alpha": true
+    },
+    {
+      "name": "hero-title.png",
+      "box": [
+        88,
+        68,
+        265,
+        180
+      ],
+      "width": 177,
+      "height": 112,
+      "alpha": true
+    },
+    {
+      "name": "hero-subtitle.png",
+      "box": [
+        88,
+        196,
+        180,
+        252
+      ],
+      "width": 92,
+      "height": 56,
+      "alpha": true
+    },
+    {
+      "name": "hero-city-left.png",
+      "box": [
+        205,
+        43,
+        472,
+        266
+      ],
+      "width": 267,
+      "height": 223,
+      "alpha": true
+    },
+    {
+      "name": "hero-party-right.png",
+      "box": [
+        469,
+        43,
+        864,
+        266
+      ],
+      "width": 395,
+      "height": 223,
+      "alpha": true
+    },
+    {
+      "name": "editor-photo.png",
+      "box": [
+        43,
+        274,
+        455,
+        475
+      ],
+      "width": 412,
+      "height": 201,
+      "alpha": true
+    },
+    {
+      "name": "editor-card.png",
+      "box": [
+        459,
+        274,
+        832,
+        475
+      ],
+      "width": 373,
+      "height": 201,
+      "alpha": true
+    },
+    {
+      "name": "category-tabs.png",
+      "box": [
+        43,
+        489,
+        833,
+        518
+      ],
+      "width": 790,
+      "height": 29,
+      "alpha": true
+    },
+    {
+      "name": "featured-main-card.png",
+      "box": [
+        43,
+        528,
+        303,
+        804
+      ],
+      "width": 260,
+      "height": 276,
+      "alpha": true
+    },
+    {
+      "name": "featured-side-card-01.png",
+      "box": [
+        320,
+        529,
+        609,
+        665
+      ],
+      "width": 289,
+      "height": 136,
+      "alpha": true
+    },
+    {
+      "name": "featured-side-card-02.png",
+      "box": [
+        320,
+        672,
+        609,
+        804
+      ],
+      "width": 289,
+      "height": 132,
+      "alpha": true
+    },
+    {
+      "name": "trending-panel.png",
+      "box": [
+        620,
+        529,
+        831,
+        1011
+      ],
+      "width": 211,
+      "height": 482,
+      "alpha": true
+    },
+    {
+      "name": "latest-panel.png",
+      "box": [
+        43,
+        813,
+        609,
+        1012
+      ],
+      "width": 566,
+      "height": 199,
+      "alpha": true
+    },
+    {
+      "name": "latest-card-01.png",
+      "box": [
+        52,
+        844,
+        231,
+        991
+      ],
+      "width": 179,
+      "height": 147,
+      "alpha": true
+    },
+    {
+      "name": "latest-card-02.png",
+      "box": [
+        242,
+        844,
+        421,
+        991
+      ],
+      "width": 179,
+      "height": 147,
+      "alpha": true
+    },
+    {
+      "name": "latest-card-03.png",
+      "box": [
+        432,
+        844,
+        602,
+        991
+      ],
+      "width": 170,
+      "height": 147,
+      "alpha": true
+    },
+    {
+      "name": "search-panel.png",
+      "box": [
+        43,
+        1016,
+        306,
+        1150
+      ],
+      "width": 263,
+      "height": 134,
+      "alpha": true
+    },
+    {
+      "name": "topics-panel.png",
+      "box": [
+        320,
+        1016,
+        832,
+        1150
+      ],
+      "width": 512,
+      "height": 134,
+      "alpha": true
+    },
+    {
+      "name": "featured-series-panel.png",
+      "box": [
+        43,
+        1160,
+        514,
+        1292
+      ],
+      "width": 471,
+      "height": 132,
+      "alpha": true
+    },
+    {
+      "name": "series-card-01.png",
+      "box": [
+        52,
+        1197,
+        178,
+        1262
+      ],
+      "width": 126,
+      "height": 65,
+      "alpha": true
+    },
+    {
+      "name": "series-card-02.png",
+      "box": [
+        190,
+        1197,
+        323,
+        1262
+      ],
+      "width": 133,
+      "height": 65,
+      "alpha": true
+    },
+    {
+      "name": "series-card-03.png",
+      "box": [
+        335,
+        1197,
+        505,
+        1262
+      ],
+      "width": 170,
+      "height": 65,
+      "alpha": true
+    },
+    {
+      "name": "instagram-picks-panel.png",
+      "box": [
+        523,
+        1160,
+        832,
+        1292
+      ],
+      "width": 309,
+      "height": 132,
+      "alpha": true
+    },
+    {
+      "name": "video-stories-panel.png",
+      "box": [
+        43,
+        1301,
+        613,
+        1432
+      ],
+      "width": 570,
+      "height": 131,
+      "alpha": true
+    },
+    {
+      "name": "video-card-01.png",
+      "box": [
+        52,
+        1329,
+        183,
+        1419
+      ],
+      "width": 131,
+      "height": 90,
+      "alpha": true
+    },
+    {
+      "name": "video-card-02.png",
+      "box": [
+        199,
+        1329,
+        330,
+        1419
+      ],
+      "width": 131,
+      "height": 90,
+      "alpha": true
+    },
+    {
+      "name": "video-card-03.png",
+      "box": [
+        345,
+        1329,
+        476,
+        1419
+      ],
+      "width": 131,
+      "height": 90,
+      "alpha": true
+    },
+    {
+      "name": "video-card-04.png",
+      "box": [
+        492,
+        1329,
+        602,
+        1419
+      ],
+      "width": 110,
+      "height": 90,
+      "alpha": true
+    },
+    {
+      "name": "lisa-panel.png",
+      "box": [
+        623,
+        1301,
+        832,
+        1432
+      ],
+      "width": 209,
+      "height": 131,
+      "alpha": true
+    },
+    {
+      "name": "customer-reviews-panel.png",
+      "box": [
+        43,
+        1439,
+        801,
+        1546
+      ],
+      "width": 758,
+      "height": 107,
+      "alpha": true
+    },
+    {
+      "name": "review-card-01.png",
+      "box": [
+        54,
+        1476,
+        179,
+        1534
+      ],
+      "width": 125,
+      "height": 58,
+      "alpha": true
+    },
+    {
+      "name": "review-card-02.png",
+      "box": [
+        198,
+        1476,
+        323,
+        1534
+      ],
+      "width": 125,
+      "height": 58,
+      "alpha": true
+    },
+    {
+      "name": "review-card-03.png",
+      "box": [
+        341,
+        1476,
+        468,
+        1534
+      ],
+      "width": 127,
+      "height": 58,
+      "alpha": true
+    },
+    {
+      "name": "review-card-04.png",
+      "box": [
+        487,
+        1476,
+        613,
+        1534
+      ],
+      "width": 126,
+      "height": 58,
+      "alpha": true
+    },
+    {
+      "name": "review-card-05.png",
+      "box": [
+        632,
+        1476,
+        758,
+        1534
+      ],
+      "width": 126,
+      "height": 58,
+      "alpha": true
+    },
+    {
+      "name": "newsletter-panel.png",
+      "box": [
+        43,
+        1553,
+        303,
+        1661
+      ],
+      "width": 260,
+      "height": 108,
+      "alpha": true
+    },
+    {
+      "name": "author-panel.png",
+      "box": [
+        317,
+        1553,
+        832,
+        1661
+      ],
+      "width": 515,
+      "height": 108,
+      "alpha": true
+    },
+    {
+      "name": "author-card-01.png",
+      "box": [
+        381,
+        1587,
+        472,
+        1647
+      ],
+      "width": 91,
+      "height": 60,
+      "alpha": true
+    },
+    {
+      "name": "author-card-02.png",
+      "box": [
+        489,
+        1587,
+        577,
+        1647
+      ],
+      "width": 88,
+      "height": 60,
+      "alpha": true
+    },
+    {
+      "name": "author-card-03.png",
+      "box": [
+        594,
+        1587,
+        682,
+        1647
+      ],
+      "width": 88,
+      "height": 60,
+      "alpha": true
+    },
+    {
+      "name": "author-card-04.png",
+      "box": [
+        699,
+        1587,
+        785,
+        1647
+      ],
+      "width": 86,
+      "height": 60,
+      "alpha": true
+    },
+    {
+      "name": "cta-background.png",
+      "box": [
+        0,
+        1664,
+        881,
+        1786
+      ],
+      "width": 881,
+      "height": 122,
+      "alpha": true
+    },
+    {
+      "name": "cta-buttons.png",
+      "box": [
+        336,
+        1746,
+        764,
+        1784
+      ],
+      "width": 428,
+      "height": 38,
+      "alpha": true
+    },
+    {
+      "name": "floating-web.png",
+      "box": [
+        810,
+        1359,
+        874,
+        1435
+      ],
+      "width": 64,
+      "height": 76,
+      "alpha": true
+    },
+    {
+      "name": "floating-line.png",
+      "box": [
+        810,
+        1439,
+        874,
+        1513
+      ],
+      "width": 64,
+      "height": 74,
+      "alpha": true
+    },
+    {
+      "name": "floating-phone.png",
+      "box": [
+        810,
+        1518,
+        874,
+        1592
+      ],
+      "width": 64,
+      "height": 74,
+      "alpha": true
+    },
+    {
+      "name": "floating-search.png",
+      "box": [
+        810,
+        1598,
+        874,
+        1671
+      ],
+      "width": 64,
+      "height": 73,
+      "alpha": true
+    },
+    {
+      "name": "floating-top.png",
+      "box": [
+        815,
+        1679,
+        870,
+        1735
+      ],
+      "width": 55,
+      "height": 56,
+      "alpha": true
+    }
+  ]
+}

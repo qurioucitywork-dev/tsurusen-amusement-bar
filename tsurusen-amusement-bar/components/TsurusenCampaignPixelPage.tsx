@@ -37,7 +37,6 @@ const navLinks = [
   { label: "PRIVATE PARTY", href: "/private-party", left: 579, top: 14, width: 84, height: 26 },
   { label: "EVENTS", href: "/events", left: 666, top: 14, width: 45, height: 26 },
   { label: "CAMPAIGNS", href: "/campaigns", left: 714, top: 14, width: 66, height: 26 },
-  { label: "ACCESS", href: "/access", left: 782, top: 14, width: 24, height: 26 },
   { label: "RESERVE", href: "/reservation", left: 806, top: 10, width: 43, height: 31 },
 ];
 

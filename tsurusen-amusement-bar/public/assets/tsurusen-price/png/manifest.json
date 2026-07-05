@@ -1,0 +1,601 @@
+{
+  "source": "C:\\Users\\ftmak\\OneDrive\\ドキュメント\\ホームページ制作\\tsurusen-amusement-bar\\tsurusen-amusement-bar\\public\\assets\\tsurusen-price\\source\\price-reference-source.png",
+  "sourceSize": [
+    862,
+    1825
+  ],
+  "assets": [
+    {
+      "file": "page-reference.png",
+      "box": [
+        0,
+        0,
+        862,
+        1825
+      ],
+      "width": 862,
+      "height": 1825,
+      "alpha": true
+    },
+    {
+      "file": "section-01-hero.png",
+      "box": [
+        0,
+        0,
+        862,
+        356
+      ],
+      "width": 862,
+      "height": 356,
+      "alpha": true
+    },
+    {
+      "file": "section-02-price-cards.png",
+      "box": [
+        0,
+        356,
+        862,
+        784
+      ],
+      "width": 862,
+      "height": 428,
+      "alpha": true
+    },
+    {
+      "file": "section-03-included.png",
+      "box": [
+        0,
+        784,
+        862,
+        963
+      ],
+      "width": 862,
+      "height": 179,
+      "alpha": true
+    },
+    {
+      "file": "section-04-flow.png",
+      "box": [
+        0,
+        963,
+        862,
+        1136
+      ],
+      "width": 862,
+      "height": 173,
+      "alpha": true
+    },
+    {
+      "file": "section-05-payment-comparison.png",
+      "box": [
+        0,
+        1136,
+        862,
+        1330
+      ],
+      "width": 862,
+      "height": 194,
+      "alpha": true
+    },
+    {
+      "file": "section-06-recommended-plans.png",
+      "box": [
+        0,
+        1330,
+        862,
+        1538
+      ],
+      "width": 862,
+      "height": 208,
+      "alpha": true
+    },
+    {
+      "file": "section-07-faq.png",
+      "box": [
+        0,
+        1538,
+        862,
+        1669
+      ],
+      "width": 862,
+      "height": 131,
+      "alpha": true
+    },
+    {
+      "file": "section-08-cta.png",
+      "box": [
+        0,
+        1720,
+        862,
+        1825
+      ],
+      "width": 862,
+      "height": 105,
+      "alpha": true,
+      "corrected": true
+    },
+    {
+      "file": "hero-background.png",
+      "box": [
+        0,
+        56,
+        862,
+        356
+      ],
+      "width": 862,
+      "height": 300,
+      "alpha": true
+    },
+    {
+      "file": "hero-background-clean.png",
+      "box": [
+        0,
+        56,
+        864,
+        356
+      ],
+      "width": 864,
+      "height": 300,
+      "alpha": true,
+      "cleaned": true
+    },
+    {
+      "file": "cta-background.png",
+      "box": [
+        0,
+        1720,
+        862,
+        1825
+      ],
+      "width": 862,
+      "height": 105,
+      "alpha": true,
+      "corrected": true
+    },
+    {
+      "file": "cta-background-clean.png",
+      "box": [
+        0,
+        1720,
+        862,
+        1825
+      ],
+      "width": 862,
+      "height": 105,
+      "alpha": true,
+      "cleaned": true,
+      "corrected": true
+    },
+    {
+      "file": "included-drink.png",
+      "box": [
+        83,
+        836,
+        193,
+        924
+      ],
+      "width": 110,
+      "height": 88,
+      "alpha": true
+    },
+    {
+      "file": "included-darts.png",
+      "box": [
+        200,
+        836,
+        309,
+        924
+      ],
+      "width": 109,
+      "height": 88,
+      "alpha": true
+    },
+    {
+      "file": "included-karaoke.png",
+      "box": [
+        316,
+        836,
+        425,
+        924
+      ],
+      "width": 109,
+      "height": 88,
+      "alpha": true
+    },
+    {
+      "file": "included-boardgame.png",
+      "box": [
+        432,
+        836,
+        542,
+        924
+      ],
+      "width": 110,
+      "height": 88,
+      "alpha": true
+    },
+    {
+      "file": "included-monitor.png",
+      "box": [
+        549,
+        836,
+        658,
+        924
+      ],
+      "width": 109,
+      "height": 88,
+      "alpha": true
+    },
+    {
+      "file": "included-charge.png",
+      "box": [
+        665,
+        836,
+        774,
+        924
+      ],
+      "width": 109,
+      "height": 88,
+      "alpha": true
+    },
+    {
+      "file": "plan-work.png",
+      "box": [
+        84,
+        1358,
+        309,
+        1451
+      ],
+      "width": 225,
+      "height": 93,
+      "alpha": true
+    },
+    {
+      "file": "plan-girls.png",
+      "box": [
+        319,
+        1358,
+        544,
+        1451
+      ],
+      "width": 225,
+      "height": 93,
+      "alpha": true
+    },
+    {
+      "file": "plan-afterparty.png",
+      "box": [
+        554,
+        1358,
+        779,
+        1451
+      ],
+      "width": 225,
+      "height": 93,
+      "alpha": true
+    },
+    {
+      "file": "payment-cash.png",
+      "box": [
+        84,
+        1176,
+        145,
+        1239
+      ],
+      "width": 61,
+      "height": 63,
+      "alpha": true
+    },
+    {
+      "file": "payment-visa.png",
+      "box": [
+        154,
+        1176,
+        215,
+        1239
+      ],
+      "width": 61,
+      "height": 63,
+      "alpha": true
+    },
+    {
+      "file": "payment-mastercard.png",
+      "box": [
+        224,
+        1176,
+        285,
+        1239
+      ],
+      "width": 61,
+      "height": 63,
+      "alpha": true
+    },
+    {
+      "file": "payment-jcb.png",
+      "box": [
+        294,
+        1176,
+        355,
+        1239
+      ],
+      "width": 61,
+      "height": 63,
+      "alpha": true
+    },
+    {
+      "file": "payment-amex.png",
+      "box": [
+        84,
+        1249,
+        145,
+        1312
+      ],
+      "width": 61,
+      "height": 63,
+      "alpha": true
+    },
+    {
+      "file": "payment-rpay.png",
+      "box": [
+        154,
+        1249,
+        215,
+        1312
+      ],
+      "width": 61,
+      "height": 63,
+      "alpha": true
+    },
+    {
+      "file": "payment-applepay.png",
+      "box": [
+        224,
+        1249,
+        285,
+        1312
+      ],
+      "width": 61,
+      "height": 63,
+      "alpha": true
+    },
+    {
+      "file": "payment-googlepay.png",
+      "box": [
+        294,
+        1249,
+        355,
+        1312
+      ],
+      "width": 61,
+      "height": 63,
+      "alpha": true
+    },
+    {
+      "file": "main-frame-reference.png",
+      "box": [
+        37,
+        356,
+        826,
+        1669
+      ],
+      "width": 789,
+      "height": 1313,
+      "alpha": true
+    },
+    {
+      "file": "price-men-reference.png",
+      "box": [
+        88,
+        453,
+        414,
+        786
+      ],
+      "width": 326,
+      "height": 333,
+      "alpha": true
+    },
+    {
+      "file": "price-women-reference.png",
+      "box": [
+        444,
+        453,
+        773,
+        786
+      ],
+      "width": 329,
+      "height": 333,
+      "alpha": true
+    },
+    {
+      "file": "flow-reference.png",
+      "box": [
+        85,
+        1016,
+        780,
+        1132
+      ],
+      "width": 695,
+      "height": 116,
+      "alpha": true
+    },
+    {
+      "file": "comparison-reference.png",
+      "box": [
+        432,
+        1190,
+        770,
+        1322
+      ],
+      "width": 338,
+      "height": 132,
+      "alpha": true
+    },
+    {
+      "file": "faq-reference.png",
+      "box": [
+        82,
+        1549,
+        771,
+        1667
+      ],
+      "width": 689,
+      "height": 118,
+      "alpha": true
+    },
+    {
+      "file": "floating-reserve-reference.png",
+      "box": [
+        778,
+        1480,
+        858,
+        1718
+      ],
+      "width": 80,
+      "height": 238,
+      "alpha": true
+    },
+    {
+      "file": "payment-cash.png",
+      "box": [
+        84,
+        1207,
+        145,
+        1281
+      ],
+      "width": 61,
+      "height": 74,
+      "alpha": true,
+      "corrected": true
+    },
+    {
+      "file": "payment-visa.png",
+      "box": [
+        154,
+        1207,
+        215,
+        1281
+      ],
+      "width": 61,
+      "height": 74,
+      "alpha": true,
+      "corrected": true
+    },
+    {
+      "file": "payment-mastercard.png",
+      "box": [
+        224,
+        1207,
+        285,
+        1281
+      ],
+      "width": 61,
+      "height": 74,
+      "alpha": true,
+      "corrected": true
+    },
+    {
+      "file": "payment-jcb.png",
+      "box": [
+        294,
+        1207,
+        355,
+        1281
+      ],
+      "width": 61,
+      "height": 74,
+      "alpha": true,
+      "corrected": true
+    },
+    {
+      "file": "payment-amex.png",
+      "box": [
+        84,
+        1290,
+        145,
+        1363
+      ],
+      "width": 61,
+      "height": 73,
+      "alpha": true,
+      "corrected": true
+    },
+    {
+      "file": "payment-rpay.png",
+      "box": [
+        154,
+        1290,
+        215,
+        1363
+      ],
+      "width": 61,
+      "height": 73,
+      "alpha": true,
+      "corrected": true
+    },
+    {
+      "file": "payment-applepay.png",
+      "box": [
+        224,
+        1290,
+        285,
+        1363
+      ],
+      "width": 61,
+      "height": 73,
+      "alpha": true,
+      "corrected": true
+    },
+    {
+      "file": "payment-googlepay.png",
+      "box": [
+        294,
+        1290,
+        355,
+        1363
+      ],
+      "width": 61,
+      "height": 73,
+      "alpha": true,
+      "corrected": true
+    },
+    {
+      "file": "plan-work.png",
+      "box": [
+        84,
+        1428,
+        306,
+        1517
+      ],
+      "width": 222,
+      "height": 89,
+      "alpha": true,
+      "corrected": true
+    },
+    {
+      "file": "plan-girls.png",
+      "box": [
+        318,
+        1428,
+        541,
+        1517
+      ],
+      "width": 223,
+      "height": 89,
+      "alpha": true,
+      "corrected": true
+    },
+    {
+      "file": "plan-afterparty.png",
+      "box": [
+        552,
+        1428,
+        776,
+        1517
+      ],
+      "width": 224,
+      "height": 89,
+      "alpha": true,
+      "corrected": true
+    }
+  ]
+}

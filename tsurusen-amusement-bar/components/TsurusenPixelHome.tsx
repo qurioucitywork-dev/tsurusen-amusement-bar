@@ -1,6 +1,7 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import { useEffect, useState, type CSSProperties } from "react";
 import {
   Aperture,
@@ -140,7 +141,7 @@ const headerNavItems: HeaderNavItem[] = [
   { label: "DRINK MENU", href: "/drink-menu", icon: Wine, group: "menu" },
   { label: "FOOD MENU", href: "/food-menu", icon: Utensils, group: "menu" },
   { label: "ACCESS", href: "/access", icon: MapPin },
-  { label: "BLOG", href: "/news", icon: FileText },
+  { label: "BLOG", href: "/blog", icon: FileText },
   { label: "CAMPAIGN", href: "/campaigns", icon: Gift },
   { label: "ENTERTAINMENT", href: "/play", icon: Mic2 },
   { label: "EVENTS", href: "/events", icon: CalendarDays },
@@ -6721,15 +6722,14 @@ function PixelHeader() {
         };
 
     return (
-      <button
+      <Link
         key={item.label}
-        type="button"
+        href={item.href}
         className="pixel-header-nav-item"
         data-active={item.active ? "true" : undefined}
         data-has-sub={item.sub ? "true" : undefined}
         onClick={() => {
           setMenuOpen(false);
-          navigateTo(item.href);
         }}
         style={style}
         aria-label={item.label}
@@ -6737,14 +6737,14 @@ function PixelHeader() {
         <Icon strokeWidth={1.65} aria-hidden="true" />
         <span className="pixel-header-nav-label">{item.label}</span>
         {item.sub ? <span className="pixel-header-nav-sub">{item.sub}</span> : null}
-      </button>
+      </Link>
     );
   };
 
   return (
     <header className="pixel-main-header" aria-label="Site header">
       <div className="pixel-header-shell">
-        <button type="button" className="pixel-header-brand" aria-label="TSURUSEN home" onClick={() => navigateTo("/")}>
+        <Link href="/" className="pixel-header-brand" aria-label="TSURUSEN home">
           <span className="pixel-header-logo-mark" aria-hidden="true">
             <span className="pixel-header-logo-stem" />
           </span>
@@ -6752,7 +6752,7 @@ function PixelHeader() {
             <span className="pixel-header-brand-kicker">AMUSEMENT BAR</span>
             <span className="pixel-header-brand-name">TSURUSEN</span>
           </span>
-        </button>
+        </Link>
 
         <nav className="pixel-header-desktop-nav" aria-label="Header menu">
           {renderNavItem(standaloneItems[0])}

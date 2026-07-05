@@ -1,409 +1,683 @@
 {
-  "source": "public\\assets\\tsurusen-drink\\reference-drink.png",
-  "sourceSize": {
-    "width": 864,
-    "height": 1821
-  },
+  "source": "C:\\Users\\ftmak\\OneDrive\\ドキュメント\\ホームページ制作\\tsurusen-amusement-bar\\tsurusen-amusement-bar\\public\\assets\\tsurusen-drink\\source\\drink-reference-source.png",
+  "sourceSize": [
+    864,
+    1821
+  ],
   "assets": [
     {
-      "name": "section-01-hero.png",
+      "file": "page-reference.png",
+      "box": [
+        0,
+        0,
+        864,
+        1821
+      ],
+      "width": 864,
+      "height": 1821,
+      "alpha": true
+    },
+    {
+      "file": "section-01-hero.png",
       "box": [
         0,
         0,
         864,
         303
       ],
-      "type": "rgba"
+      "width": 864,
+      "height": 303,
+      "alpha": true
     },
     {
-      "name": "section-02-concept.png",
+      "file": "section-02-concept.png",
       "box": [
         0,
         303,
         864,
         482
       ],
-      "type": "rgba"
+      "width": 864,
+      "height": 179,
+      "alpha": true
     },
     {
-      "name": "section-03-all-you-can-drink.png",
+      "file": "section-03-all-you-can-drink.png",
       "box": [
         0,
         482,
         864,
         650
       ],
-      "type": "rgba"
+      "width": 864,
+      "height": 168,
+      "alpha": true
     },
     {
-      "name": "section-04-beer-menu.png",
+      "file": "section-04-beer-menu.png",
       "box": [
         0,
         650,
         864,
         910
       ],
-      "type": "rgba"
+      "width": 864,
+      "height": 260,
+      "alpha": true
     },
     {
-      "name": "section-05-signature-cocktail.png",
+      "file": "section-05-signature-cocktail.png",
       "box": [
         0,
         910,
         864,
         1102
       ],
-      "type": "rgba"
+      "width": 864,
+      "height": 192,
+      "alpha": true
     },
     {
-      "name": "section-06-champagne-whisky.png",
+      "file": "section-06-champagne-whisky.png",
       "box": [
         0,
         1102,
         864,
         1225
       ],
-      "type": "rgba"
+      "width": 864,
+      "height": 123,
+      "alpha": true
     },
     {
-      "name": "section-07-whisky-carousel.png",
+      "file": "section-07-whisky-carousel.png",
       "box": [
         0,
         1225,
         864,
         1358
       ],
-      "type": "rgba"
+      "width": 864,
+      "height": 133,
+      "alpha": true
     },
     {
-      "name": "section-08-pairing.png",
+      "file": "section-08-pairing.png",
       "box": [
         0,
         1358,
         864,
         1515
       ],
-      "type": "rgba"
+      "width": 864,
+      "height": 157,
+      "alpha": true
     },
     {
-      "name": "section-09-social-favorites-night.png",
+      "file": "section-09-social-favorites-night.png",
       "box": [
         0,
         1515,
         864,
         1705
       ],
-      "type": "rgba"
+      "width": 864,
+      "height": 190,
+      "alpha": true
     },
     {
-      "name": "section-10-cta.png",
+      "file": "section-10-cta.png",
       "box": [
         0,
         1705,
         864,
         1821
       ],
-      "type": "rgba"
+      "width": 864,
+      "height": 116,
+      "alpha": true
     },
     {
-      "name": "logo-header.png",
+      "file": "hero-background.png",
       "box": [
-        20,
-        15,
-        119,
-        40
+        0,
+        55,
+        864,
+        323
       ],
-      "type": "rgba"
+      "width": 864,
+      "height": 268,
+      "alpha": true
     },
     {
-      "name": "hero-drinks-left.png",
+      "file": "hero-drinks-left.png",
       "box": [
-        80,
-        92,
-        327,
-        253
+        38,
+        78,
+        330,
+        300
       ],
-      "type": "rgba"
+      "width": 292,
+      "height": 222,
+      "alpha": true
     },
     {
-      "name": "hero-drinks-right.png",
+      "file": "hero-drinks-right.png",
       "box": [
-        530,
-        52,
-        838,
-        244
+        520,
+        70,
+        864,
+        300
       ],
-      "type": "rgba"
+      "width": 344,
+      "height": 230,
+      "alpha": true
     },
     {
-      "name": "concept-cocktail.png",
+      "file": "logo-header.png",
       "box": [
-        358,
-        303,
-        807,
-        482
+        18,
+        16,
+        158,
+        49
       ],
-      "type": "rgba"
+      "width": 140,
+      "height": 33,
+      "alpha": true
     },
     {
-      "name": "all-you-can-drink-panel.png",
+      "file": "concept-cocktail.png",
+      "box": [
+        382,
+        361,
+        812,
+        506
+      ],
+      "width": 430,
+      "height": 145,
+      "alpha": true
+    },
+    {
+      "file": "all-you-can-drink-panel.png",
       "box": [
         49,
-        483,
+        516,
         817,
-        647
+        663
       ],
-      "type": "rgba"
+      "width": 768,
+      "height": 147,
+      "alpha": true
     },
     {
-      "name": "beer-tabs.png",
+      "file": "beer-tabs.png",
       "box": [
-        49,
-        665,
-        819,
-        691
+        48,
+        680,
+        817,
+        704
       ],
-      "type": "rgba"
+      "width": 769,
+      "height": 24,
+      "alpha": true
     },
     {
-      "name": "beer-card-01.png",
+      "file": "beer-card-01.png",
       "box": [
-        49,
-        703,
-        300,
-        791
+        48,
+        713,
+        299,
+        793
       ],
-      "type": "rgba"
+      "width": 251,
+      "height": 80,
+      "alpha": true
     },
     {
-      "name": "beer-card-02.png",
+      "file": "beer-card-02.png",
       "box": [
         306,
-        703,
+        713,
         559,
-        791
+        793
       ],
-      "type": "rgba"
+      "width": 253,
+      "height": 80,
+      "alpha": true
     },
     {
-      "name": "beer-card-03.png",
+      "file": "beer-card-03.png",
       "box": [
         565,
-        703,
-        818,
-        791
+        713,
+        817,
+        793
       ],
-      "type": "rgba"
+      "width": 252,
+      "height": 80,
+      "alpha": true
     },
     {
-      "name": "beer-card-04.png",
+      "file": "beer-card-04.png",
       "box": [
-        49,
-        795,
-        300,
-        883
+        48,
+        804,
+        299,
+        888
       ],
-      "type": "rgba"
+      "width": 251,
+      "height": 84,
+      "alpha": true
     },
     {
-      "name": "beer-card-05.png",
+      "file": "beer-card-05.png",
       "box": [
         306,
-        795,
+        804,
         559,
-        883
+        888
       ],
-      "type": "rgba"
+      "width": 253,
+      "height": 84,
+      "alpha": true
     },
     {
-      "name": "beer-card-06.png",
+      "file": "beer-card-06.png",
       "box": [
         565,
-        795,
-        818,
-        883
-      ],
-      "type": "rgba"
-    },
-    {
-      "name": "signature-cocktail.png",
-      "box": [
-        49,
-        914,
+        804,
         817,
-        1087
+        888
       ],
-      "type": "rgba"
+      "width": 252,
+      "height": 84,
+      "alpha": true
     },
     {
-      "name": "champagne-area.png",
+      "file": "signature-cocktail.png",
       "box": [
-        49,
+        308,
+        912,
+        817,
+        1084
+      ],
+      "width": 509,
+      "height": 172,
+      "alpha": true
+    },
+    {
+      "file": "champagne-area.png",
+      "box": [
+        187,
         1101,
-        614,
-        1220
+        618,
+        1214
       ],
-      "type": "rgba"
+      "width": 431,
+      "height": 113,
+      "alpha": true
     },
     {
-      "name": "whisky-collection.png",
+      "file": "whisky-collection.png",
       "box": [
-        616,
+        620,
         1101,
         817,
-        1220
+        1214
       ],
-      "type": "rgba"
+      "width": 197,
+      "height": 113,
+      "alpha": true
     },
     {
-      "name": "whisky-card-01.png",
+      "file": "whisky-card-01.png",
       "box": [
-        49,
-        1231,
-        236,
-        1326
+        48,
+        1224,
+        238,
+        1325
       ],
-      "type": "rgba"
+      "width": 190,
+      "height": 101,
+      "alpha": true
     },
     {
-      "name": "whisky-card-02.png",
+      "file": "whisky-card-02.png",
       "box": [
         241,
-        1231,
+        1224,
         430,
-        1326
+        1325
       ],
-      "type": "rgba"
+      "width": 189,
+      "height": 101,
+      "alpha": true
     },
     {
-      "name": "whisky-card-03.png",
+      "file": "whisky-card-03.png",
       "box": [
         435,
-        1231,
-        624,
-        1326
+        1224,
+        623,
+        1325
       ],
-      "type": "rgba"
+      "width": 188,
+      "height": 101,
+      "alpha": true
     },
     {
-      "name": "whisky-card-04.png",
+      "file": "whisky-card-04.png",
       "box": [
-        629,
-        1231,
+        627,
+        1224,
         817,
-        1326
+        1325
       ],
-      "type": "rgba"
+      "width": 190,
+      "height": 101,
+      "alpha": true
     },
     {
-      "name": "pairing-roast-beef.png",
+      "file": "pairing-roast-beef.png",
       "box": [
-        49,
-        1391,
-        270,
-        1472
+        69,
+        1395,
+        161,
+        1450
       ],
-      "type": "rgba"
+      "width": 92,
+      "height": 55,
+      "alpha": true
     },
     {
-      "name": "pairing-shrimp.png",
+      "file": "pairing-shrimp.png",
       "box": [
-        292,
-        1391,
-        532,
-        1472
+        304,
+        1395,
+        397,
+        1450
       ],
-      "type": "rgba"
+      "width": 93,
+      "height": 55,
+      "alpha": true
     },
     {
-      "name": "pairing-cheese.png",
+      "file": "pairing-cheese.png",
       "box": [
-        558,
-        1391,
-        794,
-        1472
+        571,
+        1395,
+        663,
+        1450
       ],
-      "type": "rgba"
+      "width": 92,
+      "height": 55,
+      "alpha": true
     },
     {
-      "name": "instagram-drinks.png",
+      "file": "instagram-drinks.png",
       "box": [
-        49,
-        1517,
-        264,
-        1698
+        48,
+        1547,
+        242,
+        1674
       ],
-      "type": "rgba"
+      "width": 194,
+      "height": 127,
+      "alpha": true
     },
     {
-      "name": "customer-favorites.png",
+      "file": "customer-favorites.png",
       "box": [
-        274,
-        1517,
+        283,
+        1547,
         592,
-        1698
+        1674
       ],
-      "type": "rgba"
+      "width": 309,
+      "height": 127,
+      "alpha": true
     },
     {
-      "name": "night-experience.png",
+      "file": "night-experience.png",
       "box": [
-        601,
-        1517,
+        612,
+        1547,
         817,
-        1698
+        1674
       ],
-      "type": "rgba"
+      "width": 205,
+      "height": 127,
+      "alpha": true
     },
     {
-      "name": "floating-web.png",
+      "file": "cta-background.png",
+      "box": [
+        0,
+        1705,
+        864,
+        1821
+      ],
+      "width": 864,
+      "height": 116,
+      "alpha": true
+    },
+    {
+      "file": "floating-web.png",
       "box": [
         794,
         1553,
         858,
         1618
       ],
-      "type": "rgba"
+      "width": 64,
+      "height": 65,
+      "alpha": true
     },
     {
-      "name": "floating-line.png",
+      "file": "floating-line.png",
       "box": [
         794,
-        1623,
+        1624,
         858,
         1689
       ],
-      "type": "rgba"
+      "width": 64,
+      "height": 65,
+      "alpha": true
     },
     {
-      "name": "floating-phone.png",
+      "file": "floating-phone.png",
       "box": [
         794,
         1694,
         858,
         1760
       ],
-      "type": "rgba"
+      "width": 64,
+      "height": 66,
+      "alpha": true
     },
     {
-      "name": "cta-background.png",
+      "file": "hero-background-clean.png",
+      "box": [
+        0,
+        55,
+        864,
+        323
+      ],
+      "width": 864,
+      "height": 268,
+      "alpha": true,
+      "cleaned": true
+    },
+    {
+      "file": "cta-background-clean.png",
       "box": [
         0,
         1705,
         864,
         1821
       ],
-      "type": "rgba"
+      "width": 864,
+      "height": 116,
+      "alpha": true,
+      "cleaned": true
     },
     {
-      "name": "page.png",
+      "file": "beer-img-01.png",
       "box": [
-        0,
-        0,
-        864,
-        1821
+        55,
+        718,
+        148,
+        790
       ],
-      "type": "rgba"
+      "width": 93,
+      "height": 72,
+      "alpha": true
+    },
+    {
+      "file": "beer-img-02.png",
+      "box": [
+        313,
+        718,
+        406,
+        790
+      ],
+      "width": 93,
+      "height": 72,
+      "alpha": true
+    },
+    {
+      "file": "beer-img-03.png",
+      "box": [
+        571,
+        718,
+        668,
+        790
+      ],
+      "width": 97,
+      "height": 72,
+      "alpha": true
+    },
+    {
+      "file": "beer-img-04.png",
+      "box": [
+        55,
+        810,
+        148,
+        885
+      ],
+      "width": 93,
+      "height": 75,
+      "alpha": true
+    },
+    {
+      "file": "beer-img-05.png",
+      "box": [
+        313,
+        810,
+        406,
+        885
+      ],
+      "width": 93,
+      "height": 75,
+      "alpha": true
+    },
+    {
+      "file": "beer-img-06.png",
+      "box": [
+        571,
+        810,
+        668,
+        885
+      ],
+      "width": 97,
+      "height": 75,
+      "alpha": true
+    },
+    {
+      "file": "champagne-img-01.png",
+      "box": [
+        190,
+        1118,
+        251,
+        1210
+      ],
+      "width": 61,
+      "height": 92,
+      "alpha": true
+    },
+    {
+      "file": "champagne-img-02.png",
+      "box": [
+        323,
+        1118,
+        378,
+        1210
+      ],
+      "width": 55,
+      "height": 92,
+      "alpha": true
+    },
+    {
+      "file": "champagne-img-03.png",
+      "box": [
+        475,
+        1118,
+        532,
+        1210
+      ],
+      "width": 57,
+      "height": 92,
+      "alpha": true
+    },
+    {
+      "file": "whisky-img-01.png",
+      "box": [
+        55,
+        1231,
+        118,
+        1320
+      ],
+      "width": 63,
+      "height": 89,
+      "alpha": true
+    },
+    {
+      "file": "whisky-img-02.png",
+      "box": [
+        250,
+        1231,
+        308,
+        1320
+      ],
+      "width": 58,
+      "height": 89,
+      "alpha": true
+    },
+    {
+      "file": "whisky-img-03.png",
+      "box": [
+        445,
+        1231,
+        505,
+        1320
+      ],
+      "width": 60,
+      "height": 89,
+      "alpha": true
+    },
+    {
+      "file": "whisky-img-04.png",
+      "box": [
+        637,
+        1231,
+        699,
+        1320
+      ],
+      "width": 62,
+      "height": 89,
+      "alpha": true
     }
   ]
 }

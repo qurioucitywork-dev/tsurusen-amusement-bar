@@ -1,12 +1,10 @@
 {
-  "source": "C:\\Users\\Lenovo\\Desktop\\鶴千\\CAMPAIGN.png",
-  "size": [
-    864,
-    1821
-  ],
-  "sections": [
+  "source": "C:\\Users\\ftmak\\Downloads\\ChatGPT Image 2026年7月5日 13_43_58.png",
+  "designWidth": 864,
+  "designHeight": 1821,
+  "assets": [
     {
-      "name": "section-01-hero.png",
+      "file": "section-01-hero.png",
       "box": [
         0,
         0,
@@ -15,11 +13,10 @@
       ],
       "width": 864,
       "height": 352,
-      "mode": "RGBA",
-      "kind": "section"
+      "mode": "RGBA"
     },
     {
-      "name": "section-02-golden-night.png",
+      "file": "section-02-golden-night.png",
       "box": [
         0,
         352,
@@ -28,11 +25,10 @@
       ],
       "width": 864,
       "height": 261,
-      "mode": "RGBA",
-      "kind": "section"
+      "mode": "RGBA"
     },
     {
-      "name": "section-03-coupons.png",
+      "file": "section-03-coupons.png",
       "box": [
         0,
         613,
@@ -41,11 +37,10 @@
       ],
       "width": 864,
       "height": 221,
-      "mode": "RGBA",
-      "kind": "section"
+      "mode": "RGBA"
     },
     {
-      "name": "section-04-season-campaign.png",
+      "file": "section-04-season-campaign.png",
       "box": [
         0,
         834,
@@ -54,11 +49,10 @@
       ],
       "width": 864,
       "height": 160,
-      "mode": "RGBA",
-      "kind": "section"
+      "mode": "RGBA"
     },
     {
-      "name": "section-05-member-howto.png",
+      "file": "section-05-member-howto.png",
       "box": [
         0,
         994,
@@ -67,11 +61,10 @@
       ],
       "width": 864,
       "height": 201,
-      "mode": "RGBA",
-      "kind": "section"
+      "mode": "RGBA"
     },
     {
-      "name": "section-06-recommended-limited.png",
+      "file": "section-06-recommended-limited.png",
       "box": [
         0,
         1195,
@@ -80,11 +73,10 @@
       ],
       "width": 864,
       "height": 165,
-      "mode": "RGBA",
-      "kind": "section"
+      "mode": "RGBA"
     },
     {
-      "name": "section-07-sns-reviews.png",
+      "file": "section-07-sns-reviews.png",
       "box": [
         0,
         1360,
@@ -93,11 +85,10 @@
       ],
       "width": 864,
       "height": 199,
-      "mode": "RGBA",
-      "kind": "section"
+      "mode": "RGBA"
     },
     {
-      "name": "section-08-faq.png",
+      "file": "section-08-faq.png",
       "box": [
         0,
         1559,
@@ -106,11 +97,10 @@
       ],
       "width": 864,
       "height": 145,
-      "mode": "RGBA",
-      "kind": "section"
+      "mode": "RGBA"
     },
     {
-      "name": "section-09-cta.png",
+      "file": "section-09-cta.png",
       "box": [
         0,
         1704,
@@ -119,13 +109,10 @@
       ],
       "width": 864,
       "height": 117,
-      "mode": "RGBA",
-      "kind": "section"
-    }
-  ],
-  "materials": [
+      "mode": "RGBA"
+    },
     {
-      "name": "logo.png",
+      "file": "logo.png",
       "box": [
         18,
         14,
@@ -134,37 +121,34 @@
       ],
       "width": 104,
       "height": 21,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "reserve-header.png",
+      "file": "reserve-header.png",
       "box": [
-        807,
+        806,
         10,
         849,
-        40
+        41
       ],
-      "width": 42,
-      "height": 30,
-      "mode": "RGBA",
-      "kind": "material"
+      "width": 43,
+      "height": 31,
+      "mode": "RGBA"
     },
     {
-      "name": "hero-title.png",
+      "file": "hero-title.png",
       "box": [
         119,
         67,
-        360,
+        361,
         213
       ],
-      "width": 241,
+      "width": 242,
       "height": 146,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "hero-script.png",
+      "file": "hero-script.png",
       "box": [
         153,
         229,
@@ -173,11 +157,10 @@
       ],
       "width": 209,
       "height": 48,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "hero-buttons.png",
+      "file": "hero-buttons.png",
       "box": [
         55,
         294,
@@ -186,11 +169,10 @@
       ],
       "width": 399,
       "height": 43,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "hero-coupon-button.png",
+      "file": "hero-coupon-button.png",
       "box": [
         55,
         294,
@@ -199,11 +181,10 @@
       ],
       "width": 145,
       "height": 43,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "hero-web-button.png",
+      "file": "hero-web-button.png",
       "box": [
         210,
         294,
@@ -212,11 +193,10 @@
       ],
       "width": 116,
       "height": 43,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "hero-line-button.png",
+      "file": "hero-line-button.png",
       "box": [
         337,
         294,
@@ -225,11 +205,10 @@
       ],
       "width": 117,
       "height": 43,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "golden-night-panel.png",
+      "file": "golden-night-panel.png",
       "box": [
         45,
         358,
@@ -238,50 +217,46 @@
       ],
       "width": 775,
       "height": 248,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "golden-night-title.png",
+      "file": "golden-night-title.png",
       "box": [
         75,
-        386,
+        410,
         384,
-        488
+        512
       ],
       "width": 309,
       "height": 102,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "countdown-panel.png",
+      "file": "countdown-panel.png",
       "box": [
-        500,
-        377,
-        734,
-        592
+        489,
+        393,
+        723,
+        608
       ],
       "width": 234,
       "height": 215,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "coupons-panel.png",
+      "file": "coupons-panel.png",
       "box": [
         45,
-        623,
+        626,
         820,
-        823
+        826
       ],
       "width": 775,
       "height": 200,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "coupon-01.png",
+      "file": "coupon-01.png",
       "box": [
         58,
         645,
@@ -290,11 +265,10 @@
       ],
       "width": 108,
       "height": 172,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "coupon-02.png",
+      "file": "coupon-02.png",
       "box": [
         184,
         645,
@@ -303,11 +277,10 @@
       ],
       "width": 107,
       "height": 172,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "coupon-03.png",
+      "file": "coupon-03.png",
       "box": [
         309,
         645,
@@ -316,11 +289,10 @@
       ],
       "width": 107,
       "height": 172,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "coupon-04.png",
+      "file": "coupon-04.png",
       "box": [
         435,
         645,
@@ -329,11 +301,10 @@
       ],
       "width": 107,
       "height": 172,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "coupon-05.png",
+      "file": "coupon-05.png",
       "box": [
         560,
         645,
@@ -342,11 +313,10 @@
       ],
       "width": 107,
       "height": 172,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "coupon-06.png",
+      "file": "coupon-06.png",
       "box": [
         686,
         645,
@@ -355,24 +325,22 @@
       ],
       "width": 107,
       "height": 172,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "season-panel.png",
+      "file": "season-panel.png",
       "box": [
         45,
-        841,
+        842,
         820,
-        986
+        987
       ],
       "width": 775,
       "height": 145,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "season-card-01.png",
+      "file": "season-card-01.png",
       "box": [
         64,
         858,
@@ -381,11 +349,10 @@
       ],
       "width": 115,
       "height": 113,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "season-card-02.png",
+      "file": "season-card-02.png",
       "box": [
         187,
         858,
@@ -394,11 +361,10 @@
       ],
       "width": 115,
       "height": 113,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "season-card-03.png",
+      "file": "season-card-03.png",
       "box": [
         310,
         858,
@@ -407,11 +373,10 @@
       ],
       "width": 115,
       "height": 113,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "season-card-04.png",
+      "file": "season-card-04.png",
       "box": [
         433,
         858,
@@ -420,11 +385,10 @@
       ],
       "width": 115,
       "height": 113,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "season-card-05.png",
+      "file": "season-card-05.png",
       "box": [
         557,
         858,
@@ -433,11 +397,10 @@
       ],
       "width": 115,
       "height": 113,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "season-card-06.png",
+      "file": "season-card-06.png",
       "box": [
         680,
         858,
@@ -446,11 +409,10 @@
       ],
       "width": 115,
       "height": 113,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "member-benefits-panel.png",
+      "file": "member-benefits-panel.png",
       "box": [
         45,
         996,
@@ -459,11 +421,10 @@
       ],
       "width": 338,
       "height": 192,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "how-to-use-panel.png",
+      "file": "how-to-use-panel.png",
       "box": [
         390,
         996,
@@ -472,24 +433,22 @@
       ],
       "width": 430,
       "height": 192,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "recommended-panel.png",
+      "file": "recommended-panel.png",
       "box": [
         45,
-        1202,
+        1198,
         493,
-        1354
+        1350
       ],
       "width": 448,
       "height": 152,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "recommended-card-01.png",
+      "file": "recommended-card-01.png",
       "box": [
         64,
         1241,
@@ -498,11 +457,10 @@
       ],
       "width": 69,
       "height": 94,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "recommended-card-02.png",
+      "file": "recommended-card-02.png",
       "box": [
         140,
         1241,
@@ -511,11 +469,10 @@
       ],
       "width": 69,
       "height": 94,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "recommended-card-03.png",
+      "file": "recommended-card-03.png",
       "box": [
         216,
         1241,
@@ -524,11 +481,10 @@
       ],
       "width": 69,
       "height": 94,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "recommended-card-04.png",
+      "file": "recommended-card-04.png",
       "box": [
         292,
         1241,
@@ -537,11 +493,10 @@
       ],
       "width": 69,
       "height": 94,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "recommended-card-05.png",
+      "file": "recommended-card-05.png",
       "box": [
         368,
         1241,
@@ -550,24 +505,22 @@
       ],
       "width": 69,
       "height": 94,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "limited-offers-panel.png",
+      "file": "limited-offers-panel.png",
       "box": [
         502,
-        1202,
+        1198,
         820,
-        1354
+        1350
       ],
       "width": 318,
       "height": 152,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "limited-card-01.png",
+      "file": "limited-card-01.png",
       "box": [
         527,
         1242,
@@ -576,11 +529,10 @@
       ],
       "width": 65,
       "height": 95,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "limited-card-02.png",
+      "file": "limited-card-02.png",
       "box": [
         608,
         1242,
@@ -589,11 +541,10 @@
       ],
       "width": 65,
       "height": 95,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "limited-card-03.png",
+      "file": "limited-card-03.png",
       "box": [
         690,
         1242,
@@ -602,11 +553,10 @@
       ],
       "width": 65,
       "height": 95,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "limited-card-04.png",
+      "file": "limited-card-04.png",
       "box": [
         772,
         1242,
@@ -615,24 +565,22 @@
       ],
       "width": 38,
       "height": 95,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "sns-panel.png",
+      "file": "sns-panel.png",
       "box": [
         45,
-        1362,
+        1367,
         373,
-        1547
+        1552
       ],
       "width": 328,
       "height": 185,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "sns-card-instagram.png",
+      "file": "sns-card-instagram.png",
       "box": [
         62,
         1412,
@@ -641,11 +589,10 @@
       ],
       "width": 88,
       "height": 125,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "sns-card-tiktok.png",
+      "file": "sns-card-tiktok.png",
       "box": [
         159,
         1412,
@@ -654,11 +601,10 @@
       ],
       "width": 88,
       "height": 125,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "sns-card-review.png",
+      "file": "sns-card-review.png",
       "box": [
         256,
         1412,
@@ -667,24 +613,22 @@
       ],
       "width": 101,
       "height": 125,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "reviews-panel.png",
+      "file": "reviews-panel.png",
       "box": [
         384,
-        1362,
+        1367,
         820,
-        1547
+        1552
       ],
       "width": 436,
       "height": 185,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "review-card-01.png",
+      "file": "review-card-01.png",
       "box": [
         407,
         1407,
@@ -693,11 +637,10 @@
       ],
       "width": 87,
       "height": 130,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "review-card-02.png",
+      "file": "review-card-02.png",
       "box": [
         511,
         1407,
@@ -706,11 +649,10 @@
       ],
       "width": 87,
       "height": 130,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "review-card-03.png",
+      "file": "review-card-03.png",
       "box": [
         614,
         1407,
@@ -719,11 +661,10 @@
       ],
       "width": 87,
       "height": 130,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "review-card-04.png",
+      "file": "review-card-04.png",
       "box": [
         718,
         1407,
@@ -732,24 +673,22 @@
       ],
       "width": 87,
       "height": 130,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "faq-panel.png",
+      "file": "faq-panel.png",
       "box": [
         45,
-        1564,
+        1565,
         820,
-        1697
+        1698
       ],
       "width": 775,
       "height": 133,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "floating-coupon.png",
+      "file": "floating-coupon.png",
       "box": [
         794,
         1547,
@@ -758,11 +697,10 @@
       ],
       "width": 63,
       "height": 68,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "floating-line.png",
+      "file": "floating-line.png",
       "box": [
         794,
         1620,
@@ -771,11 +709,10 @@
       ],
       "width": 63,
       "height": 67,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "floating-phone.png",
+      "file": "floating-phone.png",
       "box": [
         794,
         1692,
@@ -784,11 +721,10 @@
       ],
       "width": 63,
       "height": 68,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "cta-background.png",
+      "file": "cta-background.png",
       "box": [
         0,
         1704,
@@ -797,11 +733,10 @@
       ],
       "width": 864,
       "height": 117,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "cta-title.png",
+      "file": "cta-title.png",
       "box": [
         218,
         1724,
@@ -810,11 +745,10 @@
       ],
       "width": 430,
       "height": 53,
-      "mode": "RGBA",
-      "kind": "material"
+      "mode": "RGBA"
     },
     {
-      "name": "cta-buttons.png",
+      "file": "cta-buttons.png",
       "box": [
         184,
         1782,
@@ -823,63 +757,7 @@
       ],
       "width": 504,
       "height": 37,
-      "mode": "RGBA",
-      "kind": "material"
-    }
-  ],
-  "recomposition": {
-    "path": "C:\\Users\\Lenovo\\Documents\\HPテンプレート作成システム\\tsurusen-amusement-bar\\artifacts\\recomposed-campaign-from-slices.png",
-    "diff_bbox": null,
-    "diff_sum": 0
-  },
-  "palette": [
-    {
-      "count": 4615,
-      "hex": "#090808"
-    },
-    {
-      "count": 3617,
-      "hex": "#080708"
-    },
-    {
-      "count": 2852,
-      "hex": "#0f0d0c"
-    },
-    {
-      "count": 2829,
-      "hex": "#0a0b0b"
-    },
-    {
-      "count": 2768,
-      "hex": "#2a1f1c"
-    },
-    {
-      "count": 2739,
-      "hex": "#010100"
-    },
-    {
-      "count": 2550,
-      "hex": "#030303"
-    },
-    {
-      "count": 2463,
-      "hex": "#1e1012"
-    },
-    {
-      "count": 2441,
-      "hex": "#4a3a34"
-    },
-    {
-      "count": 1567,
-      "hex": "#857363"
-    },
-    {
-      "count": 1000,
-      "hex": "#040409"
-    },
-    {
-      "count": 919,
-      "hex": "#11060e"
+      "mode": "RGBA"
     }
   ]
 }
