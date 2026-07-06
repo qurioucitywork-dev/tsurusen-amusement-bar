@@ -12,5 +12,3 @@
 /contact /#reserve 302
 /recruit /events 302
 /staff /events#host 302
-/events/* /events 302
-/campaigns/* /campaigns 302

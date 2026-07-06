@@ -570,10 +570,7 @@ body:has(.tsurusen-faq-page) main {
   align-items: center;
   min-height: clamp(520px, 72svh, 760px);
   padding-block: clamp(72px, 8vh, 132px);
-  background:
-    linear-gradient(90deg, rgba(5, 5, 5, 0.96), rgba(5, 5, 5, 0.66) 38%, rgba(5, 5, 5, 0.24) 68%, rgba(5, 5, 5, 0.88)),
-    radial-gradient(circle at 68% 45%, rgba(216, 177, 90, 0.18), transparent 22%),
-    url("/assets/faq/faq-hero-bg.png") center center / cover no-repeat;
+  background: transparent;
   border-bottom: 1px solid rgba(216, 177, 90, 0.34);
 }
 
