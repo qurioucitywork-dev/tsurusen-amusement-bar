@@ -1,5 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
+﻿/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { TsurusenTopHeader } from "./TsurusenTopHeader";
 import {
   CalendarDays,
   ChevronRight,
@@ -9,19 +10,6 @@ import {
 } from "lucide-react";
 
 const assetBase = "/assets/tsurusen-food/png";
-
-const navItems = [
-  { label: "TOP", href: "/" },
-  { label: "ABOUT", href: "/#about" },
-  { label: "PRICE & SYSTEM", href: "/pricing" },
-  { label: "FOOD MENU", href: "/food-menu", active: true },
-  { label: "DRINK MENU", href: "/drink-menu" },
-  { label: "ENTERTAINMENT", href: "/play" },
-  { label: "SCENE", href: "/#scene" },
-  { label: "GALLERY", href: "/#gallery" },
-  { label: "CAMPAIGN", href: "/campaigns" },
-  { label: "ACCESS", href: "/access" },
-];
 
 const popularItems = [
   {
@@ -104,38 +92,7 @@ const lateFoods = [
 ];
 
 function Header() {
-  return (
-    <header className="food-header">
-      <Link className="food-logo" href="/" aria-label="TSURUSEN TOP">
-        <span className="food-logo-mark" aria-hidden="true" />
-        <span>
-          <small>AMUSEMENT BAR</small>
-          <strong>TSURUSEN</strong>
-        </span>
-      </Link>
-      <nav className="food-nav" aria-label="FOOD MENU navigation">
-        {navItems.map((item) => (
-          <Link key={item.label} className={item.active ? "is-active" : ""} href={item.href}>
-            {item.label}
-          </Link>
-        ))}
-        <Link className="food-reserve" href="/reservation">
-          RESERVE
-        </Link>
-      </nav>
-      <details className="food-mobile-nav">
-        <summary>MENU</summary>
-        <div>
-          {navItems.map((item) => (
-            <Link key={item.label} href={item.href}>
-              {item.label}
-            </Link>
-          ))}
-          <Link href="/reservation">RESERVE</Link>
-        </div>
-      </details>
-    </header>
-  );
+  return <TsurusenTopHeader active="FOOD MENU" />;
 }
 
 function SectionTitle({ label, sub }: { label: string; sub?: string }) {

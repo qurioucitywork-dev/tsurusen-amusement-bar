@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import {
   CalendarClock,
@@ -217,7 +217,7 @@ export function HomeExperience() {
               title="席に着いた瞬間、遊び方が選べる。"
               copy="参考サイトのメニュー導線を、鶴千では利用目的別の大きなカードに置き換えました。スマホでは縦に読みやすく、タブレットでは2列、PCでは3列で比較できます。"
             />
-            <Link href="/play" className="button-secondary self-start">
+            <Link href="/entertainment" className="button-secondary self-start">
               設備を見る
             </Link>
           </div>
@@ -230,7 +230,7 @@ export function HomeExperience() {
                   key={item.id}
                   className="experience-card group"
                 >
-                  <Link href="/play" aria-label={`${item.title}の詳細を見る`}>
+                  <Link href="/entertainment" aria-label={`${item.title}の詳細を見る`}>
                     <div className="relative aspect-[4/3] overflow-hidden">
                       <Image
                         src={item.image}

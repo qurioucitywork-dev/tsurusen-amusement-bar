@@ -32,21 +32,27 @@ jobs:
             echo "available=true" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Setup pnpm
+        if: steps.cloudflare-token.outputs.available == 'true'
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       - name: Setup Node.js
         if: steps.cloudflare-token.outputs.available == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-          cache-dependency-path: tsurusen-amusement-bar/package-lock.json
+          cache: pnpm
+          cache-dependency-path: tsurusen-amusement-bar/pnpm-lock.yaml
 
       - name: Install dependencies
         if: steps.cloudflare-token.outputs.available == 'true'
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Build static site
         if: steps.cloudflare-token.outputs.available == 'true'
-        run: npm run build:cloudflare
+        run: pnpm run build:cloudflare
 
       - name: Deploy to Cloudflare Pages
         if: steps.cloudflare-token.outputs.available == 'true'

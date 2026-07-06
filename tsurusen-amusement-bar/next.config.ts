@@ -23,7 +23,6 @@ const redirects = [
   { source: "/staff", destination: "/events#host", permanent: false },
   { source: "/events/:slug+", destination: "/events", permanent: false },
   { source: "/campaigns/:slug+", destination: "/campaigns", permanent: false },
-  { source: "/news/:slug+", destination: "/news", permanent: false },
 ];
 
 const nextConfig: NextConfig = {

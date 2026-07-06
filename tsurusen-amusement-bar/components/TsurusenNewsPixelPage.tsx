@@ -1,5 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
+﻿/* eslint-disable @next/next/no-img-element */
 import { ArrowRight, CalendarDays, Camera, Grid2X2, Mail, MessageCircle, PlayCircle } from "lucide-react";
+import { TsurusenTopHeader } from "./TsurusenTopHeader";
 
 const designWidth = 864;
 const designHeight = 1821;
@@ -32,7 +33,7 @@ const navLinks = [
   { label: "PRICE & SYSTEM", href: "/pricing", left: 212, top: 14, width: 82, height: 25 },
   { label: "FOOD MENU", href: "/food-menu", left: 300, top: 14, width: 62, height: 25 },
   { label: "DRINK MENU", href: "/drink-menu", left: 366, top: 14, width: 70, height: 25 },
-  { label: "ENTERTAINMENT", href: "/play", left: 443, top: 14, width: 86, height: 25 },
+  { label: "ENTERTAINMENT", href: "/entertainment", left: 443, top: 14, width: 86, height: 25 },
   { label: "SCENES", href: "/#scene", left: 537, top: 14, width: 48, height: 25 },
   { label: "PRIVATE PARTY", href: "/private-party", left: 591, top: 14, width: 84, height: 25 },
   { label: "EVENTS", href: "/events", left: 681, top: 14, width: 48, height: 25 },
@@ -72,7 +73,7 @@ const categoryButtons = [
   { label: "CAMPAIGN", href: "/news#campaign", left: 277, top: 622, width: 68, height: 29 },
   { label: "STORE", href: "/news#store", left: 352, top: 622, width: 67, height: 29 },
   { label: "MEDIA", href: "/news#media", left: 428, top: 622, width: 67, height: 29 },
-  { label: "BLOG", href: "/blog", left: 503, top: 622, width: 67, height: 29 },
+  { label: "BLOG", href: "/news#latest", left: 503, top: 622, width: 67, height: 29 },
   { label: "PRESS", href: "/news#press", left: 578, top: 622, width: 67, height: 29 },
   { label: "UPDATE", href: "/news#update", left: 653, top: 622, width: 67, height: 29 },
   { label: "GRID", href: "/news#latest", left: 786, top: 622, width: 28, height: 29 },
@@ -182,6 +183,16 @@ body:has(.tsurusen-news-pixel-page) main {
   background: #070606;
 }
 
+.tsurusen-news-pixel-stage::before {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 3;
+  height: 3.35%;
+  background: #050505;
+  content: "";
+  pointer-events: none;
+}
+
 .tsurusen-news-pixel-stage .pixel-input {
   position: absolute;
   z-index: 4;
@@ -224,6 +235,7 @@ export function TsurusenNewsPixelPage() {
   return (
     <div className="tsurusen-news-pixel-page" id="top">
       <style>{runtimeCss}</style>
+      <TsurusenTopHeader active="BLOG" />
       <div className="tsurusen-news-pixel-stage" aria-label="TSURUSEN NEWS ROOM">
         {slices.map((slice) => (
           <img key={slice.src} src={slice.src} alt="" aria-hidden="true" className="pixel-slice" draggable={false} style={{ top: yPct(slice.top), height: yPct(slice.height) }} />

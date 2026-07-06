@@ -1,11 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
+﻿/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { TsurusenTopHeader } from "./TsurusenTopHeader";
 import {
   ArrowRight,
   BatteryCharging,
   Calculator,
   CalendarDays,
-  Camera,
   CheckCircle2,
   CircleUserRound,
   ClipboardList,
@@ -20,19 +20,7 @@ import {
 } from "lucide-react";
 
 const assetBase = "/assets/tsurusen-price/png";
-
-const navItems = [
-  { label: "TOP", href: "/" },
-  { label: "ABOUT", href: "/#about" },
-  { label: "FEATURE", href: "/#feature" },
-  { label: "PRICE & SYSTEM", href: "/pricing", active: true },
-  { label: "ENTERTAINMENT", href: "/play" },
-  { label: "SCENE", href: "/#scene" },
-  { label: "GALLERY", href: "/#gallery" },
-  { label: "EVENT", href: "/#event" },
-  { label: "CAMPAIGN", href: "/campaigns" },
-  { label: "ACCESS", href: "/access" },
-];
+const paymentAssetBase = "/assets/tsurusen-price/payment-methods";
 
 const includedItems = [
   { title: "飲み放題", body: "豊富なドリンクが飲み放題", image: "included-drink.png", icon: Martini },
@@ -52,14 +40,14 @@ const flowItems = [
 ];
 
 const payments = [
-  { name: "現金", file: "payment-cash.png" },
-  { name: "VISA", file: "payment-visa.png" },
-  { name: "Mastercard", file: "payment-mastercard.png" },
-  { name: "JCB", file: "payment-jcb.png" },
-  { name: "Pay Pay", file: "payment-amex.png" },
-  { name: "R Pay", file: "payment-rpay.png" },
-  { name: "Apple Pay", file: "payment-applepay.png" },
-  { name: "Google Pay", file: "payment-googlepay.png" },
+  { name: "現金", file: "cash.png" },
+  { name: "VISA", file: "visa.png" },
+  { name: "Mastercard", file: "mastercard.png" },
+  { name: "JCB", file: "jcb.png" },
+  { name: "American Express", file: "american-express.png" },
+  { name: "R Pay", file: "r-pay.png" },
+  { name: "Apple Pay", file: "apple-pay.png" },
+  { name: "Google Pay", file: "google-pay.png" },
 ];
 
 const comparisons = [
@@ -90,52 +78,8 @@ const faqs = [
   "その他の質問",
 ];
 
-function LogoMark() {
-  return (
-    <Link className="price-logo" href="/" aria-label="TSURUSEN TOP">
-      <span className="price-logo-mark" aria-hidden="true" />
-      <span className="price-logo-text">
-        <span>AMUSEMENT BAR</span>
-        <strong>TSURUSEN</strong>
-      </span>
-    </Link>
-  );
-}
-
 function Header() {
-  return (
-    <header className="price-header">
-      <LogoMark />
-      <nav className="price-nav" aria-label="PRICE navigation">
-        {navItems.map((item) => (
-          <Link key={item.label} className={item.active ? "is-active" : ""} href={item.href}>
-            {item.label}
-          </Link>
-        ))}
-      </nav>
-      <div className="price-header-icons" aria-label="SNS and reservation">
-        <Link href="https://www.instagram.com/" aria-label="Instagram">
-          <Camera size={18} />
-        </Link>
-        <Link href="https://line.me/R/ti/p/@tsurusen" aria-label="LINE">
-          LINE
-        </Link>
-        <Link href="tel:03-XXXX-XXXX" aria-label="電話">
-          <Phone size={18} />
-        </Link>
-      </div>
-      <details className="price-mobile-nav">
-        <summary>MENU</summary>
-        <div>
-          {navItems.map((item) => (
-            <Link key={item.label} href={item.href}>
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      </details>
-    </header>
-  );
+  return <TsurusenTopHeader active="PRICE" />;
 }
 
 function SectionHeading({ label, sub }: { label: string; sub?: string }) {
@@ -288,39 +232,44 @@ export function TsurusenSystemPixelPage() {
           </div>
         </section>
 
-        <section className="payment-comparison" id="payment">
-          <div>
-            <SectionHeading label="PAYMENT" sub="対応決済方法" />
-            <div className="payment-grid">
-              {payments.map((payment) => (
-                <article className="payment-card" key={payment.name}>
-                  <img src={`${assetBase}/${payment.file}`} alt={payment.name} />
-                </article>
-              ))}
-            </div>
+        <section className="payment-section" id="payment" aria-labelledby="payment-title">
+          <div className="payment-heading">
+            <h2 id="payment-title">PAYMENT</h2>
+            <p>対応決済方法</p>
           </div>
+          <div className="payment-grid">
+            {payments.map((payment) => (
+              <article className="payment-card" key={payment.name}>
+                <img src={`${paymentAssetBase}/${payment.file}`} alt="" aria-hidden="true" />
+                <h3>{payment.name}</h3>
+              </article>
+            ))}
+          </div>
+          <p className="payment-note">※対応決済方法は店舗により異なる場合がございます。</p>
+        </section>
 
-          <div id="comparison">
-            <SectionHeading label="COMPARISON" sub="他店との比較" />
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>項目</th>
-                  <th>一般的なバー</th>
-                  <th>鶴千 TSURUSEN</th>
+        <section className="comparison-section" id="comparison">
+          <SectionHeading label="COMPARISON" sub="他店との比較" />
+          <table className="comparison-table">
+            <thead>
+              <tr>
+                <th>項目</th>
+                <th>一般的なバー</th>
+                <th>鶴千 TSURUSEN</th>
+              </tr>
+            </thead>
+            <tbody>
+              {comparisons.map((row) => (
+                <tr key={row[0]}>
+                  {row.map((cell, index) => (
+                    <td key={`${row[0]}-${index}`} data-label={["項目", "一般的なバー", "鶴千 TSURUSEN"][index]}>
+                      {cell}
+                    </td>
+                  ))}
                 </tr>
-              </thead>
-              <tbody>
-                {comparisons.map((row) => (
-                  <tr key={row[0]}>
-                    {row.map((cell, index) => (
-                      <td key={`${row[0]}-${index}`}>{cell}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+              ))}
+            </tbody>
+          </table>
         </section>
 
         <section className="plans-section" id="plans">
@@ -400,7 +349,7 @@ const runtimeCss = `
   --line: rgba(216, 173, 30, 0.48);
   --panel: rgba(12, 12, 11, 0.9);
   width: 100%;
-  min-height: 100vh;
+  min-height: 100svh;
   overflow-x: hidden;
   background:
     radial-gradient(circle at 50% 0%, rgba(153, 100, 12, 0.16), transparent 34rem),
@@ -410,7 +359,7 @@ const runtimeCss = `
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
-  font-feature-settings: "kern";
+  font-feature-settings: "kern", "liga";
 }
 
 .price-page *,
@@ -842,7 +791,8 @@ const runtimeCss = `
 
 .included-section,
 .flow-section,
-.payment-comparison,
+.payment-section,
+.comparison-section,
 .plans-section,
 .price-faq {
   margin-top: clamp(28px, 4vw, 44px);
@@ -944,53 +894,209 @@ const runtimeCss = `
   line-height: 1.35;
 }
 
-.payment-comparison {
-  display: grid;
-  grid-template-columns: minmax(280px, 0.88fr) minmax(360px, 1.08fr);
-  gap: clamp(26px, 5vw, 70px);
+.payment-section {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+  box-sizing: border-box;
+  padding: clamp(38px, 4.4vw, 78px) clamp(26px, 5.4vw, 86px);
+  border: 1px solid rgba(216, 173, 30, 0.72);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 44% 0%, rgba(216, 173, 30, 0.1), transparent 34rem),
+    linear-gradient(180deg, rgba(12, 12, 11, 0.96), rgba(5, 5, 4, 0.98));
+  box-shadow:
+    0 0 28px rgba(0, 0, 0, 0.5),
+    inset 0 0 54px rgba(216, 173, 30, 0.045);
+}
+
+.payment-heading {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(22px, 3.4vw, 44px);
+  min-width: 0;
+  padding-bottom: clamp(18px, 2.4vw, 32px);
+}
+
+.payment-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 7px;
+  width: min(520px, 58vw);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(216, 173, 30, 0.9), rgba(216, 173, 30, 0.28), transparent);
+}
+
+.payment-heading::before {
+  content: "";
+  position: absolute;
+  left: min(500px, 55vw);
+  bottom: 2px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba(216, 173, 30, 0.9);
+  transform: rotate(45deg);
+  background: #090909;
+}
+
+.payment-heading h2 {
+  margin: 0;
+  color: var(--gold-soft);
+  font-family: var(--font-bebas), var(--font-oswald), sans-serif;
+  font-size: clamp(58px, 7.4vw, 126px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: 0.045em;
+  background: linear-gradient(180deg, #ffe98d 0%, #d8ad1e 46%, #f6d76b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 26px rgba(216, 173, 30, 0.2);
+}
+
+.payment-heading p {
+  margin: 0 0 clamp(8px, 1.2vw, 19px);
+  color: #f8f1e7;
+  font-size: clamp(22px, 2.25vw, 38px);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
 }
 
 .payment-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 18px;
+  gap: clamp(20px, 2.3vw, 32px);
+  margin-top: clamp(28px, 4vw, 42px);
 }
 
 .payment-card {
-  display: grid;
-  place-items: center;
-  min-height: 88px;
-  padding: 8px;
-  border: 1px solid rgba(216, 173, 30, 0.34);
-  border-radius: 6px;
-  background: rgba(10, 10, 9, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 2vh, 22px);
+  min-width: 0;
+  min-height: clamp(178px, 14vw, 205px);
+  padding: clamp(18px, 2.2vw, 24px);
+  border: 1px solid rgba(216, 173, 30, 0.86);
+  border-radius: 13px;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(216, 173, 30, 0.06), transparent 14rem),
+    #090909;
+  box-shadow:
+    0 0 18px rgba(0, 0, 0, 0.42),
+    inset 0 0 22px rgba(216, 173, 30, 0.035);
 }
 
 .payment-card img {
   display: block;
-  width: 100%;
-  height: 72px;
+  width: min(74%, 178px);
+  height: clamp(66px, 6.8vw, 96px);
   object-fit: contain;
 }
 
-.comparison-table {
+.payment-card h3 {
+  margin: 0;
+  color: #f8f1e7;
+  font-size: clamp(22px, 1.7vw, 31px);
+  font-weight: 900;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow-wrap: anywhere;
+}
+
+.payment-note {
+  margin: clamp(22px, 2.8vw, 34px) 0 0;
+  color: #f8f1e7;
+  font-size: clamp(17px, 1.6vw, 27px);
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.comparison-section {
   width: 100%;
-  margin-top: 18px;
+  max-width: 100%;
+  margin-inline: auto;
+  box-sizing: border-box;
+  padding: clamp(30px, 4vw, 60px) clamp(22px, 5vw, 86px);
+  border: 1px solid rgba(216, 173, 30, 0.72);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 42% 0%, rgba(216, 173, 30, 0.08), transparent 30rem),
+    linear-gradient(180deg, rgba(12, 12, 11, 0.96), rgba(5, 5, 4, 0.98));
+  box-shadow:
+    0 0 28px rgba(0, 0, 0, 0.5),
+    inset 0 0 54px rgba(216, 173, 30, 0.045);
+}
+
+.comparison-section .price-section-heading {
+  position: relative;
+  width: min(100%, 1090px);
+  margin: 0 auto clamp(12px, 2vw, 20px);
+  padding-bottom: 12px;
+  gap: clamp(18px, 2.4vw, 30px);
+}
+
+.comparison-section .price-section-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 7px;
+  width: min(340px, 45vw);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(216, 173, 30, 0.9), rgba(216, 173, 30, 0.28), transparent);
+}
+
+.comparison-section .price-section-heading::before {
+  content: "";
+  position: absolute;
+  left: min(326px, 42vw);
+  bottom: 2px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid rgba(216, 173, 30, 0.9);
+  transform: rotate(45deg);
+  background: #090909;
+}
+
+.comparison-section .price-section-heading h2 {
+  font-size: clamp(38px, 4vw, 64px);
+  background: linear-gradient(180deg, #ffe98d 0%, #d8ad1e 52%, #f6d76b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.comparison-section .price-section-heading p {
+  color: #f8f1e7;
+  font-size: clamp(18px, 1.8vw, 28px);
+  font-weight: 900;
+}
+
+.comparison-table {
+  width: min(100%, 1090px);
+  margin: 0 auto;
   border-collapse: collapse;
-  overflow: hidden;
   border: 1px solid rgba(216, 173, 30, 0.55);
   color: #f8f1e7;
-  font-size: clamp(12px, 1.15vw, 16px);
+  font-size: clamp(16px, 1.4vw, 23px);
   font-weight: 900;
   table-layout: fixed;
 }
 
 .comparison-table th,
 .comparison-table td {
-  padding: 8px 10px;
+  padding: clamp(9px, 1vw, 13px) clamp(10px, 1.3vw, 18px);
   border: 1px solid rgba(216, 173, 30, 0.38);
   text-align: center;
+  line-height: 1.35;
 }
 
 .comparison-table th {
@@ -1000,6 +1106,7 @@ const runtimeCss = `
 
 .comparison-table td:first-child {
   text-align: left;
+  padding-left: clamp(22px, 3vw, 38px);
 }
 
 .comparison-table td:last-child {
@@ -1255,6 +1362,12 @@ const runtimeCss = `
   }
 }
 
+@media (max-width: 1760px) {
+  .price-floating {
+    display: none;
+  }
+}
+
 @media (max-width: 1180px) {
   .price-nav {
     gap: 14px;
@@ -1264,9 +1377,15 @@ const runtimeCss = `
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .payment-comparison {
-    grid-template-columns: 1fr;
+  .payment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(12px, 2.4vw, 20px);
   }
+
+  .payment-card {
+    padding-inline: clamp(14px, 2.8vw, 20px);
+  }
+
 }
 
 @media (max-width: 900px) {
@@ -1326,9 +1445,98 @@ const runtimeCss = `
     padding-inline: 12px;
   }
 
-  .included-grid,
-  .payment-grid {
+  .included-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .payment-section {
+    width: 100%;
+    padding-inline: clamp(14px, 4vw, 24px);
+    border-radius: 18px;
+  }
+
+  .comparison-section {
+    width: 100%;
+    padding: clamp(24px, 7vw, 34px) clamp(14px, 4vw, 24px);
+    border-radius: 18px;
+  }
+
+  .payment-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .payment-heading h2 {
+    line-height: 0.95;
+  }
+
+  .payment-heading::after {
+    width: min(100%, 360px);
+  }
+
+  .payment-heading::before {
+    left: calc(100% - 16px);
+  }
+
+  .payment-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .payment-card {
+    min-height: clamp(150px, 34vw, 180px);
+  }
+
+  .comparison-section .price-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .comparison-table,
+  .comparison-table thead,
+  .comparison-table tbody,
+  .comparison-table tr,
+  .comparison-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .comparison-table {
+    border: 0;
+    background: transparent;
+  }
+
+  .comparison-table thead {
+    display: none;
+  }
+
+  .comparison-table tr {
+    margin-top: 12px;
+    border: 1px solid rgba(216, 173, 30, 0.55);
+    border-radius: 12px;
+    background: rgba(7, 7, 7, 0.88);
+  }
+
+  .comparison-table td {
+    display: grid;
+    grid-template-columns: minmax(112px, 38%) 1fr;
+    gap: 12px;
+    padding: 12px 14px;
+    border-width: 0 0 1px;
+    text-align: left;
+  }
+
+  .comparison-table td:last-child {
+    border-bottom: 0;
+  }
+
+  .comparison-table td::before {
+    content: attr(data-label);
+    color: var(--gold);
+    font-family: var(--font-oswald), sans-serif;
+    letter-spacing: 0.08em;
   }
 
   .price-card {

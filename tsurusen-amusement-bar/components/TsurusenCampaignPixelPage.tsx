@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+﻿/* eslint-disable @next/next/no-img-element */
 import { CalendarDays, Camera, Gift, MessageCircle, Phone, Star, Users } from "lucide-react";
 
 const designWidth = 864;
@@ -32,7 +32,7 @@ const navLinks = [
   { label: "PRICE & SYSTEM", href: "/pricing", left: 238, top: 14, width: 77, height: 26 },
   { label: "FOOD MENU", href: "/food-menu", left: 318, top: 14, width: 61, height: 26 },
   { label: "DRINK MENU", href: "/drink-menu", left: 383, top: 14, width: 70, height: 26 },
-  { label: "ENTERTAINMENT", href: "/play", left: 441, top: 14, width: 86, height: 26 },
+  { label: "ENTERTAINMENT", href: "/entertainment", left: 441, top: 14, width: 86, height: 26 },
   { label: "SCENES", href: "/#scene", left: 531, top: 14, width: 44, height: 26 },
   { label: "PRIVATE PARTY", href: "/private-party", left: 579, top: 14, width: 84, height: 26 },
   { label: "EVENTS", href: "/events", left: 666, top: 14, width: 45, height: 26 },

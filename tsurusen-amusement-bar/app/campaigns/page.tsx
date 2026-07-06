@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { TsurusenCampaignPixelPage } from "@/components/TsurusenCampaignPixelPage";
+import { TsurusenCampaignPage } from "@/components/TsurusenCampaignPage";
 
 export const metadata: Metadata = {
   title: "CAMPAIGNS",
@@ -7,5 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function CampaignsPage() {
-  return <TsurusenCampaignPixelPage />;
+  return <TsurusenCampaignPage />;
 }

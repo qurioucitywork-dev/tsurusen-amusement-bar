@@ -1,9 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
+﻿/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { TsurusenTopHeader } from "./TsurusenTopHeader";
 import {
   Beer,
   CalendarDays,
   CheckCircle2,
+  ChevronRight,
   Citrus,
   CupSoda,
   GlassWater,
@@ -15,19 +17,8 @@ import {
 } from "lucide-react";
 
 const assetBase = "/assets/tsurusen-drink/png";
-
-const navItems = [
-  { label: "TOP", href: "/" },
-  { label: "ABOUT", href: "/#about" },
-  { label: "PRICE & SYSTEM", href: "/pricing" },
-  { label: "FOOD MENU", href: "/food-menu" },
-  { label: "DRINK MENU", href: "/drink-menu", active: true },
-  { label: "ENTERTAINMENT", href: "/play" },
-  { label: "SCENE", href: "/#scene" },
-  { label: "GALLERY", href: "/#gallery" },
-  { label: "CAMPAIGN", href: "/campaigns" },
-  { label: "ACCESS", href: "/access" },
-];
+const productAssetBase = "/assets/tsurusen-drink/product-clean";
+const collectionAssetBase = "/assets/tsurusen-drink/collection-clean";
 
 const drinkTypes = [
   { label: "ビール", icon: Beer },
@@ -48,55 +39,55 @@ const beerItems = [
     body: "きめ細やかな泡とコク。のどごし抜群。",
     alc: "ALC. 5%",
     tag: "人気",
-    image: "beer-img-01.png",
+    image: "beer-clean-01.png",
   },
   {
     name: "シャンディガフ",
     body: "ビール×ジンジャーエールの定番。",
     alc: "ALC. 3%",
     tag: "おすすめ",
-    image: "beer-img-02.png",
+    image: "beer-clean-02.png",
   },
   {
     name: "コロナ",
     body: "ライムを絞って爽快に。",
     alc: "ALC. 4.5%",
     tag: "人気",
-    image: "beer-img-03.png",
+    image: "beer-clean-03.png",
   },
   {
     name: "ハイネケン",
     body: "世界中で愛されるラガービール。",
     alc: "ALC. 5%",
     tag: "NEW",
-    image: "beer-img-04.png",
+    image: "beer-clean-04.png",
   },
   {
     name: "ギネス",
     body: "クリーミーな泡が特徴の黒ビール。",
     alc: "ALC. 4.5%",
     tag: "おすすめ",
-    image: "beer-img-05.png",
+    image: "beer-clean-05.png",
   },
   {
     name: "ブルームーン",
     body: "オレンジピール香るホワイトビール。",
     alc: "ALC. 5.4%",
-    image: "beer-img-06.png",
+    image: "beer-clean-06.png",
   },
 ];
 
 const champagnes = [
-  { name: "Moet & Chandon", jp: "モエ・エ・シャンドン", price: "¥15,000", tag: "人気 No.1", image: "champagne-img-01.png" },
-  { name: "Veuve Clicquot", jp: "ヴーヴ・クリコ", price: "¥18,000", tag: "おすすめ", image: "champagne-img-02.png" },
-  { name: "Dom Perignon", jp: "ドン・ペリニヨン", price: "¥38,000", tag: "VIP 人気", image: "champagne-img-03.png" },
+  { name: "Moet & Chandon", jp: "モエ・エ・シャンドン", price: "¥15,000", tag: "人気 No.1", image: "champagne-bottle-01.png" },
+  { name: "Veuve Clicquot", jp: "ヴーヴ・クリコ", price: "¥18,000", tag: "おすすめ", image: "champagne-bottle-02.png" },
+  { name: "Dom Perignon", jp: "ドン・ペリニヨン", price: "¥38,000", tag: "VIP 人気", image: "champagne-bottle-03.png" },
 ];
 
 const whiskies = [
-  { name: "山崎 12年", en: "YAMAZAKI 12Y", body: "華やか、繊細、熟した果実", finish: "熟成年数　12年", image: "whisky-img-01.png" },
-  { name: "マッカラン 12年", en: "MACALLAN 12Y", body: "レーズン、ドライフルーツ", finish: "熟成年数　12年", image: "whisky-img-02.png" },
-  { name: "ボウモア 12年", en: "BOWMORE 12Y", body: "スモーキー、潮風、スモーク", finish: "熟成年数　12年", image: "whisky-img-03.png" },
-  { name: "ジャックダニエル", en: "JACK DANIEL'S", body: "バニラ、キャラメル、スムース", finish: "熟成年数　-", image: "whisky-img-04.png" },
+  { name: "山崎 12年", en: "YAMAZAKI 12Y", body: "華やか、繊細、熟した果実", finishLabel: "熟成年数", finishValue: "12年", image: "whisky-bottle-01.png" },
+  { name: "マッカラン 12年", en: "MACALLAN 12Y", body: "レーズン、ドライフルーツ", finishLabel: "熟成年数", finishValue: "12年", image: "whisky-bottle-02.png" },
+  { name: "ボウモア 12年", en: "BOWMORE 12Y", body: "スモーキー、潮風、スモーク", finishLabel: "熟成年数", finishValue: "12年", image: "whisky-bottle-03.png" },
+  { name: "ジャックダニエル", en: "JACK DANIEL'S", body: "バニラ、キャラメル、スムース", finishLabel: "熟成年数", finishValue: "-", image: "whisky-bottle-04.png" },
 ];
 
 const pairings = [
@@ -111,45 +102,8 @@ const reviews = [
   { name: "Rina", body: "雰囲気よくドリンクがすぐ出てテンション上がる！" },
 ];
 
-function LogoMark() {
-  return (
-    <Link className="drink-logo" href="/" aria-label="TSURUSEN TOP">
-      <span className="drink-logo-icon" aria-hidden="true" />
-      <span>
-        <span className="drink-logo-kicker">AMUSEMENT BAR</span>
-        <span className="drink-logo-name">TSURUSEN</span>
-      </span>
-    </Link>
-  );
-}
-
 function Header() {
-  return (
-    <header className="drink-header">
-      <LogoMark />
-      <nav className="drink-nav" aria-label="DRINK MENU navigation">
-        {navItems.map((item) => (
-          <Link key={item.label} className={item.active ? "is-active" : ""} href={item.href}>
-            {item.label}
-          </Link>
-        ))}
-        <Link className="drink-reserve" href="/reservation">
-          RESERVE
-        </Link>
-      </nav>
-      <details className="drink-mobile-nav">
-        <summary>MENU</summary>
-        <div>
-          {navItems.map((item) => (
-            <Link key={item.label} href={item.href}>
-              {item.label}
-            </Link>
-          ))}
-          <Link href="/reservation">RESERVE</Link>
-        </div>
-      </details>
-    </header>
-  );
+  return <TsurusenTopHeader active="DRINK MENU" />;
 }
 
 function SectionTitle({ label, sub }: { label: string; sub?: string }) {
@@ -162,10 +116,15 @@ function SectionTitle({ label, sub }: { label: string; sub?: string }) {
 }
 
 function CtaButton({ href, label, sub, tone }: { href: string; label: string; sub: string; tone: "gold" | "green" | "blue" }) {
+  const Icon = tone === "gold" ? CalendarDays : tone === "green" ? MessageCircle : Phone;
+
   return (
     <Link className={`drink-cta-button ${tone}`} href={href}>
-      <span>{label}</span>
-      <small>{sub}</small>
+      <Icon size={36} strokeWidth={2} aria-hidden="true" />
+      <span>
+        <strong>{label}</strong>
+        <small>{sub}</small>
+      </span>
     </Link>
   );
 }
@@ -239,37 +198,39 @@ export function TsurusenDrinkPixelPage() {
           </div>
         </section>
 
-        <nav className="drink-tabs" aria-label="Drink categories">
-          {tabs.map((tab) => (
-            <Link key={tab} href={`/drink-menu#${tab.toLowerCase().replaceAll(" ", "-")}`}>
-              {tab}
+        <section className="drink-products-section" id="beer" aria-label="Beer menu">
+          <nav className="drink-tabs" aria-label="Drink categories">
+            {tabs.map((tab) => (
+              <Link key={tab} href={`/drink-menu#${tab.toLowerCase().replaceAll(" ", "-")}`}>
+                {tab}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="beer-grid">
+            {beerItems.map((item) => (
+              <article className="beer-card" key={item.name}>
+                <img src={`${productAssetBase}/${item.image}`} alt="" />
+                <div>
+                  <h3>
+                    {item.name}
+                    {item.sub ? <small>{item.sub}</small> : null}
+                  </h3>
+                  {item.tag ? <span className="drink-tag">{item.tag}</span> : null}
+                  <p>{item.body}</p>
+                  <b>{item.alc}</b>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="drink-center-action">
+            <Link href="/drink-menu#beer">
+              すべてのビールを見る
+              <small>VIEW MORE</small>
             </Link>
-          ))}
-        </nav>
-
-        <section className="beer-grid" id="beer" aria-label="Beer menu">
-          {beerItems.map((item) => (
-            <article className="beer-card" key={item.name}>
-              <img src={`${assetBase}/${item.image}`} alt="" />
-              <div>
-                <h3>
-                  {item.name}
-                  {item.sub ? <small>{item.sub}</small> : null}
-                </h3>
-                {item.tag ? <span className="drink-tag">{item.tag}</span> : null}
-                <p>{item.body}</p>
-                <b>{item.alc}</b>
-              </div>
-            </article>
-          ))}
+          </div>
         </section>
-
-        <div className="drink-center-action">
-          <Link href="/drink-menu#beer">
-            すべてのビールを見る
-            <small>VIEW MORE</small>
-          </Link>
-        </div>
 
         <section className="signature-section" id="cocktail">
           <div className="signature-copy">
@@ -294,48 +255,68 @@ export function TsurusenDrinkPixelPage() {
           <img src={`${assetBase}/signature-cocktail.png`} alt="紫と青に輝くシグネチャーカクテル" />
         </section>
 
-        <section className="collection-grid" id="champagne">
-          <article className="collection-intro">
-            <SectionTitle label="CHAMPAGNE" sub="お祝いにふさわしいシャンパン" />
-            <Link href="/drink-menu#champagne">VIEW MORE</Link>
-          </article>
-          {champagnes.map((item) => (
-            <article className="bottle-card" key={item.name}>
-              <img src={`${assetBase}/${item.image}`} alt="" />
+        <section className="collection-showcase-section" id="champagne" aria-label="Champagne and whisky collection">
+          <div className="collection-showcase-grid">
+            <article className="collection-title-card collection-title-card--champagne">
               <div>
-                <h3>{item.name}</h3>
-                <p>{item.jp}</p>
-                <strong>{item.price}</strong>
-                <span>{item.tag}</span>
+                <h2>CHAMPAGNE</h2>
+                <p>お祝いにふさわしいシャンパン</p>
               </div>
+              <Link href="/drink-menu#champagne">
+                <span>VIEW MORE</span>
+                <ChevronRight aria-hidden="true" />
+              </Link>
             </article>
-          ))}
-          <article className="collection-intro whisky">
-            <SectionTitle label="WHISKY COLLECTION" sub="世界のウイスキーを厳選" />
-            <Link href="/drink-menu#whisky">VIEW MORE</Link>
-          </article>
-        </section>
 
-        <section className="whisky-grid" id="whisky">
-          {whiskies.map((item) => (
-            <article className="whisky-card" key={item.name}>
-              <img src={`${assetBase}/${item.image}`} alt="" />
+            {champagnes.map((item) => (
+              <article className="collection-product-card" key={item.name}>
+                <img src={`${collectionAssetBase}/${item.image}`} alt={item.name} />
+                <div>
+                  <h3>{item.name}</h3>
+                  <p>{item.jp}</p>
+                  <strong>{item.price}</strong>
+                  <span>{item.tag}</span>
+                </div>
+              </article>
+            ))}
+
+            <article className="collection-title-card collection-title-card--whisky" id="whisky">
               <div>
-                <h3>{item.name}</h3>
-                <small>{item.en}</small>
-                <p>{item.body}</p>
-                <b>{item.finish}</b>
+                <h2>WHISKY COLLECTION</h2>
+                <p>世界のウイスキーを厳選</p>
               </div>
+              <Link href="/drink-menu#whisky">
+                <span>VIEW MORE</span>
+                <ChevronRight aria-hidden="true" />
+              </Link>
             </article>
-          ))}
-        </section>
+          </div>
 
-        <div className="drink-center-action">
-          <Link href="/drink-menu#whisky">
-            すべてのウイスキーを見る
-            <small>VIEW MORE</small>
-          </Link>
-        </div>
+          <div className="collection-whisky-grid">
+            {whiskies.map((item) => (
+              <article className="collection-product-card collection-product-card--whisky" key={item.name}>
+                <img src={`${collectionAssetBase}/${item.image}`} alt={item.name} />
+                <div>
+                  <h3>{item.name}</h3>
+                  <small>{item.en}</small>
+                  <p>{item.body}</p>
+                  <b>
+                    <span>{item.finishLabel}</span>
+                    <span>{item.finishValue}</span>
+                  </b>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="collection-view-more">
+            <Link href="/drink-menu#whisky">
+              <span>すべてのウイスキーを見る</span>
+              <small>VIEW MORE</small>
+              <ChevronRight aria-hidden="true" />
+            </Link>
+          </div>
+        </section>
 
         <section className="pairing-section" id="pairing">
           <SectionTitle label="PAIRING" sub="フードとのペアリング" />
@@ -380,14 +361,18 @@ export function TsurusenDrinkPixelPage() {
           <article className="social-panel">
             <SectionTitle label="NIGHT EXPERIENCE" sub="特別な夜を演出" />
             <img src={`${assetBase}/night-experience.png`} alt="乾杯するグループ" />
-            <Link href="/play">もっと見る <small>VIEW MORE</small></Link>
+            <Link href="/entertainment">もっと見る <small>VIEW MORE</small></Link>
           </article>
         </section>
       </main>
 
       <section className="drink-bottom-cta" id="reserve">
         <div>
-          <h2>RAISE YOUR GLASS. PLAY ALL NIGHT.</h2>
+          <h2>
+            RAISE YOUR GLASS. PLAY
+            <br />
+            ALL NIGHT.
+          </h2>
           <p>今すぐ予約して、最高の夜を楽しもう！</p>
           <div className="drink-cta-row">
             <CtaButton href="/reservation" label="WEB予約" sub="RESERVE" tone="gold" />
@@ -425,7 +410,7 @@ const runtimeCss = `
   --panel: rgba(11, 11, 10, 0.86);
   --panel-deep: rgba(7, 7, 6, 0.96);
   width: 100%;
-  min-height: 100vh;
+  min-height: 100svh;
   overflow-x: hidden;
   background:
     radial-gradient(circle at 50% 0%, rgba(102, 73, 16, 0.22), transparent 36rem),
@@ -435,7 +420,7 @@ const runtimeCss = `
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
-  font-feature-settings: "kern";
+  font-feature-settings: "kern", "liga";
 }
 
 .drink-page *,
@@ -654,7 +639,7 @@ const runtimeCss = `
 }
 
 .drink-main {
-  width: min(100%, 1500px);
+  width: min(100%, 1800px);
   margin-inline: auto;
   padding: 0 clamp(18px, 4vw, 48px) clamp(42px, 8vw, 94px);
 }
@@ -788,26 +773,34 @@ const runtimeCss = `
   line-height: 1;
 }
 
+.drink-products-section {
+  width: min(96vw, 1800px);
+  margin-inline: auto;
+  padding: clamp(40px, 6vh, 90px) clamp(20px, 3vw, 48px);
+}
+
 .drink-tabs {
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
-  gap: 7px;
-  margin: 26px 0 16px;
+  gap: 14px;
+  margin: 0;
 }
 
 .drink-tabs a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 32px;
-  border: 1px solid rgba(215, 173, 36, 0.72);
-  border-radius: 6px;
+  min-height: 56px;
+  padding-inline: 10px;
+  border: 1px solid rgba(212, 176, 83, 0.75);
+  border-radius: 12px;
   background: rgba(11, 10, 8, 0.88);
   color: #f7f0e7;
-  font-family: var(--font-oswald), sans-serif;
-  font-size: clamp(11px, 1vw, 15px);
-  font-weight: 700;
+  font-family: var(--font-oswald), var(--font-bebas), sans-serif;
+  font-size: clamp(18px, 1.4vw, 28px);
+  font-weight: 800;
   letter-spacing: 0.08em;
+  line-height: 1;
   white-space: nowrap;
   transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
 }
@@ -826,27 +819,32 @@ const runtimeCss = `
 .beer-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  gap: 24px;
+  margin-top: 28px;
 }
 
 .beer-card {
-  position: relative;
   display: grid;
-  grid-template-columns: 35% 1fr;
-  gap: 16px;
+  grid-template-columns: clamp(130px, 10vw, 180px) minmax(0, 1fr);
+  gap: clamp(16px, 1.5vw, 28px);
   align-items: center;
-  min-height: 130px;
-  padding: 14px 18px;
-  border: 1px solid rgba(215, 173, 36, 0.34);
-  border-radius: 8px;
-  background: linear-gradient(135deg, rgba(20, 20, 19, 0.94), rgba(8, 8, 7, 0.96));
+  min-height: clamp(210px, 18vh, 260px);
+  padding: clamp(18px, 1.6vw, 28px);
+  border: 1px solid rgba(212, 176, 83, 0.55);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(212, 176, 83, 0.05), transparent 13rem),
+    linear-gradient(135deg, #070707, #111111);
+  box-shadow: inset 0 0 24px rgba(212, 176, 83, 0.03);
 }
 
 .beer-card img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  display: block;
+  width: clamp(130px, 10vw, 180px);
+  height: clamp(128px, 9.5vw, 170px);
   object-fit: cover;
-  border-radius: 6px;
+  object-position: center;
+  border-radius: 12px;
 }
 
 .beer-card h3,
@@ -855,16 +853,16 @@ const runtimeCss = `
 .pairing-card h3 {
   margin: 0;
   color: #f8efe2;
-  font-size: clamp(17px, 1.5vw, 22px);
+  font-size: clamp(24px, 1.85vw, 42px);
   font-weight: 900;
-  line-height: 1.22;
+  line-height: 1.2;
 }
 
 .beer-card h3 small {
   display: inline;
-  margin-left: 4px;
+  margin-left: 8px;
   color: rgba(246, 239, 227, 0.78);
-  font-size: 0.72em;
+  font-size: 0.62em;
 }
 
 .drink-tag,
@@ -872,18 +870,52 @@ const runtimeCss = `
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 22px;
-  margin-top: 6px;
-  padding: 0 9px;
-  border: 1px solid rgba(215, 173, 36, 0.72);
+  min-height: 30px;
+  margin-top: 10px;
+  padding: 4px 12px;
+  border: 1px solid #d8b15a;
   border-radius: 999px;
-  color: var(--gold-soft);
-  font-size: 10px;
+  color: #d8b15a;
+  font-size: clamp(14px, 1.05vw, 18px);
   font-weight: 900;
   line-height: 1;
 }
 
 .beer-card p,
+.whisky-card p,
+.pairing-card small {
+  margin: clamp(12px, 1.2vw, 18px) 0 0;
+  color: #f7f0e7;
+  font-size: clamp(16px, 1.15vw, 26px);
+  font-weight: 800;
+  line-height: 1.7;
+}
+
+.beer-card b,
+.whisky-card b {
+  display: block;
+  margin-top: clamp(14px, 1.4vw, 20px);
+  color: #f2c94c;
+  font-size: clamp(20px, 1.45vw, 30px);
+  font-weight: 900;
+}
+
+.bottle-card h3,
+.whisky-card h3,
+.pairing-card h3 {
+  font-size: clamp(17px, 1.5vw, 22px);
+  line-height: 1.22;
+}
+
+.bottle-card span {
+  min-height: 22px;
+  margin-top: 6px;
+  padding: 0 9px;
+  border-color: rgba(215, 173, 36, 0.72);
+  color: var(--gold-soft);
+  font-size: 10px;
+}
+
 .whisky-card p,
 .pairing-card small {
   margin: 8px 0 0;
@@ -893,21 +925,33 @@ const runtimeCss = `
   line-height: 1.65;
 }
 
-.beer-card b,
 .whisky-card b {
-  display: block;
   margin-top: 7px;
-  color: var(--gold-soft);
   font-size: clamp(12px, 1vw, 15px);
 }
 
 .drink-center-action {
   display: flex;
   justify-content: center;
-  margin: 8px 0 18px;
+  margin: 32px 0 0;
 }
 
-.drink-center-action a,
+.drink-center-action a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: clamp(320px, 36vw, 520px);
+  min-height: 60px;
+  border: 1px solid rgba(212, 176, 83, 0.75);
+  border-radius: 12px;
+  background: rgba(8, 8, 7, 0.9);
+  color: #f7f0e7;
+  font-size: clamp(18px, 1.25vw, 24px);
+  font-weight: 900;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
+}
+
 .collection-intro a,
 .social-panel > a {
   display: inline-flex;
@@ -987,95 +1031,249 @@ const runtimeCss = `
   border-radius: 6px;
 }
 
-.collection-grid {
-  display: grid;
-  grid-template-columns: 0.62fr repeat(3, 1fr) 0.72fr;
-  gap: 8px;
-  margin-top: 24px;
+.collection-showcase-section {
+  width: min(1800px, 96vw);
+  margin: 0 auto;
+  padding: clamp(40px, 5vh, 90px) clamp(24px, 3vw, 56px);
+  box-sizing: border-box;
 }
 
-.collection-intro,
-.bottle-card,
-.whisky-card,
+.collection-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+.collection-whisky-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+  margin-top: 28px;
+}
+
+.collection-title-card,
+.collection-product-card,
 .pairing-card,
 .social-panel {
   border: 1px solid rgba(215, 173, 36, 0.34);
-  border-radius: 7px;
-  background: rgba(10, 10, 9, 0.88);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #0a0a0a, #101010);
 }
 
-.collection-intro {
+.collection-title-card,
+.collection-product-card {
   display: grid;
+  min-height: clamp(230px, 22vh, 280px);
+  padding: clamp(20px, 2vw, 30px);
+  box-shadow: inset 0 0 32px rgba(212, 176, 83, 0.035);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.collection-title-card:hover,
+.collection-product-card:hover {
+  border-color: rgba(212, 176, 83, 0.82);
+  box-shadow: 0 0 30px rgba(212, 176, 83, 0.35), inset 0 0 32px rgba(212, 176, 83, 0.04);
+  transform: translateY(-6px);
+}
+
+.collection-title-card {
   align-content: space-between;
-  min-height: 154px;
-  padding: 18px;
-}
-
-.collection-intro .drink-section-title {
-  display: grid;
-  gap: 8px;
-}
-
-.collection-intro.whisky {
   background:
-    linear-gradient(90deg, rgba(8, 8, 7, 0.92), rgba(8, 8, 7, 0.62)),
-    url("${assetBase}/whisky-collection.png") center / cover;
+    linear-gradient(90deg, rgba(7, 7, 7, 0.98) 0%, rgba(8, 8, 8, 0.92) 56%, rgba(8, 8, 8, 0.42) 100%),
+    radial-gradient(circle at 90% 30%, rgba(216, 177, 90, 0.22), transparent 42%);
 }
 
-.bottle-card {
-  display: grid;
-  grid-template-columns: 34% 1fr;
-  gap: 12px;
+.collection-title-card--champagne {
+  background:
+    linear-gradient(90deg, rgba(7, 7, 7, 0.99) 0%, rgba(8, 8, 8, 0.93) 55%, rgba(8, 8, 8, 0.4) 100%),
+    url("${collectionAssetBase}/champagne-title-bg.png") right center / auto 100% no-repeat,
+    radial-gradient(circle at 90% 50%, rgba(216, 177, 90, 0.22), transparent 46%);
+}
+
+.collection-title-card--whisky {
+  background:
+    linear-gradient(90deg, rgba(7, 7, 7, 0.99) 0%, rgba(8, 8, 8, 0.94) 57%, rgba(8, 8, 8, 0.42) 100%),
+    url("${collectionAssetBase}/whisky-title-bg.png") right center / auto 100% no-repeat,
+    radial-gradient(circle at 92% 50%, rgba(216, 177, 90, 0.18), transparent 48%);
+}
+
+.collection-title-card h2 {
+  max-width: 11ch;
+  margin: 0;
+  background: linear-gradient(180deg, #fff1a6 0%, #d8b15a 48%, #b07b20 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: var(--font-bebas), var(--font-oswald), sans-serif;
+  font-size: clamp(42px, 3vw, 68px);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 0.94;
+  text-shadow: 0 0 24px rgba(212, 176, 83, 0.22);
+}
+
+.collection-title-card p {
+  max-width: 13em;
+  margin: clamp(18px, 1.8vw, 28px) 0 0;
+  color: #fff8ed;
+  font-size: clamp(20px, 1.35vw, 28px);
+  font-weight: 900;
+  line-height: 1.7;
+}
+
+.collection-title-card a {
+  display: inline-flex;
+  width: min(100%, 300px);
+  min-height: 60px;
   align-items: center;
-  min-height: 154px;
-  padding: 12px;
-}
-
-.bottle-card img,
-.whisky-card img {
-  display: block;
-  width: 100%;
-  height: 118px;
-  object-fit: contain;
-}
-
-.bottle-card p {
-  margin: 4px 0 0;
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.bottle-card strong {
-  display: block;
-  margin-top: 8px;
-  color: var(--gold-soft);
-  font-size: clamp(16px, 1.6vw, 22px);
-}
-
-.whisky-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px;
-  margin-top: 14px;
-}
-
-.whisky-card {
-  display: grid;
-  grid-template-columns: 34% 1fr;
-  gap: 14px;
-  min-height: 128px;
-  padding: 12px;
-}
-
-.whisky-card small {
-  display: block;
-  margin-top: 2px;
-  color: var(--gold-soft);
+  justify-content: center;
+  gap: 18px;
+  padding: 0 24px;
+  border: 1px solid rgba(212, 176, 83, 0.82);
+  border-radius: 12px;
+  color: #f2c94c;
   font-family: var(--font-oswald), sans-serif;
-  font-size: 11px;
-  font-weight: 700;
+  font-size: clamp(18px, 1.2vw, 24px);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+}
+
+.collection-title-card a svg,
+.collection-view-more a svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 3;
+}
+
+.collection-product-card {
+  display: grid;
+  grid-template-columns: minmax(92px, 118px) minmax(0, 1fr);
+  gap: clamp(16px, 1.35vw, 24px);
+  align-items: center;
+}
+
+.collection-product-card img {
+  display: block;
+  width: 118px;
+  max-width: 100%;
+  height: 170px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.collection-product-card h3 {
+  margin: 0;
+  color: #fbf7ef;
+  font-size: clamp(24px, 1.55vw, 36px);
+  font-weight: 900;
+  line-height: 1.14;
+  text-wrap: balance;
+}
+
+.collection-product-card p,
+.collection-product-card small {
+  display: block;
+  margin: clamp(8px, 1vw, 14px) 0 0;
+}
+
+.collection-product-card p {
+  color: #fff5e6;
+  font-size: clamp(18px, 1.08vw, 22px);
+  font-weight: 800;
+  line-height: 1.7;
+}
+
+.collection-product-card small {
+  color: #d8b15a;
+  font-family: var(--font-oswald), sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
   line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.collection-product-card strong {
+  display: block;
+  margin-top: clamp(18px, 1.7vw, 28px);
+  color: #f2c94c;
+  font-size: clamp(30px, 1.8vw, 38px);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.collection-product-card > div > span {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  margin-top: clamp(16px, 1.5vw, 24px);
+  padding: 4px 14px;
+  border: 1px solid #d8b15a;
+  border-radius: 999px;
+  color: #f2c94c;
+  font-size: clamp(16px, 1.08vw, 22px);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.collection-product-card b {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: center;
+  margin-top: clamp(18px, 1.8vw, 30px);
+  padding-top: clamp(18px, 1.6vw, 24px);
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  color: #f2c94c;
+  font-size: clamp(22px, 1.35vw, 30px);
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.collection-product-card b span,
+.collection-view-more a > span {
+  white-space: nowrap;
+}
+
+.collection-view-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.collection-view-more a {
+  display: inline-flex;
+  width: clamp(360px, 42vw, 760px);
+  min-height: 72px;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 0 28px;
+  border: 1px solid rgba(212, 176, 83, 0.82);
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(16, 16, 16, 0.94), rgba(5, 5, 5, 0.98));
+  color: #fff8ed;
+  font-family: var(--font-oswald), sans-serif;
+  font-size: clamp(22px, 1.7vw, 34px);
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.collection-view-more a:hover {
+  box-shadow: 0 0 30px rgba(212, 176, 83, 0.35);
+  transform: translateY(-3px) scale(1.03);
+}
+
+.collection-view-more small {
+  color: #f2c94c;
+  font-size: 0.82em;
+  letter-spacing: 0.14em;
 }
 
 .pairing-section {
@@ -1188,54 +1386,93 @@ const runtimeCss = `
 
 .drink-bottom-cta {
   display: grid;
-  min-height: clamp(160px, 22vw, 260px);
+  width: min(96vw, 1600px);
+  min-height: clamp(520px, 48vw, 760px);
+  margin: clamp(28px, 4vw, 54px) auto 0;
   place-items: center;
-  padding: clamp(28px, 6vw, 56px) clamp(18px, 4vw, 48px);
+  padding: clamp(80px, 8vh, 140px) clamp(24px, 3vw, 56px);
+  border: 1px solid rgba(216, 173, 30, 0.78);
+  border-radius: 0;
+  clip-path: polygon(16px 0, calc(100% - 16px) 0, 100% 16px, 100% calc(100% - 16px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 16px), 0 16px);
   background:
-    linear-gradient(180deg, rgba(5, 5, 4, 0.18), rgba(5, 5, 4, 0.84)),
-    url("${assetBase}/cta-background-clean.png") center / cover;
+    radial-gradient(ellipse at 10% 0%, rgba(36, 194, 255, 0.8) 0%, rgba(36, 194, 255, 0.28) 8%, transparent 23%),
+    radial-gradient(ellipse at 24% 0%, rgba(45, 139, 255, 0.72) 0%, rgba(45, 139, 255, 0.26) 8%, transparent 24%),
+    radial-gradient(ellipse at 40% 0%, rgba(92, 105, 255, 0.72) 0%, rgba(92, 105, 255, 0.26) 8%, transparent 24%),
+    radial-gradient(ellipse at 56% 0%, rgba(130, 83, 255, 0.72) 0%, rgba(130, 83, 255, 0.26) 8%, transparent 25%),
+    radial-gradient(ellipse at 72% 0%, rgba(207, 58, 255, 0.72) 0%, rgba(207, 58, 255, 0.26) 8%, transparent 24%),
+    radial-gradient(ellipse at 88% 0%, rgba(255, 58, 210, 0.74) 0%, rgba(255, 58, 210, 0.28) 8%, transparent 24%),
+    radial-gradient(ellipse at 18% 92%, rgba(216, 173, 30, 0.44), transparent 25%),
+    radial-gradient(ellipse at 50% 92%, rgba(28, 255, 94, 0.26), transparent 31%),
+    radial-gradient(ellipse at 82% 92%, rgba(255, 47, 210, 0.32), transparent 27%),
+    linear-gradient(180deg, rgba(1, 1, 2, 0.98) 0%, rgba(6, 4, 12, 0.92) 54%, rgba(2, 2, 3, 0.98) 100%);
   text-align: center;
+  box-shadow:
+    0 0 38px rgba(0, 0, 0, 0.72),
+    inset 0 0 80px rgba(0, 0, 0, 0.82),
+    inset 0 0 34px rgba(216, 173, 30, 0.08);
+}
+
+.drink-bottom-cta > div {
+  width: min(100%, 1320px);
 }
 
 .drink-bottom-cta h2 {
   margin: 0;
-  color: #79b9ff;
-  font-family: var(--font-oswald), sans-serif;
-  font-size: clamp(34px, 5.8vw, 80px);
-  font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: 0.18em;
-  text-shadow: 0 0 24px rgba(68, 144, 255, 0.68), 0 0 28px rgba(227, 72, 236, 0.34);
+  font-family: var(--font-bebas), var(--font-oswald), sans-serif;
+  font-size: clamp(78px, 10vw, 150px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: 0.04em;
+  background: linear-gradient(90deg, #24c8ff 0%, #84a8ff 42%, #bc7bff 68%, #ff43e9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 18px rgba(0, 157, 255, 0.62)) drop-shadow(0 0 26px rgba(223, 63, 255, 0.42));
+  text-shadow:
+    0 0 28px rgba(0, 157, 255, 0.74),
+    0 0 42px rgba(223, 63, 255, 0.48);
 }
 
 .drink-bottom-cta p {
-  margin: 10px 0 0;
+  margin: clamp(18px, 2vw, 28px) 0 0;
   color: #f8efe2;
-  font-size: clamp(13px, 1.6vw, 18px);
-  font-weight: 800;
+  font-size: clamp(20px, 2vw, 34px);
+  font-weight: 700;
+  line-height: 1.7;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.24);
 }
 
 .drink-cta-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
-  margin-top: 20px;
+  gap: clamp(20px, 3vw, 34px);
+  margin-top: clamp(34px, 4vw, 52px);
 }
 
 .drink-cta-button {
   --button-accent: var(--gold);
   display: inline-flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: clamp(150px, 18vw, 220px);
-  min-height: 48px;
+  gap: 26px;
+  width: min(100%, 320px);
+  min-height: 80px;
+  padding: 14px 24px;
   border: 1px solid var(--button-accent);
-  border-radius: 7px;
-  background: rgba(6, 6, 6, 0.72);
-  box-shadow: inset 0 0 22px color-mix(in srgb, var(--button-accent), transparent 74%);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(3, 3, 5, 0.84));
+  box-shadow:
+    inset 0 0 28px color-mix(in srgb, var(--button-accent), transparent 78%),
+    0 0 28px color-mix(in srgb, var(--button-accent), transparent 72%);
   transition: box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.drink-cta-button svg {
+  flex: 0 0 auto;
+  color: var(--button-accent);
+  filter: drop-shadow(0 0 10px color-mix(in srgb, var(--button-accent), transparent 35%));
 }
 
 .drink-cta-button.green {
@@ -1247,19 +1484,34 @@ const runtimeCss = `
 }
 
 .drink-cta-button span {
+  display: grid;
+  gap: 6px;
   color: #f8efe2;
-  font-size: clamp(14px, 1.3vw, 18px);
+  text-align: left;
+}
+
+.drink-cta-button strong {
+  font-size: clamp(24px, 2vw, 36px);
   font-weight: 900;
   line-height: 1;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
 }
 
 .drink-cta-button small {
-  margin-top: 4px;
   color: var(--button-accent);
   font-family: var(--font-oswald), sans-serif;
-  font-size: 10px;
+  font-size: clamp(12px, 1vw, 17px);
   font-weight: 700;
-  letter-spacing: 0.1em;
+  line-height: 1;
+  letter-spacing: 0.16em;
+}
+
+.drink-cta-button:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    inset 0 0 34px color-mix(in srgb, var(--button-accent), transparent 72%),
+    0 0 40px color-mix(in srgb, var(--button-accent), transparent 50%);
 }
 
 .floating-reserve {
@@ -1308,22 +1560,45 @@ const runtimeCss = `
   line-height: 1.15;
 }
 
+@media (max-width: 2200px) {
+  .floating-reserve {
+    display: none;
+  }
+}
+
+@media (max-width: 1540px) {
+  .collection-showcase-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .collection-whisky-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .collection-product-card {
+    grid-template-columns: minmax(88px, 108px) minmax(0, 1fr);
+  }
+
+  .collection-product-card img {
+    width: 108px;
+    height: 158px;
+  }
+}
+
 @media (max-width: 1180px) {
   .drink-nav {
     gap: 14px;
   }
 
-  .collection-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .drink-tabs {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .collection-intro,
-  .collection-intro.whisky {
-    grid-column: span 3;
-    min-height: 120px;
+  .collection-showcase-grid,
+  .collection-whisky-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .whisky-grid,
   .beer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1396,24 +1671,100 @@ const runtimeCss = `
   }
 
   .beer-grid,
-  .whisky-grid,
-  .collection-grid {
+  .collection-showcase-grid,
+  .collection-whisky-grid {
     grid-template-columns: 1fr;
   }
 
-  .collection-intro,
-  .collection-intro.whisky {
-    grid-column: auto;
+  .collection-showcase-section {
+    width: min(100%, 1800px);
+    padding: clamp(34px, 5vh, 56px) clamp(12px, 3.8vw, 18px);
   }
 
   .drink-tabs {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 
-  .beer-card,
-  .bottle-card,
-  .whisky-card {
-    grid-template-columns: 96px 1fr;
+  .drink-products-section {
+    width: min(100%, 1800px);
+    padding: clamp(34px, 5vh, 56px) clamp(12px, 3.8vw, 18px);
+  }
+
+  .beer-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 16px;
+  }
+
+  .collection-title-card,
+  .collection-product-card {
+    min-height: auto;
+  }
+
+  .collection-product-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 16px;
+  }
+
+  .collection-product-card img {
+    width: min(100%, 190px);
+    height: 190px;
+  }
+
+  .collection-product-card > div {
+    width: 100%;
+  }
+
+  .collection-view-more a {
+    width: min(100%, 520px);
+    flex-wrap: wrap;
+    min-height: 66px;
+  }
+
+  .collection-view-more a > span {
+    white-space: normal;
+  }
+
+  .beer-card {
+    text-align: left;
+  }
+
+  .beer-card img {
+    width: min(100%, 260px);
+    height: clamp(180px, 52vw, 240px);
+  }
+
+  .beer-card > div {
+    width: 100%;
+  }
+
+  .drink-bottom-cta {
+    width: calc(100% - 20px);
+    min-height: auto;
+    padding: clamp(64px, 12vh, 92px) 16px;
+  }
+
+  .drink-bottom-cta h2 {
+    max-width: 100%;
+    font-size: clamp(42px, 12vw, 66px);
+    line-height: 0.96;
+    text-wrap: balance;
+  }
+
+  .drink-bottom-cta p {
+    font-size: clamp(18px, 5vw, 24px);
+  }
+
+  .drink-cta-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .drink-cta-button {
+    width: min(100%, 320px);
   }
 
   .floating-reserve {

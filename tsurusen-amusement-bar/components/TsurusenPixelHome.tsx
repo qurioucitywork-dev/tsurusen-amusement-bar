@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
@@ -143,7 +143,7 @@ const headerNavItems: HeaderNavItem[] = [
   { label: "ACCESS", href: "/access", icon: MapPin },
   { label: "BLOG", href: "/blog", icon: FileText },
   { label: "CAMPAIGN", href: "/campaigns", icon: Gift },
-  { label: "ENTERTAINMENT", href: "/play", icon: Mic2 },
+  { label: "ENTERTAINMENT", href: "/entertainment", icon: Mic2 },
   { label: "EVENTS", href: "/events", icon: CalendarDays },
   { label: "FAQ", href: "/#faq", icon: CircleHelp },
 ];

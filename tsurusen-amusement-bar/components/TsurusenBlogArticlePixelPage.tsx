@@ -1,5 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
+﻿/* eslint-disable @next/next/no-img-element */
 import { ArrowRight, CalendarDays, Camera, ChevronUp, Copy, Heart, Link as LinkIcon, MapPin, MessageCircle, Phone, Search, Share2, Users } from "lucide-react";
+import { TsurusenTopHeader } from "./TsurusenTopHeader";
 
 const designWidth = 1024;
 const designHeight = 1536;
@@ -28,7 +29,7 @@ const navLinks = [
   { label: "PRICE & SYSTEM", href: "/pricing", left: 269, top: 14, width: 99, height: 25 },
   { label: "FOOD MENU", href: "/food-menu", left: 378, top: 14, width: 75, height: 25 },
   { label: "DRINK MENU", href: "/drink-menu", left: 463, top: 14, width: 77, height: 25 },
-  { label: "ENTERTAINMENT", href: "/play", left: 550, top: 14, width: 104, height: 25 },
+  { label: "ENTERTAINMENT", href: "/entertainment", left: 550, top: 14, width: 104, height: 25 },
   { label: "SCENES", href: "/#scene", left: 658, top: 14, width: 55, height: 25 },
   { label: "PRIVATE PARTY", href: "/#scene", left: 717, top: 14, width: 93, height: 25 },
   { label: "EVENTS", href: "/events", left: 813, top: 14, width: 57, height: 25 },
@@ -147,6 +148,16 @@ body:has(.tsurusen-blog-article-pixel-page) main {
   background: #050505;
 }
 
+.tsurusen-blog-article-pixel-stage::before {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 3;
+  height: 3.1%;
+  background: #050505;
+  content: "";
+  pointer-events: none;
+}
+
 .tsurusen-blog-article-pixel-stage .pixel-input {
   position: absolute;
   z-index: 4;
@@ -189,6 +200,7 @@ export function TsurusenBlogArticlePixelPage() {
   return (
     <div className="tsurusen-blog-article-pixel-page" id="top">
       <style>{runtimeCss}</style>
+      <TsurusenTopHeader active="BLOG" />
       <div className="tsurusen-blog-article-pixel-stage" aria-label="TSURUSEN BLOG ARTICLE">
         {slices.map((slice) => (
           <img key={slice.src} src={slice.src} alt="" aria-hidden="true" className="pixel-slice" draggable={false} style={{ top: yPct(slice.top), height: yPct(slice.height) }} />
