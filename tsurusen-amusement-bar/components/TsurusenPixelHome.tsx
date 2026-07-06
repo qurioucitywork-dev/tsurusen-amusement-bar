@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, type CSSProperties } from "react";
@@ -121,7 +121,7 @@ type SocialReviewItem = {
 };
 
 const heroActions: HeroAction[] = [
-  { label: "WEB予約", sub: "RESERVE", href: "/reservation", tone: "gold" },
+  { label: "WEB予約", sub: "RESERVE", href: "/#reserve", tone: "gold" },
   { label: "電話予約", sub: "CALL", href: "tel:03-XXXX-XXXX", tone: "blue" },
   { label: "LINE予約", sub: "LINE", href: "https://line.me/R/ti/p/@tsurusen", tone: "green" },
   { label: "Instagram", sub: "FOLLOW", href: "https://www.instagram.com/", tone: "dark", icon: Camera },
@@ -241,7 +241,7 @@ const socialReviews: SocialReviewItem[] = [
 ];
 
 const actionButtons: PixelButton[] = [
-  { label: "WEB予約", sub: "RESERVE", href: "/reservation", left: 21, top: 300, width: 186, height: 60, tone: "gold", row: "hero", framed: true, cleanFill: true },
+  { label: "WEB予約", sub: "RESERVE", href: "/#reserve", left: 21, top: 300, width: 186, height: 60, tone: "gold", row: "hero", framed: true, cleanFill: true },
   { label: "電話予約", sub: "CALL", href: "tel:03-XXXX-XXXX", left: 226, top: 300, width: 189, height: 60, tone: "blue", row: "hero", framed: true, cleanFill: true },
   { label: "LINE予約", sub: "LINE", href: "https://line.me/R/ti/p/@tsurusen", left: 431, top: 300, width: 186, height: 60, tone: "green", row: "hero", framed: true, cleanFill: true },
   { label: "Instagram", sub: "FOLLOW", href: "https://www.instagram.com/", left: 637, top: 300, width: 205, height: 60, tone: "dark", icon: Aperture, secondaryIcon: Camera, row: "hero", framed: true, compact: true, cleanFill: true },
@@ -250,7 +250,7 @@ const actionButtons: PixelButton[] = [
   { label: "もっと見る", sub: "VIEW MORE", href: "/#reviews", left: 508, top: 1379, width: 202, height: 27, tone: "dark" },
   { label: "イベント一覧を見る", sub: "VIEW MORE", href: "/#event", left: 70, top: 1581, width: 207, height: 25, tone: "dark" },
   { label: "すべてのFAQを見る", sub: "VIEW MORE", href: "/faq", left: 616, top: 1585, width: 203, height: 25, tone: "dark" },
-  { label: "WEB予約", sub: "RESERVE", href: "/reservation", left: 217, top: 1725, width: 129, height: 34, tone: "gold" },
+  { label: "WEB予約", sub: "RESERVE", href: "/#reserve", left: 217, top: 1725, width: 129, height: 34, tone: "gold" },
   { label: "LINE予約", sub: "LINE", href: "https://line.me/R/ti/p/@tsurusen", left: 356, top: 1725, width: 139, height: 34, tone: "green" },
   { label: "電話予約", sub: "CALL", href: "tel:03-XXXX-XXXX", left: 510, top: 1725, width: 139, height: 34, tone: "blue" },
 ];

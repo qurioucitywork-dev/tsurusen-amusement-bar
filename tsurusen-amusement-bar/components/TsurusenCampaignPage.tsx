@@ -1,4 +1,4 @@
-﻿/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { TsurusenTopHeader } from "./TsurusenTopHeader";
 import {
@@ -144,7 +144,7 @@ export function TsurusenCampaignPage() {
       <main className="campaign-main">
         <section className="hero-actions" aria-label="Campaign actions">
           <GlowButton href="#coupons" title="クーポンを使う" label="COUPON" />
-          <GlowButton href="/reservation" title="WEB予約" label="RESERVE" tone="blue" />
+          <GlowButton href="/#reserve" title="WEB予約" label="RESERVE" tone="blue" />
           <GlowButton href="https://line.me/R/ti/p/@tsurusen" title="LINE予約" label="LINE" tone="green" />
         </section>
 
@@ -200,7 +200,7 @@ export function TsurusenCampaignPage() {
           <SectionHeading title="COUPONS" />
           <div className="coupon-grid">
             {coupons.map(([id, title, value, note]) => (
-              <Link id={`coupon-${id}`} key={id} className="coupon-card" href="/reservation">
+              <Link id={`coupon-${id}`} key={id} className="coupon-card" href="/#reserve">
                 <span>{id}</span>
                 <h3>{title}</h3>
                 <strong>{value}</strong>
@@ -261,7 +261,7 @@ export function TsurusenCampaignPage() {
             <SectionHeading title="RECOMMENDED FOR" sub="こんな方におすすめ" />
             <div className="recommended-grid">
               {recommended.map(([title, image]) => (
-                <Link key={title} className="recommended-card" href="/reservation">
+                <Link key={title} className="recommended-card" href="/#reserve">
                   <img src={image} alt="" />
                   <strong>{title}</strong>
                 </Link>
@@ -334,7 +334,7 @@ export function TsurusenCampaignPage() {
           </div>
           <div className="bottom-actions">
             <GlowButton href="#coupons" title="クーポンを取得" label="GET COUPON" />
-            <GlowButton href="/reservation" title="WEB予約" label="RESERVE" tone="blue" />
+            <GlowButton href="/#reserve" title="WEB予約" label="RESERVE" tone="blue" />
             <GlowButton href="https://line.me/R/ti/p/@tsurusen" title="LINE予約" label="LINE" tone="green" />
             <GlowButton href="tel:03-XXXX-XXXX" title="電話予約" label="CALL" tone="pink" />
           </div>

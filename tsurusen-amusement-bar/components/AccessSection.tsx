@@ -37,7 +37,7 @@ export function AccessSection() {
               </div>
             </div>
           </div>
-          <Link href="/reservation" className="button-primary justify-self-start">
+          <Link href="/#reserve" className="button-primary justify-self-start">
             来店前に空席確認
           </Link>
         </div>

@@ -32,7 +32,7 @@ export function PricingSection() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/reservation" className="button-secondary mt-8 w-full bg-white">
+                <Link href="/#reserve" className="button-secondary mt-8 w-full bg-white">
                   このコースを相談
                 </Link>
               </article>

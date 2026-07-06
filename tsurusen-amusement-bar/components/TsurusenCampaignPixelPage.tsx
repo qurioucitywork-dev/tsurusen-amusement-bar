@@ -1,4 +1,4 @@
-﻿/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-img-element */
 import { CalendarDays, Camera, Gift, MessageCircle, Phone, Star, Users } from "lucide-react";
 
 const designWidth = 864;
@@ -34,10 +34,10 @@ const navLinks = [
   { label: "DRINK MENU", href: "/drink-menu", left: 383, top: 14, width: 70, height: 26 },
   { label: "ENTERTAINMENT", href: "/entertainment", left: 441, top: 14, width: 86, height: 26 },
   { label: "SCENES", href: "/#scene", left: 531, top: 14, width: 44, height: 26 },
-  { label: "PRIVATE PARTY", href: "/private-party", left: 579, top: 14, width: 84, height: 26 },
+  { label: "PRIVATE PARTY", href: "/#scene", left: 579, top: 14, width: 84, height: 26 },
   { label: "EVENTS", href: "/events", left: 666, top: 14, width: 45, height: 26 },
   { label: "CAMPAIGNS", href: "/campaigns", left: 714, top: 14, width: 66, height: 26 },
-  { label: "RESERVE", href: "/reservation", left: 806, top: 10, width: 43, height: 31 },
+  { label: "RESERVE", href: "/#reserve", left: 806, top: 10, width: 43, height: 31 },
 ];
 
 const anchorTargets = [
@@ -77,7 +77,7 @@ const anchorTargets = [
 const hitLinks = [
   { label: "Logo", href: "/", left: 18, top: 14, width: 105, height: 23 },
   { label: "Use coupon", href: "/campaigns#coupons", left: 55, top: 294, width: 145, height: 43 },
-  { label: "Web reserve", href: "/reservation", left: 210, top: 294, width: 116, height: 43 },
+  { label: "Web reserve", href: "/#reserve", left: 210, top: 294, width: 116, height: 43 },
   { label: "Line reserve", href: "https://line.me/R/ti/p/@tsurusen", left: 337, top: 294, width: 117, height: 43 },
   { label: "Golden night offer", href: "/campaigns#golden-night", left: 45, top: 358, width: 775, height: 248 },
   { label: "Get golden night offer", href: "/campaigns#coupon-get", left: 499, top: 548, width: 224, height: 43 },
@@ -108,11 +108,11 @@ const hitLinks = [
   { label: "Limited quantity", href: "/campaigns#limited-quantity", left: 772, top: 1242, width: 38, height: 95 },
   { label: "Instagram campaign", href: "https://www.instagram.com/", left: 62, top: 1412, width: 88, height: 125 },
   { label: "TikTok campaign", href: "https://www.tiktok.com/", left: 159, top: 1412, width: 88, height: 125 },
-  { label: "Review campaign", href: "/reviews", left: 256, top: 1412, width: 101, height: 125 },
-  { label: "Guest review one", href: "/reviews#review-01", left: 407, top: 1407, width: 87, height: 130 },
-  { label: "Guest review two", href: "/reviews#review-02", left: 511, top: 1407, width: 87, height: 130 },
-  { label: "Guest review three", href: "/reviews#review-03", left: 614, top: 1407, width: 87, height: 130 },
-  { label: "Guest review four", href: "/reviews#review-04", left: 718, top: 1407, width: 87, height: 130 },
+  { label: "Review campaign", href: "/#reviews", left: 256, top: 1412, width: 101, height: 125 },
+  { label: "Guest review one", href: "/#reviews", left: 407, top: 1407, width: 87, height: 130 },
+  { label: "Guest review two", href: "/#reviews", left: 511, top: 1407, width: 87, height: 130 },
+  { label: "Guest review three", href: "/#reviews", left: 614, top: 1407, width: 87, height: 130 },
+  { label: "Guest review four", href: "/#reviews", left: 718, top: 1407, width: 87, height: 130 },
   { label: "FAQ one", href: "/faq#campaign-use", left: 55, top: 1592, width: 355, height: 25 },
   { label: "FAQ two", href: "/faq#other-coupons", left: 55, top: 1620, width: 355, height: 25 },
   { label: "FAQ three", href: "/faq#reservation", left: 55, top: 1649, width: 355, height: 25 },
@@ -125,7 +125,7 @@ const hitLinks = [
   { label: "Floating line", href: "https://line.me/R/ti/p/@tsurusen", left: 794, top: 1620, width: 63, height: 67 },
   { label: "Floating phone", href: "tel:03-XXXX-XXXX", left: 794, top: 1692, width: 63, height: 68 },
   { label: "CTA coupon", href: "/campaigns#coupons", left: 184, top: 1782, width: 123, height: 37 },
-  { label: "CTA web reserve", href: "/reservation", left: 326, top: 1782, width: 109, height: 37 },
+  { label: "CTA web reserve", href: "/#reserve", left: 326, top: 1782, width: 109, height: 37 },
   { label: "CTA line reserve", href: "https://line.me/R/ti/p/@tsurusen", left: 448, top: 1782, width: 109, height: 37 },
   { label: "CTA phone reserve", href: "tel:03-XXXX-XXXX", left: 570, top: 1782, width: 118, height: 37 },
 ];

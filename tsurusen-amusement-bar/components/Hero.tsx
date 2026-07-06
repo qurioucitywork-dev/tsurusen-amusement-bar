@@ -33,7 +33,7 @@ export function Hero() {
             東京23区で、ダーツもカラオケも一杯も、ひとつの夜に。
           </p>
           <div className="hero-reveal hero-reveal-delay-2 mt-9 flex flex-col gap-3 sm:flex-row">
-            <Link href="/reservation" className="button-primary">
+            <Link href="/#reserve" className="button-primary">
               <CalendarClock size={18} aria-hidden="true" />
               {siteConfig.ctas.primary}
             </Link>

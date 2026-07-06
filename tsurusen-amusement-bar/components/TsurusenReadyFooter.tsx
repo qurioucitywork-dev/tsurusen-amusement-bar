@@ -3,7 +3,7 @@ import { CalendarDays, MessageCircle, Phone } from "lucide-react";
 
 const readyFooterActions = [
   {
-    href: "/reservation",
+    href: "/#reserve",
     label: "WEB予約",
     sub: "RESERVE",
     tone: "gold",

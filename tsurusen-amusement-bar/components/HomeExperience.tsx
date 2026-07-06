@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import {
   CalendarClock,
@@ -65,7 +65,7 @@ function ActionButtons({ compact = false }: { compact?: boolean }) {
 
   return (
     <div className={base}>
-      <Link href="/reservation" className="button-primary">
+      <Link href="/#reserve" className="button-primary">
         <CalendarClock size={18} aria-hidden="true" />
         Web予約
       </Link>
@@ -181,7 +181,7 @@ export function HomeExperience() {
               />
             </div>
             <div className="mt-7">
-              <Link href="/about" className="line-link">
+              <Link href="/#about" className="line-link">
                 鶴千の楽しみ方を見る
                 <ChevronRight size={16} aria-hidden="true" />
               </Link>
@@ -379,7 +379,7 @@ export function HomeExperience() {
                 <MapPin size={18} aria-hidden="true" />
                 MAP
               </a>
-              <Link href="/reservation" className="button-primary">
+              <Link href="/#reserve" className="button-primary">
                 空席確認
               </Link>
             </div>

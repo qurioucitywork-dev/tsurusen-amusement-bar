@@ -50,7 +50,7 @@ export function HomeHighlightsSection() {
               </div>
             ))}
           </div>
-          <Link href="/commitment" className="button-secondary mt-8 bg-white">
+          <Link href="/#about" className="button-secondary mt-8 bg-white">
             こだわりを詳しく見る
           </Link>
         </RevealOnScroll>

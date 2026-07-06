@@ -30,7 +30,7 @@ export const siteConfig = {
   closed: "不定休",
   priceGuide: "60min 2,800円から／貸切は20名様から相談可",
   lineUrl: "https://line.me/R/ti/p/@tsurusen",
-  reservationUrl: "/reservation",
+  reservationUrl: "/#reserve",
   instagramUrl: "https://www.instagram.com/",
   tiktokUrl: "https://www.tiktok.com/",
   mapUrl: "https://maps.google.com/?q=%E6%96%B0%E5%AE%BF%E5%8C%BA%E6%AD%8C%E8%88%9E%E4%BC%8E%E7%94%BA",
@@ -98,12 +98,12 @@ export const siteConfig = {
     ogp: asset("ogp.webp"),
   },
   nav: [
-    { label: "HOW TO", ja: "店舗紹介", href: "/about" },
+    { label: "HOW TO", ja: "店舗紹介", href: "/#about" },
     { label: "PLAY", ja: "遊び・設備", href: "/play" },
     { label: "PRICE", ja: "料金", href: "/pricing" },
-    { label: "FOOD/DRINK", ja: "フード・ドリンク", href: "/food-drink" },
+    { label: "FOOD/DRINK", ja: "フード・ドリンク", href: "/food-menu" },
     { label: "EVENT", ja: "イベント", href: "/events" },
-    { label: "PARTY", ja: "貸切", href: "/party" },
+    { label: "PARTY", ja: "貸切", href: "/#scene" },
     { label: "SHOP LIST", ja: "アクセス", href: "/access" },
   ],
   trustItems: [
@@ -113,14 +113,14 @@ export const siteConfig = {
     { label: "Reserve", value: "4導線", sub: "Web / LINE / 電話 / Instagram" },
   ],
   routes: [
-    { title: "店舗紹介", label: "ABOUT", href: "/about", image: asset("lounge-main.webp"), copy: "鶴千の空間、席、夜の過ごし方を紹介します。" },
+    { title: "店舗紹介", label: "ABOUT", href: "/#about", image: asset("lounge-main.webp"), copy: "鶴千の空間、席、夜の過ごし方を紹介します。" },
     { title: "遊び・設備", label: "PLAY", href: "/play", image: asset("darts-machines.webp"), copy: "ダーツ、カラオケ、モニター席、ゲーム設備を確認。" },
     { title: "料金", label: "PRICE", href: "/pricing", image: asset("bottle-shelf.webp"), copy: "通常利用、飲み放題、貸切の目安を掲載。" },
-    { title: "フード・ドリンク", label: "FOOD", href: "/food-drink", image: asset("drinks-food.webp"), copy: "乾杯からシェアフードまで、夜を彩るメニュー。" },
+    { title: "フード・ドリンク", label: "FOOD", href: "/food-menu", image: asset("drinks-food.webp"), copy: "乾杯からシェアフードまで、夜を彩るメニュー。" },
     { title: "イベント", label: "EVENT", href: "/events", image: asset("party-smoke.webp"), copy: "月間イベント、SNSシェア、参加予約。" },
-    { title: "貸切・パーティー", label: "PARTY", href: "/party", image: asset("night-lounge.webp"), copy: "団体、誕生日、観光客の夜遊びにも対応。" },
+    { title: "貸切・パーティー", label: "PARTY", href: "/#scene", image: asset("night-lounge.webp"), copy: "団体、誕生日、観光客の夜遊びにも対応。" },
     { title: "アクセス", label: "ACCESS", href: "/access", image: asset("access-exterior.webp"), copy: "Google Map、口コミ、駅からの道順を確認。" },
-    { title: "予約", label: "RESERVE", href: "/reservation", image: asset("hero-poster.webp"), copy: "Web予約、LINE予約、電話予約、DMに対応。" },
+    { title: "予約", label: "RESERVE", href: "/#reserve", image: asset("hero-poster.webp"), copy: "Web予約、LINE予約、電話予約、DMに対応。" },
   ],
   playItems: [
     {
@@ -247,10 +247,10 @@ export const siteConfig = {
     },
   ],
   gateways: [
-    { title: "店舗紹介", label: "ABOUT", href: "/about", image: asset("lounge-main.webp"), copy: "鶴千の空間、席、夜の過ごし方を紹介します。" },
+    { title: "店舗紹介", label: "ABOUT", href: "/#about", image: asset("lounge-main.webp"), copy: "鶴千の空間、席、夜の過ごし方を紹介します。" },
     { title: "遊び・設備", label: "PLAY", href: "/play", image: asset("darts-machines.webp"), copy: "ダーツ、カラオケ、モニター席、ゲーム設備を確認。" },
     { title: "料金", label: "PRICE", href: "/pricing", image: asset("bottle-shelf.webp"), copy: "通常利用、飲み放題、貸切の目安を掲載。" },
-    { title: "予約", label: "RESERVE", href: "/reservation", image: asset("hero-poster.webp"), copy: "Web予約、LINE予約、電話予約、DMに対応。" },
+    { title: "予約", label: "RESERVE", href: "/#reserve", image: asset("hero-poster.webp"), copy: "Web予約、LINE予約、電話予約、DMに対応。" },
   ],
   commitments: [
     { title: "高級感と気軽さの両立", label: "MOOD", body: "黒を基調にした落ち着いた店内で、初来店でも入りやすい案内を大切にしています。" },

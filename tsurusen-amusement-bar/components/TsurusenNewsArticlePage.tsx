@@ -1,4 +1,4 @@
-﻿/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-img-element */
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import { TsurusenTopHeader } from "./TsurusenTopHeader";
@@ -250,7 +250,7 @@ export function TsurusenNewsArticlePage({ article }: Props) {
             <section className="reserve-panel">
               <h2>RESERVE YOUR NIGHT</h2>
               <p>今夜のご予約はこちらから</p>
-              <Link href="/reservation">
+              <Link href="/#reserve">
                 WEB予約
                 <ArrowRight />
               </Link>
@@ -303,7 +303,7 @@ export function TsurusenNewsArticlePage({ article }: Props) {
             <p>最高の夜を、ここから。</p>
           </div>
           <nav>
-            <Link href="/reservation">WEB予約</Link>
+            <Link href="/#reserve">WEB予約</Link>
             <Link href="https://line.me/R/ti/p/@tsurusen">LINE予約</Link>
             <Link href="tel:0312345678">電話する</Link>
           </nav>
@@ -311,7 +311,7 @@ export function TsurusenNewsArticlePage({ article }: Props) {
       </main>
 
       <nav className="mobile-actions" aria-label="Quick actions">
-        <Link href="/reservation">
+        <Link href="/#reserve">
           <CalendarDays />
           WEB
         </Link>

@@ -1,4 +1,4 @@
-﻿/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-img-element */
 import { ArrowRight, CalendarDays, Camera, Grid2X2, Mail, MessageCircle, PlayCircle } from "lucide-react";
 import { TsurusenTopHeader } from "./TsurusenTopHeader";
 
@@ -35,14 +35,14 @@ const navLinks = [
   { label: "DRINK MENU", href: "/drink-menu", left: 366, top: 14, width: 70, height: 25 },
   { label: "ENTERTAINMENT", href: "/entertainment", left: 443, top: 14, width: 86, height: 25 },
   { label: "SCENES", href: "/#scene", left: 537, top: 14, width: 48, height: 25 },
-  { label: "PRIVATE PARTY", href: "/private-party", left: 591, top: 14, width: 84, height: 25 },
+  { label: "PRIVATE PARTY", href: "/#scene", left: 591, top: 14, width: 84, height: 25 },
   { label: "EVENTS", href: "/events", left: 681, top: 14, width: 48, height: 25 },
   { label: "CAMPAIGNS", href: "/campaigns", left: 730, top: 14, width: 67, height: 25 },
-  { label: "REVIEWS", href: "/reviews", left: 608, top: 36, width: 54, height: 1 },
-  { label: "SOCIAL HUB", href: "/social", left: 670, top: 36, width: 66, height: 1 },
+  { label: "REVIEWS", href: "/#reviews", left: 608, top: 36, width: 54, height: 1 },
+  { label: "SOCIAL HUB", href: "/#gallery", left: 670, top: 36, width: 66, height: 1 },
   { label: "NEWS", href: "/news", left: 737, top: 36, width: 39, height: 1 },
   { label: "ACCESS", href: "/access", left: 777, top: 14, width: 42, height: 25 },
-  { label: "RESERVE", href: "/reservation", left: 806, top: 10, width: 43, height: 31 },
+  { label: "RESERVE", href: "/#reserve", left: 806, top: 10, width: 43, height: 31 },
 ];
 
 const anchorTargets = [
@@ -92,12 +92,12 @@ const hitLinks = [
   { label: "Event updates view all", href: "/events", left: 235, top: 1037, width: 43, height: 18 },
   { label: "Campaign news view all", href: "/campaigns", left: 487, top: 1037, width: 43, height: 18 },
   { label: "Instagram picks view all", href: "https://www.instagram.com/", left: 762, top: 1037, width: 43, height: 18 },
-  { label: "Darts tournament", href: "/events/darts-tournament-2024", left: 64, top: 1063, width: 214, height: 54 },
-  { label: "Karaoke night", href: "/events/karaoke-night", left: 64, top: 1124, width: 214, height: 54 },
-  { label: "Summer DJ party", href: "/events/summer-dj-party", left: 64, top: 1185, width: 214, height: 54 },
-  { label: "First visit coupon", href: "/campaigns/first-visit-coupon", left: 315, top: 1063, width: 212, height: 54 },
-  { label: "Ladies campaign", href: "/campaigns/ladies", left: 315, top: 1124, width: 212, height: 54 },
-  { label: "Birthday benefit", href: "/campaigns/birthday", left: 315, top: 1185, width: 212, height: 54 },
+  { label: "Darts tournament", href: "/events#darts-tournament", left: 64, top: 1063, width: 214, height: 54 },
+  { label: "Karaoke night", href: "/events#karaoke-night", left: 64, top: 1124, width: 214, height: 54 },
+  { label: "Summer DJ party", href: "/events#saturday-dj-night", left: 64, top: 1185, width: 214, height: 54 },
+  { label: "First visit coupon", href: "/campaigns#first-visit", left: 315, top: 1063, width: 212, height: 54 },
+  { label: "Ladies campaign", href: "/campaigns#girls-party", left: 315, top: 1124, width: 212, height: 54 },
+  { label: "Birthday benefit", href: "/campaigns#birthday", left: 315, top: 1185, width: 212, height: 54 },
   { label: "Instagram pick one", href: "https://www.instagram.com/", left: 565, top: 1067, width: 74, height: 86 },
   { label: "Instagram pick two", href: "https://www.instagram.com/", left: 646, top: 1067, width: 74, height: 86 },
   { label: "Instagram pick three", href: "https://www.instagram.com/", left: 728, top: 1067, width: 74, height: 86 },
@@ -115,10 +115,10 @@ const hitLinks = [
   { label: "Newsletter subscribe", href: "/news#newsletter", left: 751, top: 1525, width: 55, height: 30 },
   { label: "Line subscribe", href: "https://line.me/R/ti/p/@tsurusen", left: 604, top: 1584, width: 84, height: 25 },
   { label: "Instagram follow", href: "https://www.instagram.com/", left: 702, top: 1584, width: 104, height: 25 },
-  { label: "Floating web reserve", href: "/reservation", left: 794, top: 1547, width: 63, height: 67 },
+  { label: "Floating web reserve", href: "/#reserve", left: 794, top: 1547, width: 63, height: 67 },
   { label: "Floating line reserve", href: "https://line.me/R/ti/p/@tsurusen", left: 794, top: 1620, width: 63, height: 66 },
   { label: "Floating instagram", href: "https://www.instagram.com/", left: 794, top: 1693, width: 63, height: 67 },
-  { label: "CTA web reserve", href: "/reservation", left: 191, top: 1775, width: 145, height: 36 },
+  { label: "CTA web reserve", href: "/#reserve", left: 191, top: 1775, width: 145, height: 36 },
   { label: "CTA line reserve", href: "https://line.me/R/ti/p/@tsurusen", left: 349, top: 1775, width: 146, height: 36 },
   { label: "CTA instagram follow", href: "https://www.instagram.com/", left: 508, top: 1775, width: 160, height: 36 },
 ];

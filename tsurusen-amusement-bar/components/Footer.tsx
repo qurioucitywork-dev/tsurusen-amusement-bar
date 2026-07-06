@@ -36,7 +36,7 @@ export function Footer() {
           <Link href="/faq" className="border-2 border-white bg-graphite px-3 py-3 text-sm font-black text-ink">
             FAQ
           </Link>
-          <Link href="/contact" className="border-2 border-white bg-graphite px-3 py-3 text-sm font-black text-ink">
+          <Link href="/#reserve" className="border-2 border-white bg-graphite px-3 py-3 text-sm font-black text-ink">
             お問い合わせ
           </Link>
         </nav>

@@ -39,7 +39,7 @@ export function SpacePreviewSection() {
         ))}
       </div>
       <div className="site-container mt-8">
-        <Link href="/space" className="line-link">
+        <Link href="/play#gallery" className="line-link">
           店内紹介へ <ArrowUpRight size={16} aria-hidden="true" />
         </Link>
       </div>

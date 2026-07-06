@@ -1,4 +1,4 @@
-﻿/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { TsurusenTopHeader } from "./TsurusenTopHeader";
 import { TsurusenReadyFooter } from "./TsurusenReadyFooter";
@@ -139,7 +139,7 @@ function PriceCard({
           カラオケ歌い放題
         </li>
       </ul>
-      <Link className="price-reserve-button" href="/reservation">
+      <Link className="price-reserve-button" href="/#reserve">
         <span>予約する</span>
         <small>RESERVE NOW <ArrowRight size={11} /></small>
       </Link>

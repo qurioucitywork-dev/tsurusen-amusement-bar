@@ -16,7 +16,7 @@ export function FinalCTA() {
             人数、時間、遊びたい内容が決まっていなくても大丈夫。Web予約・LINE予約・電話予約・Instagram DMで気軽にどうぞ。
           </p>
           <div className="mt-7 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
-            <Link href="/reservation" className="button-primary">
+            <Link href="/#reserve" className="button-primary">
               <CalendarClock size={18} aria-hidden="true" />
               WEB予約
             </Link>

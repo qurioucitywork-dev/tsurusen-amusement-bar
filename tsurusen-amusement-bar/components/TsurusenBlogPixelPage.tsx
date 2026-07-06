@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { TsurusenTopHeader } from "./TsurusenTopHeader";
@@ -442,7 +442,7 @@ export function TsurusenBlogPixelPage() {
             <h2>YOUR NIGHT STARTS HERE</h2>
             <p>最高の夜を、ここから。</p>
             <div className="blog-cta-buttons">
-              <GoldButton href="/reservation">WEB予約</GoldButton>
+              <GoldButton href="/#reserve">WEB予約</GoldButton>
               <GoldButton href="https://line.me/R/ti/p/@tsurusen" tone="green">
                 LINE予約
               </GoldButton>
@@ -456,7 +456,7 @@ export function TsurusenBlogPixelPage() {
       </main>
 
       <nav className="blog-fixed-cta" aria-label="Quick blog actions">
-        <Link href="/reservation">
+        <Link href="/#reserve">
           <CalendarDays aria-hidden="true" />
           WEB予約
         </Link>

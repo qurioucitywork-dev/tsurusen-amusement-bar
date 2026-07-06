@@ -501,7 +501,7 @@ export function TsurusenFaqPage() {
           <MessageCircle size={30} strokeWidth={1.8} aria-hidden="true" />
           <span>LINE相談</span>
         </Link>
-        <Link className="faq-fixed-cta__web" href="/reservation">
+        <Link className="faq-fixed-cta__web" href="/#reserve">
           <CalendarCheck size={30} strokeWidth={1.8} aria-hidden="true" />
           <span>WEB予約</span>
         </Link>

@@ -80,7 +80,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 function ReserveButtons({ compact = false }: { compact?: boolean }) {
   return (
     <div className={compact ? "ent-cta-buttons compact" : "ent-cta-buttons"}>
-      <Link className="gold" href="/reservation">
+      <Link className="gold" href="/#reserve">
         <CalendarDays size={compact ? 18 : 28} aria-hidden="true" />
         <span>
           WEB予約
@@ -302,7 +302,7 @@ export function TsurusenEntertainmentPixelPage() {
       </section>
 
       <aside className="ent-floating" aria-label="Quick reservation">
-        <Link className="gold" href="/reservation">
+        <Link className="gold" href="/#reserve">
           <CalendarDays size={23} aria-hidden="true" />
           <span>WEB予約</span>
         </Link>

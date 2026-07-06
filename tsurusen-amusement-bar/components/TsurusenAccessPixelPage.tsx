@@ -1,4 +1,5 @@
-﻿import Image from "next/image";
+import Image from "next/image";
+import Link from "next/link";
 import type { ReactNode } from "react";
 import type { LucideIcon } from "lucide-react";
 import { TsurusenTopHeader } from "./TsurusenTopHeader";
@@ -348,7 +349,7 @@ export function TsurusenAccessPixelPage() {
               <h2>YOUR NIGHT STARTS HERE</h2>
               <p>最高の夜を、ここから。</p>
               <div className="cta-buttons">
-                <GoldButton href="/reservation">WEB予約</GoldButton>
+                <GoldButton href="/#reserve">WEB予約</GoldButton>
                 <GoldButton href="https://line.me/R/ti/p/@tsurusen" tone="green">
                   LINE予約
                 </GoldButton>
@@ -366,10 +367,10 @@ export function TsurusenAccessPixelPage() {
           <MapPin aria-hidden="true" />
           Google Maps
         </a>
-        <a href="/reservation">
+        <Link href="/#reserve">
           <CalendarDays aria-hidden="true" />
           WEB予約
-        </a>
+        </Link>
         <a href="https://line.me/R/ti/p/@tsurusen">
           <MessageCircle aria-hidden="true" />
           LINE予約

@@ -14,7 +14,7 @@ export function ServiceSection({ withLink = true }: { withLink?: boolean }) {
             copy="ダーツ、カラオケ、バータイム。イベントサイトのように、目的別にすぐ探せるメニュー導線へ整理しています。"
           />
           {withLink ? (
-            <Link href="/menu" className="line-link lg:justify-self-end">
+            <Link href="/food-menu" className="line-link lg:justify-self-end">
               メニュー詳細へ <ArrowUpRight size={16} aria-hidden="true" />
             </Link>
           ) : null}

@@ -23,7 +23,7 @@ const assetBase = "/assets/events";
 
 const heroButtons = [
   { label: "イベント一覧", sub: "EVENT LIST", href: "#upcoming", className: "gold", icon: CalendarDays },
-  { label: "参加予約", sub: "JOIN NOW", href: "/reservation", className: "blue", icon: Ticket },
+  { label: "参加予約", sub: "JOIN NOW", href: "/#reserve", className: "blue", icon: Ticket },
   { label: "イベントカレンダー", sub: "CALENDAR", href: "#calendar", className: "pink", icon: CalendarDays },
 ] as const;
 
@@ -85,8 +85,8 @@ const faqItems = [
 ] as const;
 
 const ctaButtons = [
-  { label: "イベント予約", sub: "JOIN EVENT", href: "/reservation", className: "gold", icon: CalendarDays },
-  { label: "WEB予約", sub: "RESERVE", href: "/reservation", className: "blue", icon: Ticket },
+  { label: "イベント予約", sub: "JOIN EVENT", href: "/#reserve", className: "gold", icon: CalendarDays },
+  { label: "WEB予約", sub: "RESERVE", href: "/#reserve", className: "blue", icon: Ticket },
   { label: "LINEで予約", sub: "LINE", href: "https://line.me/R/ti/p/@tsurusen", className: "green", icon: MessageCircle },
   { label: "電話で予約", sub: "CALL", href: "tel:03-XXXX-XXXX", className: "pink", icon: Phone },
 ] as const;
@@ -188,7 +188,7 @@ export function TsurusenEventsPixelPage() {
                 <dd>200 PEOPLE</dd>
               </div>
             </dl>
-            <Link href="/reservation">参加する</Link>
+            <Link href="/#reserve">参加する</Link>
           </div>
           <div className="featured-stage">
             <div>
@@ -218,21 +218,25 @@ export function TsurusenEventsPixelPage() {
         <section className="panel" id="upcoming">
           <SectionTitle sub="すべてのイベントを見る">UPCOMING EVENTS</SectionTitle>
           <div className="upcoming-grid">
-            {upcomingEvents.map((event) => (
-              <Link href={`/events/${event.title.toLowerCase().replaceAll(" ", "-")}`} className="event-card" key={event.title}>
-                <img src={`${assetBase}/${event.image}`} alt="" />
-                <div>
-                  <span>{event.date}</span>
-                  <small>{event.tag}</small>
-                </div>
-                <h3>{event.title}</h3>
-                <p>{event.time} / {event.fee}</p>
-                <em>
-                  <Users size={14} aria-hidden="true" />
-                  {event.people}
-                </em>
-              </Link>
-            ))}
+            {upcomingEvents.map((event) => {
+              const eventSlug = event.title.toLowerCase().replaceAll(" ", "-");
+
+              return (
+                <Link id={eventSlug} href={`/events#${eventSlug}`} className="event-card" key={event.title}>
+                  <img src={`${assetBase}/${event.image}`} alt="" />
+                  <div>
+                    <span>{event.date}</span>
+                    <small>{event.tag}</small>
+                  </div>
+                  <h3>{event.title}</h3>
+                  <p>{event.time} / {event.fee}</p>
+                  <em>
+                    <Users size={14} aria-hidden="true" />
+                    {event.people}
+                  </em>
+                </Link>
+              );
+            })}
           </div>
         </section>
 
@@ -318,7 +322,7 @@ export function TsurusenEventsPixelPage() {
               <span>DRINK TOGETHER.</span>
             </h2>
             <p>音楽、ダーツ、カラオケで自然に会話が生まれるイベント空間。</p>
-            <Link href="/reservation">コミュニティに参加する</Link>
+            <Link href="/#reserve">コミュニティに参加する</Link>
           </div>
 
           <div className="panel" id="reviews">
@@ -397,7 +401,7 @@ export function TsurusenEventsPixelPage() {
       </section>
 
       <aside className="events-floating" aria-label="Quick reservation">
-        <Link className="gold" href="/reservation">
+        <Link className="gold" href="/#reserve">
           <CalendarDays size={25} aria-hidden="true" />
           <span>イベント予約</span>
         </Link>

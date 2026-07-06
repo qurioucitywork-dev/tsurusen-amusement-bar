@@ -1,4 +1,4 @@
-﻿/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-img-element */
 import { ArrowRight, CalendarDays, Camera, ChevronUp, Copy, Heart, Link as LinkIcon, MapPin, MessageCircle, Phone, Search, Share2, Users } from "lucide-react";
 import { TsurusenTopHeader } from "./TsurusenTopHeader";
 
@@ -37,7 +37,7 @@ const navLinks = [
   { label: "REVIEWS", href: "/#reviews", left: 802, top: 36, width: 64, height: 1 },
   { label: "SOCIAL HUB", href: "/#gallery", left: 867, top: 36, width: 74, height: 1 },
   { label: "BLOG", href: "/blog", left: 876, top: 14, width: 48, height: 25 },
-  { label: "RESERVE", href: "/reservation", left: 954, top: 8, width: 62, height: 36 },
+  { label: "RESERVE", href: "/#reserve", left: 954, top: 8, width: 62, height: 36 },
 ];
 
 const anchorTargets = [
@@ -60,7 +60,7 @@ const hitLinks = [
   { label: "Table of contents two", href: "#guide", left: 768, top: 400, width: 183, height: 21 },
   { label: "Table of contents three", href: "#guide", left: 768, top: 426, width: 183, height: 21 },
   { label: "Store information", href: "/access", left: 770, top: 746, width: 192, height: 28 },
-  { label: "Reserve your night", href: "/reservation", left: 774, top: 870, width: 186, height: 38 },
+  { label: "Reserve your night", href: "/#reserve", left: 774, top: 870, width: 186, height: 38 },
   { label: "Popular article one", href: "/blog/darts-beginner-guide", left: 772, top: 966, width: 186, height: 38 },
   { label: "Popular article two", href: "/blog/drink-guide", left: 772, top: 1010, width: 186, height: 38 },
   { label: "Popular article three", href: "/blog/karaoke-night", left: 772, top: 1054, width: 186, height: 38 },
