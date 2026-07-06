@@ -1,33 +1,26 @@
 ﻿"use client";
 
 /* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, type CSSProperties } from "react";
+import { TsurusenReadyFooter } from "./TsurusenReadyFooter";
+import { TsurusenTopHeader } from "./TsurusenTopHeader";
 import {
   Aperture,
   CalendarDays,
   Camera,
   ChevronLeft,
   ChevronRight,
-  CircleHelp,
   Clock,
   Dices,
-  FileText,
   GlassWater,
-  Gift,
-  Home,
   MapPin,
-  Menu,
   Mic2,
   MoonStar,
   Phone,
   Star,
-  Tag,
   Target,
-  Utensils,
   UsersRound,
   Wine,
-  X,
 } from "lucide-react";
 
 const designWidth = 864;
@@ -78,14 +71,6 @@ type PixelButton = PixelLink & {
   compact?: boolean;
   cleanFill?: boolean;
 };
-type HeaderNavItem = {
-  label: string;
-  href: string;
-  icon: typeof Camera;
-  sub?: string;
-  active?: boolean;
-  group?: "menu";
-};
 type HeroAction = {
   label: string;
   sub: string;
@@ -134,19 +119,6 @@ type SocialReviewItem = {
   avatarSrc: string;
   avatarPosition: string;
 };
-
-const headerNavItems: HeaderNavItem[] = [
-  { label: "HOME", href: "/", icon: Home, active: true },
-  { label: "PRICE", href: "/pricing", icon: Tag, group: "menu" },
-  { label: "DRINK MENU", href: "/drink-menu", icon: Wine, group: "menu" },
-  { label: "FOOD MENU", href: "/food-menu", icon: Utensils, group: "menu" },
-  { label: "ACCESS", href: "/access", icon: MapPin },
-  { label: "BLOG", href: "/blog", icon: FileText },
-  { label: "CAMPAIGN", href: "/campaigns", icon: Gift },
-  { label: "ENTERTAINMENT", href: "/entertainment", icon: Mic2 },
-  { label: "EVENTS", href: "/events", icon: CalendarDays },
-  { label: "FAQ", href: "/#faq", icon: CircleHelp },
-];
 
 const heroActions: HeroAction[] = [
   { label: "WEB予約", sub: "RESERVE", href: "/reservation", tone: "gold" },
@@ -277,7 +249,7 @@ const actionButtons: PixelButton[] = [
   { label: "詳しく見る", sub: "VIEW MORE", href: "/pricing", left: 124, top: 984, width: 216, height: 28, tone: "dark" },
   { label: "もっと見る", sub: "VIEW MORE", href: "/#reviews", left: 508, top: 1379, width: 202, height: 27, tone: "dark" },
   { label: "イベント一覧を見る", sub: "VIEW MORE", href: "/#event", left: 70, top: 1581, width: 207, height: 25, tone: "dark" },
-  { label: "すべてのFAQを見る", sub: "VIEW MORE", href: "/#faq", left: 616, top: 1585, width: 203, height: 25, tone: "dark" },
+  { label: "すべてのFAQを見る", sub: "VIEW MORE", href: "/faq", left: 616, top: 1585, width: 203, height: 25, tone: "dark" },
   { label: "WEB予約", sub: "RESERVE", href: "/reservation", left: 217, top: 1725, width: 129, height: 34, tone: "gold" },
   { label: "LINE予約", sub: "LINE", href: "https://line.me/R/ti/p/@tsurusen", left: 356, top: 1725, width: 139, height: 34, tone: "green" },
   { label: "電話予約", sub: "CALL", href: "tel:03-XXXX-XXXX", left: 510, top: 1725, width: 139, height: 34, tone: "blue" },
@@ -439,12 +411,6 @@ const accessRows = [
 
 const faqItems = ["予約は必要ですか？", "貸切は何名から可能ですか？", "飲み放題の内容を教えてください", "支払い方法は？", "持ち込みはできますか？"];
 
-const ctaHeroButtons = [
-  { label: "WEB予約", sub: "RESERVE", href: "/reservation", tone: "gold" as const },
-  { label: "LINE予約", sub: "LINE", href: "https://line.me/R/ti/p/@tsurusen", tone: "green" as const },
-  { label: "電話予約", sub: "CALL", href: "tel:03-XXXX-XXXX", tone: "blue" as const },
-];
-
 const runtimeCss = `
 body:has(.tsurusen-pixel-home) {
   min-width: 0 !important;
@@ -463,6 +429,7 @@ body:has(.tsurusen-pixel-home) {
   overflow-y: visible;
   contain: layout style;
   background: #090807;
+  padding-bottom: max(clamp(72px, 10svh, 150px), calc(env(safe-area-inset-bottom) + 72px));
   color: #f6f0e6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -474,6 +441,13 @@ body:has(.tsurusen-pixel-home) {
 .tsurusen-pixel-home *::before,
 .tsurusen-pixel-home *::after {
   box-sizing: border-box;
+}
+
+.tsurusen-pixel-home > .tsurusen-top-header {
+  position: relative;
+  z-index: 90;
+  margin-bottom: clamp(14px, 1.8vw, 34px);
+  pointer-events: auto;
 }
 
 .tsurusen-pixel-stage {
@@ -488,6 +462,12 @@ body:has(.tsurusen-pixel-home) {
   contain: layout style;
   background: #090807;
   isolation: isolate;
+}
+
+.pixel-home-bottom-safe-space {
+  display: block;
+  height: max(clamp(360px, 42svh, 620px), calc(env(safe-area-inset-bottom) + 360px));
+  background: #090807;
 }
 
 .pixel-page-image {
@@ -1086,7 +1066,7 @@ body:has(.tsurusen-pixel-home) {
   width: 100%;
   height: 19.8243%;
   min-height: clamp(430px, 41.8vw, 820px);
-  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
   overflow: visible;
   color: #fff8ea;
   pointer-events: none;
@@ -1131,7 +1111,7 @@ body:has(.tsurusen-pixel-home) {
 }
 
 .pixel-lux-hero .pixel-header-brand {
-  flex: 0 0 clamp(380px, 24vw, 450px);
+  flex: 0 0 clamp(330px, 23vw, 420px);
   min-height: clamp(74px, 6.4vw, 120px);
   grid-template-columns: clamp(58px, 5.3vw, 96px) minmax(0, 1fr);
   column-gap: clamp(16px, 1.4vw, 28px);
@@ -1240,7 +1220,7 @@ body:has(.tsurusen-pixel-home) {
   justify-items: center;
   gap: clamp(24px, 2.15vw, 42px);
   margin: 0 auto;
-  padding: clamp(14px, 1.4vw, 26px) 0 clamp(38px, 3.2vw, 64px);
+  padding: clamp(42px, 4vw, 76px) 0 clamp(44px, 3.6vw, 72px);
   text-align: center;
   pointer-events: auto;
 }
@@ -1381,8 +1361,8 @@ body:has(.tsurusen-pixel-home) {
 
 @media (max-width: 1400px) {
   .pixel-lux-hero .pixel-main-header {
-    --header-label-scale: 0.55;
-    --header-nav-scale: 0.64;
+    --header-label-scale: 0.52;
+    --header-nav-scale: 0.6;
   }
 
   .pixel-lux-hero .pixel-header-shell {
@@ -1391,16 +1371,19 @@ body:has(.tsurusen-pixel-home) {
   }
 
   .pixel-lux-hero .pixel-header-brand {
-    flex-basis: clamp(210px, 19vw, 250px);
+    flex-basis: clamp(300px, 25vw, 345px);
+    grid-template-columns: clamp(52px, 4.7vw, 68px) minmax(0, 1fr);
+    column-gap: clamp(12px, 1.05vw, 18px);
   }
 
   .pixel-lux-hero .pixel-header-brand-kicker {
+    font-size: clamp(11px, 0.95vw, 15px);
     letter-spacing: 0.14em;
   }
 
   .pixel-lux-hero .pixel-header-brand-name {
-    font-size: clamp(27px, 2.5vw, 38px);
-    letter-spacing: 0.08em;
+    font-size: clamp(30px, 2.35vw, 36px);
+    letter-spacing: 0.06em;
   }
 
   .pixel-lux-hero .pixel-header-menu-group {
@@ -1420,7 +1403,7 @@ body:has(.tsurusen-pixel-home) {
   }
 
   .pixel-lux-hero .pixel-header-brand {
-    flex-basis: clamp(172px, 18vw, 205px);
+    flex-basis: clamp(260px, 27vw, 318px);
     grid-template-columns: clamp(42px, 4vw, 54px) minmax(0, 1fr);
     column-gap: clamp(8px, 0.9vw, 12px);
   }
@@ -1435,7 +1418,7 @@ body:has(.tsurusen-pixel-home) {
   }
 
   .pixel-lux-hero .pixel-header-brand-name {
-    font-size: clamp(24px, 2.55vw, 31px);
+    font-size: clamp(25px, 2.6vw, 31px);
     letter-spacing: 0.06em;
   }
 
@@ -1464,6 +1447,141 @@ body:has(.tsurusen-pixel-home) {
 
   .pixel-lux-actions {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .pixel-lux-hero .pixel-main-header {
+    min-height: 86px;
+  }
+
+  .pixel-lux-hero .pixel-header-shell {
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 18px;
+  }
+
+  .pixel-lux-hero .pixel-header-brand {
+    flex: 0 1 min(72vw, 290px);
+    min-height: 56px;
+    grid-template-columns: 48px minmax(0, 1fr);
+    column-gap: 12px;
+  }
+
+  .pixel-lux-hero .pixel-header-logo-mark {
+    width: 44px;
+    height: 44px;
+  }
+
+  .pixel-lux-hero .pixel-header-brand-kicker {
+    font-size: 10px;
+    letter-spacing: 2.2px;
+  }
+
+  .pixel-lux-hero .pixel-header-brand-name {
+    margin-top: 6px;
+    font-size: 25px;
+    letter-spacing: 4px;
+  }
+
+  .pixel-lux-hero .pixel-header-desktop-nav {
+    display: none;
+  }
+
+  .pixel-lux-hero .pixel-header-mobile-toggle {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    margin-left: auto;
+    flex: 0 0 48px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(216, 180, 106, 0.76);
+    border-radius: 14px;
+    color: #efc874;
+    background: rgba(5, 5, 4, 0.72);
+    box-shadow:
+      0 0 14px rgba(216, 180, 106, 0.16),
+      inset 0 0 12px rgba(239, 200, 116, 0.04);
+  }
+
+  .pixel-lux-hero .pixel-header-mobile-toggle svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .pixel-lux-hero .pixel-header-mobile-panel[data-open="true"] {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    top: calc(100% + 8px);
+    z-index: 20;
+    display: grid;
+    max-height: calc(100dvh - 100px);
+    gap: 6px;
+    overflow-y: auto;
+    border: 1px solid rgba(216, 180, 106, 0.72);
+    border-radius: 18px;
+    padding: 10px;
+    background:
+      linear-gradient(180deg, rgba(255, 247, 220, 0.055), rgba(255, 247, 220, 0)),
+      rgba(4, 4, 4, 0.96);
+    box-shadow:
+      0 14px 30px rgba(0, 0, 0, 0.7),
+      0 0 18px rgba(216, 180, 106, 0.14);
+    pointer-events: auto;
+  }
+
+  .pixel-lux-hero .pixel-header-mobile-panel .pixel-header-nav-item {
+    width: 100%;
+    min-height: 46px;
+    height: auto;
+    flex: 0 0 auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 12px;
+    overflow: hidden;
+    border-radius: 12px;
+    padding: 8px 12px;
+    text-align: left;
+  }
+
+  .pixel-lux-hero .pixel-header-mobile-panel .pixel-header-nav-item svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .pixel-lux-hero .pixel-header-mobile-panel .pixel-header-nav-label {
+    margin-top: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: left;
+  }
+
+  .pixel-lux-hero .pixel-header-mobile-panel .pixel-header-nav-sub {
+    width: auto;
+    margin-top: 0;
+    margin-left: auto;
+    flex: 0 0 auto;
+    font-size: 11px;
+    letter-spacing: 0.4px;
+  }
+
+  .pixel-lux-hero .pixel-header-mobile-panel .pixel-header-nav-item[data-active="true"]::after {
+    left: 44px;
+    bottom: 5px;
+    width: 46px;
+    transform: none;
+  }
+
+  .pixel-lux-hero .pixel-header-mobile-group {
+    display: grid;
+    gap: 4px;
+    overflow: hidden;
+    border: 1px solid rgba(216, 180, 106, 0.68);
+    border-radius: 14px;
+    padding: 5px;
+    background: rgba(9, 8, 6, 0.56);
   }
 }
 
@@ -6685,106 +6803,12 @@ function CardLink({ href, label, left, top, width, height }: PixelLink) {
 }
 
 function PixelHeader() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const groupedItems = headerNavItems.filter((item) => item.group === "menu");
-  const standaloneItems = headerNavItems.filter((item) => item.group !== "menu");
-
-  const itemMetrics = (label: string) => {
-    const basisByLabel: Record<string, number> = {
-      HOME: 80,
-      ACCESS: 90,
-      BLOG: 70,
-      CAMPAIGN: 120,
-      ENTERTAINMENT: 150,
-      EVENTS: 86,
-      FAQ: 60,
-      PRICE: 92,
-      "DRINK MENU": 132,
-      "FOOD MENU": 126,
-    };
-
-    return {
-      basis: basisByLabel[label] ?? 76,
-      labelSize: label.length > 12 ? 18 : label.length > 8 ? 19.5 : 21,
-      tracking: label.length > 12 ? 0.16 : label.length > 8 ? 0.34 : 0.78,
-    };
-  };
-
-  const renderNavItem = (item: HeaderNavItem, isMobile = false) => {
-    const Icon = item.icon;
-    const { basis, labelSize, tracking } = itemMetrics(item.label);
-    const style: PixelStyle | undefined = isMobile
-      ? undefined
-      : {
-          "--nav-basis": basis,
-          "--header-font-size": labelSize,
-          "--header-tracking": tracking,
-        };
-
-    return (
-      <Link
-        key={item.label}
-        href={item.href}
-        className="pixel-header-nav-item"
-        data-active={item.active ? "true" : undefined}
-        data-has-sub={item.sub ? "true" : undefined}
-        onClick={() => {
-          setMenuOpen(false);
-        }}
-        style={style}
-        aria-label={item.label}
-      >
-        <Icon strokeWidth={1.65} aria-hidden="true" />
-        <span className="pixel-header-nav-label">{item.label}</span>
-        {item.sub ? <span className="pixel-header-nav-sub">{item.sub}</span> : null}
-      </Link>
-    );
-  };
-
-  return (
-    <header className="pixel-main-header" aria-label="Site header">
-      <div className="pixel-header-shell">
-        <Link href="/" className="pixel-header-brand" aria-label="TSURUSEN home">
-          <span className="pixel-header-logo-mark" aria-hidden="true">
-            <span className="pixel-header-logo-stem" />
-          </span>
-          <span className="pixel-header-brand-copy">
-            <span className="pixel-header-brand-kicker">AMUSEMENT BAR</span>
-            <span className="pixel-header-brand-name">TSURUSEN</span>
-          </span>
-        </Link>
-
-        <nav className="pixel-header-desktop-nav" aria-label="Header menu">
-          {renderNavItem(standaloneItems[0])}
-          <div className="pixel-header-menu-group" aria-label="Price, drink menu and food menu">
-            {groupedItems.map((item, index) => [
-              index > 0 ? <span key={`${item.label}-divider`} className="pixel-header-menu-divider" aria-hidden="true" /> : null,
-              renderNavItem(item),
-            ])}
-          </div>
-          {standaloneItems.slice(1).map((item) => renderNavItem(item))}
-        </nav>
-
-        <button type="button" className="pixel-header-mobile-toggle" aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"} aria-expanded={menuOpen} aria-controls="pixel-header-mobile-menu" onClick={() => setMenuOpen((open) => !open)}>
-          {menuOpen ? <X strokeWidth={1.8} aria-hidden="true" /> : <Menu strokeWidth={1.8} aria-hidden="true" />}
-        </button>
-
-        <nav id="pixel-header-mobile-menu" className="pixel-header-mobile-panel" data-open={menuOpen ? "true" : undefined} aria-label="Mobile header menu">
-          {renderNavItem(standaloneItems[0], true)}
-          <div className="pixel-header-mobile-group" aria-label="Price, drink menu and food menu">
-            {groupedItems.map((item) => renderNavItem(item, true))}
-          </div>
-          {standaloneItems.slice(1).map((item) => renderNavItem(item, true))}
-        </nav>
-      </div>
-    </header>
-  );
+  return <TsurusenTopHeader active="HOME" />;
 }
 
 function PixelHero() {
   return (
     <section className="pixel-lux-hero" aria-labelledby="pixel-lux-title">
-      <PixelHeader />
       <div className="pixel-lux-content">
         <h1 id="pixel-lux-title" className="pixel-lux-title">
           LET&apos;S PLAY TONIGHT.
@@ -7139,7 +7163,7 @@ function EventAccessFaqSection() {
                 </details>
               ))}
             </div>
-            <button type="button" className="pixel-eaf-button pixel-eaf-button-faq" onClick={() => navigateTo("/#faq")}>
+            <button type="button" className="pixel-eaf-button pixel-eaf-button-faq" onClick={() => navigateTo("/faq")}>
               <span>すべてのFAQを見る</span>
               <small>VIEW MORE</small>
             </button>
@@ -7151,24 +7175,7 @@ function EventAccessFaqSection() {
 }
 
 function CtaFooterSection() {
-  return (
-    <section id="reserve" className="pixel-cf-cta" aria-labelledby="pixel-cf-cta-title">
-      <div className="pixel-cf-cta-inner">
-        <h2 id="pixel-cf-cta-title" className="pixel-cf-cta-title">
-          LET&apos;S PLAY TONIGHT.
-        </h2>
-        <p className="pixel-cf-cta-subtitle">今夜はTSURUSENで最高の時間を。</p>
-        <div className="pixel-cf-cta-actions" aria-label="Reservation actions">
-          {ctaHeroButtons.map((button) => (
-            <button key={button.label} type="button" className="pixel-cf-cta-button" data-tone={button.tone} onClick={() => navigateTo(button.href)}>
-              <span>{button.label}</span>
-              <small>{button.sub}</small>
-            </button>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  return <TsurusenReadyFooter className="pixel-home-ready-footer" showFloating={false} />;
 }
 
 export function TsurusenPixelHome() {
@@ -7196,9 +7203,11 @@ export function TsurusenPixelHome() {
   }, []);
 
   return (
-    <div className="tsurusen-pixel-home" id="top">
-      <style>{runtimeCss}</style>
-      <div className="tsurusen-pixel-stage" aria-label="TSURUSEN HOME">
+    <>
+      <div className="tsurusen-pixel-home" id="top">
+        <style>{runtimeCss}</style>
+        <PixelHeader />
+        <div className="tsurusen-pixel-stage" aria-label="TSURUSEN HOME">
         {textlessSlices.map((slice) => (
           <img
             key={slice.src}
@@ -7247,7 +7256,10 @@ export function TsurusenPixelHome() {
           <Star size={14} fill="currentColor" strokeWidth={1.2} style={{ left: xPct(620), top: yPct(1204) }} />
           <Star size={14} fill="currentColor" strokeWidth={1.2} style={{ left: xPct(645), top: yPct(1204) }} />
         </div>
+        </div>
+        <div className="pixel-home-bottom-safe-space" aria-hidden="true" />
       </div>
-    </div>
+      <TsurusenReadyFooter id="top-floating-reserve" showFooter={false} showFloating />
+    </>
   );
 }

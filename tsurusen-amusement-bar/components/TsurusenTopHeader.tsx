@@ -37,7 +37,7 @@ const headerNavItems: HeaderItem[] = [
   { label: "CAMPAIGN", href: "/campaigns", icon: Gift, paths: ["/campaign", "/campaigns"] },
   { label: "ENTERTAINMENT", href: "/entertainment", icon: Mic2, paths: ["/entertainment", "/play"] },
   { label: "EVENTS", href: "/events", icon: CalendarDays, paths: ["/events", "/event"] },
-  { label: "FAQ", href: "/#faq", icon: CircleHelp, paths: ["/faq"] },
+  { label: "FAQ", href: "/faq", icon: CircleHelp, paths: ["/faq"] },
 ];
 
 const topHeaderCss = `

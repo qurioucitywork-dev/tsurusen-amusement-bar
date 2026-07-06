@@ -535,18 +535,48 @@ body:has(.events-page) > main#main {
 }
 
 .events-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   min-height: clamp(520px, 72svh, 760px);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: clamp(82px, 8vh, 140px) clamp(20px, 4vw, 64px);
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.72)),
-    radial-gradient(circle at 50% 48%, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.18) 23%, rgba(0, 0, 0, 0.72) 70%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.45) 58%, rgba(0, 0, 0, 0.88) 100%),
+    radial-gradient(circle at 18% 35%, rgba(58, 98, 255, 0.36), transparent 24rem),
+    radial-gradient(circle at 80% 32%, rgba(255, 57, 220, 0.38), transparent 25rem),
+    radial-gradient(circle at 50% 48%, rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.24) 28%, rgba(0, 0, 0, 0.7) 72%),
     url("${assetBase}/section-01-hero.png") center / cover no-repeat;
 }
 
+.events-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.24) 0%, transparent 24%, transparent 76%, rgba(0, 0, 0, 0.24) 100%),
+    radial-gradient(ellipse 78% 70% at 50% 50%, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.9) 48%, rgba(0, 0, 0, 0.58) 72%, rgba(0, 0, 0, 0.14) 92%, transparent 100%);
+}
+
+.events-hero::after {
+  content: "";
+  position: absolute;
+  inset: clamp(84px, 12vh, 148px) max(14px, 12vw) clamp(82px, 13vh, 142px);
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.56) 58%, rgba(0, 0, 0, 0) 83%),
+    linear-gradient(90deg, transparent, rgba(255, 85, 220, 0.1) 50%, transparent);
+  filter: blur(8px);
+}
+
 .events-hero-inner {
+  position: relative;
+  z-index: 2;
   width: min(960px, 100%);
   display: grid;
   justify-items: center;
@@ -1287,19 +1317,53 @@ body:has(.events-page) > main#main {
 }
 
 .events-bottom-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
   width: 100%;
+  height: auto;
+  max-height: none;
   min-height: clamp(280px, 32svh, 480px);
   display: grid;
   place-items: center;
-  padding: clamp(52px, 7vh, 110px) clamp(16px, 4vw, 64px);
+  padding: clamp(52px, 7vh, 110px) clamp(16px, 4vw, 64px) clamp(82px, 9vh, 138px);
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.6)),
-    radial-gradient(circle at 48% 45%, rgba(255, 57, 220, 0.34), transparent 28rem),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.4) 48%, rgba(0, 0, 0, 0.9) 100%),
+    radial-gradient(circle at 18% 16%, rgba(59, 126, 255, 0.36), transparent 22rem),
+    radial-gradient(circle at 82% 18%, rgba(255, 57, 220, 0.4), transparent 24rem),
+    radial-gradient(circle at 50% 56%, rgba(216, 177, 90, 0.12), transparent 34rem),
     url("${assetBase}/cta-background.png") center / cover no-repeat;
   text-align: center;
 }
 
+.events-bottom-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 22% 28%, rgba(63, 130, 255, 0.2), transparent 18rem),
+    radial-gradient(circle at 78% 28%, rgba(255, 57, 220, 0.22), transparent 18rem),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.76) 24%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.76) 76%, rgba(0, 0, 0, 0.24) 100%),
+    radial-gradient(ellipse 78% 80% at 50% 56%, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.62) 60%, rgba(0, 0, 0, 0.14) 92%, transparent 100%);
+}
+
+.events-bottom-cta::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  height: 42%;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.72) 56%, rgba(0, 0, 0, 0.98) 100%),
+    radial-gradient(ellipse at 50% 98%, rgba(216, 177, 90, 0.16), transparent 52%);
+}
+
 .events-bottom-cta > div {
+  position: relative;
+  z-index: 2;
   width: min(1120px, calc(100% - clamp(24px, 4vw, 48px)));
   display: grid;
   justify-items: center;
@@ -1475,6 +1539,11 @@ body:has(.events-page) > main#main {
   .events-bottom-cta h2 {
     font-size: clamp(46px, 14vw, 72px);
     line-height: 1;
+  }
+
+  .events-bottom-cta {
+    min-height: auto;
+    padding-block: clamp(58px, 14vw, 82px) max(clamp(118px, 28vw, 156px), calc(env(safe-area-inset-bottom) + 112px));
   }
 
   .events-cta-buttons {

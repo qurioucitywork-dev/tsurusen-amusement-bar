@@ -1,17 +1,15 @@
 ﻿/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { TsurusenTopHeader } from "./TsurusenTopHeader";
+import { TsurusenReadyFooter } from "./TsurusenReadyFooter";
 import {
   Beer,
-  CalendarDays,
   CheckCircle2,
   ChevronRight,
   Citrus,
   CupSoda,
   GlassWater,
   Martini,
-  MessageCircle,
-  Phone,
   Star,
   Wine,
 } from "lucide-react";
@@ -112,20 +110,6 @@ function SectionTitle({ label, sub }: { label: string; sub?: string }) {
       <h2>{label}</h2>
       {sub ? <p>{sub}</p> : null}
     </div>
-  );
-}
-
-function CtaButton({ href, label, sub, tone }: { href: string; label: string; sub: string; tone: "gold" | "green" | "blue" }) {
-  const Icon = tone === "gold" ? CalendarDays : tone === "green" ? MessageCircle : Phone;
-
-  return (
-    <Link className={`drink-cta-button ${tone}`} href={href}>
-      <Icon size={36} strokeWidth={2} aria-hidden="true" />
-      <span>
-        <strong>{label}</strong>
-        <small>{sub}</small>
-      </span>
-    </Link>
   );
 }
 
@@ -366,36 +350,7 @@ export function TsurusenDrinkPixelPage() {
         </section>
       </main>
 
-      <section className="drink-bottom-cta" id="reserve">
-        <div>
-          <h2>
-            RAISE YOUR GLASS. PLAY
-            <br />
-            ALL NIGHT.
-          </h2>
-          <p>今すぐ予約して、最高の夜を楽しもう！</p>
-          <div className="drink-cta-row">
-            <CtaButton href="/reservation" label="WEB予約" sub="RESERVE" tone="gold" />
-            <CtaButton href="https://line.me/R/ti/p/@tsurusen" label="LINE予約" sub="LINE" tone="green" />
-            <CtaButton href="tel:03-XXXX-XXXX" label="電話予約" sub="CALL" tone="blue" />
-          </div>
-        </div>
-      </section>
-
-      <aside className="floating-reserve" aria-label="Reservation shortcuts">
-        <Link className="gold" href="/reservation">
-          <CalendarDays size={22} />
-          <span>WEB予約</span>
-        </Link>
-        <Link className="green" href="https://line.me/R/ti/p/@tsurusen">
-          <MessageCircle size={22} />
-          <span>LINE予約</span>
-        </Link>
-        <Link className="pink" href="tel:03-XXXX-XXXX">
-          <Phone size={22} />
-          <span>電話予約</span>
-        </Link>
-      </aside>
+      <TsurusenReadyFooter />
     </div>
   );
 }
@@ -1387,10 +1342,12 @@ const runtimeCss = `
 .drink-bottom-cta {
   display: grid;
   width: min(96vw, 1600px);
+  height: auto;
+  max-height: none;
   min-height: clamp(520px, 48vw, 760px);
   margin: clamp(28px, 4vw, 54px) auto 0;
   place-items: center;
-  padding: clamp(80px, 8vh, 140px) clamp(24px, 3vw, 56px);
+  padding: clamp(80px, 8vh, 140px) clamp(24px, 3vw, 56px) clamp(100px, 10vh, 160px);
   border: 1px solid rgba(216, 173, 30, 0.78);
   border-radius: 0;
   clip-path: polygon(16px 0, calc(100% - 16px) 0, 100% 16px, 100% calc(100% - 16px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 16px), 0 16px);
@@ -1742,8 +1699,10 @@ const runtimeCss = `
 
   .drink-bottom-cta {
     width: calc(100% - 20px);
+    height: auto;
+    max-height: none;
     min-height: auto;
-    padding: clamp(64px, 12vh, 92px) 16px;
+    padding: clamp(64px, 12vh, 92px) 16px max(clamp(116px, 28vw, 156px), calc(env(safe-area-inset-bottom) + 112px));
   }
 
   .drink-bottom-cta h2 {

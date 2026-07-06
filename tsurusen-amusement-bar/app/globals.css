@@ -1069,3 +1069,87 @@ body:has(.tsurusen-pixel-home) {
   display: block;
   color: currentColor;
 }
+
+/* Reservation shortcuts must stay fixed at the bottom-right on every pixel page. */
+:where(
+  .ts-ready-floating,
+  .floating-reserve,
+  .price-floating,
+  .food-floating,
+  .ent-floating,
+  .events-floating,
+  .access-fixed-cta,
+  .blog-fixed-cta,
+  .faq-fixed-cta,
+  .fixed-campaign-cta
+) {
+  position: fixed !important;
+  inset: auto max(18px, env(safe-area-inset-right)) max(18px, env(safe-area-inset-bottom)) auto !important;
+  z-index: 214 !important;
+  display: grid !important;
+  width: auto !important;
+  max-width: min(92px, calc(100vw - 24px)) !important;
+  max-height: calc(100svh - 36px) !important;
+  grid-template-columns: 1fr !important;
+  gap: clamp(7px, 1.1svh, 11px) !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  transform: none !important;
+  box-sizing: border-box !important;
+}
+
+:where(
+  .ts-ready-floating,
+  .floating-reserve,
+  .price-floating,
+  .food-floating,
+  .ent-floating,
+  .events-floating,
+  .access-fixed-cta,
+  .blog-fixed-cta,
+  .faq-fixed-cta,
+  .fixed-campaign-cta
+) > a,
+:where(.ts-ready-floating) .ts-ready-floating__button {
+  width: clamp(64px, 5.8vw, 88px) !important;
+  min-width: 0 !important;
+  min-height: clamp(64px, 9svh, 88px) !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 700px) {
+  :where(
+    .ts-ready-floating,
+    .floating-reserve,
+    .price-floating,
+    .food-floating,
+    .ent-floating,
+    .events-floating,
+    .access-fixed-cta,
+    .blog-fixed-cta,
+    .faq-fixed-cta,
+    .fixed-campaign-cta
+  ) {
+    inset: auto max(8px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) auto !important;
+    max-width: min(74px, calc(100vw - 16px)) !important;
+    gap: 7px !important;
+  }
+
+  :where(
+    .ts-ready-floating,
+    .floating-reserve,
+    .price-floating,
+    .food-floating,
+    .ent-floating,
+    .events-floating,
+    .access-fixed-cta,
+    .blog-fixed-cta,
+    .faq-fixed-cta,
+    .fixed-campaign-cta
+  ) > a,
+  :where(.ts-ready-floating) .ts-ready-floating__button {
+    width: clamp(56px, 16vw, 72px) !important;
+    min-height: clamp(56px, 13svh, 72px) !important;
+  }
+}

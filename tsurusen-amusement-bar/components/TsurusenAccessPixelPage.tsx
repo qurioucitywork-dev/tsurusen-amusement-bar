@@ -1156,6 +1156,9 @@ body:has(.tsurusen-access-dom-page) main {
   grid-template-columns: 0.95fr 1.25fr;
   gap: 28px;
   align-items: stretch;
+  height: auto;
+  max-height: none;
+  padding-bottom: clamp(36px, 5vw, 88px);
 }
 
 .street-card img {
@@ -1270,6 +1273,9 @@ body:has(.tsurusen-access-dom-page) main {
   .access-map-transport,
   .access-final-cta {
     grid-template-columns: 1fr;
+    height: auto;
+    max-height: none;
+    padding-bottom: max(clamp(112px, 28vw, 152px), calc(env(safe-area-inset-bottom) + 112px));
   }
 
   .access-quick-grid,

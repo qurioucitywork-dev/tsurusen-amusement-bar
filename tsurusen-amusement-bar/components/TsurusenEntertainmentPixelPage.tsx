@@ -435,18 +435,48 @@ body:has(.entertainment-page) > main#main {
 }
 
 .ent-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: clamp(520px, 72svh, 760px);
   padding: clamp(80px, 8vh, 140px) clamp(18px, 4vw, 56px);
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.18) 45%, rgba(0, 0, 0, 0.45)),
-    radial-gradient(circle at 50% 46%, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.34) 30%, rgba(0, 0, 0, 0.75) 68%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 66%, rgba(0, 0, 0, 0.86) 100%),
+    radial-gradient(circle at 16% 36%, rgba(42, 134, 255, 0.42), transparent 24rem),
+    radial-gradient(circle at 84% 34%, rgba(235, 77, 218, 0.38), transparent 25rem),
+    radial-gradient(circle at 50% 46%, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.3) 32%, rgba(0, 0, 0, 0.68) 74%),
     url("${assetBase}/section-01-hero.png") center / cover no-repeat;
 }
 
+.ent-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.28) 0%, transparent 22%, transparent 78%, rgba(0, 0, 0, 0.28) 100%),
+    radial-gradient(ellipse 78% 68% at 50% 51%, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.92) 48%, rgba(0, 0, 0, 0.58) 72%, rgba(0, 0, 0, 0.16) 92%, transparent 100%);
+}
+
+.ent-hero::after {
+  content: "";
+  position: absolute;
+  inset: clamp(86px, 12vh, 150px) max(14px, 12vw) clamp(78px, 13vh, 140px);
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.58) 58%, rgba(0, 0, 0, 0) 83%),
+    linear-gradient(90deg, transparent, rgba(216, 177, 90, 0.1) 50%, transparent);
+  filter: blur(8px);
+}
+
 .ent-hero-inner {
+  position: relative;
+  z-index: 2;
   width: min(1180px, 94vw);
   display: grid;
   justify-items: center;
@@ -882,19 +912,53 @@ body:has(.entertainment-page) > main#main {
 }
 
 .ent-bottom-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
   width: 100%;
+  height: auto;
+  max-height: none;
   min-height: clamp(360px, 42svh, 620px);
   display: grid;
   place-items: center;
-  padding: clamp(62px, 8vh, 118px) clamp(18px, 4vw, 56px);
+  padding: clamp(62px, 8vh, 118px) clamp(18px, 4vw, 56px) clamp(88px, 10vh, 148px);
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.78)),
-    radial-gradient(circle at 50% 42%, rgba(143, 51, 255, 0.42), transparent 30rem),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.44) 48%, rgba(0, 0, 0, 0.92) 100%),
+    radial-gradient(circle at 18% 18%, rgba(48, 151, 255, 0.38), transparent 23rem),
+    radial-gradient(circle at 82% 18%, rgba(236, 74, 213, 0.36), transparent 24rem),
+    radial-gradient(circle at 50% 56%, rgba(216, 177, 90, 0.12), transparent 34rem),
     url("${assetBase}/cta-background.png") center / cover no-repeat;
   text-align: center;
 }
 
+.ent-bottom-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 22% 28%, rgba(39, 143, 255, 0.18), transparent 18rem),
+    radial-gradient(circle at 78% 28%, rgba(223, 75, 221, 0.2), transparent 18rem),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0.78) 24%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.78) 76%, rgba(0, 0, 0, 0.26) 100%),
+    radial-gradient(ellipse 76% 78% at 50% 56%, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.62) 60%, rgba(0, 0, 0, 0.14) 92%, transparent 100%);
+}
+
+.ent-bottom-cta::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  height: 44%;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.72) 56%, rgba(0, 0, 0, 0.98) 100%),
+    radial-gradient(ellipse at 50% 98%, rgba(216, 177, 90, 0.16), transparent 52%);
+}
+
 .ent-bottom-cta > div {
+  position: relative;
+  z-index: 2;
   width: min(980px, calc(100% - clamp(24px, 4vw, 48px)));
   display: grid;
   justify-items: center;
@@ -1164,6 +1228,11 @@ body:has(.entertainment-page) > main#main {
     font-size: clamp(46px, 15vw, 68px);
     letter-spacing: 0.08em;
     line-height: 1;
+  }
+
+  .ent-bottom-cta {
+    min-height: auto;
+    padding-block: clamp(58px, 14vw, 82px) max(clamp(118px, 28vw, 156px), calc(env(safe-area-inset-bottom) + 112px));
   }
 
   .ent-cta-buttons {

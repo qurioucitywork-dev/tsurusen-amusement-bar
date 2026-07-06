@@ -1,11 +1,9 @@
 ﻿/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { TsurusenTopHeader } from "./TsurusenTopHeader";
+import { TsurusenReadyFooter } from "./TsurusenReadyFooter";
 import {
-  CalendarDays,
   ChevronRight,
-  MessageCircle,
-  Phone,
   Star,
 } from "lucide-react";
 
@@ -101,15 +99,6 @@ function SectionTitle({ label, sub }: { label: string; sub?: string }) {
       <h2>{label}</h2>
       {sub ? <p>{sub}</p> : null}
     </div>
-  );
-}
-
-function CtaButton({ href, label, sub, tone }: { href: string; label: string; sub: string; tone: "gold" | "green" | "blue" }) {
-  return (
-    <Link className={`food-cta-button ${tone}`} href={href}>
-      <span>{label}</span>
-      <small>{sub}</small>
-    </Link>
   );
 }
 
@@ -269,35 +258,7 @@ export function TsurusenFoodPixelPage() {
         </section>
       </main>
 
-      <section className="food-bottom-cta" id="reserve" aria-labelledby="food-cta-title">
-        <div>
-          <h2 id="food-cta-title">
-            GOOD FOOD
-            <br />
-            GOOD NIGHT
-          </h2>
-          <div className="food-cta-actions">
-            <CtaButton href="/reservation" label="WEB予約" sub="RESERVE" tone="gold" />
-            <CtaButton href="https://line.me/R/ti/p/@tsurusen" label="LINE予約" sub="LINE" tone="green" />
-            <CtaButton href="tel:03-XXXX-XXXX" label="電話予約" sub="CALL" tone="blue" />
-          </div>
-        </div>
-      </section>
-
-      <aside className="food-floating" aria-label="予約ショートカット">
-        <Link className="gold" href="/reservation">
-          <CalendarDays size={24} />
-          <span>WEB予約</span>
-        </Link>
-        <Link className="green" href="https://line.me/R/ti/p/@tsurusen">
-          <MessageCircle size={24} />
-          <span>LINE予約</span>
-        </Link>
-        <Link className="blue" href="tel:03-XXXX-XXXX">
-          <Phone size={24} />
-          <span>電話予約</span>
-        </Link>
-      </aside>
+      <TsurusenReadyFooter />
     </div>
   );
 }
@@ -919,8 +880,10 @@ const runtimeCss = `
 .food-bottom-cta {
   display: grid;
   place-items: center;
+  height: auto;
+  max-height: none;
   min-height: clamp(154px, 18vw, 250px);
-  padding: clamp(22px, 4vw, 48px) 18px;
+  padding: clamp(22px, 4vw, 48px) 18px clamp(56px, 7vw, 96px);
   margin-top: 0;
   background:
     linear-gradient(180deg, rgba(5, 5, 4, 0.1), rgba(5, 5, 4, 0.82)),
@@ -1194,6 +1157,13 @@ const runtimeCss = `
 
   .food-cta-button {
     width: min(100%, 180px);
+  }
+
+  .food-bottom-cta {
+    height: auto;
+    max-height: none;
+    min-height: auto;
+    padding-block: clamp(38px, 10vw, 62px) max(clamp(112px, 28vw, 152px), calc(env(safe-area-inset-bottom) + 112px));
   }
 }
 `;

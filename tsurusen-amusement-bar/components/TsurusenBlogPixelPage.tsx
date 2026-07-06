@@ -1240,7 +1240,9 @@ body:has(.tsurusen-blog-dom-page) main {
   grid-template-columns: 0.7fr 1fr 0.55fr;
   gap: 26px;
   align-items: center;
-  padding: clamp(24px, 3vw, 42px);
+  height: auto;
+  max-height: none;
+  padding: clamp(24px, 3vw, 42px) clamp(24px, 3vw, 42px) clamp(56px, 5vw, 92px);
   border: 1px solid var(--border);
   border-radius: 18px;
   background:
@@ -1355,6 +1357,9 @@ body:has(.tsurusen-blog-dom-page) main {
   .blog-content-grid,
   .blog-bottom-cta {
     grid-template-columns: 1fr;
+    height: auto;
+    max-height: none;
+    padding-bottom: max(clamp(112px, 26vw, 148px), calc(env(safe-area-inset-bottom) + 112px));
   }
 
   .blog-content-grid {

@@ -6,6 +6,7 @@ dist
 .env.local
 *.log
 *.tsbuildinfo
+tsurusen-amusement-bar/screenshots/
 *.db
 *.db-journal
 .jobs

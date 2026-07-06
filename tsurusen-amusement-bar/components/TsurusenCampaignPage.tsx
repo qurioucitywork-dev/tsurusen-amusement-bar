@@ -1178,8 +1178,10 @@ body:has(.campaign-page) main {
   display: grid;
   place-items: center;
   gap: clamp(20px, 3vw, 32px);
+  height: auto;
+  max-height: none;
   min-height: clamp(330px, 38svh, 480px);
-  padding: clamp(40px, 6vh, 80px) clamp(20px, 4vw, 60px);
+  padding: clamp(40px, 6vh, 80px) clamp(20px, 4vw, 60px) clamp(82px, 9vh, 138px);
   border: 1px solid rgba(216, 177, 90, .46);
   border-radius: 18px;
   background:
@@ -1346,6 +1348,13 @@ body:has(.campaign-page) main {
     width: auto;
     min-height: 58px;
     border-radius: 12px;
+  }
+
+  .bottom-cta {
+    height: auto;
+    max-height: none;
+    min-height: auto;
+    padding-block: clamp(42px, 11vw, 70px) max(clamp(112px, 28vw, 152px), calc(env(safe-area-inset-bottom) + 112px));
   }
 }
 

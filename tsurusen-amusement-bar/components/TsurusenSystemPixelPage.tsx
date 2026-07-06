@@ -1,21 +1,19 @@
 ﻿/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { TsurusenTopHeader } from "./TsurusenTopHeader";
+import { TsurusenReadyFooter } from "./TsurusenReadyFooter";
 import {
   ArrowRight,
   BatteryCharging,
   Calculator,
-  CalendarDays,
   CheckCircle2,
   CircleUserRound,
   ClipboardList,
   DoorOpen,
   Gamepad2,
   Martini,
-  MessageCircle,
   Mic,
   Monitor,
-  Phone,
   Target,
 } from "lucide-react";
 
@@ -146,15 +144,6 @@ function PriceCard({
         <small>RESERVE NOW <ArrowRight size={11} /></small>
       </Link>
     </article>
-  );
-}
-
-function CtaButton({ href, label, sub, tone }: { href: string; label: string; sub: string; tone: "gold" | "green" | "pink" }) {
-  return (
-    <Link className={`price-cta-button ${tone}`} href={href}>
-      <span>{label}</span>
-      <small>{sub}</small>
-    </Link>
   );
 }
 
@@ -307,32 +296,7 @@ export function TsurusenSystemPixelPage() {
         </section>
       </main>
 
-      <section className="ready-cta" id="reserve">
-        <div>
-          <h2>READY TO PLAY?</h2>
-          <p>今すぐ予約して、最高の夜を楽しもう！</p>
-          <div className="ready-buttons">
-            <CtaButton href="/reservation" label="WEB予約" sub="RESERVE" tone="gold" />
-            <CtaButton href="https://line.me/R/ti/p/@tsurusen" label="LINE予約" sub="LINE" tone="green" />
-            <CtaButton href="tel:03-XXXX-XXXX" label="電話予約" sub="CALL" tone="pink" />
-          </div>
-        </div>
-      </section>
-
-      <aside className="price-floating" aria-label="予約ショートカット">
-        <Link className="gold" href="/reservation">
-          <CalendarDays size={24} />
-          <span>WEB予約</span>
-        </Link>
-        <Link className="green" href="https://line.me/R/ti/p/@tsurusen">
-          <MessageCircle size={24} />
-          <span>LINE予約</span>
-        </Link>
-        <Link className="pink" href="tel:03-XXXX-XXXX">
-          <Phone size={24} />
-          <span>電話予約</span>
-        </Link>
-      </aside>
+      <TsurusenReadyFooter />
     </div>
   );
 }

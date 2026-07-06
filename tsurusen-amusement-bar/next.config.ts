@@ -13,7 +13,6 @@ const redirects = [
   { source: "/social", destination: "/#gallery", permanent: false },
   { source: "/reviews", destination: "/#reviews", permanent: false },
   { source: "/reservation", destination: "/#reserve", permanent: false },
-  { source: "/faq", destination: "/#faq", permanent: false },
   { source: "/food-drink", destination: "/food-menu", permanent: false },
   { source: "/menu", destination: "/food-menu", permanent: false },
   { source: "/space", destination: "/play#gallery", permanent: false },
